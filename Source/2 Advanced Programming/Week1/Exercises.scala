@@ -1,7 +1,7 @@
 // Advanced Programming, Exercises by A. Wąsowski, IT University of Copenhagen
 //
-// AUTHOR1:
-// AUTHOR2:
+// AUTHOR1: Søren Harrison
+// AUTHOR2: Jan Vium Enghoff
 //
 // Write names and ITU email addresses of both group members that contributed to
 // the solution of the exercise (in alphabetical order by family name).
@@ -37,6 +37,12 @@ object Exercises extends App {
 
   // Exercise 3
 
+  def power(x: Double, n: Int) : Double = {
+     if(n == 0) 1  
+     else if(n % 2 == 0 && n > 0) { power(x, n/2) * power(x, n/2) }
+     else if(n % 2 != 0 && n > 0) { x * power(x, n-1) }
+     else { 1 / power(x, -1 * n) }
+  }
   // A few tests, uncomment when your implementation is ready.
 
   // assert (power (2.0, 2) == 4.0)
@@ -55,6 +61,13 @@ object Exercises extends App {
 
   // Exercise 4
 
+  def fib (n: Int) : Int = {
+      def loop(n1: Int, n2: Int, n: Int) : Int = {
+        if(n == 0) n1
+        else loop(n2, n1 + n2, n-1) 
+      }
+      loop(0, 1, n)
+  }
   // def fib (n: Int) : Int = ...
 
   // some tests (uncomment, add more):
