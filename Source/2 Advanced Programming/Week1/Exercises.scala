@@ -100,7 +100,15 @@ object Exercises extends App {
     new Expense("Coffee", 450),
     new Expense("Cake", 350) )
 
-  // assert (total (testcase1) == 800) // uncomment
+    def total (expenses: Array[Expense]) :Int = {
+	    @annotation.tailrec
+	    def loop(a : Array[Expense], i: Int, total: Int): Int = {
+	      if(a Nil) 0
+	      if(a.length-1 == i) total+a(i).price
+	      else loop(a, i+1, total+a(i).price)
+	    }
+    	return loop(expenses, 0, 0);
+  	}
 
   // Add one or two more tests
   // ...
