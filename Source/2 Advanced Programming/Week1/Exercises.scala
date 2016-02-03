@@ -96,39 +96,71 @@ object Exercises extends App {
 
   // def total (expenses: Array[Expense]) :Int = ...
 
-  val testcase1 = Array[Expense](
+
+
+  def total (expenses: Array[Expense]) :Int = {
+	   @annotation.tailrec
+	   def loop(a : Array[Expense], i: Int, total: Int): Int = {
+	     if(a.length-1 == i) total+a(i).price
+	     else loop(a, i+1, total+a(i).price)
+	   }
+  	return loop(expenses, 0, 0);
+  }
+
+  def totalTest() : Unit = {
+
+      val testcase1 = Array[Expense](
     new Expense("Coffee", 450),
     new Expense("Cake", 350) )
 
-    def total (expenses: Array[Expense]) :Int = {
-	    @annotation.tailrec
-	    def loop(a : Array[Expense], i: Int, total: Int): Int = {
-	      if(a Nil) 0
-	      if(a.length-1 == i) total+a(i).price
-	      else loop(a, i+1, total+a(i).price)
-	    }
-    	return loop(expenses, 0, 0);
-  	}
+      val testcase2 = Array[Expense](
+    new Expense("Chocolate", 100),
+    new Expense("Milk", 150) )
 
+    assert(total(testcase1) == 800)
+    assert(total(testcase2) == 800)
+  }
   // Add one or two more tests
   // ...
 
 
   // Exercise 6
 
-  // def isSorted[A] (as: Array[A], ordered: (A,A) =>  Boolean) :Boolean = ...
+  def isSorted[A] (as: Array[A], ordered: (A,A) =>  Boolean) : Boolean = {
+    @annotation.tailrec
+    def loop(as: Array[A], i: Int, ordered: (A,A) =>  Boolean) : Boolean = {
+      if(i == as.length-2)  ordered(as(i), as(i+1))
+      else if(ordered(as(i), as(i+1))) loop(as, i+1, ordered)
+      else false
+    }
+    loop(as, 0, ordered)
+  }
 
   // some tests (uncomment)
+  def isSortedTest() : Unit = {
+    assert ( isSorted (Array(1,2,3,4,5,6), (a: Int, b: Int)=> a <= b))
+    assert (!isSorted (Array(6,2,3,4,5,6), (a: Int, b: Int)=> a <= b))
+    assert (!isSorted (Array(1,2,3,4,5,1), (a: Int, b: Int)=> a <= b))
+  }
 
-  // assert ( isSorted (Array(1,2,3,4,5,6), (a: Int, b: Int)=> a <= b))
-  // assert (!isSorted (Array(6,2,3,4,5,6), (a: Int, b: Int)=> a <= b))
-  // assert (!isSorted (Array(1,2,3,4,5,1), (a: Int, b: Int)=> a <= b))
 
   // add two tests with another type, for example an Array[String]
 
   // Exercise 7: a curried version of solution to exercise 3
 
-  // def power1(x: Double) (n: Int) :Double = ...
+  def power1(x: Double) (n: Int) : Double = {
+    if(n == 0) 1  
+    else if(n % 2 == 0 && n > 0) { power(x, n/2) * power(x, n/2) }
+    else if(n % 2 != 0 && n > 0) { x * power(x, n-1) }
+    else { 1 / power(x, -1 * n) }
+  }
+
+  def power1Test() : Unit = {
+    assert(power1(2)(2) == 4)
+    assert(power1(2)(3) == 8)
+    assert(power1(-2)(2) == 4)
+    assert(power1(-2)(3) == -8)
+  }
 
   // Exercise 8
 
