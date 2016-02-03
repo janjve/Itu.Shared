@@ -112,7 +112,6 @@ object Exercises extends App {
       val testcase1 = Array[Expense](
     new Expense("Coffee", 450),
     new Expense("Cake", 350) )
-
       val testcase2 = Array[Expense](
     new Expense("Chocolate", 100),
     new Expense("Milk", 150) )
@@ -164,7 +163,16 @@ object Exercises extends App {
 
   // Exercise 8
 
-  // def curry[A,B,C] (f: (A,B)=>C) : A => (B => C) = ...
+   def curry[A,B,C] (f: (A,B)=>C) : A => (B => C) = {
+   		A => (B => f(A,B))
+   }
+
+   def testCurry(): Unit= {
+   		var function1 = curry[Double, Int, Double](power(_,_))
+   		var function2 = function1(2)
+   		var result = function2(2)
+   		println(result)
+   }
   //
   // test if it type checks by currying power automatically:
 
