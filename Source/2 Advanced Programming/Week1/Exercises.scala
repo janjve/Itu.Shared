@@ -167,10 +167,10 @@ object Exercises extends App {
    		A => (B => f(A,B))
    }
 
-   def testCurry(): Unit= {
-   		var function1 = curry[Double, Int, Double](power(_,_))
-   		var function2 = function1(2)
-   		var result = function2(2)
+   def curryTest(): Unit= {
+   		val function1 = curry[Double, Int, Double](power(_,_))
+   		val function2 = function1(2)
+   		val result = function2(2)
    		println(result)
    }
   //
@@ -180,12 +180,34 @@ object Exercises extends App {
 
   // Exercise 9
 
-  // def uncurry[A,B,C] (f: A => B => C) : (A,B) => C =
+  def uncurry[A,B,C] (f: A => B => C) : (A,B) => C = {
+    (A,B) => f(A)(B)
+  }
 
+  def uncurryTest(): Unit = {
+    val function1 = uncurry[Double, Int, Double](power1)
+    val result = function1(2,2)
+    println(result)
+  }
   // val power_uncurried: (Double,Int) => Double =
 
   // Exercise 10
 
-  // def compose[A,B,C] (f: B => C, g: A => B) : A => C = ...
+  def compose[A,B,C] (f: B => C, g: A => B) : A => C = {
+    (A) => f(g(A))
+  }
 
+  def composeTest1(): Unit = {
+    //A => B
+    def function1(i: Int): Double = {
+      i*2
+    } 
+    //B => C
+    def function2(d: Double): String = {
+      s"Your anwser is $d"
+    }
+    val result = compose[Int, Double, String](function2(_), function1(_))
+
+    println(result(5))
+  }
 }
