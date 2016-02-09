@@ -46,25 +46,44 @@ object List {
 
   // Exercise 2
 
-  // def tail[A] (as: List[A]) :List[A] = ...
+  def tail[A] (as: List[A]) :List[A] = as match {
+  	case Nil => Nil
+  	case Cons(_, xs) => xs
+  }
 
   // Exercise 3
 
-  // def setHead[A] (as: List[A], newHead: A) : List[A] = ...
+  def setHead[A] (as: List[A], newHead: A) : List[A] = as match {
+  	  	case Nil => Nil
+  	case Cons(x, xs) => Cons(newHead, xs)
+  }
 
   // Exercise 4
 
-  // def drop[A] (l: List[A], n: Int) : List[A] = ...
+  def drop[A] (l: List[A], n: Int) : List[A] = l match {
+  	  	case Nil => Nil
+  		case Cons(x, xs) => if(n > 0) drop[A](xs, n-1) 
+  		else l
+  }
 
   // Exercise 5
 
-  // def dropWhile[A](l: List[A], f: A => Boolean): List[A] = ...
+  def dropWhile[A](l: List[A], f: A => Boolean): List[A] = l match{
+  	  	case Nil => Nil
+  		case Cons(x, xs) => if(f(x)) dropWhile[A](xs, f)
+  		else l
+  }
 
   // Exercise 6
 
-  // def init[A](l: List[A]): List[A] = ...
+  def init[A](l: List[A]): List[A] = l match {
+  	case Nil => Nil
+  	case Cons(x, xs) => if(xs == Nil) Nil
+  	else Cons(x, init(xs))
+  }
 
   // Exercise 7 is in the bottom of the file
+
 
   // Exercise 8
 
@@ -73,21 +92,38 @@ object List {
     case Cons (x,xs) => f (x, foldRight (xs,z) (f))
   }
 
-  // def length[A] (as: List[A]): Int = ...
+  def length[A] (as: List[A]): Int = as match{
+    case Nil => 0
+  	 case Cons(x, xs) => foldRight[A, Int](as, 0) (
+  	 	(a, b) => b+1)
+  }
 
   // Exercise 9
-
-  // def foldLeft[A,B] (as: List[A], z: B) (f: (B, A) => B) : B = ...
+  def foldLeft[A,B] (as: List[A], z: B) (f: (B, A) => B) : B = as match {
+  	    case Nil => z
+    case Cons (x,xs) => foldLeft(xs, f(z, x))(f)
+  }
 
   // Exercise 10
 
-  // def sum (as : List[Int]) : Int = ...
-  // def product (as :List[Int]) : Int = ...
-  // def length1 (as :List[Int]) : Int = ...
+  def sum (as : List[Int]) : Int = {
+  	foldLeft[Int, Int](as, 0)(_ + _)
+  }
+
+  def product (as :List[Int]) : Int = {
+  	foldLeft[Int, Int](as, 1)(_ * _)
+  }
+
+  def length1 (as :List[Int]) : Int = {
+  	foldLeft[Int, Int](as, 0)((b, _) => b+1)
+  }
 
   // Exercise 11
 
-  // def reverse[A] (as :List[A]) :List[A] = ...
+  def reverse[A] (as :List[A]) :List[A] = as match {
+  	case Nil => Nil
+  	case Cons(_,_) => foldLeft[A, List[A]](as, Nil)((b, a) => Cons(a, b))
+  }
 
   // Exercise 12
 
@@ -102,7 +138,10 @@ object List {
     case Cons(h,t) => Cons(h, append(t, a2))
   }
 
-  // def concat[A] (as: List[List[A]]) :List[A] = ..
+  def concat[A] (as: List[List[A]]) :List[A] = as match {
+  	case Nil => Nil
+    case Cons(h,t) => foldLeft[List[A], List[A]](as, List()) ((b,a) => append(a,b))
+  }
 
   // Exercise 14
 
@@ -151,10 +190,20 @@ object Exercise7 {
 
   case class SalaryLine(name: String, amount: Integer)
 
-  // def maximumSalary (salaries: List[SalaryLine]) :Integer = ...
+  // Borrow foldRight method from Exercise 8
+  def foldRight[A,B] (as :List[A], z: B) (f : (A,B)=> B) :B = as match {
+    case Nil => z
+    case Cons (x,xs) => f (x, foldRight (xs,z) (f))
+  }
+
+  def maximumSalary (salaries: List[SalaryLine]) : Integer = salaries match {
+  	 case Nil => -1
+  	 case Cons(x, xs) => foldRight[SalaryLine, Int](salaries, -1) ((a, b) => if(a.amount > b) a.amount else b)
+  }
 
   val test_case = List( SalaryLine("John",41),
     SalaryLine("Alice", 42),
-    SalaryLine("Bob",40))
-
+    SalaryLine("Bob",40),
+    SalaryLine("Bob",85),
+  SalaryLine("Bob",32))
 }
