@@ -93,11 +93,6 @@ object Exercises extends App {
   }
 
   // computes the total of expenses in cents
-
-  // def total (expenses: Array[Expense]) :Int = ...
-
-
-
   def total (expenses: Array[Expense]) :Int = {
 	   @annotation.tailrec
 	   def loop(a : Array[Expense], i: Int, total: Int): Int = {
@@ -119,8 +114,6 @@ object Exercises extends App {
     assert(total(testcase1) == 800)
     assert(total(testcase2) == 800)
   }
-  // Add one or two more tests
-  // ...
 
 
   // Exercise 6
@@ -135,7 +128,6 @@ object Exercises extends App {
     loop(as, 0, ordered)
   }
 
-  // some tests (uncomment)
   def isSortedTest() : Unit = {
     assert ( isSorted (Array(1,2,3,4,5,6), (a: Int, b: Int)=> a <= b))
     assert (!isSorted (Array(6,2,3,4,5,6), (a: Int, b: Int)=> a <= b))
