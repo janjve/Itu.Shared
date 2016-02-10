@@ -1,3 +1,5 @@
+package itu.datamining.utility;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -56,7 +58,8 @@ public class CSVFileReader {
 		bufRdr.close();
 		return lines.toArray(ret);
 	}
-	
+
+	// Example of use
 	public static void main(String args[]) {
 		boolean skipHeaderRow = false;
 		
