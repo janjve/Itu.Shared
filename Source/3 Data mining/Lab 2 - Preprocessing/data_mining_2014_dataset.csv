@@ -1,0 +1,68 @@
+﻿age;prog_skill;uni_yrs;OS;progLangs;EngSkill;FavAnimal;MoreMtns;winter;rand1-10;rand0-1;rand0-1_pt2;canteenFood;FavColor;neuralNetwork;vectorMachine;sql;FavSQLServ;APriori;SqRoot;Georgios_middleName;JulianHome;therbforttglag;Planets
+24;8;4;win 7;c#, java, python;59;zebra;no;yes;4;0.651;0.4801;Good;Blue;yes;no;yes;mysql;no;-;Tom;London;glag;9
+26;2;6;Windows;-;60;ZEBRA;YES;YES;7.9;0.2;0.03;-;BLUE;KINDA;KINDA;NO;-;NO;DON'T KNOW;DON'T KNOW;DON'T KNOW;HAH;8
+23;2;4;Windows;Python, Java, C++;55;Zebra;Yes;A Little bit, I think;6;0;0.5;I have no idea;blue;kind of;Yes;Yes;-;NO;-;-;-;-;-
+25;6;4;Windows 7;Java, Javascript, C#;65;Elephant;No;Yes;7;0.707;0.314;It's expensive and bad;orange;Yes;No;Yes;MySQL;No;6672.60614;?;?;glag?;8
+25;6;5.5;Linux Mint; Python,R,Java;63;Elephant;-;No;8;0.8;-;OK;Blue;Yes;Yes;No;-;No;Check a calculator;Don't know;Don't know;Don't know how to process, that part;8
+29;5;4;Windows;Java,Javascript,C#;68;zebra;no;no;8;1,6;1,2;it's fine;blue;somewhat;no;yes;ms;no;dont know;dont know;dont know;dont know;dont know
+OLD;11;3;MAC OS X;Java, Java and Java;69;Guinea Pig;YES PLEASE;NAH;1;0;1;DISGUSTING;ANIMAL;YES;nope;yes;MYSQL;yes;1;Dick;Dick;Dick;Dick
+29;7;5;Windows;C#, ACTIONSCRIPT, PHP;66;zebra;No;yes;9;0.29;0.99;Its okay;Red;yes;No;yes;Microsoft SQL Server;No;-;-;-;-;8 + Pluto XD
+25;8;3.5;Win;C#,Java,C;63;Elephant;as long it not interferes with my biking routes;no;2.3789111357;.71785114;.13577905;meh.;green;yes;no;yes;MySQL;no;6672.606163;N.;Malmo;no.;8
+23;10;3.5;OSX;Clojure,C,Ruby;52;Elephant;Yes;Yes;3;0.2571593679102569718923;0.36792334192347899012567;Boring;Blue;Yes;No;Yes;No favourites;No;SQRT(94523673);Don't know;Don't know;Don't know;8
+25;5;3;Windows;C#,Java,C;51;Zebra;yes;no;2;0.52;0.1;It is okay, expensive;orange;no;no;yes;mysql;no;dunno! 23?;i have no idea, omar?;Sussex;robb?;too damn many! 8?
+30;7;5;OSX & Win;Java,PHP,C#;56;Elephant;yes;no;8;0.3;0.4;too salty;blue;no;no;yes;MySQL;no;-;-;Malmö;-;-
+22;8;3.5;Debian;Python,C#,JavaScript;55;Zebra;Yes;Yes;7;?;?;Sufficient;Blue;Yes;Yes;Yes;Postgres;No;~6672;?;?;?;9
+30;8;4;Windows 7;C#,Python,JS;67;zebra;Yes;No;8;0.23;0.87;ok, compared to the price;Blue;Yes;No;Yes;MSSQL;No;~6672.6;?;Kiruna;?;?
+42;5;6;Windows;C#,Java,Delphi;59;Elephant;YES!;no;7;0.9;0.142;ok;green;yes;no;yes;MSSQL;no;-;-;-;-;-
+26;8;3.5;Win7;C#,F#,Java;65;Elephant;Nope;Yes;5;1.5;1.89;Never had any;Blue;No;No;Yes;MySQL;No;Don't know;No idea;No idea;Yes;8
+28;8;7;WINDOWS;JAVA,C#,GROOVY;65;-;No;YES;7;0.33;0.76;IT'S OK;-;NO;NO;YES;WINDOWS SQL SERVER;NO;SQRT(44523673);-;MALMÖ;-;12
+24;7;4;OS X;Objective C, Ruby,C#;51;zebra;NO;Yes;3;0.2;0;Bad;Red;yes;NO;yes;Postgres;NO;(your mom)^2;Bob?;Go fish;wat?;7
+23;8;4.5;something Unix-y;Java, C++, Python;65;Zebra;Definitely;sort of;4;0.8325;0.2741;:(;None in particular;Maybe;No;Yes;Don't have any;No;A number;Jens;Malmö;Delicious;8 or 9 depending on your convictions
+OLD ENOUGH!;ON A SCALE OF 1 TO CARMACK, I'M AN 8. (ON A GOOD DAY);5.5 YRS;WiN7;C#, ACTIONSCRIPT, COMMON LISP;69.1;THE PAINTED HORSE;IT WOULD KEEP THE WiND AT BAY...;YES;3.67;0.1;0.8675309;EXPENSIVE CRAP;GOLD;i GUESS...;I USED TO IN COLLEGE;MORE THAN i'D HOPE.... :(;MYSQL;i REMEMBERED AFTER 2SEC. OF GOOGLING.;iT'S TOO EARLY FOR THAT... LET'S JUST SAY SQRT(THAT);ASPARAGUS;THE PLACE WHERE i WENT TO UNITE LAST YEAR.;YES. :|;NOT THAT MANY AROUND 8.
+27;2;9;windows, os;Java is the only one I know;60;Zebra;Yes;yes;7;0.1;Pi;Not my favorite;Black;No;No;Yes;I don't know;No;I have no calculator with me;No idea;I don't know;No idea;7
+32;7;11;Linux (Debian family);Perl, Java, Bash;57;Zebra;No;No;8;0.8;0.1;Really bad;Blue;I have no idea;No;Yes;MySQL;No;46;Denno;Malmø;Hvad;9
+40;-5;2;OS X;C#, F#, Python;69000;Asparagus;yes;ok;12;1;infinity;Absolute shit;yes;Maybe;No;Yes;MySQL;ok;Your Mom;Adolf;Some s*** place;? SWE k;1, the sun obviously
+26;7;4;MAC OSX/UNIX;F#, SCALA, C#;68;ELEPHANT;YES;YES;3;0.1;1;IT SUCKS;GREEN;YES;NO;YES;MySQL;NO;PI;BFCC;SWEDEN;POTATO;7
+23;4;1½;Windows 7;C# Java F#;67;Zebra;Of course;Partly;8;0.124;PI/4;The quality varies a lot;dark purple;yes;no;yes;MySQL;maybe;smaller;ordinary;swedish;swedish;8
+29;6;5;OSX;python, php, javascript;68;Elephant, although a moving asparagus is quite interesting;No;not as much as usual;7, but that wasn't random;0.5;1/4;-;-;superficially;supposedly;yes;MySQL;No;-;-;-;-;don't remember, but pluto ought to be one of them
+26;2;2½;windows 7 /ubuntu;Java, C#, SML;51.5;Elephant;NO;YES;e;0.1;0.2;0;#FF0000;YES;NO;YES;NO IDEA;NO;~6500;NO CLUE;ÅRHUS;GRAMMARNAZICASUALTIES++;NO ONE KNOWS
+24;7;4;OS X;Java, C#, Obj-C;60;Elephant;No;Yes;7;0;1;Expensive;Green;No;No;Yes;MySQL;No;42;Pickle Chips;Malmö;glag;8
+24;8;4;windows;C#, Scala, Java;68;Zebra;YES;Nope;10;0.6;0.2;SHIT;Brown;Yes;No;Yes;Mariadb;No;:-|;-;-;-;12(?)
+23;7;4.5;Windows;C#, F#, Scala;58;Zebra;yes;yes;7;PI/4;½;No;Blue;Yes;No;Yes;My own;No;SQRT(44523675);Greek;Malmö;?;8
+23;1;4,5;Windows 7;C#,;60;Zebra;yes;yes;1;1;yes;not worth the price;blue;Almost;No;yes;dunno;no;5;dunno;Malmö;yes;yes
+24;3;2,5;MAC OSX;JAVA, C#, PHP, JAVASCRIPT, MOSML;52;ELEPHANT;NO;YES;7;0,7;0,1;GREAT;GREEN;YES;NO;YES;MYSQL;NO;5054;NO IDEA;NO Idea;?;12
+25;6;6;windows;C#, Java,;50;Zebra;Yes;No;1;0.48333;0.679;good;blue;Yes;No;Yes;Microsoft;No;-;-;-;-;9
+25;7;4;Linux;C#, Java, PHP;60;Elephant;No;Yes;5;0,25;0,632;It's really bad.;Blue;Yes;No;Yes;Microsoft SQL;No;42;-;-;-;-
+27;6.5;4;OSX;Ruby, PHP, GO,;65;Elephant;Don't care;Yes;4;0.324;0.76;Over priced;Blue;Yes;No;Yes;MySQL;No;7?;James;-;-;-
+20;5;1.5;Windows;C#, java, C++;60;Asparagus;NO!;Yes!;10;1.0;No;Yum;Pink;Yes;No;Yes;None;No;241;Øm;The town of Sweden;Superman;Pluto is planet
+20;6.5;1.5;windows 7;C# C++ Java;60;Elephant;Yes;Yes;1;1;0;Pretty good when i can afford it;Yellow;Yes;No;Yes;I don't have one;Yes;I don't know;Bob :);Stockholm;I don't know;7
+32;2;5;Mac OS X;Python, PhP;58;Zebra;Yes;Yes;2;0.55;0.001;Cheese;Green;Yes;Yes;No;-;No;-;I could probably google that for you;I could probably google that for you;-;-
+23;6;4;Linux;C, C++, bash, Python;55;Zebra;No;No;5;0,1562378118732651;0,83217977616441;Nothing;Red;Yes;No;Yes;Any;No;6672,60616;The one between Georgios and Yannakakis;København;What?;8
+28;7;4;OSX;Python, Ruby, C#;60;Elephant;yes!;yes!;2;0.234;0.235;It's fine. not good, not bad.;red;yes;yes;yes;postgres;no;no;pi;Lund;fortt;8
+25;6;4;OSX;C#, Java, python;64;Elephant;Yes;Yes;8;-;-;Alright;Blue;No;No;Yes;MSSQL;No;-;-;-;-;11
+27;2;7;Ubuntu;Java, Python, Matlab;65;Elephant; Definitely YES!;No, I can handle it a few more months;9;0.83;0.56;Really good!;Green;Yes.;Yes.;Yes.;I have never worked with SQL, I just know what it is.;Yes.;No clue;No idea.;Some town in Sweden.;glob thre mond;9
+29;5;8.5;Windows;Python, Java (I don't have a third one);66;Elephant;Yes;No;4;1;0.25;Good;Blue;Sort of.;Not completely;No;-;No;Don't know;Don't know;Malmö;?;11
+26;3.5;7;Windows XP;Python, Java, Lisp;73,4;rigolite;Yes, please!;Not really. Xmas was disappointing;6;1;0,3;0/10 - haven't tried it...;say -brown;yes;I can google it. No;yes;The one at home.;no;squareroot(44523673);No idea.;I don't know;Peecha chakka no woonie? ho ho ho;8. Poor Pluto.
+24;6.5;3.5;windows;X#, java, F#;60;Asparagus;no;yes;7;0.378921...;0.469830...;decent;green;yes;-;yes;mysql;no;6,6k;Nanana;vrågdal;banana;8 (oh pluto, I hardly knew ye)
+Old... 24 already :(;depends, really. If you'd ask how good GAME programmer I am. I say 8...;okay 7;Windows!!!! 7;C#, C++, don't need any more in Unity and Game Programmming overall;92 TOEFG iBT. Don't know if I deserved that yet. So ~60;Asparagus definetelly! What is that by the way?;Just one. To watch the neiBours.;And you call THAT a winter;1. very random;1;1. -usuall this is how random generators work;Like a resteraunt food. If I could afford it;shades of grey;yep. Biological or mathematical one?;Yes, I know few of these words. Like vector! and machine;yes. Sequel, as I remember. databases query language;Microsoft SQL server;no....;no......... :( I could use calculator though!;I'd use google, but I'm too lasy;...Denmark!;...Denmark?;8! Ha-he!
+27;5;6;windows;C#, C#, C#;61;ZEBRA;NO, I LIKE WIND;MOAR SNOW!;9;1;ERROR, PRESS ANY KEY;RIPETITIVE;BLUE;MAYBE;NO;YES;I NEVER USED ONE, SO NO FAVOURITE;NO;I WON'T CHEAT;-;MALMÖ;-;8, POOR PLUTO IS NOT A PLANET ANYMORE
+27;3;6;MAC OS;JAVA, JAVASCRIPT;57;Elephant;YES;NO;1;0,11;0,01;NOT VERY GOOD;-;I HAVE A VAGUE IDEA;NO;YES;ORACLE;NO;-;-;-;-;9+-
+20;8;2,5;Ubuntu;C#, Python, F#;69;Elephant;Yes;No;6;0.7643292;0.999997962;Tastes like chicken;Black;Yes;No;Yes;MySQL;No;7000;Ferret;Malmö;Pleb plab plub, all the boys to the yard;8
+-10;15;2 HORSES;CHROME OS;NORWEGIAN, SWEDISH, ENGLISH;2PI;APPLE;MORE WATER FALLS;MEH;10,314;@;7;EPIX;0,5;KINDA;TURTLE;YES;...;HALF;42;YOLO;OSLO;0,17;512^21
+45;7;4;OSX;Java, Python, C#;57;Elephant;yes;yes;3;0,3;0,7;ok;Blue;yes;no;yes;MySQL;no;7381;-;Malmø;?;8
+25;5;3.5;MAC;Java, PHP, C++;50;Zebra;Yes;Yes;8;1;-;Never tried before;Yellow;Yes;No;Yes;MySQL;No;-;-;-;-;9
+26;9;1,5;Windows 7;C#, Java,;67;Elephant;Yes;No;8,5;0,28745;0,12354678;The sandwich is good;Red;Yes;No;Yes;MySQL;No;Old mans pants;Unspellable;Malmø, but in reality the train between CPH and Malmø;Beer;9
+22;7;3;Windows 7;C#, PHP, Java;61;Asparagus;Yes;Yes;5;0;1;Don't know it;Blue;No;No;Yes;MySQL 5.5;No;6672,606;N.+;Sweden;Protected yellow.;8
+24;9;3,52;Mac OSX;C#, Java, F#;61,14;Zebra;No, but definitely more valleys;YES!;7;0,14213790;0,9;I don't;Blue with a hint of lime;I have a pretty good idea;Nope;Yes;The one that works;No;I have no clue, 42421?;" ";Somewhere outside Lund?;Huh?;8
+23;7;3,5;Windows;Python, Java, ...;68.9999(9);Elephant;No;No;3.14;squareroot(1/69);squareroot(pi/3);Need more Russian salad;green;Kind of ...;No.;Yes;MySQL;No;squareroot(44523673);Bjørn;Sweden;Yes;42
+23;9;4;Windows (7/8);java, C#, PHP;61;Zebra;Yes;no;1;pi/4;e/2;expensive;Orange;Sometimes;Nope;Yes;MySQL?;no;eight;Frank;Malmö;right;311
+35;9;6;Ubuntu;Java, C++, python;69;Elephant;Yes;No;6;0.0000005;0.314;OK;Blue;Yes;No;Yes;MSQL;no;A number;NO idea;Malmö;None of the above;plenty
+26;5;4,5;win 7;Python, Java;61;Asparagus;No;Yes;2;0,3;0,9;worse than CBS and DTU better than KU;Green;no;no;yes;Apache;yes;-;-;Malmø;-;-
+24;7;4;Windows;Javascript, C#, Python;67,9;Cake!;O;O;9;0,42;0,425;No;Alpha;1;1;1;Postgres;O;17;-;Ikea;Never!;9
+25;9;6;Windows;C#, Java, Python;63;Asparagus;Yes;No;8;0.13371337;0.4242424242;Meh;Yellow;Si;Nope;Mm;Dunno;No;squareroot(44523673);Middlename;Ikea;?;1337
+24;8;4,5;Windows;C#, Python;67;Asparagus;More lakes;Not fed up;10;0,345;1,0112013316115;yes;yellow;yes;yes;yes;MySQL;yes;a number;ios yanna;Sweden;evta;8
+39;7;8;OSX, Windows;Java, Javascript, Python;60;Zebra;yes;yes;3;1;0;okay;blue;yes;more or less;yes;MySQL;No;I don't know;I don't know;I don't know;No idea;I don't know
+25;5;4;Windows & Mac;Java, C#, PHP;60;Elephant;No;No;3;1;1;Good food but higher price for me.;Green;yes;NO;yes;SQLServer 2005;NO;2110.06;No idea;Sweden;NO idea, Don't understand the;9
+28;5;3,5;windows;Java, C#, PHP;57;Elephant;yes;yes;5;-;-;no comment;orange;yes;no;yes;mySQL;not exactly;-;don't know;Copenhagen (for now)?;?;8 i think
+38;9;4;OS X;JavaScript, Objective C, Python;61;Elephant;Yes;No;2;0,49;0,48;Meh;Blue;Yes;No;Yes;PostgreSQL;No;Don't know;Don't know;Malmø;What?;7
+2;8;5;Windows;C#, Java, C++;87,23 pie;Zebra has eaten asparagus and ran away;Not if you're going to steal then from other contries. Please, don't invade anyone.;You call THIS winter? HAHAHAHAHA!;Elephant;Also elephant;Also elephant;It's no more. If I ever catch this zebra...!;Blue. No, wait, green! Aaaah! <falls into the pit of death>;Yupp;Noez;Ah, yiss.;Oracle SQL (over $AmIn for usable license AA);nope;Hey, elephant, why are you running away too?;Yoda;Hobbiton;Ecky-ecky-ecky picking zuu boing!;R.I.P. Pluto [*]
