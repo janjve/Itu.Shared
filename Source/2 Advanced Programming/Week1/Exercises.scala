@@ -1,6 +1,6 @@
 // Advanced Programming, Exercises by A. Wąsowski, IT University of Copenhagen
 //
-// AUTHOR1: Jan Vium Enghoff (jaen@itu.dk) 
+// AUTHOR1: Jan Vium Enghoff (jaen@itu.dk)
 // AUTHOR2: Søren Harrison (soeh@itu.dk)
 //
 // Write names and ITU email addresses of both group members that contributed to
@@ -38,42 +38,52 @@ object Exercises extends App {
   // Exercise 3
 
   def power(x: Double, n: Int) : Double = {
-     if(n == 0) 1  
+     if(n == 0) 1
      else if(n % 2 == 0 && n > 0) { power(x, n/2) * power(x, n/2) }
      else if(n % 2 != 0 && n > 0) { x * power(x, n-1) }
      else { 1 / power(x, -1 * n) }
   }
   // A few tests, uncomment when your implementation is ready.
 
-  // assert (power (2.0, 2) == 4.0)
-  // assert (power (1.0, 42) == 1.0)
+  assert (power (2.0, 2) == 4.0)
+  assert (power (1.0, 42) == 1.0)
   //
   // The above assertions should pass when you call "scala Exercises".
   //
   // The following one should fail. Uncomment to check that assert works as
   // expected:
   //
-  // assert (power (1.0, 42) == 2.0)
+  assert (power (1.0, 42) == 2.0)
 
   // add 2-3 more tests:
   //
   // ...
+
+  // Raised to the power of 0.
+  assert (power (2.0, 0) == 1.0)
+  // Decimal number
+  assert (power (2.5, 2) == 6.25)
+  // Negative number
+  assert (power (-2.0, 2) == 4.0)
 
   // Exercise 4
 
   def fib (n: Int) : Int = {
       def loop(n1: Int, n2: Int, n: Int) : Int = {
         if(n == 0) n1
-        else loop(n2, n1 + n2, n-1) 
+        else loop(n2, n1 + n2, n-1)
       }
       loop(0, 1, n)
   }
-  // def fib (n: Int) : Int = ...
 
   // some tests (uncomment, add more):
 
-  // assert (fib (1) == 0)
+  assert (fib (1) == 0)
   // ...
+  assert (fib (2) == 1)
+  assert (fib (3) == 1)
+  assert (fib (5) == 3)
+
 
   // Exercise 5
 
@@ -115,7 +125,6 @@ object Exercises extends App {
     assert(total(testcase2) == 800)
   }
 
-
   // Exercise 6
 
   def isSorted[A] (as: Array[A], ordered: (A,A) =>  Boolean) : Boolean = {
@@ -140,7 +149,7 @@ object Exercises extends App {
   // Exercise 7: a curried version of solution to exercise 3
 
   def power1(x: Double) (n: Int) : Double = {
-    if(n == 0) 1  
+    if(n == 0) 1
     else if(n % 2 == 0 && n > 0) { power(x, n/2) * power(x, n/2) }
     else if(n % 2 != 0 && n > 0) { x * power(x, n-1) }
     else { 1 / power(x, -1 * n) }
@@ -193,7 +202,7 @@ object Exercises extends App {
     //A => B
     def function1(i: Int): Double = {
       i*2
-    } 
+    }
     //B => C
     def function2(d: Double): String = {
       s"Your anwser is $d"
