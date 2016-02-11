@@ -53,24 +53,23 @@ object Exercises extends App {
   // The following one should fail. Uncomment to check that assert works as
   // expected:
   //
-  assert (power (1.0, 42) == 2.0)
+  // <jaen & soeh> Uncomment to validate.
+  //assert (power (1.0, 42) == 2.0, "power (1.0, 42) == 2.0: This is expected to result in an assertion error.")
 
   // add 2-3 more tests:
   //
   // ...
 
-  // Raised to the power of 0.
   assert (power (2.0, 0) == 1.0)
-  // Decimal number
   assert (power (2.5, 2) == 6.25)
-  // Negative number
   assert (power (-2.0, 2) == 4.0)
 
   // Exercise 4
 
+  // Assuming n > 0 since the exercise does not specify expected result for invalid values of n.
   def fib (n: Int) : Int = {
       def loop(n1: Int, n2: Int, n: Int) : Int = {
-        if(n == 0) n1
+        if(n == 1) n1
         else loop(n2, n1 + n2, n-1)
       }
       loop(0, 1, n)
@@ -112,18 +111,24 @@ object Exercises extends App {
   	return loop(expenses, 0, 0);
   }
 
-  def totalTest() : Unit = {
+  val testcase1 = Array[Expense](
+	new Expense("Coffee", 450),
+	new Expense("Cake", 350) )
 
-      val testcase1 = Array[Expense](
-    new Expense("Coffee", 450),
-    new Expense("Cake", 350) )
-      val testcase2 = Array[Expense](
-    new Expense("Chocolate", 100),
-    new Expense("Milk", 150) )
+  assert (total (testcase1) == 800) // uncomment
 
-    assert(total(testcase1) == 800)
-    assert(total(testcase2) == 800)
-  }
+  // Add one or two more tests
+  // ...
+
+  val testcaseTotalSingleElement = Array[Expense](
+    new Expense("Chocolate", 200))
+  assert(total(testcaseTotalSingleElement) == 200)
+
+  val testcaseTotalMultipleElements = Array[Expense](
+    new Expense("Chocolate", 200),
+    new Expense("Cookie", 300),
+    new Expense("Milk", 150))
+  assert(total(testcaseTotalMultipleElements) == 650)
 
   // Exercise 6
 
@@ -137,14 +142,15 @@ object Exercises extends App {
     loop(as, 0, ordered)
   }
 
-  def isSortedTest() : Unit = {
-    assert ( isSorted (Array(1,2,3,4,5,6), (a: Int, b: Int)=> a <= b))
-    assert (!isSorted (Array(6,2,3,4,5,6), (a: Int, b: Int)=> a <= b))
-    assert (!isSorted (Array(1,2,3,4,5,1), (a: Int, b: Int)=> a <= b))
-  }
+  // some tests (uncomment)
 
+  assert ( isSorted (Array(1,2,3,4,5,6), (a: Int, b: Int)=> a <= b))
+  assert (!isSorted (Array(6,2,3,4,5,6), (a: Int, b: Int)=> a <= b))
+  assert (!isSorted (Array(1,2,3,4,5,1), (a: Int, b: Int)=> a <= b))
 
   // add two tests with another type, for example an Array[String]
+  assert ( isSorted (Array("ab","bc","cd","de","f","ff"), (a: String, b: String)=> a <= b))
+  assert ( !isSorted (Array("ff","ab","bc","de","e","f"), (a: String, b: String)=> a <= b))
 
   // Exercise 7: a curried version of solution to exercise 3
 
@@ -176,8 +182,9 @@ object Exercises extends App {
    }
   //
   // test if it type checks by currying power automatically:
+  val power_curried: Double => Int => Double = curry(power(_,_))
+  assert(power_curried(2.0)(2) == 4.0)
 
-  // val power_curried: Double => Int => Double = ...
 
   // Exercise 9
 
@@ -190,7 +197,11 @@ object Exercises extends App {
     val result = function1(2,2)
     println(result)
   }
-  // val power_uncurried: (Double,Int) => Double =
+
+  val power_uncurried: (Double,Int) => Double = uncurry(power1)
+  // <jaen & soeh> Uncomment to validate.
+  //assert(power_uncurried(2.0)(2) == 4.0, "This should not compile.")
+  assert(power_uncurried(2.0, 2) == 4.0, "This should compile and run.")
 
   // Exercise 10
 
@@ -198,17 +209,14 @@ object Exercises extends App {
     (A) => f(g(A))
   }
 
-  def composeTest1(): Unit = {
-    //A => B
-    def function1(i: Int): Double = {
-      i*2
-    }
-    //B => C
-    def function2(d: Double): String = {
-      s"Your anwser is $d"
-    }
-    val result = compose[Int, Double, String](function2(_), function1(_))
+  // Test.
+  // A => B
+  val testcaseCompose1: (Int) => Double = (i) => i/2.0
+  // B => C
+  val testcaseCompose2: (Double) => String = (d) => s"Your answer is: $d"
+  // Compose A => B => C to A => C
+  val composedFunction = compose[Int, Double, String](testcaseCompose2(_), testcaseCompose1(_))
 
-    println(result(5))
-  }
+  assert(composedFunction(2) == "Your answer is: 1.0")
+  assert(composedFunction(3) == "Your answer is: 1.5")
 }
