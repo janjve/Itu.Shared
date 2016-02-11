@@ -28,8 +28,27 @@ public class MainWeek2 {
             ResultPrinter.printResult(data, SKIP_HEADER_ROW);
 
             // Attribute subset selection
-            String[][] result = Preprocessor.selectFrom(data, "Name", "Age");
+            String[][] result = Preprocessor.selectFrom(data,
+                    "\"What degree are you studying?\"",
+                    "\"How often do you play video games?\"",
+                    "\"Favorite game?\"",
+                    "\"Which row are you sitting/did you sit in during the introduction lecture? \"",
+                    "\"Which seat are you sitting/did you sit on during the introduction lecture?\"");
+
+            ResultPrinter.printHeader("Attribute reduced selection");
             ResultPrinter.printResult(result, !SKIP_HEADER_ROW);
+
+            Preprocessor.trimTrailingValues(result, "\"Favorite game?\"");
+
+            ResultPrinter.printHeader("Trimmed Favorite Game");
+            ResultPrinter.printResult(result, !SKIP_HEADER_ROW);
+
+            Preprocessor.convertLettersToNumbers(result, "\"Which row are you sitting/did you sit in during the introduction lecture? \"");
+
+            ResultPrinter.printHeader("Row letters to numbers");
+            ResultPrinter.printResult(result, !SKIP_HEADER_ROW);
+
+
 
         } catch (IOException e) {
             System.err.println(e.getLocalizedMessage());
