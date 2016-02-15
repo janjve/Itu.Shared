@@ -30,7 +30,6 @@
 // in order).  Please compile and test frequently.
 
 // An ADT of Lists
-
 sealed trait List[+A]
 case object Nil extends List[Nothing]
 case class Cons[+A](head: A, tail: List[A]) extends List[A]
@@ -140,22 +139,55 @@ object List {
 
   def concat[A] (as: List[List[A]]) :List[A] = as match {
   	case Nil => Nil
-    case Cons(h,t) => foldLeft[List[A], List[A]](as, List()) ((b,a) => append(a,b))
+    case Cons(h,t) => foldLeft[List[A], List[A]](as, List()) ((b,a) => append(b,a))
   }
 
   // Exercise 14
-
-  // def map[A,B] (a :List[A]) (f :A => B) :List[B] = ...
+  // Tail recursive?
+  def map[A,B] (a :List[A]) (f :A => B) : List[B] = a match {
+   	case Nil => Nil
+   	case Cons(h, t) => {
+   		Cons(f(h), map[A, B](t)(f))
+   	}
+  }
 
   // Exercise 15 (no coding)
 
   // Exercise 16
 
-  // def filter[A] (as: List[A]) (f: A => Boolean) : List[A] = ...
+  def filter[A] (as: List[A]) (f: A => Boolean) : List[A] = as match{
+  	case Nil => Nil
+  	case Cons(h, t) => {
+  		val filterPredicate = (h: A, b: List[A]) => {
+  			if(f(h)) Cons(h, b) 
+  			else b
+  		}
+  		foldRight[A, List[A]](as, List()) (filterPredicate)
+  	}
+  }
+
+  // Fold right example
+  // 1,2,3
+  // i => i*2
+  // z = 1
+  // <- foldright([1,2,3], 1) (f)
+  // f(1, foldright([2,3], 1)(f))
+  // f(1, f(2, foldright([3], 1)(f)))
+  // f(1, f(2, f(3, foldRight(Nil, 1)(f))))
+  // f(1, f(2, f(3, 1)))
+  // f(1, f(2, 3*1)
+  // f(1, 2*(3*1))
+  // 1*(2*(3*1))
+  // 6
 
   // Exercise 17
 
-  // def flatMap[A,B](as: List[A])(f: A => List[B]) : List[B] = ...
+  def flatMap[A,B] (as: List[A]) (f: A => List[B]) : List[B] = as match {
+  	case Nil => Nil
+  	case Cons(h,t) => {
+  		
+  	}
+  }
 
   // Exercise 18
 
@@ -178,6 +210,38 @@ object List {
   // def pascal (n :Int) : List[Int] = ...
 
   // a test: pascal (4) = Cons(1,Cons(3,Cons(3,Cons(1,Nil))))
+
+  // Assert Exercises works
+  def testAll() {
+  	// Exercise 13
+	val testcase1_13 = Cons(1, Cons(2, Nil))
+	val testcase2_13 = Cons(3, Cons(4, Nil))
+	val expected_13 = Cons(1, Cons(2, Cons(3, Cons(4,  Nil))))
+	val actual_13 = concat[Int](List(testcase1_13, testcase2_13))
+
+	assert (actual_13 == expected_13, "Exercise 13 error")
+
+	  // Exercise 14
+    val testcase1_14 = List(1,2,3)
+	val expected_14 = List(1,4,9)
+	val actual_14 = map[Int, Int](testcase1_14)((x: Int) => x*x)
+
+  	assert(actual_14 == expected_14, "Exercise 14 error")
+
+  	// Exercise 16
+  	val testcase1_16 = List(1,2,3,4)
+  	val expected_16 = List(2,4)
+  	val actual_16 = filter[Int](testcase1_16)((x: Int) => x%2 == 0)
+
+  	assert(actual_16 == expected_16, "Exercise 16 error")
+
+  	// Exercise 17
+
+  }
+
+  def loadTest(){
+  	println("Loaded")
+  }
 
 }
 
