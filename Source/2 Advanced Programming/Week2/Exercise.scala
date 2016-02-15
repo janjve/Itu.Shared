@@ -231,7 +231,15 @@ object List {
 
   // Exercise 20
 
-  // def zipWith[A,B,C] (f : (A,B)=>C) (l: List[A], r: List[B]) : List[C] = ...
+  def zipWith[A,B,C] (f : (A,B) => C) (l: List[A], r: List[B]) : List[C] = l match {
+  	  	case Nil => Nil
+  		case Cons(hL,tL) => r match {
+  			case Nil => Nil
+  			case Cons(hR,tR) => {
+  				Cons(f(hL, hR), zipWith(f)(tL, tR))
+  			}
+  		}
+  }
 
   // Exercise 21
 
@@ -287,8 +295,16 @@ object List {
   	val expected_19 = List(4,6,8)
   	val actual_19 = add(testcase1_19) (testcase2_19)
   	println(s"Exercise 19 Actual result: $actual_19")
-  	assert(actual_19 == expected_19, "Exercise 19 error")  	
+  	assert(actual_19 == expected_19, "Exercise 19 error")
 
+  	// Exercise 20
+	val testcase1_20 = List(1,2,3)
+  	val testcase2_20 = List("a","b","c","d")
+  	val expected_20 = List("1a","4b","9c")
+  	val testcaseFunction_20 = (i: Int, s: String) => i*i + s
+  	val actual_20 = zipWith[Int, String, String] (testcaseFunction_20) (testcase1_20, testcase2_20)
+  	println(s"Exercise 20 Actual result: $actual_20")
+  	assert(actual_20 == expected_20, "Exercise 20 error")
   }
 
   def loadTest(){
