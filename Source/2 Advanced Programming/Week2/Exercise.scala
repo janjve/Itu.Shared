@@ -231,23 +231,39 @@ object List {
 
   // Exercise 20
 
-  def zipWith[A,B,C] (f : (A,B) => C) (l: List[A], r: List[B]) : List[C] = l match {
-  	  	case Nil => Nil
-  		case Cons(hL,tL) => r match {
-  			case Nil => Nil
-  			case Cons(hR,tR) => {
-  				Cons(f(hL, hR), zipWith(f)(tL, tR))
-  			}
-  		}
+  def zipWith[A,B,C] (f : (A,B) => C) (l: List[A], r: List[B]) : List[C] = (l, r) match {
+  	  	case (Nil, _) => Nil
+  	  	case (_, Nil) => Nil
+  	  	case (Cons(hL,tL), Cons(hR,tR)) => Cons(f(hL, hR), zipWith(f)(tL, tR))
   }
 
   // Exercise 21
 
-  // def hasSubsequence[A] (sup: List[A], sub: List[A]) :Boolean = ...
+  def hasSubsequence[A] (sup: List[A], sub: List[A]) : Boolean = (sup, sub) match {
+  	 case (_, Nil) => true // True when sub is empty. (This might be redundant)
+  	 case (Nil, Cons(_, _)) => false // False when sup is Nil and sub is not. (This might be redundant)
+  	 case (Cons(_, _), Cons(h, _)) => {
+  	 	def hasSubsequenceLoop (supTail: List[A], subTail: List[A], head: A) : Boolean = (supTail, subTail) match {
+  	 		// sub is reduced to Nil and there is a matching sequence.
+  	 		case (_, Nil) => true
+  	 		// Matching sequence -> Reduce
+	  	 	case (Cons(supH, supT), Cons(subH,subT)) if(supH == subH) => hasSubsequenceLoop(supT, subT, head)
+	  	 	// Failed to match at beginning of sequence -> next super tail and reset sub.
+	  	 	case (Cons(supH, supT), Cons(subH,subT)) if(supH != subH && subH == head) => hasSubsequenceLoop(supT, sub, head) 
+	  	 	// Failed to match but not at beginning of sequence -> don't reduce super but reset sub.
+			  case (Cons(supH, supT), Cons(subH,subT)) if(supH != subH && subH != head) => hasSubsequenceLoop(supTail, sub, head) 
+	  	 	// Unable to find matching sequence.
+	  	 	case _ => false
+  	 	}
+  	 	hasSubsequenceLoop(sup, sub, h)
+ 	 }
+  }
 
   // Exercise 22
 
-  // def pascal (n :Int) : List[Int] = ...
+  def pascal (n :Int) : List[Int] = {
+    Nil
+  }
 
   // a test: pascal (4) = Cons(1,Cons(3,Cons(3,Cons(1,Nil))))
 
@@ -263,9 +279,9 @@ object List {
 
 	  // Exercise 14
     val testcase1_14 = List(1,2,3)
-	val expected_14 = List(1,4,9)
-	val actual_14 = map[Int, Int](testcase1_14)((x: Int) => x*x)
-	//println(s"Exercise 14 Actual result: $actual_14")
+  	val expected_14 = List(1,4,9)
+  	val actual_14 = map[Int, Int](testcase1_14)((x: Int) => x*x)
+  	//println(s"Exercise 14 Actual result: $actual_14")
   	assert(actual_14 == expected_14, "Exercise 14 error")
 
   	// Exercise 16
@@ -294,27 +310,37 @@ object List {
   	val testcase2_19 = List(3,4,5,6)
   	val expected_19 = List(4,6,8)
   	val actual_19 = add(testcase1_19) (testcase2_19)
-  	println(s"Exercise 19 Actual result: $actual_19")
+  	//println(s"Exercise 19 Actual result: $actual_19")
   	assert(actual_19 == expected_19, "Exercise 19 error")
 
   	// Exercise 20
-	val testcase1_20 = List(1,2,3)
+  	val testcase1_20 = List(1,2,3)
   	val testcase2_20 = List("a","b","c","d")
   	val expected_20 = List("1a","4b","9c")
   	val testcaseFunction_20 = (i: Int, s: String) => i*i + s
   	val actual_20 = zipWith[Int, String, String] (testcaseFunction_20) (testcase1_20, testcase2_20)
-  	println(s"Exercise 20 Actual result: $actual_20")
+  	//println(s"Exercise 20 Actual result: $actual_20")
   	assert(actual_20 == expected_20, "Exercise 20 error")
-  }
 
-  def loadTest(){
-  	println("Loaded")
-  }
+  	// Exercise 21
+  	val testcase1_21 = List(1,2,3)
+  	val testcase2_21 = List(1,2,3)
+  	val testcase3_21 = List(1,3)
+  	val actual1_21 = hasSubsequence[Int] (testcase1_21, testcase2_21) // True
+  	val actual2_21 = hasSubsequence[Int] (testcase1_21, testcase3_21) // False
+  	//println(s"Exercise 21 Actual result: $actual1_21")
+  	//println(s"Exercise 21 Actual result: $actual2_21")
+  	assert(actual1_21 == true, "Exercise 21 error")
+  	assert(actual2_21 == false, "Exercise 21 error")
 
+    // Exercise 22
+    val testcase1_22 = 4
+    val expected_22 = Cons(1,Cons(3,Cons(3,Cons(1,Nil))))
+    val actual_22 = pascal(testcase1_22);
+    assert(actual_22 == expected_22, "Exercise 22 error")
+
+  }
 }
-
-
-
 
 // Exercise 7
 
