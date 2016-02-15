@@ -180,12 +180,27 @@ object List {
   // 1*(2*(3*1))
   // 6
 
+  /* FOLD LEFT EXAMPLE
+  1,2,3
+  i => i*2
+  z = 1
+  <- foldleft([2,3], f(1, 1))(f)
+  foldleft([2,3], 1)(f)
+  foldleft([3], 2)
+  foldleft(Nil, f(2, 3))
+  foldleft(Nil, 6)
+  6
+  */
+
   // Exercise 17
 
   def flatMap[A,B] (as: List[A]) (f: A => List[B]) : List[B] = as match {
   	case Nil => Nil
   	case Cons(h,t) => {
-  		
+  		val appendMap = (b: List[B], h: A) => {
+  			append[B](b, f(h))
+  		}
+  		foldLeft[A,List[B]](as, List())(appendMap)
   	}
   }
 
@@ -218,24 +233,30 @@ object List {
 	val testcase2_13 = Cons(3, Cons(4, Nil))
 	val expected_13 = Cons(1, Cons(2, Cons(3, Cons(4,  Nil))))
 	val actual_13 = concat[Int](List(testcase1_13, testcase2_13))
-
+	//println(s"Exercise 13 Actual result: $actual_13")
 	assert (actual_13 == expected_13, "Exercise 13 error")
 
 	  // Exercise 14
     val testcase1_14 = List(1,2,3)
 	val expected_14 = List(1,4,9)
 	val actual_14 = map[Int, Int](testcase1_14)((x: Int) => x*x)
-
+	//println(s"Exercise 14 Actual result: $actual_14")
   	assert(actual_14 == expected_14, "Exercise 14 error")
 
   	// Exercise 16
   	val testcase1_16 = List(1,2,3,4)
   	val expected_16 = List(2,4)
   	val actual_16 = filter[Int](testcase1_16)((x: Int) => x%2 == 0)
-
+  	//println(s"Exercise 16 Actual result: $actual_16")
   	assert(actual_16 == expected_16, "Exercise 16 error")
 
   	// Exercise 17
+  	val testcase1_17 = List(1,2,3)
+  	val expected_17 = List(1,0.5, 2, 1.0, 3, 1.5)
+  	val actual_17 = flatMap[Int, Double](testcase1_17)((x: Int) => List(x, x/2.0))
+
+  	//println(s"Exercise 17 Actual result: $actual_17")
+  	assert(actual_17 == expected_17, "Exercise 17 error")
 
   }
 
