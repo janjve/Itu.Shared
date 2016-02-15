@@ -166,32 +166,6 @@ object List {
   	}
   }
 
-  // Fold right example
-  // 1,2,3
-  // i => i*2
-  // z = 1
-  // <- foldright([1,2,3], 1) (f)
-  // f(1, foldright([2,3], 1)(f))
-  // f(1, f(2, foldright([3], 1)(f)))
-  // f(1, f(2, f(3, foldRight(Nil, 1)(f))))
-  // f(1, f(2, f(3, 1)))
-  // f(1, f(2, 3*1)
-  // f(1, 2*(3*1))
-  // 1*(2*(3*1))
-  // 6
-
-  /* FOLD LEFT EXAMPLE
-  1,2,3
-  i => i*2
-  z = 1
-  <- foldleft([2,3], f(1, 1))(f)
-  foldleft([2,3], 1)(f)
-  foldleft([3], 2)
-  foldleft(Nil, f(2, 3))
-  foldleft(Nil, 6)
-  6
-  */
-
   // Exercise 17
 
   def flatMap[A,B] (as: List[A]) (f: A => List[B]) : List[B] = as match {
@@ -253,7 +227,7 @@ object List {
 	  	 	// Failed to match but not at beginning of sequence -> don't reduce super but reset sub.
 			  case (Cons(supH, supT), Cons(subH,subT)) if(supH != subH && subH != head) => hasSubsequenceLoop(supTail, sub, head) 
 	  	 	// Unable to find matching sequence.
-	  	 	case _ => false
+	  	 	case (_,_) => false
   	 	}
   	 	hasSubsequenceLoop(sup, sub, h)
  	 }
@@ -262,20 +236,24 @@ object List {
   // Exercise 22
 
   def pascal (n :Int) : List[Int] = {
-    Nil
+    if(n == 0) Nil
+    else if(n == 1) List(1)
+    else {
+      
+    }
   }
 
   // a test: pascal (4) = Cons(1,Cons(3,Cons(3,Cons(1,Nil))))
 
   // Assert Exercises works
-  def testAll() {
+  def testAll(): Unit = {
   	// Exercise 13
-	val testcase1_13 = Cons(1, Cons(2, Nil))
-	val testcase2_13 = Cons(3, Cons(4, Nil))
-	val expected_13 = Cons(1, Cons(2, Cons(3, Cons(4,  Nil))))
-	val actual_13 = concat[Int](List(testcase1_13, testcase2_13))
-	//println(s"Exercise 13 Actual result: $actual_13")
-	assert (actual_13 == expected_13, "Exercise 13 error")
+  	val testcase1_13 = Cons(1, Cons(2, Nil))
+  	val testcase2_13 = Cons(3, Cons(4, Nil))
+  	val expected_13 = Cons(1, Cons(2, Cons(3, Cons(4,  Nil))))
+  	val actual_13 = concat[Int](List(testcase1_13, testcase2_13))
+  	//println(s"Exercise 13 Actual result: $actual_13")
+  	assert (actual_13 == expected_13, "Exercise 13 error")
 
 	  // Exercise 14
     val testcase1_14 = List(1,2,3)
