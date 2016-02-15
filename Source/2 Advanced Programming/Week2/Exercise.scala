@@ -219,7 +219,15 @@ object List {
 
   // Exercise 19
 
-  // def add (l: List[Int]) (r: List[Int]): List[Int] = ...
+  def add (l: List[Int]) (r: List[Int]): List[Int] = l match {
+  	case Nil => Nil
+  	case Cons(hL,tL) => r match {
+  			case Nil => Nil
+  			case Cons(hR,tR) => {
+  				Cons(hL+hR, add(tL)(tR))
+  			}
+  		}
+  }
 
   // Exercise 20
 
@@ -270,8 +278,16 @@ object List {
   	val testcase1_18 = List(1,2,3,4)
   	val expected_18 = List(2,4)
   	val actual_18 = filter1[Int](testcase1_18)((x: Int) => x%2 == 0)
-  	println(s"Exercise 18 Actual result: $actual_18")
+  	//println(s"Exercise 18 Actual result: $actual_18")
   	assert(actual_18 == expected_18, "Exercise 18 error")
+
+  	// Exercise 19
+  	val testcase1_19 = List(1,2,3)
+  	val testcase2_19 = List(3,4,5,6)
+  	val expected_19 = List(4,6,8)
+  	val actual_19 = add(testcase1_19) (testcase2_19)
+  	println(s"Exercise 19 Actual result: $actual_19")
+  	assert(actual_19 == expected_19, "Exercise 19 error")  	
 
   }
 
