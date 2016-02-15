@@ -206,7 +206,16 @@ object List {
 
   // Exercise 18
 
-  // def filter1[A] (l: List[A]) (p: A => Boolean) :List[A] = ...
+  def filter1[A] (l: List[A]) (p: A => Boolean) :List[A] = l match {
+  	case Nil => Nil
+  	case Cons(h,t) => {
+  		val filterPredicate = (a: A) => {
+  			if(p(a)) List(a)
+  			else Nil
+  		}
+  		flatMap[A, A](l)(filterPredicate)
+  	}
+  }
 
   // Exercise 19
 
@@ -254,9 +263,15 @@ object List {
   	val testcase1_17 = List(1,2,3)
   	val expected_17 = List(1,0.5, 2, 1.0, 3, 1.5)
   	val actual_17 = flatMap[Int, Double](testcase1_17)((x: Int) => List(x, x/2.0))
-
   	//println(s"Exercise 17 Actual result: $actual_17")
   	assert(actual_17 == expected_17, "Exercise 17 error")
+
+  	// Exercise 18
+  	val testcase1_18 = List(1,2,3,4)
+  	val expected_18 = List(2,4)
+  	val actual_18 = filter1[Int](testcase1_18)((x: Int) => x%2 == 0)
+  	println(s"Exercise 18 Actual result: $actual_18")
+  	assert(actual_18 == expected_18, "Exercise 18 error")
 
   }
 
