@@ -43,6 +43,9 @@ object List {
     if (as.isEmpty) Nil
     else Cons(as.head, apply(as.tail: _*))
 
+  // Exercise 1
+  // Output: 3
+
   // Exercise 2
 
   def tail[A] (as: List[A]) :List[A] = as match {
@@ -53,24 +56,24 @@ object List {
   // Exercise 3
 
   def setHead[A] (as: List[A], newHead: A) : List[A] = as match {
-  	  	case Nil => Nil
+  	case Nil => Nil
   	case Cons(x, xs) => Cons(newHead, xs)
   }
 
   // Exercise 4
 
   def drop[A] (l: List[A], n: Int) : List[A] = l match {
-  	  	case Nil => Nil
-  		case Cons(x, xs) => if(n > 0) drop[A](xs, n-1) 
-  		else l
+  	case Nil => Nil
+		case Cons(x, xs) => if(n > 0) drop[A](xs, n-1) 
+		  else l
   }
 
   // Exercise 5
 
   def dropWhile[A](l: List[A], f: A => Boolean): List[A] = l match{
-  	  	case Nil => Nil
-  		case Cons(x, xs) => if(f(x)) dropWhile[A](xs, f)
-  		else l
+  	case Nil => Nil
+		case Cons(x, xs) => if(f(x)) dropWhile[A](xs, f)
+		  else l
   }
 
   // Exercise 6
@@ -78,7 +81,7 @@ object List {
   def init[A](l: List[A]): List[A] = l match {
   	case Nil => Nil
   	case Cons(x, xs) => if(xs == Nil) Nil
-  	else Cons(x, init(xs))
+  	 else Cons(x, init(xs))
   }
 
   // Exercise 7 is in the bottom of the file
@@ -99,7 +102,7 @@ object List {
 
   // Exercise 9
   def foldLeft[A,B] (as: List[A], z: B) (f: (B, A) => B) : B = as match {
-  	    case Nil => z
+    case Nil => z
     case Cons (x,xs) => foldLeft(xs, f(z, x))(f)
   }
 
@@ -152,6 +155,9 @@ object List {
   }
 
   // Exercise 15 (no coding)
+
+  // This is to preserve the order of the input list.
+  // Using foldLeft would have reversed the output since the first element is added to the LIFO structured list first.
 
   // Exercise 16
 
@@ -214,18 +220,22 @@ object List {
   // Exercise 21
 
   def hasSubsequence[A] (sup: List[A], sub: List[A]) : Boolean = (sup, sub) match {
-  	 case (_, Nil) => true // True when sub is empty. (This might be redundant)
+  	 case (_, Nil) => true           // True when sub is empty. (This might be redundant)
   	 case (Nil, Cons(_, _)) => false // False when sup is Nil and sub is not. (This might be redundant)
   	 case (Cons(_, _), Cons(h, _)) => {
   	 	def hasSubsequenceLoop (supTail: List[A], subTail: List[A], head: A) : Boolean = (supTail, subTail) match {
   	 		// sub is reduced to Nil and there is a matching sequence.
   	 		case (_, Nil) => true
+
   	 		// Matching sequence -> Reduce
 	  	 	case (Cons(supH, supT), Cons(subH,subT)) if(supH == subH) => hasSubsequenceLoop(supT, subT, head)
+
 	  	 	// Failed to match at beginning of sequence -> next super tail and reset sub.
 	  	 	case (Cons(supH, supT), Cons(subH,subT)) if(supH != subH && subH == head) => hasSubsequenceLoop(supT, sub, head) 
+
 	  	 	// Failed to match but not at beginning of sequence -> don't reduce super but reset sub.
 			  case (Cons(supH, supT), Cons(subH,subT)) if(supH != subH && subH != head) => hasSubsequenceLoop(supTail, sub, head) 
+
 	  	 	// Unable to find matching sequence.
 	  	 	case (_,_) => false
   	 	}
@@ -234,12 +244,32 @@ object List {
   }
 
   // Exercise 22
-
+  /* Example
+  1
+  1 1
+  1 2 1
+  1 3 3 1
+  1 4 6 4 1
+  1 5 10 10 5 1
+  1 6 15 20 15 6 1
+  1 7 21 35 35 21 7 1
+  1 8 18 46 70 46 18 8 1
+  */
+  // https://en.wikipedia.org/wiki/Pascal%27s_triangle#Calculating_a_row_or_diagonal_by_itself
   def pascal (n :Int) : List[Int] = {
-    if(n == 0) Nil
-    else if(n == 1) List(1)
+    if(n < 1) Nil                                             // Invalid request - default to Nil.
+    else if(n == 1) List(1)                                   // Speciel case
     else {
-      
+      def pascalRowLoop(previous: Int, k: Int): List[Int] = {     
+        if(k == 0) Cons(1, pascalRowLoop(1, k+1))             // Initial value
+        else if(k == n-1) Cons(previous*(n-k)/(k), Nil)       // Reached end. Substract 1 to get pascal(0) as row 1
+        else {
+          val current = previous*(n-k)/(k)                    // See wiki for formular. 
+                                                              // Replace n with n-1 and reduce (n-1+1-k)/k -> (n-k)/k
+          Cons(current, pascalRowLoop(current, k+1))          // Looping.
+        }
+      }
+      pascalRowLoop(1, 0)
     }
   }
 
@@ -315,6 +345,7 @@ object List {
     val testcase1_22 = 4
     val expected_22 = Cons(1,Cons(3,Cons(3,Cons(1,Nil))))
     val actual_22 = pascal(testcase1_22);
+    //println(s"Exercise 22 Actual result: $actual_22")
     assert(actual_22 == expected_22, "Exercise 22 error")
 
   }
