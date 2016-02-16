@@ -38,10 +38,14 @@
  * reimplement them in my subclass.  This is not a problem if I mix in a trait
  * construction time. */
 
-trait OrderedPoint extends ... {
-
-  override def compare (that :java.awt.Point) :Int =  ...
-
+trait OrderedPoint extends java.awt.Point {
+	/*
+  override def compare (that :java.awt.Point) : Int =  {
+  	-1
+  	//if (this.x )
+  	//else if(this.x < that.x || this.getX() == that.x && this.y < y) -1 else 1
+  }
+  */
 }
 
 // Chapter 3
@@ -54,15 +58,24 @@ object Tree {
 
   // Exercise 2 (3.25)
 
-  // def size[A] (t :Tree[A]) :Int = ...
+  def size[A] (t :Tree[A]) :Int = t match {
+  	case Leaf(_) => 1
+  	case Branch(l,r) => 1+size(l)+size(r)
+  }
 
   // Exercise 3 (3.26)
 
-  // def maximum (t: Tree[Int]) :Int = ...
+  def maximum (t: Tree[Int]) :Int = t match {
+  	case Leaf(v) => v
+  	case Branch(l, r) => maximum(l).max(maximum(r))
+  }
 
   // Exercise 4 (3.27)
 
-  // def depth[A] (t :Tree[A]) :Int = ...
+  def depth[A] (t :Tree[A]) : Int = t match {
+  	case Leaf(_) => 0	// 1-1=0 to substract compensate for root leaf
+  	case Branch(l,r) => depth(l).max(depth(r)) + 1
+  }
 
   // Exercise 5 (3.28)
 
@@ -135,10 +148,12 @@ object ExercisesOption {
 
 object Tests extends App {
 
+  println("Started tests")
   // Exercise 1
-  // val p = new java.awt.Point(0,1) with OrderedPoint
-  // val q = new java.awt.Point(0,2) with OrderedPoint
-  // assert(p < q)
+  val p = new java.awt.Point(0,1) with OrderedPoint 
+  val q = new java.awt.Point(0,2) with OrderedPoint
+
+  //assert(p < q)
 
   // Notice how we are using nice infix comparison on java.awt
   // objects that were implemented way before Scala existed :) (And without the
@@ -147,12 +162,14 @@ object Tests extends App {
 
 
   // Exercise 2
-  // assert (Tree.size (Branch(Leaf(1), Leaf(2))) == 3)
+  assert (Tree.size (Branch(Leaf(1), Leaf(2))) == 3)
+  assert (Tree.size (Branch(Branch(Leaf(1), Leaf(2)), Leaf(2))) == 5, "Exercise 2 error")
   // Exercise 3
-  // assert (Tree.maximum (Branch(Leaf(1), Leaf(2))) == 2)
+  assert (Tree.maximum (Branch(Leaf(1), Leaf(2))) == 2)
+  assert (Tree.size (Branch(Branch(Leaf(1), Leaf(5)), Leaf(2))) == 5, "Exercise 3 error")
   // Exercise 4
-  // val t4 = Branch(Leaf(1), Branch(Branch(Leaf(2),Leaf(3)),Leaf(4)))
-  // assert (Tree.depth (t4) == 3)
+  val t4 = Branch(Leaf(1), Branch(Branch(Leaf(2),Leaf(3)),Leaf(4)))
+  assert (Tree.depth (t4) == 3)
   // Exercise 5
   // val t5 = Branch(Leaf("1"), Branch(Branch(Leaf("2"),Leaf("3")),Leaf("4")))
   // assert (Tree.map (t4) (_.toString) == t5)
