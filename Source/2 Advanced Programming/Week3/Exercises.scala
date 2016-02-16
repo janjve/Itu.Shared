@@ -38,14 +38,13 @@
  * reimplement them in my subclass.  This is not a problem if I mix in a trait
  * construction time. */
 
-trait OrderedPoint extends java.awt.Point {
-	/*
+trait OrderedPoint extends java.awt.Point with scala.math.Ordered[java.awt.Point] {
+	
   override def compare (that :java.awt.Point) : Int =  {
   	-1
   	//if (this.x )
   	//else if(this.x < that.x || this.getX() == that.x && this.y < y) -1 else 1
   }
-  */
 }
 
 // Chapter 3
@@ -153,7 +152,7 @@ object Tests extends App {
   val p = new java.awt.Point(0,1) with OrderedPoint 
   val q = new java.awt.Point(0,2) with OrderedPoint
 
-  //assert(p < q)
+  assert(p < q)
 
   // Notice how we are using nice infix comparison on java.awt
   // objects that were implemented way before Scala existed :) (And without the
