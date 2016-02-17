@@ -38,11 +38,14 @@
  * reimplement them in my subclass.  This is not a problem if I mix in a trait
  * construction time. */
 
-//trait OrderedPoint extends ... {
-
- // override def compare (that :java.awt.Point) :Int =  ...
-
-//}
+trait OrderedPoint extends java.awt.Point with scala.math.Ordered[java.awt.Point] {
+	
+  override def compare (that :java.awt.Point) : Int =  {
+  	-1
+  	//if (this.x )
+  	//else if(this.x < that.x || this.getX() == that.x && this.y < y) -1 else 1
+  }
+}
 
 // Chapter 3
 
@@ -144,10 +147,12 @@ object ExercisesOption {
 
 object Tests extends App {
 
+  println("Started tests")
   // Exercise 1
-  // val p = new java.awt.Point(0,1) with OrderedPoint
-  // val q = new java.awt.Point(0,2) with OrderedPoint
-  // assert(p < q)
+  val p = new java.awt.Point(0,1) with OrderedPoint 
+  val q = new java.awt.Point(0,2) with OrderedPoint
+
+  assert(p < q)
 
   // Notice how we are using nice infix comparison on java.awt
   // objects that were implemented way before Scala existed :) (And without the
@@ -156,11 +161,16 @@ object Tests extends App {
 
 
   // Exercise 2
-  // assert (Tree.size (Branch(Leaf(1), Leaf(2))) == 3)
+  assert (Tree.size (Branch(Leaf(1), Leaf(2))) == 3)
+  assert (Tree.size (Branch(Branch(Leaf(1), Leaf(2)), Leaf(2))) == 5, "Exercise 2 error")
   // Exercise 3
   assert (Tree.maximum (Branch(Leaf(1), Leaf(2))) == 2)
+<<<<<<< HEAD
   assert(Tree.maximum(Branch(Branch(Leaf(3), Leaf(1)), Leaf(2))) == 3)
 
+=======
+  assert (Tree.size (Branch(Branch(Leaf(1), Leaf(5)), Leaf(2))) == 5, "Exercise 3 error")
+>>>>>>> 4f5a3b8dcfb1455036a3af79994f0bfe6918095a
   // Exercise 4
   val t4 = Branch(Leaf(1), Branch(Branch(Leaf(2),Leaf(3)),Leaf(4)))
   assert (Tree.depth (t4) == 3)

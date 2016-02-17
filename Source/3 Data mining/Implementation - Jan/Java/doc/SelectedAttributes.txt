@@ -1,0 +1,6 @@
+5.  "What degree are you studying?"
+10. "How often do you play video games?"
+16. "Pick a number"
+19. "Favorite game?"
+20. "Which row are you sitting/did you sit in during the introduction lecture?"
+21. "Which seat are you sitting/did you sit on during the introduction lecture?"
