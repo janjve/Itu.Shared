@@ -7,6 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataminingConsole", "Datami
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataminingTools", "DataminingTools\DataminingTools.csproj", "{00657D0D-38EC-4EA1-9201-4E97169493D8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{5EEFC17F-C770-47C8-9B91-E75AD2E5C376}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\Data Mining - Spring 2016 - Google Forms.pdf = Doc\Data Mining - Spring 2016 - Google Forms.pdf
+		Doc\Data mining methods.txt = Doc\Data mining methods.txt
+		Doc\Readme.md = Doc\Readme.md
+		Doc\SelectedAttributes.txt = Doc\SelectedAttributes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataminingToolsTests", "DataminingToolsTests\DataminingToolsTests.csproj", "{6BF7EF6B-9EC2-4E61-AE38-F36B61103F53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +31,10 @@ Global
 		{00657D0D-38EC-4EA1-9201-4E97169493D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00657D0D-38EC-4EA1-9201-4E97169493D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00657D0D-38EC-4EA1-9201-4E97169493D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF7EF6B-9EC2-4E61-AE38-F36B61103F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF7EF6B-9EC2-4E61-AE38-F36B61103F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF7EF6B-9EC2-4E61-AE38-F36B61103F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF7EF6B-9EC2-4E61-AE38-F36B61103F53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
