@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace DataminingTools.FileIO
+namespace DataminingConsole.Processes.DataMiningSpring2016.Common
 {
     public class LogWriter
     {

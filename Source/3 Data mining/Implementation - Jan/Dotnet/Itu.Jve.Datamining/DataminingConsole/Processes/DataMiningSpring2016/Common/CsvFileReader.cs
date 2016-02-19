@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
-
-namespace DataminingTools.FileIO
+namespace DataminingConsole.Processes.DataMiningSpring2016.Common
 {
     public class CsvFileReader
     {

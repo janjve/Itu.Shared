@@ -1,6 +1,6 @@
 ﻿using System;
+using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DataminingTools.FileIO;
 
 namespace DataminingToolsTests
 {
@@ -8,7 +8,7 @@ namespace DataminingToolsTests
     public class CsvFileReaderTests
     {
         [TestMethod]
-        public void CoulReadFile()
+        public void CouldReadFile()
         {
             var result = CsvFileReader.ReadDataFile(@"Testdata\SimpleCsvFile.csv");
             Assert.IsTrue(result != null, "Should be able to open file");

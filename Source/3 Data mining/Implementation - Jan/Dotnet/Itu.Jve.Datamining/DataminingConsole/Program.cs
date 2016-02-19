@@ -1,6 +1,4 @@
 ﻿using DataminingConsole.Processes;
-using DataminingTools.FileIO;
-using DataminingTools.Preprocessing;
 using System;
 using System.Collections.Generic;
 using System.Linq;

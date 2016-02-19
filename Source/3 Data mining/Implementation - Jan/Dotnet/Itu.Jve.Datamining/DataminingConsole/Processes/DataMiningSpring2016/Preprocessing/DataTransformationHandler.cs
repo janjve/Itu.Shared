@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
 
-namespace DataminingConsole.Processes.DataMiningSpring2016.Utility
+namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 {
     // Values that can't be transformed are considered "missing"
     public class DataTransformationHandler

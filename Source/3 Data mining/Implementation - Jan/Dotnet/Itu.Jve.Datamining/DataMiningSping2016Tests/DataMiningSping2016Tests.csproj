@@ -59,10 +59,6 @@
       <Project>{e7aed7aa-50e4-4d2d-8ff5-b9a765153708}</Project>
       <Name>DataminingConsole</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataminingTools\DataminingTools.csproj">
-      <Project>{00657d0d-38ec-4ea1-9201-4e97169493d8}</Project>
-      <Name>DataminingTools</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Testdata\SimpleCsvFile.csv">

@@ -44,16 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Processes\DataMiningSpring2016\Common\Constant.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\Common\DebugStringBuilder.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\CsvCleaningExtensions.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\CsvFileReader.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\Logger.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\LogWriter.cs" />
     <Compile Include="Processes\DataMiningSpring2016\DataMiningSpring2016.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\AgeAttribute.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attribute.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\AttributeType.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Table.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\DataTuple.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\Utility\DataCleaningHandler.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\Utility\DataMappers.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\Utility\DataTransformationHandler.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataCleaningHandler.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataMappers.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataTransformationHandler.cs" />
     <Compile Include="Processes\IDataminingProcesses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,12 +66,6 @@
     <None Include="Data\DataMining 2016 %28Responses%29.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataminingTools\DataminingTools.csproj">
-      <Project>{00657d0d-38ec-4ea1-9201-4e97169493d8}</Project>
-      <Name>DataminingTools</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

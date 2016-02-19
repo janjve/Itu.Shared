@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using DataminingConsole.Processes.DataMiningSpring2016.Common;
-using DataminingConsole.Processes.DataMiningSpring2016.Utility;
+using DataminingConsole.Processes.DataMiningSpring2016.Preprocessing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataMiningSping2016Tests
 {
+    [TestClass]
     public class CleanTest
     {
         [TestClass]

@@ -1,7 +1,7 @@
 ﻿using DataminingConsole.Processes.DataMiningSpring2016.Entities;
 using CsvAttributeName = DataminingConsole.Processes.DataMiningSpring2016.Common.Constant.CsvAttributeName;
 
-namespace DataminingConsole.Processes.DataMiningSpring2016.Utility
+namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 {
     public static class DataMappers
     {

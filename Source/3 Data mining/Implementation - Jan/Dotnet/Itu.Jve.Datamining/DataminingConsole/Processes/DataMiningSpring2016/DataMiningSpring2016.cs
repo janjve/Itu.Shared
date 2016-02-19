@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using DataminingConsole.Processes.DataMiningSpring2016.Common;
-using DataminingConsole.Processes.DataMiningSpring2016.Utility;
-using DataminingTools.FileIO;
-using DataminingTools.Preprocessing;
+using DataminingConsole.Processes.DataMiningSpring2016.Preprocessing;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016
 {
@@ -57,25 +55,13 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
 
             // Attributelist temp.
             attributeList = _csvAttributeNames;
-            Log(dataset, "Attributes selected");
+            Logger.Log(dataset, "Attributes selected");
 
             dataset.MapColumn(attributeList, Constant.CsvAttributeName.Age, _dataCleaningHandler.AgeCleaner);
 
             var transformedDataset = dataset.Select(x => _dataTransformationHandler.TransformTuple(x, attributeIndex));
 
-            Log(dataset, "Age cleaned");
+            Logger.Log(dataset, "Age cleaned");
         }
-
-        #region Private members
-        private static void Log(List<List<string>> results, string header)
-        {
-            var output = DebugStringBuilder.HeaderString(header)
-                + results.CsvArrayToString()
-                + $"{Environment.NewLine}[INFO ]\tColumns: {results[0].Count}, Rows: {results.Count - 1}";
-            Debug.WriteLine(output);
-
-            LogWriter.WriteLogToFile(@"log.txt", output, false);
-        }
-        #endregion
     }
 }
