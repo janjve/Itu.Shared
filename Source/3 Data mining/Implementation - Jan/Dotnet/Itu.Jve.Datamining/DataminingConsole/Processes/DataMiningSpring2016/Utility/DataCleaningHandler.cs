@@ -7,7 +7,7 @@ using DataminingConsole.Processes.DataMiningSpring2016.Common;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Utility
 {
-    public class DataCleanerHandler
+    public class DataCleaningHandler
     {
         public string StringCleaner(string initial)
         {

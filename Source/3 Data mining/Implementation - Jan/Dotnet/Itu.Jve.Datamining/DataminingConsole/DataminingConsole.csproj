@@ -46,11 +46,14 @@
     <Compile Include="Processes\DataMiningSpring2016\Common\Constant.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Common\DebugStringBuilder.cs" />
     <Compile Include="Processes\DataMiningSpring2016\DataMiningSpring2016.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\AgeAttribute.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\Attribute.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\AttributeType.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Table.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\Entities\Tuple.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\Utility\DataCleanerHandler.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\DataTuple.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Utility\DataCleaningHandler.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Utility\DataMappers.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Utility\DataTransformationHandler.cs" />
     <Compile Include="Processes\IDataminingProcesses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
