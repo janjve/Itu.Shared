@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6BF7EF6B-9EC2-4E61-AE38-F36B61103F53}</ProjectGuid>
+    <ProjectGuid>{8A078138-B9EC-466C-ADD7-B69927BA5B59}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataminingToolsTests</RootNamespace>
-    <AssemblyName>DataminingToolsTests</AssemblyName>
+    <RootNamespace>DataMiningSping2016Tests</RootNamespace>
+    <AssemblyName>DataMiningSping2016Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,10 +50,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="CleanTest.cs" />
+    <Compile Include="CsvFileReaderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataminingConsole\DataminingConsole.csproj">
+      <Project>{e7aed7aa-50e4-4d2d-8ff5-b9a765153708}</Project>
+      <Name>DataminingConsole</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataminingTools\DataminingTools.csproj">
       <Project>{00657d0d-38ec-4ea1-9201-4e97169493d8}</Project>
       <Name>DataminingTools</Name>

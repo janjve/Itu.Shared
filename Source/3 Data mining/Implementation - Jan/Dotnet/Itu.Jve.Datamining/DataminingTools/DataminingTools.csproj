@@ -41,7 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileIO\CsvFileReader.cs" />
-    <Compile Include="Preprocessing\NormalizationExtensions.cs" />
+    <Compile Include="FileIO\LogWriter.cs" />
+    <Compile Include="Preprocessing\CsvCleaningExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

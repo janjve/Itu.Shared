@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using DataminingConsole.Processes.DataMiningSpring2016;
 
 namespace DataminingConsole
 {
@@ -15,6 +16,7 @@ namespace DataminingConsole
         static void Main(string[] args)
         {
             var dataminingProcess = new DataMiningSpring2016();
+            Console.BufferHeight = short.MaxValue - 1;
             Console.WriteLine(string.Format("Starting mining process: {0} ...", dataminingProcess.GetType()));
             dataminingProcess.Start();
             Console.WriteLine(string.Format("Completed mining process: {0}.", dataminingProcess.GetType()));

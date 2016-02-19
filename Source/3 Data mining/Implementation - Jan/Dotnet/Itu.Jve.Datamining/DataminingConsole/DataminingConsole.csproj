@@ -43,7 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Processes\DataMiningSpring2016.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\Constant.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\DebugStringBuilder.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\DataMiningSpring2016.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\AttributeType.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\Table.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\Tuple.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Utility\DataCleanerHandler.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Utility\DataMappers.cs" />
     <Compile Include="Processes\IDataminingProcesses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +67,7 @@
       <Name>DataminingTools</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
