@@ -20,5 +20,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 
             return initial;
         }
+
+        public string DegreeCleaner(string initial)
+        {
+
+            return initial;
+        }
     }
 }

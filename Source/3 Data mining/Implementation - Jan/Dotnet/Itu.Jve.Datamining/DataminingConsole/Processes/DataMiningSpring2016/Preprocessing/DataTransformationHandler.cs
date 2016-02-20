@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities.Age;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 {
@@ -18,7 +20,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
         public AgeAttribute TransformAge(string age)
         {
             int transformedAge;
-            // Simple transform - Could try harder to transform.
+
             if (int.TryParse(age, out transformedAge))
                 return new AgeAttribute {Value = transformedAge };
             return null;

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using DataminingConsole.Processes.DataMiningSpring2016.Common;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities.Age;
 using DataminingConsole.Processes.DataMiningSpring2016.Preprocessing;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016
@@ -51,17 +53,33 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
             // Create attributeIndex
             var attributeIndex = _csvAttributeNames
                 .Select((x, i) => new { key = x, value = i })
-                .ToDictionary((x) => DataMappers.AttributeTypeMapper(x.key), x => x.value);
-
-            // Attributelist temp.
-            attributeList = _csvAttributeNames;
+                .ToDictionary(x => DataMappers.AttributeTypeMapper(x.key), x => x.value);
             Logger.Log(dataset, "Attributes selected");
 
-            dataset.MapColumn(attributeList, Constant.CsvAttributeName.Age, _dataCleaningHandler.AgeCleaner);
+            dataset.MapColumn(attributeIndex, AttributeType.Age, _dataCleaningHandler.AgeCleaner);
 
-            var transformedDataset = dataset.Select(x => _dataTransformationHandler.TransformTuple(x, attributeIndex));
+            var transformedDataset = dataset.Select(x => _dataTransformationHandler.TransformTuple(x, attributeIndex)).ToList();
 
-            Logger.Log(dataset, "Age cleaned");
+            var ageSet = transformedDataset.Select(x => x.Age).ToList();
+            var mean = ageSet.Mean();
+            var median = ageSet.Median();
+            var mode = ageSet.Mode();
+            var midrange = ageSet.Midrange();
+
+            Debug.WriteLine($"Age mean : {mean}");
+            Debug.WriteLine($"Age median : {median}");
+            Debug.WriteLine($"Age mode : {mode}");
+            Debug.WriteLine($"Age midrange : {midrange}");
+
+            transformedDataset.OrderBy(x => x.Age).ToList().ForEach(x => Debug.WriteLine(x));
         }
+
+        /*
+        Flow:
+        - Reduce attribute list.
+        - Remove header list
+        - Create attributeIndex, dictionary
+        - 
+        */
     }
 }

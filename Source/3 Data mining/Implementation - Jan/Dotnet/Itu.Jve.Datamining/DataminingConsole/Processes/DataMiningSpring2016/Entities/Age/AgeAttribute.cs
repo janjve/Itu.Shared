@@ -1,0 +1,27 @@
+﻿using System;
+
+namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Age
+{
+    public class AgeAttribute : Attribute
+    {
+        public AgeAttribute() : base(AttributeType.Age) { }
+
+        public int Value { get; set; }
+
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+        public override int CompareTo(object obj)
+        {
+            if (obj == null) return 1;
+            var otherAgeAttribute = obj as AgeAttribute;
+
+            if (otherAgeAttribute != null)
+                return Value.CompareTo(otherAgeAttribute.Value);
+            else
+                throw new ArgumentException("Object is not an AgeAttribute");
+        }
+    }
+}

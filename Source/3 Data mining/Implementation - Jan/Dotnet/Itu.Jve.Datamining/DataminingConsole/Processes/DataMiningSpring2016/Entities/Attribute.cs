@@ -1,13 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DataminingConsole.Processes.DataMiningSpring2016.Common;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
 {
-    public abstract class Attribute
+    public abstract class Attribute : IComparable
     {
-        public AttributeType AttributeType { get; set; }
+        protected Attribute(AttributeType attributeType)
+        {
+            AttributeType = attributeType;
+        }
+
+        public AttributeType AttributeType { get; private set; }
+
+        public abstract int CompareTo(object obj);
     }
 }

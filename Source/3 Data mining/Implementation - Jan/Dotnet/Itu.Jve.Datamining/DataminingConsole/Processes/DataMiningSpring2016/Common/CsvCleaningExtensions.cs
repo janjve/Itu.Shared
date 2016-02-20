@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Common
 {
@@ -14,7 +15,6 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Common
         /// /// <param name="attributeListOrder">Attribute list</param>
         /// <param name="selectAttributes">Attributes to select</param>
         /// <returns>A new list containing tuples with the selected selectAttributes</returns>
-        [Obsolete("Should use AttributeType instead of strings to handle Attribute")]
         public static List<List<string>> SelectAttributes(this List<List<string>> list, List<string> attributeListOrder, List<string> selectAttributes)
         {
             var selectedIndex = attributeListOrder
@@ -28,12 +28,10 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Common
                 .Select((y) => y).ToList()).ToList();               // Return every tuple.
         }
 
-        [Obsolete("Should use AttributeType instead of strings to handle Attribute")]
-        public static void MapColumn(this List<List<string>> list, List<string> attributeListOrder, string attributeToMap, Func<string, string> mappingFunc)
+        public static void MapColumn(this List<List<string>> list, Dictionary<AttributeType, int> attributeIndex, AttributeType attributeType, Func<string, string> mappingFunc)
         {
-            var attributeIndex = attributeListOrder.FindIndex(attributeToMap.Equals);
-
-            list.ForEach(x => { x[attributeIndex] = mappingFunc(x[attributeIndex]); });     // Apply the mapping on the attribute
+            var index = attributeIndex[attributeType];                      // Get index of Age attribute.
+            list.ForEach(x => { x[index] = mappingFunc(x[index]); });       // Apply the mapping on the attribute.
         }
     }
 }
