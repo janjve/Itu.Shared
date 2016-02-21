@@ -60,22 +60,30 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
 
             var transformedDataset = dataset.Select(x => _dataTransformationHandler.TransformTuple(x, attributeIndex)).ToList();
 
-            var ageSet = transformedDataset.Select(x => x.Age).Take(4).ToList();
+            var ageSet = transformedDataset.Select(x => x.Age).ToList();
+
             var mean = ageSet.Mean();
             var median = ageSet.Median();
             var mode = ageSet.Mode();
             var midrange = ageSet.Midrange();
             var range = ageSet.Range();
-            var two_quantiles = ageSet.Quantile(2);
+            var twoQuantiles = ageSet.Quantile(2);
+            var iqr = ageSet.InterQuartileRange();
+            var variance = ageSet.Variance();
+            var standardDeviation = ageSet.StandardDeviation();
+            var fiveNumberSummary = ageSet.FiveNumberSummary();
 
             Debug.WriteLine($"Age mean : {mean}");
             Debug.WriteLine($"Age median : {median}");
             Debug.WriteLine($"Age mode : {mode}");
             Debug.WriteLine($"Age midrange : {midrange}");
             Debug.WriteLine($"Age range : {range}");
-            Debug.WriteLine($"Age 4-quantiles : {two_quantiles[0]}");
-            //Debug.WriteLine($"Age 4-quantiles : {two_quantiles[1]}");
-            //Debug.WriteLine($"Age 4-quantiles : {two_quantiles[2]}");
+            Debug.WriteLine($"Age 2-quantiles : {twoQuantiles[0]}");
+            Debug.WriteLine($"Age iqr : {iqr}");
+            Debug.WriteLine($"Age variance : {variance}");
+            Debug.WriteLine($"Age standardDeviation : {standardDeviation}");
+            Debug.WriteLine($"Age fiveNumberSummary : {fiveNumberSummary}");
+
 
             //transformedDataset.OrderBy(x => x.Age).ToList().ForEach(x => Debug.WriteLine(x));
         }

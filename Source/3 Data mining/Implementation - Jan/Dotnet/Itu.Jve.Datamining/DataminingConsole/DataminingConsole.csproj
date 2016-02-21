@@ -46,6 +46,7 @@
     <Compile Include="Processes\DataMiningSpring2016\Common\Constant.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Common\CsvCleaningExtensions.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Common\CsvFileReader.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\FiveNumberSummary.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Common\Logger.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Common\LogWriter.cs" />
     <Compile Include="Processes\DataMiningSpring2016\DataMiningSpring2016.cs" />
