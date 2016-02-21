@@ -19,7 +19,7 @@ namespace DataminingConsole
             dataminingProcess.Start();
             Console.WriteLine(string.Format("Completed mining process: {0}.", dataminingProcess.GetType()));
             Console.WriteLine("Press enter to terminate..");
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }

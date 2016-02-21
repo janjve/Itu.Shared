@@ -22,7 +22,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Age
             if (ageAttributes == null || !ageAttributes.Any())
                 return null;
 
-            return ageAttributes.OrderBy(x => x.Value).ToList()[ageAttributes.Count/2].Value;
+            return ageAttributes.OrderBy(x => x.Value).ToList()[ageAttributes.Count / 2].Value;
         }
 
         public static int? Mode(this List<AgeAttribute> ageAttributes)
@@ -58,7 +58,36 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Age
 
 
         #region data dispersion
-        
+        // Variance and standard deviation
+        // Range
+        public static int? Range(this List<AgeAttribute> ageAttributes)
+        {
+            if (ageAttributes == null || !ageAttributes.Any())
+                return null;
+
+            return ageAttributes.Max(x => x.Value) - ageAttributes.Min(x => x.Value);
+        }
+
+        // Quantiles
+        public static int[] Quantile(this List<AgeAttribute> ageAttributes, int quantiles)
+        {
+            if (ageAttributes == null || !ageAttributes.Any())
+                return null;
+
+            if (quantiles < 1 || ageAttributes.Count <= quantiles)
+                throw new ApplicationException($"Can't get the {quantiles}-quantiles of a list of size {ageAttributes.Count}");
+
+            var split = ageAttributes.Count / quantiles;
+            var ordered = ageAttributes.OrderBy(x => x.Value).ToList();
+            var quantileValues = new List<int>();
+            for (var i = split; i < ordered.Count; i += split)
+            {
+                quantileValues.Add(ordered[i].Value);
+            }
+            return quantileValues.ToArray();
+        }
+        // InterquartileRange
+        // Five-number summary
 
         #endregion
     }
