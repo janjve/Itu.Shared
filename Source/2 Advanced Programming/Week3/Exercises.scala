@@ -117,10 +117,10 @@ sealed trait Option[+A] {
 
   // Exercise 7 (4.1)
 
-  def map[B] (f: A=>B) : Option[B] = this match {
-  	case None => Option[Nothing]
-  	case Some(a) => Option[f(a)]
-  }
+  //def map[B] (f: A=>B) : Option[B] = this match {
+ // 	case None => Option[Nothing]
+  //	case Some(a) => Option[f(a)]
+ // }
 
   // Ignore the arrow in default's type this week
   // (it should work (almost) as if it was not there)
@@ -205,7 +205,7 @@ object Tests extends App {
   assert (Tree.map1 (t4) (_.toString) == t5)
 
   // Exercise 7
-  assert (Some(1).map (x => x +1) == Some(2))
+  // assert (Some(1).map (x => x +1) == Some(2))
   // assert (Some(41).getOrElse(42) == 41)
   // assert (None.getOrElse(42) == 42)
   // assert (Some(1).flatMap (x => Some(x+1)) == Some(2))
