@@ -78,16 +78,38 @@ object Tree {
 
   // Exercise 5 (3.28)
 
-  // def map[A,B] (t: Tree[A]) (f: A => B) : Tree[B] = ...
+  def map[A,B] (t: Tree[A]) (f: A => B) : Tree[B] = t match {
+  	case Leaf(v) => Leaf[B](f(v))
+  	case Branch(l,r) => Branch[B](map[A,B](l) (f), map[A,B](r) (f))
+  }
 
   // Exercise 6 (3.29)
 
-  // def fold[A,B] (t: Tree[A]) (f: (B,B) => B) (g: A => B) :B = ...
+  def fold[A,B] (t: Tree[A]) (f: (B,B) => B) (g: A => B) :B = t match {
+  	case Leaf(v) => g(v)
+  	case Branch(l,r) => f(fold[A,B](l)(f)(g), fold[A,B](r)(f)(g))
+  }
 
-  // def size1[A] ...
-  // def maximum1 ...
-  // def depth1[A] ...
-  // def map1[A,B] ...
+  def size1[A] (t: Tree[A]): Int = {
+  	val g = (_: A) => 1
+  	val f = (x: Int, y: Int) => 1+x+y
+  	fold[A, Int](t)(f)(g)
+  }
+  def maximum1 (t: Tree[Int]): Int = {
+  	val g = (v: Int) => v
+  	val f = (x: Int, y: Int) => x.max(y)
+  	fold[Int, Int](t)(f)(g)
+  }
+  def depth1[A] (t: Tree[A]): Int = {
+  	val g = (_: A) => 0
+  	val f = (x: Int, y: Int) => x.max(y)+1
+  	fold[A, Int](t)(f)(g)
+  }
+  def map1[A,B] (t: Tree[A])(f1: A => B): Tree[B] = {
+  	val g = (v: A) => Leaf[B](f1(v))
+  	val f = (x: Tree[B], y: Tree[B]) => Branch[B](x, y)
+  	fold[A,Tree[B]](t)(f)(g)
+  }
 
 }
 
@@ -95,7 +117,10 @@ sealed trait Option[+A] {
 
   // Exercise 7 (4.1)
 
-  // def map[B] (f: A=>B) : Option[B] = ...
+  def map[B] (f: A=>B) : Option[B] = this match {
+  	case None => Option[Nothing]
+  	case Some(a) => Option[f(a)]
+  }
 
   // Ignore the arrow in default's type this week
   // (it should work (almost) as if it was not there)
@@ -170,17 +195,17 @@ object Tests extends App {
   val t4 = Branch(Leaf(1), Branch(Branch(Leaf(2),Leaf(3)),Leaf(4)))
   assert (Tree.depth (t4) == 3)
   // Exercise 5
-  // val t5 = Branch(Leaf("1"), Branch(Branch(Leaf("2"),Leaf("3")),Leaf("4")))
-  // assert (Tree.map (t4) (_.toString) == t5)
+  val t5 = Branch(Leaf("1"), Branch(Branch(Leaf("2"),Leaf("3")),Leaf("4")))
+  assert (Tree.map (t4) (_.toString) == t5)
 
   // Exercise 6
-  // assert (Tree.size1 (Branch(Leaf(1), Leaf(2))) == 3)
-  // assert (Tree.maximum1 (Branch(Leaf(1), Leaf(2))) == 2)
-  // assert (Tree.depth1 (t4) == 3)
-  // assert (Tree.map1 (t4) (_.toString) == t5)
+  assert (Tree.size1 (Branch(Leaf(1), Leaf(2))) == 3)
+  assert (Tree.maximum1 (Branch(Leaf(1), Leaf(2))) == 2)
+  assert (Tree.depth1 (t4) == 3)
+  assert (Tree.map1 (t4) (_.toString) == t5)
 
   // Exercise 7
-  // assert (Some(1).map (x => x +1) == Some(2))
+  assert (Some(1).map (x => x +1) == Some(2))
   // assert (Some(41).getOrElse(42) == 41)
   // assert (None.getOrElse(42) == 42)
   // assert (Some(1).flatMap (x => Some(x+1)) == Some(2))
