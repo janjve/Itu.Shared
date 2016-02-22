@@ -165,12 +165,7 @@ object Tests extends App {
   assert (Tree.size (Branch(Branch(Leaf(1), Leaf(2)), Leaf(2))) == 5, "Exercise 2 error")
   // Exercise 3
   assert (Tree.maximum (Branch(Leaf(1), Leaf(2))) == 2)
-<<<<<<< HEAD
-  assert(Tree.maximum(Branch(Branch(Leaf(3), Leaf(1)), Leaf(2))) == 3)
-
-=======
   assert (Tree.size (Branch(Branch(Leaf(1), Leaf(5)), Leaf(2))) == 5, "Exercise 3 error")
->>>>>>> 4f5a3b8dcfb1455036a3af79994f0bfe6918095a
   // Exercise 4
   val t4 = Branch(Leaf(1), Branch(Branch(Leaf(2),Leaf(3)),Leaf(4)))
   assert (Tree.depth (t4) == 3)
