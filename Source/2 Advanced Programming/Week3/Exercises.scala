@@ -41,9 +41,8 @@
 trait OrderedPoint extends java.awt.Point with scala.math.Ordered[java.awt.Point] {
 	
   override def compare (that :java.awt.Point) : Int =  {
-  	-1
-  	//if (this.x )
-  	//else if(this.x < that.x || this.getX() == that.x && this.y < y) -1 else 1
+  	if (this.x == that.x && this.y == that.y) 0
+  	else if(this.x < that.x || this.x == that.x && this.y < that.y) -1 else 1
   }
 }
 
@@ -146,7 +145,6 @@ sealed trait Option[+A] {
     case None => None
     case Some(a) => if(f(a)) Some(a) else None 
   }
-
 }
 
 case class Some[+A] (get: A) extends Option[A]
@@ -156,22 +154,41 @@ object ExercisesOption {
 
   // Remember that mean is implemented in Chapter 4 of the text book
 
-  def mean(xs: Seq[Double]): Option[Double] =
+  def mean(xs: Seq[Double]): Option[Double] ={
     if (xs.isEmpty) None
     else Some(xs.sum / xs.length)
-
+}
   // Exercise 8 (4.2)
 
-  // def variance (xs: Seq[Double]) : Option[Double] = ..
+  def variance (xs: Seq[Double]) : Option[Double] = {
+    if(xs.isEmpty) None
+    else {
+        val m = xs.sum / xs.length
+        mean(xs.map(x => math.pow(x - m, 2)))
+    }
+  }
 
   // Exercise 9 (4.3)
 
-  // def map2[A,B,C] (ao: Option[A], bo: Option[B]) (f: (A,B) => C) :Option[C] =
+  def map2[A,B,C] (ao: Option[A], bo: Option[B]) (f: (A,B) => C) :Option[C] = {
+    for {
+        a <- ao
+        b <- bo
+    } yield f(a,b)
+  }
 
   // Exercise 10 (4.4)
-
-  // def sequence[A] (aos: List[Option[A]]) : Option[List[A]] = ...
-
+/*
+  def sequence[A] (aos: List[Option[A]]) : Option[List[A]] = {
+    val x = for {
+        as <- aos.filter(aos
+    } yield {
+        as
+    }
+    if(x.isEmpty) None
+    else Some(x)
+  }
+*/
   // Exercise 11 (4.5)
 
   // def traverse[A,B] (as: List[A]) (f :A => Option[B]) :Option[List[B]] =
@@ -190,6 +207,16 @@ object Tests extends App {
   val q = new java.awt.Point(0,2) with OrderedPoint
 
   assert(p < q)
+  
+   val p1 = new java.awt.Point(1,1) with OrderedPoint 
+   val q1 = new java.awt.Point(0,2) with OrderedPoint
+
+   assert(p1 > q1)
+  
+   val p2 = new java.awt.Point(0,1) with OrderedPoint 
+   val q2 = new java.awt.Point(0,1) with OrderedPoint
+   
+   assert(p2 == q2)
 
   // Notice how we are using nice infix comparison on java.awt
   // objects that were implemented way before Scala existed :) (And without the
@@ -229,15 +256,15 @@ object Tests extends App {
   assert ((None: Option[Int]).filter(_ == 42) == None)
 
   // Exercise 8
-  // assert (ExercisesOption.variance (List(42,42,42)) == Some(0.0))
-  // assert (ExercisesOption.variance (List()) == None)
+  assert (ExercisesOption.variance (List(42,42,42)) == Some(0.0))
+  assert (ExercisesOption.variance (List()) == None)
 
 
   // Exercise 9
-  // assert (ExercisesOption.map2 (Some(42),Some(7)) (_ + _) == Some(49))
-  // assert (ExercisesOption.map2 (Some(42),None) (_ + _) == None)
-  // assert (ExercisesOption.map2 (None: Option[Int],Some(7)) (_ + _) == None)
-  // assert (ExercisesOption.map2 (None: Option[Int],None) (_ + _) == None)
+  assert (ExercisesOption.map2 (Some(42),Some(7)) (_ + _) == Some(49))
+  assert (ExercisesOption.map2 (Some(42),None) (_ + _) == None)
+  assert (ExercisesOption.map2 (None: Option[Int],Some(7)) (_ + _) == None)
+  assert (ExercisesOption.map2 (None: Option[Int],None) (_ + _) == None)
 
   // Exercise 10
   // assert (ExercisesOption.sequence (List(Some(1), Some(2), Some(42))) == Some(List(1,2,42)))
