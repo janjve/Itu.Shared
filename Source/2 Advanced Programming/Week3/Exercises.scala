@@ -117,23 +117,35 @@ sealed trait Option[+A] {
 
   // Exercise 7 (4.1)
 
-  //def map[B] (f: A=>B) : Option[B] = this match {
- // 	case None => Option[Nothing]
-  //	case Some(a) => Option[f(a)]
- // }
+  def map[B] (f: A=>B) : Option[B] = this match {
+  	case None => None
+  	case Some(a) => Some[B](f(a))
+  }
 
   // Ignore the arrow in default's type this week
   // (it should work (almost) as if it was not there)
 
-  // def getOrElse[B >: A] (default: => B) :B = ...
+  def getOrElse[B >: A] (default: => B) :B = this match {
+    case None => default
+    case Some(a) => a
+  }
 
-  // def flatMap[B] (f: A=>Option[B]) : Option[B] = ...
+  def flatMap[B] (f: A=>Option[B]) : Option[B] = this match {
+    case None => None
+    case Some(a) => f(a)
+  }
 
   // Ignore the arrow in ob's type this week
 
-  // def orElse[B >: A] (ob : => Option[B]) : Option[B] = ...
+  def orElse[B >: A] (ob : => Option[B]) : Option[B] = this match {
+    case None => ob
+    case Some(a) => Some[B](a)
+  }
 
-  // def filter (f: A => Boolean) : Option[A] = ...
+  def filter (f: A => Boolean) : Option[A] = this match {
+    case None => None
+    case Some(a) => if(f(a)) Some(a) else None 
+  }
 
 }
 
@@ -205,16 +217,16 @@ object Tests extends App {
   assert (Tree.map1 (t4) (_.toString) == t5)
 
   // Exercise 7
-  // assert (Some(1).map (x => x +1) == Some(2))
-  // assert (Some(41).getOrElse(42) == 41)
-  // assert (None.getOrElse(42) == 42)
-  // assert (Some(1).flatMap (x => Some(x+1)) == Some(2))
-  // assert ((None: Option[Int]).flatMap[Int] (x => Some(x+1)) == None)
-  // assert (Some(41).orElse (Some(42)) == Some(41))
-  // assert (None.orElse (Some(42)) == Some(42))
-  // assert (Some(42).filter(_ == 42) == Some(42))
-  // assert (Some(41).filter(_ == 42) == None)
-  // assert ((None: Option[Int]).filter(_ == 42) == None)
+  assert (Some(1).map (x => x +1) == Some(2))
+  assert (Some(41).getOrElse(42) == 41)
+  assert (None.getOrElse(42) == 42)
+  assert (Some(1).flatMap (x => Some(x+1)) == Some(2))
+  assert ((None: Option[Int]).flatMap[Int] (x => Some(x+1)) == None)
+  assert (Some(41).orElse (Some(42)) == Some(41))
+  assert (None.orElse (Some(42)) == Some(42))
+  assert (Some(42).filter(_ == 42) == Some(42))
+  assert (Some(41).filter(_ == 42) == None)
+  assert ((None: Option[Int]).filter(_ == 42) == None)
 
   // Exercise 8
   // assert (ExercisesOption.variance (List(42,42,42)) == Some(0.0))
