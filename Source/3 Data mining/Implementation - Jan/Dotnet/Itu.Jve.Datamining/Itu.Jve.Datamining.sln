@@ -1,26 +1,64 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataminingConsole", "DataminingConsole\DataminingConsole.csproj", "{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataminingTools", "DataminingTools\DataminingTools.csproj", "{00657D0D-38EC-4EA1-9201-4E97169493D8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{5EEFC17F-C770-47C8-9B91-E75AD2E5C376}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\Data Mining - Spring 2016 - Google Forms.pdf = Doc\Data Mining - Spring 2016 - Google Forms.pdf
+		Doc\Data mining methods.txt = Doc\Data mining methods.txt
+		Doc\Readme.md = Doc\Readme.md
+		Doc\SelectedAttributes.txt = Doc\SelectedAttributes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMiningSping2016Tests", "DataMiningSping2016Tests\DataMiningSping2016Tests.csproj", "{8A078138-B9EC-466C-ADD7-B69927BA5B59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Debug|ARM.Build.0 = Debug|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Debug|x64.Build.0 = Debug|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Debug|x86.Build.0 = Debug|Any CPU
 		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00657D0D-38EC-4EA1-9201-4E97169493D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00657D0D-38EC-4EA1-9201-4E97169493D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00657D0D-38EC-4EA1-9201-4E97169493D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00657D0D-38EC-4EA1-9201-4E97169493D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Release|ARM.Build.0 = Release|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Release|x64.ActiveCfg = Release|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Release|x64.Build.0 = Release|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Release|x86.ActiveCfg = Release|Any CPU
+		{E7AED7AA-50E4-4D2D-8FF5-B9A765153708}.Release|x86.Build.0 = Release|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Debug|ARM.Build.0 = Debug|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Debug|x64.Build.0 = Debug|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Debug|x86.Build.0 = Debug|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Release|ARM.ActiveCfg = Release|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Release|ARM.Build.0 = Release|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Release|x64.ActiveCfg = Release|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Release|x64.Build.0 = Release|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Release|x86.ActiveCfg = Release|Any CPU
+		{8A078138-B9EC-466C-ADD7-B69927BA5B59}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

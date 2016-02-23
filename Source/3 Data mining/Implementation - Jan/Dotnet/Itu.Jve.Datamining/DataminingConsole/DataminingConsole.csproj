@@ -43,6 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Processes\DataMiningSpring2016\Common\Constant.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\CsvCleaningExtensions.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\CsvFileReader.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\FiveNumberSummary.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\Logger.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\LogWriter.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\DataMiningSpring2016.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\Age\AgeAttribute.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\Age\AgeMeasurementsExtentions.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\Attribute.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\AttributeType.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\DegreeAttribute.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\Table.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Entities\DataTuple.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataCleaningHandler.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataMappers.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataTransformationHandler.cs" />
+    <Compile Include="Processes\IDataminingProcesses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

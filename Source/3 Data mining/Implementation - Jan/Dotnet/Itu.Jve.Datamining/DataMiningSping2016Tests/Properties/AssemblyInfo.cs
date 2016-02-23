@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DataminingTools")]
+[assembly: AssemblyTitle("DataMiningSping2016Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DataminingTools")]
+[assembly: AssemblyProduct("DataMiningSping2016Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("00657d0d-38ec-4ea1-9201-4e97169493d8")]
+[assembly: Guid("8a078138-b9ec-466c-add7-b69927ba5b59")]
 
 // Version information for an assembly consists of the following four values:
 //
