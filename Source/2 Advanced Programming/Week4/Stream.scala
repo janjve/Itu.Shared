@@ -3,7 +3,7 @@
 //
 // meant to be compiled, for example: fsc Stream.scala
 
-package fpinscala.laziness
+//package fpinscala.laziness
 
 import Stream._
 
@@ -19,7 +19,7 @@ sealed trait Stream[+A] {
       case Empty => Empty
       case Cons(h,t) => t()
   }
-
+  
   def foldRight[B] (z : =>B) (f :(A, =>B) => B) :B = this match {
       case Empty => z
       case Cons (h,t) => f (h(), t().foldRight (z) (f))
@@ -45,6 +45,18 @@ sealed trait Stream[+A] {
       // Note 2. this is also tail recursive (because of the special semantics
       // of ||)
     }
+    
+    def toList: List[A] = this match {
+        case Empty => Nil
+        case Cons (h,t) => h() :: t().toList
+    }
+    
+    def take (n :Int) :Stream[A] = this match {
+        case Empty => Empty
+        //case Cons(h,t) => if(n == 0) { cons(h, t().take(n-1)) } else cons(h(), Empty)
+    }
+    //def drop (n :Int) :Stream[A]
+
 
   //def find (p :A => Boolean) :Option[A] = this.filter (p).headOption
 }
