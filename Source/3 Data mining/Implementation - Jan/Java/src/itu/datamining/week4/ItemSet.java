@@ -54,4 +54,14 @@ public class ItemSet {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        String output = "[";
+        for(int i = 0; i < this.set.length; i++){
+            output += this.set[i] + ",";
+        }
+        output += "]";
+        return output;
+    }
 }
