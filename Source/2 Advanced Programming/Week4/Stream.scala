@@ -3,7 +3,7 @@
 //
 // meant to be compiled, for example: fsc Stream.scala
 
-//package fpinscala.laziness
+package fpinscala.laziness
 
 import Stream._
 
@@ -53,12 +53,45 @@ sealed trait Stream[+A] {
     
     def take (n :Int) :Stream[A] = this match {
         case Empty => Empty
-        //case Cons(h,t) => if(n == 0) { cons(h, t().take(n-1)) } else cons(h(), Empty)
+        case Cons(h,t) => 
+            if(n > 1) cons(h(), t().take(n-1)) 
+            else cons(h(), Empty)
     }
-    //def drop (n :Int) :Stream[A]
+    
+    def drop (n :Int) :Stream[A] = this match {
+        case Empty => Empty
+        case Cons(h,t) => 
+            if(n > 0) t().drop(n-1)
+            else cons(h(), t())
+    }
+    
+    def takeWhile (p: A => Boolean): Stream[A] = this match{
+        case Empty => Empty
+        case Cons(h,t) =>  
+            if(p(h())) cons(h(), t().takeWhile(p))
+            else cons(h(), Empty)
+    }
+    
+    def forAll(p: A => Boolean): Boolean = this match {
+        case Empty => true
+        case Cons(h,t) => p(h()) && t().forAll(p)
+    }
+    
+    def takeWhileFoldRight(p: A => Boolean): Stream[A] = 
+      foldRight[Stream[A]](Empty)((a, b) => if(p(a)) cons(a, b) else b)
+    
+    def headOptionFoldRight () :Option[A] =
+      foldRight[Option[A]](None)((a,b) => Some(a))
 
+
+
+    def map[B](f: A => B) : Stream[(=>B)] = 
+    {
+
+    }
 
   //def find (p :A => Boolean) :Option[A] = this.filter (p).headOption
+  (f :(A, =>B) => B)
 }
 
 

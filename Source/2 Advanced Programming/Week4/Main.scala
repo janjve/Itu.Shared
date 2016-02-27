@@ -17,18 +17,49 @@ def from (n :Int) :Stream[Int] = {
     Cons(() => n, () => from(n+1))
 }
 
-val l1 :Stream[Int] = Empty
-val l2 :Stream[Int] = empty
+def test0(): Unit = {
+    val l1 :Stream[Int] = Empty
+    val l2 :Stream[Int] = empty
 
-val l3 :Stream[Int]= cons(1, cons(2, cons (3, empty)))
+    val l3 :Stream[Int]= cons(1, cons(2, cons (3, empty)))
 
-println (l1.headOption)
-println (l2.headOption)
-println (l3.headOption)
+    println (l1.headOption)
+    println (l2.headOption)
+    println (l3.headOption)
+}
 
-// Take test
-val stream1 = to(10)
-val stream1take5 = stream1.take(5)
-println(stream1take5.toList);
+def test1 (): Unit = {
+    val stream1 = to(10)    // Finite
+    val stream2 = from(10)  // Infinite
+    
+    println(stream2.take(5).toList)
+    println(stream1.drop(5).take(5).toList)
+    println(stream2.take(1000000000).drop(41).take(10).toList.toList)
+}
 
+def test2 (): Unit = {
+    val neutrals = from(1)  // Infinite
+    
+    println(neutrals.takeWhile(_<1000000000).drop(100).take(50).toList)
+}
 
+def test3 (): Unit = {
+    val neutrals = from(1)                  // Infinite
+    val to10 = to(10)                       // Finite
+    
+    println(neutrals.forAll(_ < 10))        // False
+    println(to10.forAll(_ <= 10))           // true
+    //println(neutrals.forAll(_ >= 0))      // Error
+}
+
+def test4 (): Unit = {
+    val neutrals = from(10)  // Infinite
+    
+    println(neutrals.takeWhileFoldRight(_<1000000000).drop(100).take(50).toList)
+}
+
+def test5(): Unit = {
+    val neutrals = from(1)                  // Infinite
+    println(neutrals.headOptionFoldRight)
+    println(neutrals.drop(5).headOptionFoldRight)
+}
