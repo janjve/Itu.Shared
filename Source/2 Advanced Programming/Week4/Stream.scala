@@ -87,11 +87,10 @@ sealed trait Stream[+A] {
 
     def map[B](f: A => B) : Stream[(=>B)] = 
     {
-
+      
     }
 
   //def find (p :A => Boolean) :Option[A] = this.filter (p).headOption
-  (f :(A, =>B) => B)
 }
 
 
