@@ -96,16 +96,13 @@ sealed trait Stream[+A] {
       case Cons(_,_) => foldRight[Stream[A]] (Empty) ((a,b) => if(p(a)) cons(a, b) else b) 
     }
 
-
-
-    /* UNDONE
-    def append[B <: A](that: Stream[B]): Stream[A] = (this, that) match {
+    def append[B >: A](that: Stream[B]): Stream[A] = (this, that) match {
       case (Empty, Empty) => Empty
       case (Empty, t) => this
       case (t, Empty) => t
       case (Cons(_,_), Cons(h,t)) => foldRight[Stream[A]] (that) ((a,b) => cons(h(), b))
     }
-    */
+    
 
 
     // This is okay since it will only evaluate until a value is found.
