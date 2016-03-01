@@ -161,11 +161,10 @@ object ExercisesOption {
   // Exercise 8 (4.2)
 
   def variance (xs: Seq[Double]) : Option[Double] = {
-    if(xs.isEmpty) None
-    else {
-        val m = xs.sum / xs.length
-        mean(xs.map(x => math.pow(x - m, 2)))
+    for {
+        m <- mean(xs)
     }
+    yield xs.map(x => math.pow(x-m,2))
   }
 
   // Exercise 9 (4.3)
@@ -180,13 +179,12 @@ object ExercisesOption {
   // Exercise 10 (4.4)
 /*
   def sequence[A] (aos: List[Option[A]]) : Option[List[A]] = {
-    val x = for {
-        as <- aos.filter(aos
+    for {
+        as <- aos
     } yield {
-        as
+        if(as.isEmpty) None
+        else Some(as)
     }
-    if(x.isEmpty) None
-    else Some(x)
   }
 */
   // Exercise 11 (4.5)

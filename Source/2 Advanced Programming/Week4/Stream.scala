@@ -3,7 +3,7 @@
 //
 // meant to be compiled, for example: fsc Stream.scala
 
-// package fpinscala.laziness
+package fpinscala.laziness
 
 import Stream._
 
@@ -19,7 +19,7 @@ sealed trait Stream[+A] {
       case Empty => Empty
       case Cons(h,t) => t()
   }
-
+  
   def foldRight[B] (z : =>B) (f :(A, =>B) => B) :B = this match {
       case Empty => z
       case Cons (h,t) => f (h(), t().foldRight (z) (f))
@@ -45,22 +45,70 @@ sealed trait Stream[+A] {
       // Note 2. this is also tail recursive (because of the special semantics
       // of ||)
     }
-
+    
     def toList: List[A] = this match {
-      case Empty => Nil
-      case Cons(h, t) => h() :: t().toList
+        case Empty => Nil
+        case Cons (h,t) => h() :: t().toList
     }
-
+    
     def take (n :Int) :Stream[A] = this match {
+        case Empty => Empty
+        case Cons(h,t) => 
+            if(n > 1) cons(h(), t().take(n-1)) 
+            else cons(h(), Empty)
+    }
+    
+    def drop (n :Int) :Stream[A] = this match {
+        case Empty => Empty
+        case Cons(h,t) => 
+            if(n > 0) t().drop(n-1)
+            else cons(h(), t())
+    }
+    
+    def takeWhile (p: A => Boolean): Stream[A] = this match{
+        case Empty => Empty
+        case Cons(h,t) =>  
+            if(p(h())) cons(h(), t().takeWhile(p))
+            else cons(h(), Empty)
+    }
+    
+    def forAll(p: A => Boolean): Boolean = this match {
+        case Empty => true
+        case Cons(h,t) => p(h()) && t().forAll(p)
+    }
+    
+    def takeWhileFoldRight(p: A => Boolean): Stream[A] = 
+      foldRight[Stream[A]](Empty)((a, b) => if(p(a)) cons(a, b) else b)
+    
+    def headOptionFoldRight () :Option[A] =
+      foldRight[Option[A]](None)((a,b) => Some(a))
+
+
+
+    def map[B](f: A => B) : Stream[B] = this match {
       case Empty => Empty
-      case Cons(h, t) => if(n > 0) Cons(h(), t().take(n-1)) else Empty 
+      case Cons(_,_) => foldRight[Stream[B]](Empty)((a,b) => cons(f(a), b))
     }
 
-    /*def drop (n :Int) :Stream[A] = {
+    // This checks might be redundant
+    def filter(p: A => Boolean): Stream[A] = this match {
+      case Empty => Empty
+      case Cons(_,_) => foldRight[Stream[A]] (Empty) ((a,b) => if(p(a)) cons(a, b) else b) 
+    }
 
-    }*/
+    def append[B >: A](that: Stream[B]): Stream[A] = (this, that) match {
+      case (Empty, Empty) => Empty
+      case (Empty, t) => this
+      case (t, Empty) => t
+      case (Cons(_,_), Cons(h,t)) => foldRight[Stream[A]] (that) ((a,b) => cons(h(), b))
+    }
+    
 
-  //def find (p :A => Boolean) :Option[A] = this.filter (p).headOption
+
+    // This is okay since it will only evaluate until a value is found.
+    def find (p :A => Boolean) :Option[A] = this.filter (p).headOption
+
+    
 }
 
 
