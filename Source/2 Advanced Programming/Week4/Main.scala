@@ -17,6 +17,10 @@ def from (n :Int) :Stream[Int] = {
     Cons(() => n, () => from(n+1))
 }
 
+def fib() : Stream[Int] = {
+    
+}
+
 def test0(): Unit = {
     val l1 :Stream[Int] = Empty
     val l2 :Stream[Int] = empty
@@ -62,4 +66,21 @@ def test5(): Unit = {
     val neutrals = from(1)                  // Infinite
     println(neutrals.headOptionFoldRight)
     println(neutrals.drop(5).headOptionFoldRight)
+}
+
+def test6() = {
+    val neutrals = from(1)                  // Infinite
+
+    println(neutrals.map (_*2).drop (30).take (50).toList)
+    println(neutrals.drop(42).filter (_%2 == 0).take (30).toList)
+}
+
+def test7() = {
+    val neutrals = from(1)                  // Infinite
+
+    println(neutrals.find(x => x == 1000000))
+}
+
+def test8() =  {
+    val neutrals = from(1)
 }
