@@ -1,4 +1,4 @@
-package data;
+package itu.datamining.week5.data;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
-package data;
+package itu.datamining.week5.data;
 /**
  * Enum for the different iris classes.
- * @author Anders Hartzen, Jens Andersson Grøn
+ * @author Anders Hartzen, Jens Andersson Grï¿½n
  *
  */
 public enum IrisClass {

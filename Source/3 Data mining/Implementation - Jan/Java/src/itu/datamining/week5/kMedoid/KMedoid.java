@@ -1,8 +1,8 @@
-package kMedoid;
+package itu.datamining.week5.kMedoid;
+
+import itu.datamining.week5.data.Iris;
 
 import java.util.ArrayList;
-
-import data.Iris;
 
 public class KMedoid {
 
