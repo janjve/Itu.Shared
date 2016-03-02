@@ -83,27 +83,21 @@ sealed trait Stream[+A] {
     def headOptionFoldRight () :Option[A] =
       foldRight[Option[A]](None)((a,b) => Some(a))
 
-
-
-    def map[B](f: A => B) : Stream[B] = this match {
-      case Empty => Empty
-      case Cons(_,_) => foldRight[Stream[B]](Empty)((a,b) => cons(f(a), b))
-    }
+    def map[B](f: A => B) : Stream[B] = 
+      foldRight[Stream[B]](Empty)((a,b) => cons(f(a), b))
 
     // This checks might be redundant
-    def filter(p: A => Boolean): Stream[A] = this match {
-      case Empty => Empty
-      case Cons(_,_) => foldRight[Stream[A]] (Empty) ((a,b) => if(p(a)) cons(a, b) else b) 
-    }
-
-    def append[B >: A](that: Stream[B]): Stream[A] = (this, that) match {
-      case (Empty, Empty) => Empty
-      case (Empty, t) => this
-      case (t, Empty) => t
-      case (Cons(_,_), Cons(h,t)) => foldRight[Stream[A]] (that) ((a,b) => cons(h(), b))
-    }
+    def filter(p: A => Boolean): Stream[A] = 
+      foldRight[Stream[A]] (Empty) ((a,b) => if(p(a)) cons(a, b) else b) 
     
 
+    def append[B >: A](that: Stream[B]): Stream[B] =
+      foldRight[Stream[B]] (that) ((a,b) => Cons(a, b))
+    
+    
+    def flatMap[B](f: A => Stream[B]): Stream[B] =
+      foldRight[Stream[B]](Empty)((a,b) => b.append(f(a)))
+    
 
     // This is okay since it will only evaluate until a value is found.
     def find (p :A => Boolean) :Option[A] = this.filter (p).headOption

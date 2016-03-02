@@ -17,8 +17,11 @@ def from (n :Int) :Stream[Int] = {
     Cons(() => n, () => from(n+1))
 }
 
-def fib() : Stream[Int] = {
-    
+def fib(): Stream[Int] =  {
+	def inner(n1: Int, n2: Int): Stream[Int] = {
+		 cons(n1+n2 ,inner(n1+n2))
+	}
+	inner(0,1)
 }
 
 def test0(): Unit = {
@@ -73,6 +76,8 @@ def test6() = {
 
     println(neutrals.map (_*2).drop (30).take (50).toList)
     println(neutrals.drop(42).filter (_%2 == 0).take (30).toList)
+    println(neutrals.take(10).append(neutrals).take(20).toList)
+    println(neutrals.flatMap (x => from(1)).take (100).toList)
 }
 
 def test7() = {
