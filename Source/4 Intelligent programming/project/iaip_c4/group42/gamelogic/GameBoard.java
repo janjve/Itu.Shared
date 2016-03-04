@@ -2,6 +2,8 @@ package group42.gamelogic;
 
 import group42.entities.TerminalResultType;
 
+import java.util.Arrays;
+
 /**
  * Created by rrjan on 3/4/2016.
  */
@@ -9,7 +11,7 @@ public class GameBoard
 {
     private int[][] gameboard;
     private int[] colCount;
-    private final int WINNING_CONDITION = 4;
+    private final int WINNING_CONDITION = 3;
 
     public GameBoard(int x, int y)
     {
@@ -40,17 +42,26 @@ public class GameBoard
     public TerminalResultType terminalTest()
     {
         TerminalResultType type = TerminalResultType.NOT_FINISHED;
-        //type =  type == TerminalResultType.NOT_FINISHED ? winConditionDiagonallyAscending() : TerminalResultType.NOT_FINISHED;
-        //type =  type == TerminalResultType.NOT_FINISHED ? winConditionDiagonallyDescending() : TerminalResultType.NOT_FINISHED;
-        type = type == TerminalResultType.NOT_FINISHED ? winConditionVertically() : TerminalResultType.NOT_FINISHED;
-        type = type == TerminalResultType.NOT_FINISHED ? winConditionHorizontally() : TerminalResultType.NOT_FINISHED;
-        type = type == TerminalResultType.NOT_FINISHED ? tieCondition() : TerminalResultType.NOT_FINISHED;
+        //type =  type == TerminalResultType.NOT_FINISHED ? winConditionDiagonallyAscending() : type;
+        //type =  type == TerminalResultType.NOT_FINISHED ? winConditionDiagonallyDescending() : type;
+        type = type == TerminalResultType.NOT_FINISHED ? winConditionVertically() : type;
+        type = type == TerminalResultType.NOT_FINISHED ? winConditionHorizontally() : type;
+        type = type == TerminalResultType.NOT_FINISHED ? tieCondition() : type;
         return type;
     }
 
     public GameBoard clone()
     {
-        return new GameBoard(gameboard.clone(), colCount.clone());
+        int[][] _gameBoard = new int[gameboard.length][gameboard[0].length];
+        for (int x = 0; x < gameboard.length; x++)
+        {
+            for (int y = 0; y < gameboard[x].length; y++)
+            {
+                _gameBoard[x][y] = gameboard[x][y];
+            }
+        }
+
+        return new GameBoard(_gameBoard, Arrays.copyOf(colCount, colCount.length));
     }
 
     public boolean fullColumn(int col)
@@ -69,7 +80,7 @@ public class GameBoard
         return fullBoard ? TerminalResultType.TIE : TerminalResultType.NOT_FINISHED;
     }
 
-    private TerminalResultType winConditionVertically()
+    private TerminalResultType winConditionHorizontally()
     {
         int count = 0;
 
@@ -78,9 +89,9 @@ public class GameBoard
             count = 0;
             for (int x = 0; x < gameboard[y].length; x++)
             {
-                count = gameboard[x][y] != 0 && (count == 0 || gameboard[x][y] == gameboard[x-1][y]) ? count+1 : 0;
+                count = gameboard[x][y] != 0 && (count == 0 || gameboard[x][y] == gameboard[x - 1][y]) ? count + 1 : 1;
 
-                if(count == WINNING_CONDITION)
+                if (count == WINNING_CONDITION)
                 {
                     return resultTypeFromPlayerId(gameboard[x][y]);
                 }
@@ -89,7 +100,7 @@ public class GameBoard
         return TerminalResultType.NOT_FINISHED;
     }
 
-    private TerminalResultType winConditionHorizontally()
+    private TerminalResultType winConditionVertically()
     {
         int count = 0;
 
@@ -98,9 +109,8 @@ public class GameBoard
             count = 0;
             for (int y = 0; y < gameboard[x].length; y++)
             {
-                count = gameboard[x][y] != 0 && (count == 0 || gameboard[x][y] == gameboard[x][y-1]) ? count+1 : 0;
-
-                if(count == WINNING_CONDITION)
+                count = gameboard[x][y] != 0 && (count == 0 || gameboard[x][y] == gameboard[x][y - 1]) ? count + 1 : 1;
+                if (count == WINNING_CONDITION)
                 {
                     return resultTypeFromPlayerId(gameboard[x][y]);
                 }
@@ -109,12 +119,23 @@ public class GameBoard
         return TerminalResultType.NOT_FINISHED;
     }
 
-    private TerminalResultType winConditionDiagonallyDescending()
+    private TerminalResultType winConditionDiagonallyAscending()
     {
+        int cols = this.gameboard[0].length;
+        int rows = this.gameboard[0].length;
+
+        for(int col = WINNING_CONDITION - 1; col < cols - (WINNING_CONDITION-1); col++)
+        {
+            for(int row = WINNING_CONDITION - 1; row < rows - (WINNING_CONDITION-1); row++)
+            {
+
+            }
+        }
+
         return TerminalResultType.NOT_FINISHED;
     }
 
-    private TerminalResultType winConditionDiagonallyAscending()
+    private TerminalResultType winConditionDiagonallyDescending()
     {
         return TerminalResultType.NOT_FINISHED;
     }

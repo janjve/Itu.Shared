@@ -5,7 +5,7 @@ import group42.gamelogic.GameBoard;
 
 /**
  * Created by rrjan on 3/4/2016.
- *
+ * <p/>
  * Dette er en test
  */
 public class MinimaxDecision implements IDecisionHandler
@@ -25,17 +25,21 @@ public class MinimaxDecision implements IDecisionHandler
     @Override
     public int decideNextMove()
     {
+
         GameBoard state = gameBoard;
         int maxUtility = Integer.MIN_VALUE;
         int action = -1;
 
-        for (int i = 0; i < state.getGameboard().length; i++){
+        for (int i = 0; i < state.getGameboard().length; i++)
+        {
+            System.out.println("Deciding next move for turn for action: "+i);
             if (!state.fullColumn(i))
             {
                 GameBoard newState = state.clone();
                 newState.insertCoin(i, playerId);
                 int maxUtilityI = minValue(newState);
-                if(maxUtilityI > maxUtility){
+                if (maxUtilityI > maxUtility)
+                {
                     maxUtility = maxUtilityI;
                     action = i;
                 }
@@ -44,51 +48,57 @@ public class MinimaxDecision implements IDecisionHandler
         return action;
     }
 
-    private int maxValue(GameBoard state){
-        if(state.terminalTest() != TerminalResultType.NOT_FINISHED) return utility(state);
+    private int maxValue(GameBoard state)
+    {
+        if (state.terminalTest() != TerminalResultType.NOT_FINISHED) return utility(state);
         int maxUtility = Integer.MIN_VALUE;
 
-        for (int i = 0; i < state.getGameboard().length; i++){
+        for (int i = 0; i < state.getGameboard().length; i++)
+        {
             if (!state.fullColumn(i))
             {
                 GameBoard newState = state.clone();
                 newState.insertCoin(i, playerId);
 
                 int maxUtilityI = minValue(newState);
-                maxUtility = maxUtilityI > maxUtility ? maxUtility : maxUtilityI;
+                maxUtility = maxUtilityI > maxUtility ? maxUtilityI : maxUtility;
             }
         }
         return maxUtility;
     }
 
-    private int minValue(GameBoard state){
-        if(state.terminalTest() != TerminalResultType.NOT_FINISHED) return utility(state);
+    private int minValue(GameBoard state)
+    {
+        if (state.terminalTest() != TerminalResultType.NOT_FINISHED) return utility(state);
         int minUtility = Integer.MAX_VALUE;
 
-        for (int i = 0; i < state.getGameboard().length; i++){
+        for (int i = 0; i < state.getGameboard().length; i++)
+        {
             if (!state.fullColumn(i))
             {
                 GameBoard newState = state.clone();
                 newState.insertCoin(i, opponentPlayerId);
 
                 int minUtilityI = maxValue(newState);
-                minUtility = minUtilityI < minUtility ? minUtility : minUtilityI;
+                minUtility = minUtilityI < minUtility ? minUtilityI : minUtility;
             }
         }
         return minUtility;
     }
 
-    private int utility(GameBoard state){
-    TerminalResultType resultType = state.terminalTest();
-    switch (resultType){
-        case PLAYER1:
-            return playerId == 1 ? 2 : 0;
-        case PLAYER2:
-            return playerId == 2 ? 2 : 0;
-        case TIE:
-            return 1;
-        default:
-            return 1;
+    private int utility(GameBoard state)
+    {
+        TerminalResultType resultType = state.terminalTest();
+        switch (resultType)
+        {
+            case PLAYER1:
+                return playerId == 1 ? 2 : 0;
+            case PLAYER2:
+                return playerId == 2 ? 2 : 0;
+            case TIE:
+                return 1;
+            default:
+                return 1;
+        }
     }
-}
 }
