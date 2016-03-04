@@ -42,10 +42,10 @@ public class GameBoard
     public TerminalResultType terminalTest()
     {
         TerminalResultType type = TerminalResultType.NOT_FINISHED;
-        //type =  type == TerminalResultType.NOT_FINISHED ? winConditionDiagonallyAscending() : type;
-        //type =  type == TerminalResultType.NOT_FINISHED ? winConditionDiagonallyDescending() : type;
-        type = type == TerminalResultType.NOT_FINISHED ? winConditionVertically() : type;
+        type = type == TerminalResultType.NOT_FINISHED ? winConditionDiagonallyAscending() : type;
+        type = type == TerminalResultType.NOT_FINISHED ? winConditionDiagonallyDescending() : type;
         type = type == TerminalResultType.NOT_FINISHED ? winConditionHorizontally() : type;
+        type = type == TerminalResultType.NOT_FINISHED ? winConditionVertically() : type;
         type = type == TerminalResultType.NOT_FINISHED ? tieCondition() : type;
         return type;
     }
@@ -82,16 +82,16 @@ public class GameBoard
 
     private TerminalResultType winConditionHorizontally()
     {
-        int count = 0;
+        int points;
 
-        for (int y = 0; y < gameboard.length; y++)
+        for (int y = 0; y < gameboard[0].length; y++)
         {
-            count = 0;
-            for (int x = 0; x < gameboard[y].length; x++)
+            points = 0;
+            for (int x = 0; x < gameboard.length; x++)
             {
-                count = gameboard[x][y] != 0 && (count == 0 || gameboard[x][y] == gameboard[x - 1][y]) ? count + 1 : 1;
+                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y]) ? points + 1 : 1;
 
-                if (count == WINNING_CONDITION)
+                if (points == WINNING_CONDITION)
                 {
                     return resultTypeFromPlayerId(gameboard[x][y]);
                 }
@@ -102,15 +102,15 @@ public class GameBoard
 
     private TerminalResultType winConditionVertically()
     {
-        int count = 0;
+        int points;
 
         for (int x = 0; x < gameboard.length; x++)
         {
-            count = 0;
+            points = 0;
             for (int y = 0; y < gameboard[x].length; y++)
             {
-                count = gameboard[x][y] != 0 && (count == 0 || gameboard[x][y] == gameboard[x][y - 1]) ? count + 1 : 1;
-                if (count == WINNING_CONDITION)
+                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x][y - 1]) ? points + 1 : 1;
+                if (points == WINNING_CONDITION)
                 {
                     return resultTypeFromPlayerId(gameboard[x][y]);
                 }
@@ -121,14 +121,39 @@ public class GameBoard
 
     private TerminalResultType winConditionDiagonallyAscending()
     {
-        int cols = this.gameboard[0].length;
-        int rows = this.gameboard[0].length;
+        int points;
+        int cols = this.gameboard[0].length - 1;
+        int rows = this.gameboard.length - 1;
 
-        for(int col = WINNING_CONDITION - 1; col < cols - (WINNING_CONDITION-1); col++)
+        for (int row = rows; row > rows - (WINNING_CONDITION - 1); row--)
         {
-            for(int row = WINNING_CONDITION - 1; row < rows - (WINNING_CONDITION-1); row++)
+            points = 0;
+            for (int count = 0; count < row + 1; count++)
             {
+                int x = row - count;
+                int y = count;
+                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x + 1][y - 1]) ? points + 1 : 1;
 
+                if (points == WINNING_CONDITION)
+                {
+                    return resultTypeFromPlayerId(gameboard[x][y]);
+                }
+            }
+        }
+
+        for (int col = 1; col <= cols - (WINNING_CONDITION - 1); col++)
+        {
+            points = 0;
+            for (int count = 0; count < (cols - col) + 1; count++)
+            {
+                int x = rows - count;
+                int y = col + count;
+                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x + 1][y - 1]) ? points + 1 : 1;
+
+                if (points == WINNING_CONDITION)
+                {
+                    return resultTypeFromPlayerId(gameboard[x][y]);
+                }
             }
         }
 
@@ -137,6 +162,42 @@ public class GameBoard
 
     private TerminalResultType winConditionDiagonallyDescending()
     {
+        int points;
+        int cols = this.gameboard[0].length - 1;
+        int rows = this.gameboard.length - 1;
+
+        for (int row = 0; row <= rows - (WINNING_CONDITION - 1); row++)
+        {
+            points = 0;
+            for (int count = 0; count < (rows - row) + 1; count++)
+            {
+                int x = row + count;
+                int y = count;
+                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y - 1]) ? points + 1 : 1;
+
+                if (points == WINNING_CONDITION)
+                {
+                    return resultTypeFromPlayerId(gameboard[x][y]);
+                }
+            }
+        }
+
+        for (int col = 1; col <= cols - (WINNING_CONDITION - 1); col++)
+        {
+            points = 0;
+            for (int count = 0; count < (cols - col) + 1; count++)
+            {
+                int x = count;
+                int y = col + count;
+                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y - 1]) ? points + 1 : 1;
+
+                if (points == WINNING_CONDITION)
+                {
+                    return resultTypeFromPlayerId(gameboard[x][y]);
+                }
+            }
+        }
+
         return TerminalResultType.NOT_FINISHED;
     }
 

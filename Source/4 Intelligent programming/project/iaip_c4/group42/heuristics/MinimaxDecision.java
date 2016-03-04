@@ -14,7 +14,6 @@ public class MinimaxDecision implements IDecisionHandler
     private int playerId;
     private int opponentPlayerId;
 
-
     public MinimaxDecision(GameBoard gameBoard, int playerId)
     {
         this.gameBoard = gameBoard;
@@ -32,12 +31,13 @@ public class MinimaxDecision implements IDecisionHandler
 
         for (int i = 0; i < state.getGameboard().length; i++)
         {
-            System.out.println("Deciding next move for turn for action: "+i);
+            System.out.println("Deciding next move for turn for action: " + i);
             if (!state.fullColumn(i))
             {
                 GameBoard newState = state.clone();
                 newState.insertCoin(i, playerId);
-                int maxUtilityI = minValue(newState);
+
+                int maxUtilityI = minValue(newState, 1);
                 if (maxUtilityI > maxUtility)
                 {
                     maxUtility = maxUtilityI;
@@ -48,9 +48,9 @@ public class MinimaxDecision implements IDecisionHandler
         return action;
     }
 
-    private int maxValue(GameBoard state)
+    private int maxValue(GameBoard state, int depth)
     {
-        if (state.terminalTest() != TerminalResultType.NOT_FINISHED) return utility(state);
+        if (state.terminalTest() != TerminalResultType.NOT_FINISHED) return utility(state) / depth;
         int maxUtility = Integer.MIN_VALUE;
 
         for (int i = 0; i < state.getGameboard().length; i++)
@@ -60,16 +60,16 @@ public class MinimaxDecision implements IDecisionHandler
                 GameBoard newState = state.clone();
                 newState.insertCoin(i, playerId);
 
-                int maxUtilityI = minValue(newState);
+                int maxUtilityI = minValue(newState, depth + 1);
                 maxUtility = maxUtilityI > maxUtility ? maxUtilityI : maxUtility;
             }
         }
         return maxUtility;
     }
 
-    private int minValue(GameBoard state)
+    private int minValue(GameBoard state, int depth)
     {
-        if (state.terminalTest() != TerminalResultType.NOT_FINISHED) return utility(state);
+        if (state.terminalTest() != TerminalResultType.NOT_FINISHED) return utility(state) / depth;
         int minUtility = Integer.MAX_VALUE;
 
         for (int i = 0; i < state.getGameboard().length; i++)
@@ -79,7 +79,7 @@ public class MinimaxDecision implements IDecisionHandler
                 GameBoard newState = state.clone();
                 newState.insertCoin(i, opponentPlayerId);
 
-                int minUtilityI = maxValue(newState);
+                int minUtilityI = maxValue(newState, depth + 1);
                 minUtility = minUtilityI < minUtility ? minUtilityI : minUtility;
             }
         }
@@ -92,13 +92,13 @@ public class MinimaxDecision implements IDecisionHandler
         switch (resultType)
         {
             case PLAYER1:
-                return playerId == 1 ? 2 : 0;
+                return playerId == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
             case PLAYER2:
-                return playerId == 2 ? 2 : 0;
+                return playerId == 2 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
             case TIE:
-                return 1;
+                return 0;
             default:
-                return 1;
+                return 0;
         }
     }
 }
