@@ -5,6 +5,8 @@ import group42.gamelogic.GameBoard;
 
 /**
  * Created by rrjan on 3/4/2016.
+ *
+ * Dette er en test
  */
 public class MinimaxDecision implements IDecisionHandler
 {
