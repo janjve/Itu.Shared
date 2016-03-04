@@ -6,5 +6,4 @@ package group42.heuristics;
 public interface IDecisionHandler
 {
     int decideNextMove();
-
 }
