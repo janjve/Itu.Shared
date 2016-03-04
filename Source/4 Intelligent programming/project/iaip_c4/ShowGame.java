@@ -80,7 +80,7 @@ public class ShowGame
             }
         }
         
-        if(!err) {
+        if(err) {
             printHelp(errMsg);
             System.exit(1);
         }
