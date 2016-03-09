@@ -13,7 +13,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
         {
             return new DataTuple
             {
-                Age = TransformAge(tuple[attributeIndex[AttributeType.Age]])
+                Age = TransformAge(tuple[attributeIndex[AttributeType.Age]]),
+                //Degree = TransformAge(tuple[attributeIndex[AttributeType.Age]]),
+                //FavoriteGame = TransformAge(tuple[attributeIndex[AttributeType.Age]]),
+                //GameFrequency = TransformAge(tuple[attributeIndex[AttributeType.Age]]),
+                //PlayedGames = TransformAge(tuple[attributeIndex[AttributeType.Age]])
             };
         } 
 
