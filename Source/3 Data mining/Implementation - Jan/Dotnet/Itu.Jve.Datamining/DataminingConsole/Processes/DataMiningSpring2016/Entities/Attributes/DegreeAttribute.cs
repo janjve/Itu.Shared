@@ -27,7 +27,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
 
     public enum DegreeType
     {
-        Other,
+        PolIT,
         GAMES_A,
         GAMES_T,
         SDT_SE,

@@ -27,6 +27,29 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
 
     public enum PlayedGameType
     {
-        A, // .....
+        Candy_Crush,
+        Wordfeud,
+        Minecraft,
+        FarmVille,
+        Fifa_2016,
+        Star_Wars_Battlefront,
+        Life_is_Strange,
+        Battlefield 4,
+        Journey,
+        Gone_Home,
+        Stanley_Parable,
+        Call_of_Duty_Black_Ops_III,
+        Rocket_League,
+        Bloodborne,
+        Rise_of_the_Tomb_Raider,
+        The_Witness,
+        Her_Story,
+        Fallout_4,
+        Dragon_Age_Inquisition,
+        Counter_strike_GO,
+        Angry_birds,
+        The_Last_of_Us,
+        The_Magic_Circle,
+        I_have_not_played_any_of_these_games,
     }
 }

@@ -31,6 +31,6 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
         LessThan10HoursAWeek,
         LessThan15HoursAWeek,
         LessThan20HoursAWeek,
-        MoreThan20HoursAWeek,
+        MoreThan20HoursAWeek
     }
 }
