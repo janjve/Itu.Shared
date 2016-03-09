@@ -29,6 +29,9 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
             if (CsvAttributeName.PickNumber.Equals(csvName))
                 return AttributeType.PickNumber;
 
+            if (CsvAttributeName.PlayedGames.Equals(csvName))
+                return AttributeType.PlayedGames;
+
             else 
                 return AttributeType.Unknown; // Tried to parse unknown attribute type
         }
