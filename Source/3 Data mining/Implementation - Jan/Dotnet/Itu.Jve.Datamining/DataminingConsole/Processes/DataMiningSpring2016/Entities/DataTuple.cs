@@ -17,7 +17,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
 
         public override string ToString()
         {
-            return $"age: {Age}";
+            return $"age: {Age}, .... TODO: tostirng in dataTuple";
         }
     }
 }

@@ -49,6 +49,7 @@
     <Compile Include="Processes\DataMiningSpring2016\Common\FiveNumberSummary.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Common\Logger.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Common\LogWriter.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Common\NumericMeasurer.cs" />
     <Compile Include="Processes\DataMiningSpring2016\DataMiningSpring2016.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\Abstract\NominalAttribute.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\Abstract\NumericAttribute.cs" />
@@ -60,11 +61,15 @@
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\GameFrequencyAttribute.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\FavoriteGameAttribute.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\DegreeAttribute.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\Entities\Table.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\DataTuple.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Clustering\KMeanCluster.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Clustering\KMeans.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Clustering\ReassignedResponse.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataCleaningHandler.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataMappers.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataNormalizer.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataTransformationHandler.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\Preprocessing\MissingDataHandler.cs" />
     <Compile Include="Processes\IDataminingProcesses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

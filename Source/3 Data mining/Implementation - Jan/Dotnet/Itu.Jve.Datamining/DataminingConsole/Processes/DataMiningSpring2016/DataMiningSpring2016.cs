@@ -17,6 +17,13 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
         private readonly DataCleaningHandler _dataCleaningHandler;
         private readonly DataTransformationHandler _dataTransformationHandler;
 
+        private readonly Func<DataTuple, bool> _ageNoisePredicate;
+        private readonly Func<DataTuple, bool> _degreeNoisePredicate;
+        private readonly Func<DataTuple, bool> _gameFrequencyNoisePredicate;
+        private readonly Func<DataTuple, bool> _favoriteGameNoisePredicate;
+        private readonly Func<DataTuple, bool> _playedGameNoisePredicate;
+
+
         public DataMiningSpring2016()
         {
             _csvAttributeNames = new List<string>()
@@ -30,6 +37,12 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
             _csvPath = @"Data\DataMining 2016 (Responses).csv";
             _dataCleaningHandler = new DataCleaningHandler();
             _dataTransformationHandler = new DataTransformationHandler();
+
+            _ageNoisePredicate = x => /*x.MissingValue ||*/ x.Age.Value < 10 || x.Age.Value > 70;
+            _degreeNoisePredicate = x => /*x.MissingValue ||*/ false;
+            _gameFrequencyNoisePredicate = x => false;
+            _favoriteGameNoisePredicate = x => false;
+            _playedGameNoisePredicate = x => false;
         }
 
         #endregion
@@ -48,19 +61,33 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
             // Reduce attribute domain
             dataset = dataset.SelectAttributes(attributeList, _csvAttributeNames);
 
+            // Remove \" from all string values????? - REMEMBER TO UPDATE AttributeTypeMapper
+
             // Create attributeIndex
             var attributeIndex = _csvAttributeNames
                 .Select((x, i) => new { key = x, value = i })
                 .ToDictionary(x => DataMappers.AttributeTypeMapper(x.key), x => x.value);
+
             Logger.Log(dataset, "Attributes selected");
 
             dataset.MapColumn(attributeIndex, AttributeType.Age, _dataCleaningHandler.AgeCleaner);
 
-            var transformedDataset = dataset.Select(x => _dataTransformationHandler.TransformTuple(x, attributeIndex)).ToList();
+            var transformedDataset = dataset
+                .Select(x => _dataTransformationHandler.TransformTuple(x, attributeIndex)).ToList();
 
+            var ageNoiseRemovedDataset = transformedDataset.RemoveAgeNoise(_ageNoisePredicate, NoiseHandler.NoiseMethod.Median);
+            //... noise from attributes
+
+
+            var normalizedDataset = ageNoiseRemovedDataset.MinMaxNormalizeDataTuple();
             var ageSet = transformedDataset.Select(x => x.Age).ToList();
 
-            //transformedDataset.OrderBy(x => x.Age).ToList().ForEach(x => Debug.WriteLine(x));
+            transformedDataset.OrderBy(x => x.Age).ToList().ForEach(x => Debug.WriteLine(x));
+        }
+
+        public void PatternDiscovery(List<DataTuple> dataTuple)
+        {
+
         }
     }
 }
