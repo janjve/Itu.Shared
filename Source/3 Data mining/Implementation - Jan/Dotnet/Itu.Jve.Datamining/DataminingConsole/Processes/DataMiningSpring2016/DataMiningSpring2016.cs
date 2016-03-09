@@ -63,6 +63,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
 
             // Remove \" from all string values????? - REMEMBER TO UPDATE AttributeTypeMapper
 
+
             // Create attributeIndex
             var attributeIndex = _csvAttributeNames
                 .Select((x, i) => new { key = x, value = i })
@@ -70,7 +71,10 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
 
             Logger.Log(dataset, "Attributes selected");
 
-            dataset.MapColumn(attributeIndex, AttributeType.Age, _dataCleaningHandler.AgeCleaner);
+            dataset.MapColumn(attributeIndex, AttributeType.Degree, _dataCleaningHandler.StringCleaner);
+            dataset.MapColumn(attributeIndex, AttributeType.FavoriteGame, _dataCleaningHandler.StringCleaner);
+            dataset.MapColumn(attributeIndex, AttributeType.GameFrequency, _dataCleaningHandler.StringCleaner);
+            dataset.MapColumn(attributeIndex, AttributeType.PlayedGames, _dataCleaningHandler.StringCleaner);
 
             var transformedDataset = dataset
                 .Select(x => _dataTransformationHandler.TransformTuple(x, attributeIndex)).ToList();

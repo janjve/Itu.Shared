@@ -34,7 +34,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
         Fifa_2016,
         Star_Wars_Battlefront,
         Life_is_Strange,
-        Battlefield 4,
+        Battlefield_4,
         Journey,
         Gone_Home,
         Stanley_Parable,

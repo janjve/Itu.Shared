@@ -28,7 +28,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
     {
         World_Of_Tank,
         World_Of_Warcraft,
-        Yu-Gi-Oh,
+        Yu_Gi_Oh,
         Hearthstone,
         Snake,
         Hitman,
@@ -40,7 +40,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
         Counter_Strike,
         FEZ,
         Diablo_2,
-        Path_Of_Exile
+        Path_Of_Exile,
         Dota_2,
         Spec_Ops_The_Line,
         Fifa_16,
@@ -69,6 +69,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
         Portal,
         Advanced_Wars_Dual_Strike,
         Prototype,
-        Unknown
+        Unknown,
+        Last_Of_Us
     }
 }

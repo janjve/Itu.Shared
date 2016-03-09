@@ -2,6 +2,8 @@
 using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities.Age;
+using static DataminingConsole.Processes.DataMiningSpring2016.Common.Constant;
+using System;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 {
@@ -33,74 +35,54 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
         public DegreeAttribute TransformDegree(string degree) {
             switch (degree)
             {
-                case(degree.equals("GAMES-A")) return new DegreeAttribute { Value = DegreeType.GAMES_A}
-                
-                case(degree.equals("GAMES-T")) return new DegreeAttribute { Value = DegreeType.GAMES_T}
-                
-                case(degree.equals("SDT-SE")) return new DegreeAttribute { Value = DegreeType.SDT_SE}
-                
-                case(degree.equals("SDT_DT")) return new DegreeAttribute { Value = DegreeType.SDT_DT}
-                
-                case(degree.equals("SWU")) return new DegreeAttribute { Value = DegreeType.SWU}
-                
-                case(degree.equals("Guest Student")) return new DegreeAttribute { Value = DegreeType.Guest_Student}
-                
-                case(degree.equals("Polit på KU (økonomi)")) return new DegreeAttribute { Value = DegreeType.PolIt}
-                
-                default: return new DegreeAttribute { Missing = true }
+                case ("GAMES-A"): return new DegreeAttribute { Value = DegreeType.GAMES_A };
+                case ("GAMES-T"): return new DegreeAttribute { Value = DegreeType.GAMES_T };
+                case ("SDT-SE"): return new DegreeAttribute { Value = DegreeType.SDT_SE };
+                case ("SDT_DT"): return new DegreeAttribute { Value = DegreeType.SDT_DT };
+                case ("SWU"): return new DegreeAttribute { Value = DegreeType.SWU };
+                case ("Guest Student"): return new DegreeAttribute { Value = DegreeType.Guest_Student };
+                case ("Polit på KU (økonomi)"): return new DegreeAttribute { Value = DegreeType.PolIT };
+                default: return new DegreeAttribute { MissingValue = true };
             }
         }
         
         public FavoriteGameAttribute TransformFavoriteGame(string favoriteGame) {
-            var arrayOfGames = favoriteGame.Split(",");
+            var arrayOfGames = favoriteGame.Split(',');
             if(arrayOfGames != null) {
                 favoriteGame = arrayOfGames[0];
             }
             
-            favoriteGame.ToLowerCase();
-            switch (degree)
-            {
-                case(Prototype.FavoriteGameMapping.Contains(favoriteGame)) 
-                return new FavoriteGameAttribute { Value = hashMap.Get(favoriteGame) }
-                
-                default: return new FavoriteGameAttribute { Value = DegreeType.Unknown }
-            }
+            favoriteGame.ToLower();
+
+            return Mappings.FavoriteGameMapping.ContainsKey(favoriteGame) 
+                ? new FavoriteGameAttribute { Value = Mappings.FavoriteGameMapping[favoriteGame] }
+                : new FavoriteGameAttribute { Value = FavoriteGameType.Unknown };
+
         }
 
         public GameFrequencyAttribute TramsformGameFrequency(string gameFrequency) {
             
             switch (gameFrequency)
             {
-                case(gameFrequency.Equals("Never"))
-                    return new GameFrequencyAttribute { Value = GameFrequencyType.Never }     
-                               
-                case(gameFrequency.Equals("< 5 hours a week"))
-                    return new GameFrequencyAttribute { Value = GameFrequencyType.LessThan5HoursAWeek }
-                
-                case(gameFrequency.Equals("< 10 hours a week"))
-                    return new GameFrequencyAttribute { Value = GameFrequencyType.LessThan10HoursAWeek }                
-                
-                case(gameFrequency.Equals("< 15 hours a week"))
-                    return new GameFrequencyAttribute { Value = GameFrequencyType.LessThan15HoursAWeek }
-                
-                case(gameFrequency.Equals("< 20 hours a week"))
-                    return new GameFrequencyAttribute { Value = GameFrequencyType.LessThan20HoursAWeek }                
-               
-                case(gameFrequency.Equals("> 20 hours a week"))
-                    return new GameFrequencyAttribute { Value = GameFrequencyType.MoreThan20HoursAWeek }                                        
-                
+                case ("Never"):
+                    return new GameFrequencyAttribute { Value = GameFrequencyType.Never };
+                case ("< 5 hours a week"):
+                    return new GameFrequencyAttribute { Value = GameFrequencyType.LessThan5HoursAWeek };
+                case ("< 10 hours a week"):
+                    return new GameFrequencyAttribute { Value = GameFrequencyType.LessThan10HoursAWeek };
+                case ("< 15 hours a week"):
+                    return new GameFrequencyAttribute { Value = GameFrequencyType.LessThan15HoursAWeek };
+                case ("< 20 hours a week"):
+                    return new GameFrequencyAttribute { Value = GameFrequencyType.LessThan20HoursAWeek };
+                case ("> 20 hours a week"):
+                    return new GameFrequencyAttribute { Value = GameFrequencyType.MoreThan20HoursAWeek };                                       
                 default: 
-                    return new GameFrequencyAttribute { Missing = true };
+                    return new GameFrequencyAttribute { MissingValue = true };
             }
         }
         
         public PlayedGamesAttribute TransformPlayedGames(string playedGames) {
-            switch (playedGames)
-            {
-                case(playedGames.Equals(""))
-                return something fucker!
-                default:
-            }
+            throw new NotImplementedException("No transformation yet.");
         }
     }
 }
