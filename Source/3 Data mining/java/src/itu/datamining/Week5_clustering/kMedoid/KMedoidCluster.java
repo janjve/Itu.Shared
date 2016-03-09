@@ -1,0 +1,29 @@
+package itu.datamining.Week5_clustering.kMedoid;
+import java.util.ArrayList;
+import itu.datamining.Week5_clustering.data.Iris;
+
+public class KMedoidCluster {
+
+public ArrayList<Iris> ClusterMembers;
+public Iris Medoid;
+	
+public KMedoidCluster(Iris medoid)
+{
+	this.ClusterMembers = new ArrayList<Iris>();
+	this.Medoid = medoid;
+}
+	
+	@Override
+	public String toString() {
+		String toPrintString = "-----------------------------------CLUSTER START------------------------------------------" + System.getProperty("line.separator");
+		toPrintString += "Medoid: "+this.Medoid.toString() + System.getProperty("line.separator");
+		for(Iris i : this.ClusterMembers)
+		{
+			toPrintString += i.toString() + System.getProperty("line.separator");
+		}
+		toPrintString += "-----------------------------------CLUSTER END-------------------------------------------" + System.getProperty("line.separator");
+		
+		return toPrintString;
+	}
+	
+}
