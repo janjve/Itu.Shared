@@ -9,6 +9,7 @@
         Degree,
         GameFrequency,
         FavoriteGame,
+        PlayedGames,
         PickNumber
     }
 }
