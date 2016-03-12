@@ -30,15 +30,15 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
         }
         
         public DegreeAttribute TransformDegree(string degree) {
-            switch (degree)
+            switch (degree.ToLower())
             {
-                case ("GAMES-A"): return new DegreeAttribute { Value = DegreeType.GAMES_A };
-                case ("GAMES-T"): return new DegreeAttribute { Value = DegreeType.GAMES_T };
-                case ("SDT-SE"): return new DegreeAttribute { Value = DegreeType.SDT_SE };
-                case ("SDT_DT"): return new DegreeAttribute { Value = DegreeType.SDT_DT };
-                case ("SWU"): return new DegreeAttribute { Value = DegreeType.SWU };
-                case ("Guest Student"): return new DegreeAttribute { Value = DegreeType.Guest_Student };
-                case ("Polit på KU (økonomi)"): return new DegreeAttribute { Value = DegreeType.PolIT };
+                case "games-a": return new DegreeAttribute { Value = DegreeType.GAMES_A };
+                case "games-t": return new DegreeAttribute { Value = DegreeType.GAMES_T };
+                case "sdt-se": return new DegreeAttribute { Value = DegreeType.SDT_SE };
+                case "sdt-dt": return new DegreeAttribute { Value = DegreeType.SDT_DT };
+                case "swu": return new DegreeAttribute { Value = DegreeType.SWU };
+                case "guest student": return new DegreeAttribute { Value = DegreeType.Guest_Student };
+                case "polit på ku (økonomi)": return new DegreeAttribute { Value = DegreeType.PolIT };
                 default: return new DegreeAttribute { MissingValue = true };
             }
         }
@@ -46,10 +46,10 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
         public FavoriteGameAttribute TransformFavoriteGame(string favoriteGame) {
             var arrayOfGames = favoriteGame.Split(',');
             favoriteGame = arrayOfGames[0]?.Trim().ToLower();
-
-            return favoriteGame != null && Mappings.FavoriteGameMapping.ContainsKey(favoriteGame) 
-                ? new FavoriteGameAttribute { Value = Mappings.FavoriteGameMapping[favoriteGame] }
-                : new FavoriteGameAttribute { Value = FavoriteGameType.Unknown };
+            var game = favoriteGame != null && Mappings.FavoriteGameMapping.ContainsKey(favoriteGame)
+                ? new FavoriteGameAttribute {Value = Mappings.FavoriteGameMapping[favoriteGame]}
+                : new FavoriteGameAttribute {Value = FavoriteGameType.Unknown};
+            return game;
 
         }
 

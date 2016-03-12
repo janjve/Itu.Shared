@@ -40,7 +40,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clus
         public override string ToString()
         {
             var stringToPrint = "-----------------------------------CLUSTER START------------------------------------------" + Environment.NewLine;
-            stringToPrint += ClusterMembers.Select(x => x + Environment.NewLine);
+            ClusterMembers.ForEach(x => { stringToPrint += x.ToString() + Environment.NewLine; });
             stringToPrint += "---------------------------------------CLUSTER END-------------------------------------------" + Environment.NewLine;
             return stringToPrint;
         }

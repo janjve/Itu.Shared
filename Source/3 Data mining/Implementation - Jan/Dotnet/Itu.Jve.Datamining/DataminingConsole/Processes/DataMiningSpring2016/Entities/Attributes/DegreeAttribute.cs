@@ -28,6 +28,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes
 
     public enum DegreeType
     {
+        Unknown,
         PolIT,
         GAMES_A,
         GAMES_T,
