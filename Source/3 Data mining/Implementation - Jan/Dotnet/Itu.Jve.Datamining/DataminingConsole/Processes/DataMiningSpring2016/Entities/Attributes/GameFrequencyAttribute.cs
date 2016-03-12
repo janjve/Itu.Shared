@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
+namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes
 {
     public class GameFrequencyAttribute : Attribute
     {
@@ -21,6 +17,10 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
                 return Value.CompareTo(otherGameFrequencyAttribute.Value);
             else
                 throw new ArgumentException("Object is not an GameFrequencyAttribute");
+        }
+        public override string ToString()
+        {
+            return Value.ToString();
         }
     }
 

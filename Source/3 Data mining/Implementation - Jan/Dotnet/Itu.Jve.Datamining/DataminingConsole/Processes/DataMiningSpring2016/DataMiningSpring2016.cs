@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
-using DataminingConsole.Processes.DataMiningSpring2016.Entities.Age;
 using DataminingConsole.Processes.DataMiningSpring2016.Preprocessing;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016
@@ -47,51 +46,63 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
 
         #endregion
 
-        public void Start()
+        public void Run()
         {
-            // Part 1
+            var data = DataSelection();
+            var dataset = PreProcessing(data);
+            PatternDiscovery(dataset);
+        }
+
+        public List<List<string>> DataSelection()
+        {
             // Load in Csv
             var result = CsvFileReader.ReadDataFile(_csvPath);
 
-            // Part 2
             // Split attributes from tuples
             var attributeList = result.First(x => true);
-            var dataset = result.Skip(1).ToList();
+            var cvsDataset = result.Skip(1).ToList();
 
             // Reduce attribute domain
-            dataset = dataset.SelectAttributes(attributeList, _csvAttributeNames);
+            return cvsDataset.SelectAttributes(attributeList, _csvAttributeNames);
+        }
 
-            // Remove \" from all string values????? - REMEMBER TO UPDATE AttributeTypeMapper
-
-
+        public List<DataTuple> PreProcessing(List<List<string>> cvsDataset)
+        {
             // Create attributeIndex
             var attributeIndex = _csvAttributeNames
                 .Select((x, i) => new { key = x, value = i })
                 .ToDictionary(x => DataMappers.AttributeTypeMapper(x.key), x => x.value);
 
-            Logger.Log(dataset, "Attributes selected");
+            cvsDataset.MapColumn(attributeIndex, AttributeType.Degree, _dataCleaningHandler.StringCleaner);
+            cvsDataset.MapColumn(attributeIndex, AttributeType.FavoriteGame, _dataCleaningHandler.StringCleaner);
+            cvsDataset.MapColumn(attributeIndex, AttributeType.GameFrequency, _dataCleaningHandler.StringCleaner);
+            cvsDataset.MapColumn(attributeIndex, AttributeType.PlayedGames, _dataCleaningHandler.StringCleaner);
 
-            dataset.MapColumn(attributeIndex, AttributeType.Degree, _dataCleaningHandler.StringCleaner);
-            dataset.MapColumn(attributeIndex, AttributeType.FavoriteGame, _dataCleaningHandler.StringCleaner);
-            dataset.MapColumn(attributeIndex, AttributeType.GameFrequency, _dataCleaningHandler.StringCleaner);
-            dataset.MapColumn(attributeIndex, AttributeType.PlayedGames, _dataCleaningHandler.StringCleaner);
-
-            var transformedDataset = dataset
+            var dataset = cvsDataset
                 .Select(x => _dataTransformationHandler.TransformTuple(x, attributeIndex)).ToList();
 
-            var ageNoiseRemovedDataset = transformedDataset.RemoveAgeNoise(_ageNoisePredicate, NoiseHandler.NoiseMethod.Median);
+            dataset = dataset.RemoveAgeNoise(_ageNoisePredicate, NoiseHandler.NoiseMethod.Median);
             //... noise from attributes
+            dataset = dataset.MinMaxNormalizeDataTuple();
 
-
-            var normalizedDataset = ageNoiseRemovedDataset.MinMaxNormalizeDataTuple();
-            var ageSet = transformedDataset.Select(x => x.Age).ToList();
-
-            transformedDataset.OrderBy(x => x.Age).ToList().ForEach(x => Debug.WriteLine(x));
+            return dataset;
         }
 
-        public void PatternDiscovery(List<DataTuple> dataTuple)
+        public void PatternDiscovery(List<DataTuple> dataSet)
         {
+            Debug.WriteLine("");
+            Debug.WriteLine("================================");
+            Debug.WriteLine("== STARTING PATTERN DISCOVERY ==");
+            Debug.WriteLine("================================");
+            Debug.WriteLine("");
 
+            dataSet.OrderBy(x => x.Age).ToList().ForEach(x => Debug.WriteLine(x));
+
+            Debug.WriteLine("");
+            Debug.WriteLine("================================");
+            Debug.WriteLine("=== ENDING PATTERN DISCOVERY ===");
+            Debug.WriteLine("================================");
+            Debug.WriteLine("");
         }
     }
 }

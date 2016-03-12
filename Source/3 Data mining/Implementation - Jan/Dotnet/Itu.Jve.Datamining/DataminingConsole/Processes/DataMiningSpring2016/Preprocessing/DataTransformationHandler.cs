@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
-using DataminingConsole.Processes.DataMiningSpring2016.Entities.Age;
 using static DataminingConsole.Processes.DataMiningSpring2016.Common.Constant;
 using System;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 {
@@ -18,18 +18,15 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
                 Age = TransformAge(tuple[attributeIndex[AttributeType.Age]]),
                 Degree = TransformDegree(tuple[attributeIndex[AttributeType.Degree]]),
                 FavoriteGame = TransformFavoriteGame(tuple[attributeIndex[AttributeType.FavoriteGame]]),
-                GameFrequency = TramsformGameFrequency(tuple[attributeIndex[AttributeType.GameFrequency]]),
-                //PlayedGames = TransformPlayedGames(tuple[attributeIndex[AttributeType.PlayedGames]])
+                GameFrequency = TransformGameFrequency(tuple[attributeIndex[AttributeType.GameFrequency]]),
+                PlayedGames = new PlayedGamesAttribute() // TransformPlayedGames(tuple[attributeIndex[AttributeType.PlayedGames]])
             };
         } 
 
         public AgeAttribute TransformAge(string age)
         {
             int transformedAge;
-
-            if (int.TryParse(age, out transformedAge))
-                return new AgeAttribute {Value = transformedAge };
-            return null;
+            return int.TryParse(age, out transformedAge) ? new AgeAttribute {Value = transformedAge } : null;
         }
         
         public DegreeAttribute TransformDegree(string degree) {
@@ -48,19 +45,15 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
         
         public FavoriteGameAttribute TransformFavoriteGame(string favoriteGame) {
             var arrayOfGames = favoriteGame.Split(',');
-            if(arrayOfGames != null) {
-                favoriteGame = arrayOfGames[0];
-            }
-            
-            favoriteGame.ToLower();
+            favoriteGame = arrayOfGames[0]?.Trim().ToLower();
 
-            return Mappings.FavoriteGameMapping.ContainsKey(favoriteGame) 
+            return favoriteGame != null && Mappings.FavoriteGameMapping.ContainsKey(favoriteGame) 
                 ? new FavoriteGameAttribute { Value = Mappings.FavoriteGameMapping[favoriteGame] }
                 : new FavoriteGameAttribute { Value = FavoriteGameType.Unknown };
 
         }
 
-        public GameFrequencyAttribute TramsformGameFrequency(string gameFrequency) {
+        public GameFrequencyAttribute TransformGameFrequency(string gameFrequency) {
             
             switch (gameFrequency)
             {

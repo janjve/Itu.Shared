@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataminingConsole.Processes.DataMiningSpring2016.Entities.Age;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
 {
@@ -17,7 +17,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
 
         public override string ToString()
         {
-            return $"age: {Age}, .... TODO: tostirng in dataTuple";
+            return $"[TUPLE] (age: {Age}, degree: {Degree}, FavoriteGame: {FavoriteGame}, GameFrequency: {GameFrequency}, PlayedGames: {PlayedGames})";
         }
     }
 }

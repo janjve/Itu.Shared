@@ -8,6 +8,6 @@ namespace DataminingConsole.Processes
 {
     public interface IDataminingProcesses
     {
-        void Start();
+        void Run();
     }
 }

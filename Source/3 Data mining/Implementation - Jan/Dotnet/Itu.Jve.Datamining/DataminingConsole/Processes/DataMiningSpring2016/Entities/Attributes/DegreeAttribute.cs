@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
+namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes
 {
     public class DegreeAttribute : Attribute
     {
@@ -22,6 +18,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
                 return Value.CompareTo(otherAgeAttribute.Value);
             else
                 throw new ArgumentException("Object is not an DegreeAttribute");
+        }
+
+        public override string ToString()
+        {
+            return Value.ToString();
         }
     }
 

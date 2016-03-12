@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
+namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes
 {
     public class PlayedGamesAttribute : Attribute
     {
@@ -22,6 +19,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
                 //return Value.all(otherPlayedGameAttribute.Value);
             else
                 throw new ArgumentException("Object is not an PlayedGameAttribute");
+        }
+
+        public override string ToString()
+        {
+            return Value?.Count.ToString() ?? "NULL";
         }
     }
 
