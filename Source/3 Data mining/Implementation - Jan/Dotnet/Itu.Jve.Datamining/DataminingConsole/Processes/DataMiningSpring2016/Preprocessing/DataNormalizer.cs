@@ -24,8 +24,10 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
                 ageMin = x.Age.Value < ageMin ? x.Age.Value : ageMin;
                 ageMax = x.Age.Value > ageMax ? x.Age.Value : ageMax;
             });
-
-            dataTuples.ForEach(x => x.Age.NormalizedValue = (x.Age.Value - ageMin) / (ageMax - ageMin));
+            if(Math.Abs(ageMax - ageMin) < 0.1f) // All values are the same.
+                dataTuples.ForEach(x => x.Age.NormalizedValue = 1); 
+            else
+                dataTuples.ForEach(x => x.Age.NormalizedValue = (x.Age.Value - ageMin) / (ageMax - ageMin));
 
             return dataTuples;
         }
