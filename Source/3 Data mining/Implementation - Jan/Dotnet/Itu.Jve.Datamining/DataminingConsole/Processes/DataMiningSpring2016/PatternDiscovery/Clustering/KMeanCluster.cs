@@ -11,14 +11,21 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clus
     {
         public List<DataTuple> ClusterMembers { get; set; }
 
-        public KMeanCluster()
+        public DataTuple ClusterMean { get; set; }
+
+        public DataTuple CalculateClusterMean()
         {
-            this.ClusterMembers = new List<DataTuple>();
+            if (ClusterMean == null)
+            {
+                // TODO
+                ClusterMean = new DataTuple();
+            }
+            return ClusterMean;
         }
 
         public override string ToString()
         {
-            string stringToPrint = "-----------------------------------CLUSTER START------------------------------------------" + Environment.NewLine;
+            var stringToPrint = "-----------------------------------CLUSTER START------------------------------------------" + Environment.NewLine;
 
             stringToPrint += ClusterMembers.Select(x => x + Environment.NewLine);
 
