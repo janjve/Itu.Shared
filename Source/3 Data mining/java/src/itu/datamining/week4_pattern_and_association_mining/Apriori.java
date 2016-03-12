@@ -24,44 +24,68 @@ public class Apriori {
         System.out.println(table.size());
 
     }
+    /*
+    * We should check that the following properties are true for the Apriori alg:
+    * Itemsets should be pruned, such that non-frequent itemsets are not part of the generated itemsets. TODO!!
+    * It should finish when there is only 1 element left!
+    * Should it return all itemsets that are frequent, no matter how small?
+    * What should this algorithm ACTUALLY return?!
+    * */
 
     public static List<ItemSet> apriori( int[][] transactions, int supportThreshold ) {
-        int k;
+        int k = 1;
         Hashtable<ItemSet, Integer> frequentItemSets = generateFrequentItemSetsLevel1( transactions, supportThreshold );
-        for (k = 1; frequentItemSets.size() > 0; k++) {
-            System.out.print( "Finding frequent itemsets of length " + (k + 1) + "…" );
-            frequentItemSets = generateFrequentItemSets( supportThreshold, transactions, frequentItemSets );
-            // TODO: add to list
+        ArrayList<ItemSet> itemSets = new ArrayList<>();
+        //Continues untill there is only one itemset left.
 
+        while(frequentItemSets.size() > 1) {
+            k++;
+            System.out.print( "Finding frequent itemsets of length " + (k + 1) + "…" );
+            Hashtable<ItemSet, Integer> tempFrequentItemSets = generateFrequentItemSets( supportThreshold, transactions, frequentItemSets );
+
+            for (ItemSet item : frequentItemSets.keySet()) {
+                itemSets.add(item);
+            }
+
+            if(tempFrequentItemSets.size() > 0) {
+                frequentItemSets = tempFrequentItemSets ;
+            }
             System.out.println( " found " + frequentItemSets.size() );
         }
+
+
         // TODO: create association rules from the frequent itemsets
 
         // TODO: return something useful
-        return null;
+        return itemSets;
     }
 
     private static Hashtable<ItemSet, Integer> generateFrequentItemSets( int supportThreshold, int[][] transactions,
                     Hashtable<ItemSet, Integer> lowerLevelItemSets ) {
-        // TODO: first generate candidate itemsets from the lower level itemsets
-        //This calculation seems erroneous
-        Hashtable<ItemSet, Integer> frequentItemSets = new Hashtable<>();
+
+        //This calculation seems erroneous - Uhh... why? What the F was I thinking?
+        Hashtable<ItemSet, Integer> frequentItemSetCandidates = new Hashtable<>();
 
         for (ItemSet item: lowerLevelItemSets.keySet()) {
             for (ItemSet item2: lowerLevelItemSets.keySet()) {
                 if (!item.equals(item2)) {
-                    frequentItemSets.put(joinSets(item, item2),0);
+                    frequentItemSetCandidates.put(joinSets(item, item2),0);
                 }
             }
         }
 
-        /*
-         * TODO: now check the support for all candidates and add only those
-         * that have enough support to the set
-         */
+        //TODO: Prune itemsets.
 
-        // TODO: return something useful
-        return null;
+        //check the support for all candidates and add only those
+        Hashtable<ItemSet, Integer> frequentItemSets = new Hashtable<>();
+        for (ItemSet item: frequentItemSetCandidates.keySet()) {
+
+            if(countSupport(item.set, transactions) >= supportThreshold) {
+                frequentItemSets.put(item, frequentItemSetCandidates.get(item));
+            }
+        }
+
+        return frequentItemSets;
     }
 
     private static ItemSet joinSets( ItemSet first, ItemSet second ) {
@@ -95,6 +119,8 @@ public class Apriori {
                 hashtable.put(itemSet, hashtable.get(itemSet)+1);
             }
         }
+
+        //TODO: Prune itemsets???
 
         Hashtable<ItemSet, Integer> frequentItemSets = new Hashtable<>();
         for (ItemSet item: hashtable.keySet()) {
