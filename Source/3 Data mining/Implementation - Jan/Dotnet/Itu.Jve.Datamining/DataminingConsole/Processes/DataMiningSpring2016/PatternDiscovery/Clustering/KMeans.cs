@@ -10,6 +10,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clus
     {
         public static List<KMeanCluster> KMeansPartition(int k, List<DataTuple> data)
         {
+            random = new Random();
             var clusters = GenerateInitialPartioningCluster(k, data);
             ReassignedResponse response;
             do
@@ -74,10 +75,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clus
             }).ToList();
         }
 
-
+        public static Random random { get; set; }
         private static float ManhattenDistance(DataTuple tuple1, DataTuple tuple2)
         {
-            return float.MaxValue;
+            // TODO
+            return (float) random.NextDouble();
         }
     }
 }

@@ -13,6 +13,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clus
 
         public DataTuple ClusterMean { get; set; }
 
+        public KMeanCluster()
+        {
+            ClusterMembers = new List<DataTuple>();
+        }
+
         public DataTuple CalculateClusterMean()
         {
             if (ClusterMean == null)
@@ -26,10 +31,8 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clus
         public override string ToString()
         {
             var stringToPrint = "-----------------------------------CLUSTER START------------------------------------------" + Environment.NewLine;
-
             stringToPrint += ClusterMembers.Select(x => x + Environment.NewLine);
-
-            stringToPrint += "-----------------------------------CLUSTER END------------------------------------------" + Environment.NewLine;
+            stringToPrint += "---------------------------------------CLUSTER END-------------------------------------------" + Environment.NewLine;
             return stringToPrint;
         }
     }
