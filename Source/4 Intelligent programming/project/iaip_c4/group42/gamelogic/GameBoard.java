@@ -11,7 +11,7 @@ public class GameBoard
 {
     private int[][] gameboard;
     private int[] colCount;
-    private final int WINNING_CONDITION = 3;
+    private final int WINNING_CONDITION = 4;
 
     public GameBoard(int x, int y)
     {

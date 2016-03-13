@@ -22,7 +22,7 @@ public class GameLogic42 implements IGameLogic
         this.y = y;
         this.playerID = playerID;
         this.gameBoard = new GameBoard(x, y);
-        this.decisionHandler = new MinimaxDecision(gameBoard, playerID);
+        this.decisionHandler = new MinimaxIDSDecision(gameBoard, playerID);
     }
 
     public Winner gameFinished()
