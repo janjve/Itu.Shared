@@ -11,7 +11,7 @@ public class GameBoard
 {
     private int[][] gameboard;
     private int[] colCount;
-    private final int WINNING_CONDITION = 4;
+    private final int WINNING_CONDITION = 3;
 
     public GameBoard(int x, int y)
     {
@@ -122,17 +122,18 @@ public class GameBoard
     private TerminalResultType winConditionDiagonallyAscending()
     {
         int points;
-        int cols = this.gameboard[0].length - 1;
-        int rows = this.gameboard.length - 1;
+        int rows = this.gameboard[0].length;
+        int cols = this.gameboard.length;
 
-        for (int row = rows; row > rows - (WINNING_CONDITION - 1); row--)
+        //
+        for (int row = 0; row < rows - (WINNING_CONDITION - 1); row++)
         {
             points = 0;
-            for (int count = 0; count < row + 1; count++)
+            for (int count = 0; count < cols && count+row < rows; count++)
             {
-                int x = row - count;
-                int y = count;
-                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x + 1][y - 1]) ? points + 1 : 1;
+                int x = count;
+                int y = row + count;
+                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y - 1]) ? points + 1 : 1;
 
                 if (points == WINNING_CONDITION)
                 {
@@ -141,14 +142,14 @@ public class GameBoard
             }
         }
 
-        for (int col = 1; col <= cols - (WINNING_CONDITION - 1); col++)
+        for (int col = 1; col < cols - (WINNING_CONDITION - 1); col++)
         {
             points = 0;
-            for (int count = 0; count < (cols - col) + 1; count++)
+            for (int count = 0; count+col < cols && count < rows; count++)
             {
-                int x = rows - count;
-                int y = col + count;
-                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x + 1][y - 1]) ? points + 1 : 1;
+                int x = col+count;
+                int y = count;
+                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y - 1]) ? points + 1 : 1;
 
                 if (points == WINNING_CONDITION)
                 {
@@ -163,17 +164,17 @@ public class GameBoard
     private TerminalResultType winConditionDiagonallyDescending()
     {
         int points;
-        int cols = this.gameboard[0].length - 1;
-        int rows = this.gameboard.length - 1;
+        int rows = this.gameboard[0].length;
+        int cols = this.gameboard.length;
 
-        for (int row = 0; row <= rows - (WINNING_CONDITION - 1); row++)
+        for (int row = rows-1; row >= WINNING_CONDITION-1; row--)
         {
             points = 0;
-            for (int count = 0; count < (rows - row) + 1; count++)
+            for (int count = 0; row - count  >= 0 && count < cols; count++)
             {
-                int x = row + count;
-                int y = count;
-                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y - 1]) ? points + 1 : 1;
+                int x = count;
+                int y = row - count;
+                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y + 1]) ? points + 1 : 1;
 
                 if (points == WINNING_CONDITION)
                 {
@@ -182,14 +183,14 @@ public class GameBoard
             }
         }
 
-        for (int col = 1; col <= cols - (WINNING_CONDITION - 1); col++)
+        for (int col = 1; col < cols - (WINNING_CONDITION - 1); col++)
         {
             points = 0;
-            for (int count = 0; count < (cols - col) + 1; count++)
+            for (int count = 0; col + count < rows && rows - 1 - count > 0; count++)
             {
-                int x = count;
-                int y = col + count;
-                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y - 1]) ? points + 1 : 1;
+                int x = col + count;
+                int y = rows - 1 - count;
+                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y + 1]) ? points + 1 : 1;
 
                 if (points == WINNING_CONDITION)
                 {
