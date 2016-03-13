@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java" line="81" />
+    <bookmark url="file://$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java" line="94" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86ab0ff7-0e41-4f5e-831c-b3b0e076bda6" name="Default" comment="">
@@ -29,26 +29,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/group42/gamelogic/GameBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34203655">
-              <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="83" column="27" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1903#1904#0" expanded="true" />
                 <element signature="e#1964#1965#0" expanded="true" />
-                <marker date="1457903474321" expanded="true" signature="2154:2406" placeholder="//..." />
+                <marker date="1457904461698" expanded="true" signature="2154:2358" placeholder="//..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimaxIDSDecision.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MinimaxIDSDecision.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="144" column="30" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.72584856">
+              <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -106,8 +106,8 @@
         <option value="$PROJECT_DIR$/GameLogic42.java" />
         <option value="$PROJECT_DIR$/group42/heuristics/GameLogic42IDSAB.java" />
         <option value="$PROJECT_DIR$/GameLogic42IDSAB.java" />
-        <option value="$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java" />
         <option value="$PROJECT_DIR$/group42/gamelogic/GameBoard.java" />
+        <option value="$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java" />
       </list>
     </option>
   </component>
@@ -594,7 +594,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="ShowGame" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="human GameLogic42IDSAB 5 5" />
+      <option name="PROGRAM_PARAMETERS" value="human GameLogic42IDSAB 7 7" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -797,7 +797,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1903#1904#0" expanded="true" />
             <element signature="e#1964#1965#0" expanded="true" />
-            <marker date="1457903474321" expanded="true" signature="2154:2406" placeholder="//..." />
+            <marker date="1457904461698" expanded="true" signature="2154:2358" placeholder="//..." />
           </folding>
         </state>
       </provider>
@@ -840,7 +840,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1903#1904#0" expanded="true" />
             <element signature="e#1964#1965#0" expanded="true" />
-            <marker date="1457903474321" expanded="true" signature="2154:2406" placeholder="//..." />
+            <marker date="1457904461698" expanded="true" signature="2154:2358" placeholder="//..." />
           </folding>
         </state>
       </provider>
@@ -868,7 +868,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1903#1904#0" expanded="true" />
             <element signature="e#1964#1965#0" expanded="true" />
-            <marker date="1457903474321" expanded="true" signature="2154:2406" placeholder="//..." />
+            <marker date="1457904461698" expanded="true" signature="2154:2358" placeholder="//..." />
           </folding>
         </state>
       </provider>
@@ -1162,24 +1162,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="144" column="30" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/group42/gamelogic/GameBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34203655">
-          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="27" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1903#1904#0" expanded="true" />
             <element signature="e#1964#1965#0" expanded="true" />
-            <marker date="1457903474321" expanded="true" signature="2154:2406" placeholder="//..." />
+            <marker date="1457904461698" expanded="true" signature="2154:2358" placeholder="//..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72584856">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

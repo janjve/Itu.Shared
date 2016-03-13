@@ -31,6 +31,8 @@ public class MinimaxIDSDecision implements IDecisionHandler
         GameBoard state = gameBoard;
         int maxUtility = Integer.MIN_VALUE;
         int action = -1;
+        int tempAction = -1;
+
         this.timeStart = System.currentTimeMillis();
         int doneCount = 0;
 
@@ -50,19 +52,28 @@ public class MinimaxIDSDecision implements IDecisionHandler
                     newState.insertCoin(i, playerId);
                     MinimaxIDSResult maxUtilityI = minValue(newState, 1, depthCutOff, alpha, beta);
                     if (!maxUtilityI.getCutOff()) doneCount++;
+                    System.out.println("Action: "+ i+ " gives utility of: " + maxUtilityI.getUtility());
 
                     if (maxUtilityI.getUtility() > maxUtility)
                     {
                         maxUtility = maxUtilityI.getUtility();
-                        action = i;
+                        tempAction = i;
                         alpha = maxUtility;
+                        System.out.println("Found better action: " + tempAction);
                     }
                 } else
                 {
                     doneCount++;
                 }
             }
+            if(!this.timeCutOff())
+            {
+                action = tempAction;
+                System.out.println("Found better action: " + tempAction);
+                maxUtility = Integer.MIN_VALUE;
+            }
         }
+        System.out.println("picked action: " + action);
 
         return action;
     }
@@ -76,8 +87,10 @@ public class MinimaxIDSDecision implements IDecisionHandler
     private MinimaxIDSResult maxValue(GameBoard state, int depth, int depthCutOff, int alpha, int beta)
     {
         TerminalResultType result = state.terminalTest();
-        if (result != TerminalResultType.NOT_FINISHED) return new MinimaxIDSResult(utility(result, state, depth, this.playerId, this.opponentPlayerId), false);
-        else if (depth >= depthCutOff || timeCutOff()) return new MinimaxIDSResult(utility(result, state, depth, this.playerId, this.opponentPlayerId), true);
+        if (result != TerminalResultType.NOT_FINISHED)
+            return new MinimaxIDSResult(utility(result, state, depth, this.playerId, this.opponentPlayerId), false);
+        else if (depth >= depthCutOff || timeCutOff())
+            return new MinimaxIDSResult(utility(result, state, depth, this.playerId, this.opponentPlayerId), true);
         MinimaxIDSResult maxUtility = new MinimaxIDSResult(Integer.MIN_VALUE, false);
 
         for (int i = 0; i < state.getGameboard().length; i++)
@@ -131,19 +144,20 @@ public class MinimaxIDSDecision implements IDecisionHandler
         switch (resultType)
         {
             case PLAYER1:
-                result = playerId == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE; // sæt tilbage til MAX_VALUE
+                result = playerId == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+                result /= depth;
                 break;
             case PLAYER2:
-                result = playerId == 2 ? Integer.MAX_VALUE : Integer.MIN_VALUE;// sæt tilbage til MAX_VALUE
+                result = playerId == 2 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+                result /= depth;
                 break;
             case TIE:
                 result = 0;
                 break;
             default:
-                //result = state.stateHeuristic(player, opponent);
+                result = state.stateHeuristic(player, opponent);
         }
-        result = state.stateHeuristic(player, opponent);
-        System.out.println("HEURISTIC: " + result);
-        return result / depth;
+        //System.out.println("HEURISTIC: " + result);
+        return result;
     }
 }
