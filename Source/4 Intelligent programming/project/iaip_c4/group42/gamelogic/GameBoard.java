@@ -69,6 +69,11 @@ public class GameBoard
         return colCount[col] >= gameboard[col].length;
     }
 
+    public boolean emptyColumn(int col)
+    {
+        return colCount[col]==0;
+    }
+
     private TerminalResultType tieCondition()
     {
         boolean fullBoard = true;

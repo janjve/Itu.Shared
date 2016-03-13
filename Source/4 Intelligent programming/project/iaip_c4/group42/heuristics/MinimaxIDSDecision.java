@@ -33,6 +33,7 @@ public class MinimaxIDSDecision implements IDecisionHandler
         int action = -1;
         this.timeStart = System.currentTimeMillis();
         int doneCount = 0;
+
         for (int depthCutOff = 1; !this.timeCutOff() && doneCount < state.getGameboard().length; depthCutOff++)
         {
             int alpha = Integer.MIN_VALUE;
@@ -40,6 +41,7 @@ public class MinimaxIDSDecision implements IDecisionHandler
             System.out.println("Depth: " + depthCutOff);
 
             doneCount = 0;
+
             for (int i = 0; i < state.getGameboard().length; i++)
             {
                 if (!state.fullColumn(i))
@@ -47,7 +49,7 @@ public class MinimaxIDSDecision implements IDecisionHandler
                     GameBoard newState = state.clone();
                     newState.insertCoin(i, playerId);
                     MinimaxIDSResult maxUtilityI = minValue(newState, 1, depthCutOff, alpha, beta);
-                    if(!maxUtilityI.getCutOff()) doneCount++;
+                    if (!maxUtilityI.getCutOff()) doneCount++;
 
                     if (maxUtilityI.getUtility() > maxUtility)
                     {
@@ -55,8 +57,7 @@ public class MinimaxIDSDecision implements IDecisionHandler
                         action = i;
                         alpha = maxUtility;
                     }
-                }
-                else
+                } else
                 {
                     doneCount++;
                 }
@@ -72,10 +73,11 @@ public class MinimaxIDSDecision implements IDecisionHandler
         return (ticks - this.timeStart) > this.timeCutOff;
     }
 
-    private MinimaxIDSResult maxValue(GameBoard state, int depth, int depthCutOff,  int alpha, int beta)
+    private MinimaxIDSResult maxValue(GameBoard state, int depth, int depthCutOff, int alpha, int beta)
     {
-        if (state.terminalTest() != TerminalResultType.NOT_FINISHED ) return new MinimaxIDSResult(utility(state, depth),false);
-        else if(depth >= depthCutOff || timeCutOff()) return new MinimaxIDSResult(utility(state, depth),true);
+        TerminalResultType result = state.terminalTest();
+        if (result != TerminalResultType.NOT_FINISHED) return new MinimaxIDSResult(utility(result, depth), false);
+        else if (depth >= depthCutOff || timeCutOff()) return new MinimaxIDSResult(utility(result, depth), true);
         MinimaxIDSResult maxUtility = new MinimaxIDSResult(Integer.MIN_VALUE, false);
 
         for (int i = 0; i < state.getGameboard().length; i++)
@@ -88,7 +90,7 @@ public class MinimaxIDSDecision implements IDecisionHandler
                 MinimaxIDSResult maxUtilityI = minValue(newState, depth + 1, depthCutOff, alpha, beta);
                 maxUtility = maxUtilityI.getUtility() > maxUtility.getUtility() ? maxUtilityI : maxUtility;
             }
-            if(maxUtility.getUtility() >= beta)
+            if (maxUtility.getUtility() >= beta)
             {
                 return maxUtility;
             }
@@ -97,9 +99,10 @@ public class MinimaxIDSDecision implements IDecisionHandler
         return maxUtility;
     }
 
-    private MinimaxIDSResult minValue(GameBoard state, int depth, int depthCutOff,int alpha, int beta)
+    private MinimaxIDSResult minValue(GameBoard state, int depth, int depthCutOff, int alpha, int beta)
     {
-        if (state.terminalTest() != TerminalResultType.NOT_FINISHED) return new MinimaxIDSResult(utility(state, depth),false);
+        TerminalResultType result = state.terminalTest();
+        if (result != TerminalResultType.NOT_FINISHED) return new MinimaxIDSResult(utility(result, depth), false);
         MinimaxIDSResult minUtility = new MinimaxIDSResult(Integer.MAX_VALUE, false);
 
         for (int i = 0; i < state.getGameboard().length; i++)
@@ -112,7 +115,7 @@ public class MinimaxIDSDecision implements IDecisionHandler
                 MinimaxIDSResult minUtilityI = maxValue(newState, depth + 1, depthCutOff, alpha, beta);
                 minUtility = minUtilityI.getUtility() < minUtility.getUtility() ? minUtilityI : minUtility;
             }
-            if(minUtility.getUtility() <= alpha)
+            if (minUtility.getUtility() <= alpha)
             {
                 return minUtility;
             }
@@ -121,9 +124,8 @@ public class MinimaxIDSDecision implements IDecisionHandler
         return minUtility;
     }
 
-    private int utility(GameBoard state, int depth)
+    private int utility(TerminalResultType resultType, int depth)
     {
-        TerminalResultType resultType = state.terminalTest();
         int result = 0;
         switch (resultType)
         {
