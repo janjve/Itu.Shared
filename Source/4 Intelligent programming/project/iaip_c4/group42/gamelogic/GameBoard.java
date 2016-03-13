@@ -90,33 +90,39 @@ public class GameBoard
 
         for (int col = 0; col < gameboard.length; col++)
         {
-            int tmpPlayerPoints = 1;
-            int tmpOpponentPoints = 1;
+            int playerChain = 0;
+            int tmpPlayerPoints = 0;
+            int tmpOpponentPoints = 0;
+            int opponentChain = 0;
             for (int row = 0; row < gameboard[0].length; row++)
             {
-                if (row > 0 && ((gameboard[col][row - 1] == player && (gameboard[col][row] == player || gameboard[col][row] == 0)) ||
-                        (gameboard[col][row - 1] == 0 && gameboard[col][row] == player)))
+
+                if (row > 0 && (gameboard[col][row-1] != opponent && gameboard[col][row] != opponent))
                 {
-                    tmpPlayerPoints *= 2;
-                    tmpOpponentPoints = 1;
-                } else if (tmpPlayerPoints > 1)
-                {
-                    points += tmpPlayerPoints;
-                    tmpPlayerPoints = 1;
+                    if (gameboard[col][row] == player)
+                    {
+                        tmpPlayerPoints++;
+                        points -= opponentChain >= WINNING_CONDITION ? Math.pow(2, tmpOpponentPoints) : 0;
+                        tmpOpponentPoints = 0;
+                        opponentChain = 0;
+                    }
+                    playerChain++;
                 }
-                if (row > 0 && ((gameboard[col][row - 1] == opponent && (gameboard[col][row] == opponent || gameboard[col][row] == 0)) ||
-                        (gameboard[col][row - 1] == 0 && gameboard[col][row] == opponent)))
+
+                if (row > 0 && (gameboard[col][row-1] != player && gameboard[col][row] != player))
                 {
-                    tmpOpponentPoints *= 2;
-                    tmpPlayerPoints = 1;
-                } else if (tmpOpponentPoints > 1)
-                {
-                    points -= tmpOpponentPoints;
-                    tmpOpponentPoints = 1;
+                    if (gameboard[col][row] == opponent)
+                    {
+                        tmpOpponentPoints++;
+                        points += playerChain >= WINNING_CONDITION ? Math.pow(2, tmpPlayerPoints) : 0;
+                        tmpPlayerPoints = 0;
+                        playerChain = 0;
+                    }
+                    opponentChain++;
                 }
             }
-            points += tmpPlayerPoints > 1 ? tmpPlayerPoints : 0;
-            points -= tmpOpponentPoints > 1 ? tmpOpponentPoints : 0;
+            points += playerChain >= WINNING_CONDITION ? Math.pow(2, tmpPlayerPoints) : 0;
+            points -= opponentChain >= WINNING_CONDITION ? Math.pow(2, tmpOpponentPoints) : 0;
         }
 
         return points;
