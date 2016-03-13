@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
-using DataminingConsole.Processes.DataMiningSpring2016.Entities.Age;
+using DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clustering;
 using DataminingConsole.Processes.DataMiningSpring2016.Preprocessing;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016
@@ -12,88 +12,100 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
     public class DataMiningSpring2016 : IDataminingProcesses
     {
         #region Configuration
+        // Preprocessing
         private readonly string _csvPath;
         private readonly List<string> _csvAttributeNames;
         private readonly DataCleaningHandler _dataCleaningHandler;
         private readonly DataTransformationHandler _dataTransformationHandler;
+
+        private readonly Func<DataTuple, bool> _ageNoisePredicate;
+        private readonly Func<DataTuple, bool> _degreeNoisePredicate;
+        private readonly Func<DataTuple, bool> _gameFrequencyNoisePredicate;
+        private readonly Func<DataTuple, bool> _favoriteGameNoisePredicate;
+        private readonly Func<DataTuple, bool> _playedGameNoisePredicate;
+
+        // Pattern discovery
+        private readonly int _kMeanClusters;
 
         public DataMiningSpring2016()
         {
             _csvAttributeNames = new List<string>()
             {
                 Constant.CsvAttributeName.Age,
-                Constant.CsvAttributeName.Row,
-                Constant.CsvAttributeName.Seat,
                 Constant.CsvAttributeName.Degree,
                 Constant.CsvAttributeName.GameFrequency,
+                Constant.CsvAttributeName.PlayedGames,
                 Constant.CsvAttributeName.FavoriteGame,
-                Constant.CsvAttributeName.PickNumber,
             }; ;
             _csvPath = @"Data\DataMining 2016 (Responses).csv";
             _dataCleaningHandler = new DataCleaningHandler();
             _dataTransformationHandler = new DataTransformationHandler();
+
+            _ageNoisePredicate = x => x.Age.MissingValue || x.Age.Value < 10 || x.Age.Value > 70;
+            _degreeNoisePredicate = x => /*x.MissingValue ||*/ false;
+            _gameFrequencyNoisePredicate = x => false;
+            _favoriteGameNoisePredicate = x => false;
+            _playedGameNoisePredicate = x => false;
+
+            // Pattern discovery
+            _kMeanClusters = 3;
+
         }
 
         #endregion
 
-        public void Start()
+        public void Run()
         {
-            // Part 1
+            var data = DataSelection();
+            var dataset = PreProcessing(data);
+            PatternDiscovery(dataset);
+        }
+
+        public List<List<string>> DataSelection()
+        {
             // Load in Csv
             var result = CsvFileReader.ReadDataFile(_csvPath);
 
-            // Part 2
             // Split attributes from tuples
             var attributeList = result.First(x => true);
-            var dataset = result.Skip(1).ToList();
+            var cvsDataset = result.Skip(1).ToList();
 
             // Reduce attribute domain
-            dataset = dataset.SelectAttributes(attributeList, _csvAttributeNames);
+            return cvsDataset.SelectAttributes(attributeList, _csvAttributeNames);
+        }
 
+        public List<DataTuple> PreProcessing(List<List<string>> cvsDataset)
+        {
             // Create attributeIndex
             var attributeIndex = _csvAttributeNames
                 .Select((x, i) => new { key = x, value = i })
                 .ToDictionary(x => DataMappers.AttributeTypeMapper(x.key), x => x.value);
-            Logger.Log(dataset, "Attributes selected");
 
-            dataset.MapColumn(attributeIndex, AttributeType.Age, _dataCleaningHandler.AgeCleaner);
+            cvsDataset.MapColumn(attributeIndex, AttributeType.Degree, _dataCleaningHandler.StringCleaner);
+            cvsDataset.MapColumn(attributeIndex, AttributeType.FavoriteGame, _dataCleaningHandler.StringCleaner);
+            cvsDataset.MapColumn(attributeIndex, AttributeType.GameFrequency, _dataCleaningHandler.StringCleaner);
+            cvsDataset.MapColumn(attributeIndex, AttributeType.PlayedGames, _dataCleaningHandler.StringCleaner);
 
-            var transformedDataset = dataset.Select(x => _dataTransformationHandler.TransformTuple(x, attributeIndex)).ToList();
+            var dataset = cvsDataset
+                .Select(x => _dataTransformationHandler.TransformTuple(x, attributeIndex)).ToList();
 
-            var ageSet = transformedDataset.Select(x => x.Age).ToList();
+            dataset = dataset.RemoveAgeNoise(_ageNoisePredicate, NoiseHandler.NoiseMethod.Median);
+            //... noise from attributes
 
-            var mean = ageSet.Mean();
-            var median = ageSet.Median();
-            var mode = ageSet.Mode();
-            var midrange = ageSet.Midrange();
-            var range = ageSet.Range();
-            var twoQuantiles = ageSet.Quantile(2);
-            var iqr = ageSet.InterQuartileRange();
-            var variance = ageSet.Variance();
-            var standardDeviation = ageSet.StandardDeviation();
-            var fiveNumberSummary = ageSet.FiveNumberSummary();
+            dataset = dataset.MinMaxNormalizeDataTuple();
 
-            Debug.WriteLine($"Age mean : {mean}");
-            Debug.WriteLine($"Age median : {median}");
-            Debug.WriteLine($"Age mode : {mode}");
-            Debug.WriteLine($"Age midrange : {midrange}");
-            Debug.WriteLine($"Age range : {range}");
-            Debug.WriteLine($"Age 2-quantiles : {twoQuantiles[0]}");
-            Debug.WriteLine($"Age iqr : {iqr}");
-            Debug.WriteLine($"Age variance : {variance}");
-            Debug.WriteLine($"Age standardDeviation : {standardDeviation}");
-            Debug.WriteLine($"Age fiveNumberSummary : {fiveNumberSummary}");
-
-
-            //transformedDataset.OrderBy(x => x.Age).ToList().ForEach(x => Debug.WriteLine(x));
+            return dataset;
         }
 
-        /*
-        Flow:
-        - Reduce attribute list.
-        - Remove header list
-        - Create attributeIndex, dictionary
-        - 
-        */
+        public void PatternDiscovery(List<DataTuple> dataSet)
+        {
+            Debug.WriteLine("=======================================================================");
+            dataSet.ForEach(x => Debug.WriteLine(x));
+            Debug.WriteLine("=======================================================================");
+            Debug.WriteLine("=======================================================================");
+
+            var clusters = KMeans.KMeansPartition(_kMeanClusters, dataSet);
+            clusters.ForEach(x => Debug.WriteLine(x));
+        }
     }
 }

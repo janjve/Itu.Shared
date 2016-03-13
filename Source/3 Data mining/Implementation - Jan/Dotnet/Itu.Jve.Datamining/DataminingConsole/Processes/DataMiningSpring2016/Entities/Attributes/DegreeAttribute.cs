@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
+namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes
 {
     public class DegreeAttribute : Attribute
     {
@@ -23,11 +19,17 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
             else
                 throw new ArgumentException("Object is not an DegreeAttribute");
         }
+
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
     }
 
     public enum DegreeType
     {
-        Other,
+        Unknown,
+        PolIT,
         GAMES_A,
         GAMES_T,
         SDT_SE,

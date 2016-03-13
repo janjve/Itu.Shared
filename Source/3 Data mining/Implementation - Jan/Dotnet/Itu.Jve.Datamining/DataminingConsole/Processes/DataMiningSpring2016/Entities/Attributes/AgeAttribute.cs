@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Age
+namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes
 {
     public class AgeAttribute : Attribute
     {

@@ -1,4 +1,5 @@
 ﻿using DataminingConsole.Processes.DataMiningSpring2016.Common;
+using System;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 {
@@ -6,9 +7,12 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
     {
         public string StringCleaner(string initial)
         {
-            return initial;
+            return initial.StartsWith("\"") && initial.EndsWith("\"") 
+                ? initial.Substring(1, initial.Length - 2) 
+                : initial;
         }
 
+        [Obsolete("Should be handled during string parsing")]
         public string AgeCleaner(string initial)
         {
             int ignored;

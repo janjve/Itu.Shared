@@ -11,11 +11,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
             if (CsvAttributeName.Age.Equals(csvName))
                 return AttributeType.Age;
 
-            if (CsvAttributeName.Row.Equals(csvName))
-                return AttributeType.Row;
+            //if (CsvAttributeName.Row.Equals(csvName))
+            //    return AttributeType.Row;
 
-            if (CsvAttributeName.Seat.Equals(csvName))
-                return AttributeType.Seat;
+            //if (CsvAttributeName.Seat.Equals(csvName))
+            //    return AttributeType.Seat;
 
             if (CsvAttributeName.Degree.Equals(csvName))
                 return AttributeType.Degree;
@@ -26,8 +26,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
             if (CsvAttributeName.FavoriteGame.Equals(csvName))
                 return AttributeType.FavoriteGame;
 
-            if (CsvAttributeName.PickNumber.Equals(csvName))
-                return AttributeType.PickNumber;
+            //if (CsvAttributeName.PickNumber.Equals(csvName))
+            //    return AttributeType.PickNumber;
+
+            if (CsvAttributeName.PlayedGames.Equals(csvName))
+                return AttributeType.PlayedGames;
 
             else 
                 return AttributeType.Unknown; // Tried to parse unknown attribute type

@@ -1,0 +1,35 @@
+FUNC bc(KB, q){
+    unproven <- Nil
+    unproven.push(q)
+    visited <- Nil
+    agenda <- list of proven conclusions
+    
+    RETURN bc-recusive(KB, unproven)
+}
+
+FUNC bc-recusive(KB, unproven, visited){
+    q <- unproven.pop()
+    FOREACH clause IN KB WHERE conclusion == q
+        unproven' <- Nil
+        clauseProven <- true
+
+        FOREACH symbol IN clause.premise
+            if(symbol NOT IN agenda)
+                unproven'.push(symbol)
+        
+        IF unproven'.peek() IS empty  
+            agenda.add(q)
+            RETURN true
+        ELSE
+            IF visited CONTAINS clause.premise
+                visited.remove(clause.premise)
+                RETURN false
+            ELSE
+                visited.add(clause)
+                unproven.pushAll(unproven')
+                FOREACH symbol IN unproven  
+                    clauseProven <- clauseProven AND bc-recusive(KB, unproven, visited)
+        if(clauseProven) 
+            RETURN true
+      RETURN false
+}

@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CleanTest.cs" />
+    <Compile Include="PatternDiscovery\ClusteringTests.cs" />
     <Compile Include="CsvFileReaderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

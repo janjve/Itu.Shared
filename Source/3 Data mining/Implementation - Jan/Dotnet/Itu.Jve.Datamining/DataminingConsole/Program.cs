@@ -16,7 +16,7 @@ namespace DataminingConsole
             var dataminingProcess = new DataMiningSpring2016();
             Console.BufferHeight = short.MaxValue - 1;
             Console.WriteLine(string.Format("Starting mining process: {0} ...", dataminingProcess.GetType()));
-            dataminingProcess.Start();
+            dataminingProcess.Run();
             Console.WriteLine(string.Format("Completed mining process: {0}.", dataminingProcess.GetType()));
             Console.WriteLine("Press enter to terminate..");
             //Console.ReadLine();

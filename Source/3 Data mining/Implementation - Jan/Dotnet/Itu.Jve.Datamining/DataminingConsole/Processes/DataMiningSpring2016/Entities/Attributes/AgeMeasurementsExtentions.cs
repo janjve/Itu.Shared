@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Schema;
 using DataminingConsole.Processes.DataMiningSpring2016.Common;
 
-namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Age
+namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes
 {
     public static class AgeMeasurementsExtentions
     {

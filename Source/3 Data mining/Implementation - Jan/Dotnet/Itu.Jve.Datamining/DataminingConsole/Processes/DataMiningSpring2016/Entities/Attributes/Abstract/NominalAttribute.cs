@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataminingConsole.Processes
+namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstract
 {
-    public interface IDataminingProcesses
+    class NominalAttribute
     {
-        void Run();
     }
 }
