@@ -71,8 +71,57 @@ public class GameBoard
 
     public boolean emptyColumn(int col)
     {
-        return colCount[col]==0;
+        return colCount[col] == 0;
     }
+
+    public int stateHeuristic(int player, int opponent)
+    {
+        int statePoints = 0;
+        statePoints = stateHeuristicVertical(player, opponent);
+        //statePoints += stateHeuristicVertical();
+        //statePoints += stateHeuristicDiagonallyAscend();
+        //statePoints += stateHeuristicDiagonallyDesc();
+        return statePoints;
+    }
+
+    private int stateHeuristicVertical(int player, int opponent)
+    {
+        int points = 0;
+
+        for (int col = 0; col < gameboard[0].length; col++)
+        {
+            int tmpPlayerPoints = 0;
+            int tmpOpponentPoints = 0;
+            for (int row = 0; row < gameboard.length; row++)
+            {
+                if (row > 0 && ((gameboard[row - 1][col] == player  && (gameboard[row][col] == player || gameboard[row][col] == 0)) ||
+                        (gameboard[row - 1][col] == 0 && gameboard[row][col] == player)))
+                {
+                    tmpPlayerPoints++;
+                    tmpOpponentPoints = 0;
+                }
+                else if (tmpPlayerPoints > 1)
+                {
+                    points += tmpPlayerPoints;
+                    tmpPlayerPoints = 0;
+                }
+                if (row > 0 && ((gameboard[row - 1][col] == opponent  && (gameboard[row][col] == opponent || gameboard[row][col] == 0)) ||
+                        (gameboard[row - 1][col] == 0 && gameboard[row][col] == opponent)))
+                {
+                    tmpOpponentPoints++;
+                    tmpPlayerPoints = 0;
+                }
+                else if (tmpOpponentPoints > 1)
+                {
+                    points -= tmpOpponentPoints;
+                    tmpOpponentPoints = 0;
+                }
+            }
+        }
+
+        return points;
+    }
+
 
     private TerminalResultType tieCondition()
     {
@@ -232,4 +281,6 @@ public class GameBoard
     {
         return playerId == 1 ? TerminalResultType.PLAYER1 : TerminalResultType.PLAYER2;
     }
+
+
 }
