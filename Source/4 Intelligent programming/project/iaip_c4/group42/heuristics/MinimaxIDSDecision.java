@@ -37,11 +37,11 @@ public class MinimaxIDSDecision implements IDecisionHandler
         {
             int alpha = Integer.MIN_VALUE;
             int beta = Integer.MAX_VALUE;
+            System.out.println("Depth: " + depthCutOff);
 
             doneCount = 0;
             for (int i = 0; i < state.getGameboard().length; i++)
             {
-                System.out.println("Deciding next move for turn for action: " + i);
                 if (!state.fullColumn(i))
                 {
                     GameBoard newState = state.clone();

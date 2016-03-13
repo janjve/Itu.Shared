@@ -11,7 +11,7 @@ public class GameBoard
 {
     private int[][] gameboard;
     private int[] colCount;
-    private final int WINNING_CONDITION = 3;
+    private final int WINNING_CONDITION = 4;
 
     public GameBoard(int x, int y)
     {
@@ -125,35 +125,45 @@ public class GameBoard
         int rows = this.gameboard[0].length;
         int cols = this.gameboard.length;
 
-        //
-        for (int row = 0; row < rows - (WINNING_CONDITION - 1); row++)
+
+        int col = 0;
+        for (int row = rows - 1; row > rows - WINNING_CONDITION; row--)
         {
             points = 0;
-            for (int count = 0; count < cols && count+row < rows; count++)
+            int maxCnt = Math.min(row + 1, cols - col);
+            if (maxCnt >= WINNING_CONDITION)
             {
-                int x = count;
-                int y = row + count;
-                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y - 1]) ? points + 1 : 1;
-
-                if (points == WINNING_CONDITION)
+                for (int count = 0; count < maxCnt; count++)
                 {
-                    return resultTypeFromPlayerId(gameboard[x][y]);
+                    int c = col + count;
+                    int r = row - count;
+                    points = gameboard[c][r] != 0 && (points == 0 || gameboard[c][r] == gameboard[c - 1][r + 1]) ? points + 1 : 1;
+
+                    if (points == WINNING_CONDITION)
+                    {
+                        return resultTypeFromPlayerId(gameboard[c][r]);
+                    }
                 }
             }
         }
 
-        for (int col = 1; col < cols - (WINNING_CONDITION - 1); col++)
+        int row = rows - 1;
+        for (col = 1; col <= cols - WINNING_CONDITION; col++)
         {
             points = 0;
-            for (int count = 0; count+col < cols && count < rows; count++)
+            int maxCnt = Math.min(row + 1, cols - col);
+            if (maxCnt >= WINNING_CONDITION)
             {
-                int x = col+count;
-                int y = count;
-                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y - 1]) ? points + 1 : 1;
-
-                if (points == WINNING_CONDITION)
+                for (int count = 0; count < maxCnt; count++)
                 {
-                    return resultTypeFromPlayerId(gameboard[x][y]);
+                    int c = col + count;
+                    int r = row - count;
+                    points = gameboard[c][r] != 0 && (points == 0 || gameboard[c][r] == gameboard[c - 1][r + 1]) ? points + 1 : 1;
+
+                    if (points == WINNING_CONDITION)
+                    {
+                        return resultTypeFromPlayerId(gameboard[c][r]);
+                    }
                 }
             }
         }
@@ -167,34 +177,45 @@ public class GameBoard
         int rows = this.gameboard[0].length;
         int cols = this.gameboard.length;
 
-        for (int row = rows-1; row >= WINNING_CONDITION-1; row--)
+
+        int col = 0;
+        for (int row = 0; row <= rows - WINNING_CONDITION; row++)
         {
             points = 0;
-            for (int count = 0; row - count  >= 0 && count < cols; count++)
+            int maxCnt = Math.min(rows - row, cols - col);
+            if (maxCnt >= WINNING_CONDITION)
             {
-                int x = count;
-                int y = row - count;
-                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y + 1]) ? points + 1 : 1;
-
-                if (points == WINNING_CONDITION)
+                for (int count = 0; count < maxCnt; count++)
                 {
-                    return resultTypeFromPlayerId(gameboard[x][y]);
+                    int c = col + count;
+                    int r = row + count;
+                    points = gameboard[c][r] != 0 && (points == 0 || gameboard[c][r] == gameboard[c - 1][r - 1]) ? points + 1 : 1;
+
+                    if (points == WINNING_CONDITION)
+                    {
+                        return resultTypeFromPlayerId(gameboard[c][r]);
+                    }
                 }
             }
         }
 
-        for (int col = 1; col < cols - (WINNING_CONDITION - 1); col++)
+        int row = 0;
+        for (col = 1; col <= cols - WINNING_CONDITION; col++)
         {
             points = 0;
-            for (int count = 0; col + count < rows && rows - 1 - count > 0; count++)
+            int maxCnt = Math.min(rows - row, cols - col);
+            if (maxCnt >= WINNING_CONDITION)
             {
-                int x = col + count;
-                int y = rows - 1 - count;
-                points = gameboard[x][y] != 0 && (points == 0 || gameboard[x][y] == gameboard[x - 1][y + 1]) ? points + 1 : 1;
-
-                if (points == WINNING_CONDITION)
+                for (int count = 0; count < maxCnt; count++)
                 {
-                    return resultTypeFromPlayerId(gameboard[x][y]);
+                    int c = col + count;
+                    int r = row + count;
+                    points = gameboard[c][r] != 0 && (points == 0 || gameboard[c][r] == gameboard[c - 1][r - 1]) ? points + 1 : 1;
+
+                    if (points == WINNING_CONDITION)
+                    {
+                        return resultTypeFromPlayerId(gameboard[c][r]);
+                    }
                 }
             }
         }
