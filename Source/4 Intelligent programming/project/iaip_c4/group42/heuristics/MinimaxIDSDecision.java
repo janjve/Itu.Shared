@@ -131,19 +131,19 @@ public class MinimaxIDSDecision implements IDecisionHandler
         switch (resultType)
         {
             case PLAYER1:
-                result = playerId == 1 ? Integer.MIN_VALUE : Integer.MIN_VALUE; // sæt tilbage til MAX_VALUE
+                result = playerId == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE; // sæt tilbage til MAX_VALUE
                 break;
             case PLAYER2:
-                result = playerId == 2 ? Integer.MIN_VALUE : Integer.MIN_VALUE;// sæt tilbage til MAX_VALUE
+                result = playerId == 2 ? Integer.MAX_VALUE : Integer.MIN_VALUE;// sæt tilbage til MAX_VALUE
                 break;
             case TIE:
                 result = 0;
                 break;
             default:
-                result = state.stateHeuristic(player, opponent);
-                System.out.println("HEURISTIC: " + result);
+                //result = state.stateHeuristic(player, opponent);
         }
-
+        result = state.stateHeuristic(player, opponent);
+        System.out.println("HEURISTIC: " + result);
         return result / depth;
     }
 }
