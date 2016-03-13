@@ -80,7 +80,7 @@ public class GameBoard
         statePoints = stateHeuristicVertical(player, opponent);
         statePoints += stateHeuristicHorizontal(player, opponent);
         statePoints += stateHeuristicDiagonallyAscend(player, opponent);
-        //statePoints += stateHeuristicDiagonallyDesc();
+        statePoints += stateHeuristicDiagonallyDesc(player, opponent);
         return statePoints;
     }
 
@@ -246,6 +246,96 @@ public class GameBoard
 
         return points;
     }
+
+
+    private int stateHeuristicDiagonallyDesc(int player, int opponent)
+    {
+        int points = 0;
+        int rows = this.gameboard[0].length;
+        int cols = this.gameboard.length;
+
+
+        int col = 0;
+        for (int row = 0; row <= rows - WINNING_CONDITION; row++)
+        {
+
+            int maxCnt = Math.min(rows - row, cols - col);
+            if (maxCnt >= WINNING_CONDITION)
+            {
+                int playerChain = 0;
+                int tmpPlayerPoints = 0;
+                int tmpOpponentPoints = 0;
+                int opponentChain = 0;
+                for (int count = 0; count < maxCnt; count++)
+                {
+                    int c = col + count;
+                    int r = row + count;
+                    if (gameboard[c][r] == player)
+                    {
+                        tmpPlayerPoints += 2;
+                        points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
+                        tmpOpponentPoints = 0;
+                        opponentChain = 0;
+                    }
+
+                    if (gameboard[c][r] == opponent)
+                    {
+                        tmpOpponentPoints += 2;
+                        points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+                        tmpPlayerPoints = 0;
+                        playerChain = 0;
+                    }
+
+                    opponentChain++;
+                    playerChain++;
+                }
+                points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+                points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
+            }
+        }
+
+        int row = 0;
+        for (col = 1; col <= cols - WINNING_CONDITION; col++)
+        {
+            int maxCnt = Math.min(rows - row, cols - col);
+            if (maxCnt >= WINNING_CONDITION)
+            {
+                int playerChain = 0;
+                int tmpPlayerPoints = 0;
+                int tmpOpponentPoints = 0;
+                int opponentChain = 0;
+                for (int count = 0; count < maxCnt; count++)
+                {
+                    int c = col + count;
+                    int r = row + count;
+                    if (gameboard[c][r] == player)
+                    {
+                        tmpPlayerPoints += 2;
+                        points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
+                        tmpOpponentPoints = 0;
+                        opponentChain = 0;
+                    }
+
+                    if (gameboard[c][r] == opponent)
+                    {
+                        tmpOpponentPoints += 2;
+                        points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+                        tmpPlayerPoints = 0;
+                        playerChain = 0;
+                    }
+                    opponentChain++;
+                    playerChain++;
+
+                }
+                points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+                points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
+            }
+        }
+
+        return points;
+    }
+
+
 
     private TerminalResultType tieCondition()
     {
