@@ -144,6 +144,6 @@ public class MinimaxIDSDecision implements IDecisionHandler
         }
         result = state.stateHeuristic(player, opponent);
         System.out.println("HEURISTIC: " + result);
-        return result;
+        return result / depth;
     }
 }

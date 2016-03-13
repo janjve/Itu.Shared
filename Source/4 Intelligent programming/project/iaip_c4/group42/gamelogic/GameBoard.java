@@ -77,9 +77,9 @@ public class GameBoard
     public int stateHeuristic(int player, int opponent)
     {
         int statePoints = 0;
-        //statePoints = stateHeuristicVertical(player, opponent);
+        statePoints = stateHeuristicVertical(player, opponent);
         statePoints += stateHeuristicHorizontal(player, opponent);
-        //statePoints += stateHeuristicDiagonallyAscend(player, opponent);
+        statePoints += stateHeuristicDiagonallyAscend(player, opponent);
         //statePoints += stateHeuristicDiagonallyDesc();
         return statePoints;
     }
@@ -96,33 +96,26 @@ public class GameBoard
             int opponentChain = 0;
             for (int row = 0; row < gameboard[0].length; row++)
             {
-
-                if (row > 0 && (gameboard[col][row-1] != opponent && gameboard[col][row] != opponent))
+                if (gameboard[col][row] == player)
                 {
-                    if (gameboard[col][row] == player)
-                    {
-                        tmpPlayerPoints++;
-                        points -= opponentChain >= WINNING_CONDITION ? Math.pow(2, tmpOpponentPoints) : 0;
-                        tmpOpponentPoints = 0;
-                        opponentChain = 0;
-                    }
-                    playerChain++;
+                    tmpPlayerPoints += 1;
+                    points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
+                    tmpOpponentPoints = 0;
+                    opponentChain = 0;
                 }
 
-                if (row > 0 && (gameboard[col][row-1] != player && gameboard[col][row] != player))
+                if (gameboard[col][row] == opponent)
                 {
-                    if (gameboard[col][row] == opponent)
-                    {
-                        tmpOpponentPoints++;
-                        points += playerChain >= WINNING_CONDITION ? Math.pow(2, tmpPlayerPoints) : 0;
-                        tmpPlayerPoints = 0;
-                        playerChain = 0;
-                    }
-                    opponentChain++;
+                    tmpOpponentPoints += 1;
+                    points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+                    tmpPlayerPoints = 0;
+                    playerChain = 0;
                 }
+                opponentChain++;
+                playerChain++;
             }
-            points += playerChain >= WINNING_CONDITION ? Math.pow(2, tmpPlayerPoints) : 0;
-            points -= opponentChain >= WINNING_CONDITION ? Math.pow(2, tmpOpponentPoints) : 0;
+            points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+            points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
         }
 
         return points;
@@ -139,33 +132,27 @@ public class GameBoard
             int opponentChain = 0;
             for (int col = 0; col < gameboard.length; col++)
             {
-                if (col > 0 && (gameboard[col - 1][row] != opponent && gameboard[col][row] != opponent))
+                if (gameboard[col][row] == player)
                 {
-                    if (gameboard[col][row] == player)
-                    {
-                        tmpPlayerPoints++;
-                        points -= opponentChain >= WINNING_CONDITION ? Math.pow(2, tmpOpponentPoints) : 0;
-                        tmpOpponentPoints = 0;
-                        opponentChain = 0;
-                    }
-                    playerChain++;
+                    tmpPlayerPoints += 3;
+                    points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
+                    tmpOpponentPoints = 0;
+                    opponentChain = 0;
                 }
 
-                if (col > 0 && (gameboard[col - 1][row] != player && gameboard[col][row] != player))
+                if (gameboard[col][row] == opponent)
                 {
-                    if (gameboard[col][row] == opponent)
-                    {
-                        tmpOpponentPoints++;
-                        points += playerChain >= WINNING_CONDITION ? Math.pow(2, tmpPlayerPoints) : 0;
-                        tmpPlayerPoints = 0;
-                        playerChain = 0;
-                    }
-                    opponentChain++;
+                    tmpOpponentPoints += 3;
+                    points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+                    tmpPlayerPoints = 0;
+                    playerChain = 0;
                 }
 
+                opponentChain++;
+                playerChain++;
             }
-            points += playerChain >= WINNING_CONDITION ? Math.pow(2, tmpPlayerPoints) : 0;
-            points -= opponentChain >= WINNING_CONDITION ? Math.pow(2, tmpOpponentPoints) : 0;
+            points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+            points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
         }
 
         return points;
@@ -193,32 +180,27 @@ public class GameBoard
                     int c = col + count;
                     int r = row - count;
 
-                    if (c > 0 && (gameboard[c - 1][r + 1] != opponent && gameboard[c][r] != opponent))
+                    if (gameboard[c][r] == player)
                     {
-                        if (gameboard[c][r] == player)
-                        {
-                            tmpPlayerPoints++;
-                            points -= opponentChain >= WINNING_CONDITION ? Math.pow(2, tmpOpponentPoints) : 0;
-                            tmpOpponentPoints = 0;
-                            opponentChain = 0;
-                        }
-                        playerChain++;
+                        tmpPlayerPoints += 2;
+                        points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
+                        tmpOpponentPoints = 0;
+                        opponentChain = 0;
                     }
 
-                    if (c > 0 && (gameboard[c - 1][r + 1] != player && gameboard[c][r] != player))
+                    if (gameboard[c][r] == opponent)
                     {
-                        if (gameboard[c][r] == opponent)
-                        {
-                            tmpOpponentPoints++;
-                            points += playerChain >= WINNING_CONDITION ? Math.pow(2, tmpPlayerPoints) : 0;
-                            tmpPlayerPoints = 0;
-                            playerChain = 0;
-                        }
-                        opponentChain++;
+                        tmpOpponentPoints += 2;
+                        points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+                        tmpPlayerPoints = 0;
+                        playerChain = 0;
                     }
+
+                    opponentChain++;
+                    playerChain++;
                 }
-                points += playerChain >= WINNING_CONDITION ? Math.pow(2, tmpPlayerPoints) : 0;
-                points -= opponentChain >= WINNING_CONDITION ? Math.pow(2, tmpOpponentPoints) : 0;
+                points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+                points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
             }
         }
 
@@ -238,32 +220,27 @@ public class GameBoard
                     int c = col + count;
                     int r = row - count;
 
-                    if (r < row && (gameboard[c - 1][r + 1] != opponent && gameboard[c][r] != opponent))
+                    if (gameboard[c][r] == player)
                     {
-                        if (gameboard[c][r] == player)
-                        {
-                            tmpPlayerPoints++;
-                            points -= opponentChain >= WINNING_CONDITION ? Math.pow(2, tmpOpponentPoints) : 0;
-                            tmpOpponentPoints = 0;
-                            opponentChain = 0;
-                        }
-                        playerChain++;
+                        tmpPlayerPoints += 2;
+                        points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
+                        tmpOpponentPoints = 0;
+                        opponentChain = 0;
                     }
 
-                    if (r < row && (gameboard[c - 1][r + 1] != player && gameboard[c][r] != player))
+                    if (gameboard[c][r] == opponent)
                     {
-                        if (gameboard[c][r] == opponent)
-                        {
-                            tmpOpponentPoints++;
-                            points += playerChain >= WINNING_CONDITION ? Math.pow(2, tmpPlayerPoints) : 0;
-                            tmpPlayerPoints = 0;
-                            playerChain = 0;
-                        }
-                        opponentChain++;
+                        tmpOpponentPoints += 2;
+                        points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+                        tmpPlayerPoints = 0;
+                        playerChain = 0;
                     }
+                    opponentChain++;
+                    playerChain++;
+
                 }
-                points += playerChain >= WINNING_CONDITION ? Math.pow(2, tmpPlayerPoints) : 0;
-                points -= opponentChain >= WINNING_CONDITION ? Math.pow(2, tmpOpponentPoints) : 0;
+                points += playerChain >= WINNING_CONDITION ? tmpPlayerPoints * tmpPlayerPoints : 0;
+                points -= opponentChain >= WINNING_CONDITION ? tmpOpponentPoints * tmpOpponentPoints : 0;
             }
         }
 
