@@ -15,7 +15,7 @@ public class MinimaxIDSDecision implements IDecisionHandler
     private int playerId;
     private int opponentPlayerId;
     private long timeStart;
-    private final long timeCutOff = 1000;
+    private final long timeCutOff = 10000;
 
     public MinimaxIDSDecision(GameBoard gameBoard, int playerId)
     {
@@ -35,8 +35,11 @@ public class MinimaxIDSDecision implements IDecisionHandler
 
         this.timeStart = System.currentTimeMillis();
         int doneCount = 0;
+        int start = 0;
+        int end = state.getGameboard().length;
 
-        for (int depthCutOff = 1; !this.timeCutOff() && doneCount < state.getGameboard().length; depthCutOff++)
+        System.out.println("=================================== MOVE");
+        for (int depthCutOff = 1; !this.timeCutOff() && doneCount < (end+1 - start); depthCutOff++)
         {
             int alpha = Integer.MIN_VALUE;
             int beta = Integer.MAX_VALUE;
@@ -44,7 +47,27 @@ public class MinimaxIDSDecision implements IDecisionHandler
 
             doneCount = 0;
 
-            for (int i = 0; i < state.getGameboard().length; i++)
+            start = (state.getGameboard().length) / 2;
+            end = (state.getGameboard().length) / 2;
+            for (int idx = 1; idx <= state.getGameboard().length - 1; idx++)
+            {
+                if (!(state.emptyColumn(idx - 1) && state.emptyColumn(idx)))
+                {
+                    start = idx - 1;
+                    for (int idx2 = state.getGameboard().length - 1; idx2 >= start; idx2--)
+                    {
+                        if (!(state.emptyColumn(idx2 - 1) && state.emptyColumn(idx2)))
+                        {
+                            end = idx2;
+                            break;
+                        }
+                    }
+
+                    break;
+                }
+            }
+            System.out.println("Analyzing actions :" + start +" to "+end);
+            for (int i = start; i <= end; i++)
             {
                 if (!state.fullColumn(i))
                 {
