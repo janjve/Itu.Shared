@@ -71,9 +71,11 @@ public class MinimaxIDSDecision implements IDecisionHandler
             {
                 if (!state.fullColumn(i))
                 {
-                    GameBoard newState = state.clone();
-                    newState.insertCoin(i, playerId);
-                    MinimaxIDSResult maxUtilityI = minValue(newState, 1, depthCutOff, alpha, beta);
+                    //GameBoard newState = state.clone();
+
+                    state.insertCoin(i, playerId);
+                    MinimaxIDSResult maxUtilityI = minValue(state, 1, depthCutOff, alpha, beta);
+                    state.removeCoin(i);
                     if (!maxUtilityI.getCutOff()) doneCount++;
                     System.out.println("Action: "+ i+ " gives utility of: " + maxUtilityI.getUtility());
 
@@ -120,10 +122,10 @@ public class MinimaxIDSDecision implements IDecisionHandler
         {
             if (!state.fullColumn(i))
             {
-                GameBoard newState = state.clone();
-                newState.insertCoin(i, playerId);
-
-                MinimaxIDSResult maxUtilityI = minValue(newState, depth + 1, depthCutOff, alpha, beta);
+                //GameBoard newState = state.clone();
+                state.insertCoin(i, playerId);
+                MinimaxIDSResult maxUtilityI = minValue(state, depth + 1, depthCutOff, alpha, beta);
+                state.removeCoin(i);
                 maxUtility = maxUtilityI.getUtility() > maxUtility.getUtility() ? maxUtilityI : maxUtility;
             }
             if (maxUtility.getUtility() >= beta)
@@ -146,10 +148,12 @@ public class MinimaxIDSDecision implements IDecisionHandler
         {
             if (!state.fullColumn(i))
             {
-                GameBoard newState = state.clone();
-                newState.insertCoin(i, opponentPlayerId);
+                //GameBoard newState = state.clone();
 
-                MinimaxIDSResult minUtilityI = maxValue(newState, depth + 1, depthCutOff, alpha, beta);
+                state.insertCoin(i, opponentPlayerId);
+
+                MinimaxIDSResult minUtilityI = maxValue(state, depth + 1, depthCutOff, alpha, beta);
+                state.removeCoin(i);
                 minUtility = minUtilityI.getUtility() < minUtility.getUtility() ? minUtilityI : minUtility;
             }
             if (minUtility.getUtility() <= alpha)

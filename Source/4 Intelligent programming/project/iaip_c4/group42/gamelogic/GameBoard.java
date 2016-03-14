@@ -39,6 +39,14 @@ public class GameBoard
         this.colCount[column]++;
     }
 
+    public void removeCoin(int column)
+    {
+        int r = 0;
+        while (r < (gameboard[column].length - 1) && gameboard[column][r] == 0) r++;
+        gameboard[column][r] = 0;
+        this.colCount[column]--;
+    }
+
     public TerminalResultType terminalTest()
     {
         TerminalResultType type = TerminalResultType.NOT_FINISHED;
