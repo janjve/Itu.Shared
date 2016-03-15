@@ -12,6 +12,7 @@ object test extends App{
     val results = global.State.sequence(ls)
     println(results.run(1))
     println(results.run(10))
+    println(global.State.random_int.take(3).toList)
 }
 object global { // Fix because REPL is broken.... (like everything else related to JAVA)
 
@@ -21,7 +22,7 @@ trait RNG {
 
 
 object RNG {
-  // NB - this was called SimpleRNG in the book text
+  // NB - this was called Si  mpleRNG in the book text
 
   case class Simple(seed: Long) extends RNG {
     def nextInt: (Int, RNG) = {
@@ -255,6 +256,7 @@ object State {
 
     sequence_aux(sas) (Nil)
   }
+
   //
   // This is given in the book:
 
@@ -272,11 +274,15 @@ object State {
 
   // Exercise 11
 
-  // def state2stream[S,A] (s :State[S,A]) (seed :S) :Stream[A] = ...
+  def state2stream[S,A] (s :State[S,A]) (seed :S) :Stream[A] = {
+
+    val (a1,s1) = s.run(seed)
+    Stream.cons[A] (a1, state2stream(s) (s1) )
+  }
 
   // Exercise 12
 
-  // val random_integers = ...
+  val random_integers = state2stream(random_int)(RNG.Simple(2))
 
 }
 
