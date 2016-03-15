@@ -97,17 +97,17 @@ sealed trait Stream[+A] {
 
     // Exercise 8
     def map[B](f: A => B) : Stream[B] = 
-      foldRight[Stream[B]](Empty)((a,b) => Cons(f(a), b))
+      foldRight[Stream[B]](Empty)((a,b) => Cons(() => f(a), () => b))
 
     def filter(p: A => Boolean): Stream[A] = 
       foldRight[Stream[A]] (Empty) ((a,b) => if(p(a)) cons(a, b) else b) 
     
     def append[B >: A](that: Stream[B]): Stream[B] =
-      foldRight[Stream[B]] (that) ((a,b) => Cons(a, b))
+      foldRight[Stream[B]] (that) ((a,b) => Cons(() => a, ()=>b))
     
     def flatMap[B](f: A => Stream[B]): Stream[B] =
       foldRight[Stream[B]](Empty)((a,b) => b.append(f(a)))
-    
+
     // Exercise 9
     // This is okay since filter will only evaluate until a value is found when using streams. 
     // This is unlike filter on List which will check every element matching the predicate p.
@@ -119,13 +119,19 @@ sealed trait Stream[+A] {
   	case Some((a, b)) => Cons(() => a, () => unfold(b)(f))
 }
 
+  // Exercise 13
+  // Missing
+
 	// Exercise 14
 	def startsWith[A](that : Stream[A]) : Boolean = that.foldRight ((true, this)) ((a,b) => { 
 		val b1 = b._1
 		val b2 = b._2
-		val newval = b2.take(1).headOption.get
-		(a==newval && b1, b2.drop(1))
+		val head2 = b2.headOption.get
+		(b1 && a==head2 , b2.drop(1))
 	})._1
+
+  // Exercise 15
+  // Missing
 }
 
 case object Empty extends Stream[Nothing]
@@ -165,6 +171,8 @@ object test extends App {
   val a = Stream.to(5);
   println(a.toList)
 
-  val b = Stream.from(2);
+  val b = Stream.from(1);
   println(b.take(100).toList)
+
+  println(b.startsWith(a))
 }
