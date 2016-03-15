@@ -159,14 +159,16 @@ object ExercisesOption {
     else Some(xs.sum / xs.length)
 }
   // Exercise 8 (4.2)
-
+/*
   def variance (xs: Seq[Double]) : Option[Double] = {
-    for {
+    
+    val list = for {
         m <- mean(xs)
     }
     yield xs.map(x => math.pow(x-m,2))
+    mean(list)
   }
-
+*/
   // Exercise 9 (4.3)
 
   def map2[A,B,C] (ao: Option[A], bo: Option[B]) (f: (A,B) => C) :Option[C] = {
@@ -185,8 +187,7 @@ object ExercisesOption {
         if(as.isEmpty) None
         else Some(as)
     }
-  }
-*/
+  }*/
   // Exercise 11 (4.5)
 
   // def traverse[A,B] (as: List[A]) (f :A => Option[B]) :Option[List[B]] =
@@ -253,9 +254,10 @@ object Tests extends App {
   assert ((None: Option[Int]).filter(_ == 42) == None)
 
   // Exercise 8
+  /*
   assert (ExercisesOption.variance (List(42,42,42)) == Some(0.0))
   assert (ExercisesOption.variance (List()) == None)
-
+*/
 
   // Exercise 9
   assert (ExercisesOption.map2 (Some(42),Some(7)) (_ + _) == Some(49))
