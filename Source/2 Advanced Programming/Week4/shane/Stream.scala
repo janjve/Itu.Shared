@@ -166,13 +166,3 @@ object Stream {
   def apply[A] (as: A*) :Stream[A] = if (as.isEmpty) empty
     else cons(as.head, apply(as.tail: _*))
 }
-
-object test extends App {
-  val a = Stream.to(5);
-  println(a.toList)
-
-  val b = Stream.from(1);
-  println(b.take(100).toList)
-
-  println(b.startsWith(a))
-}

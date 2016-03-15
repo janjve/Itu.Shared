@@ -199,7 +199,6 @@ object ExercisesOption {
 
 object Tests extends App {
 
-  println("Started tests")
   // Exercise 1
   val p = new java.awt.Point(0,1) with OrderedPoint 
   val q = new java.awt.Point(0,2) with OrderedPoint
