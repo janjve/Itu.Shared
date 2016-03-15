@@ -2,6 +2,7 @@
 //
 // AUTHOR1: Jan Vium Enghoff (jaen@itu.dk)
 // AUTHOR2: Søren Harrison (soeh@itu.dk)
+// Group number: 23
 //
 // Write names and ITU email addresses of both group members that contributed to
 // the solution of the exercise (in alphabetical order by family name).
