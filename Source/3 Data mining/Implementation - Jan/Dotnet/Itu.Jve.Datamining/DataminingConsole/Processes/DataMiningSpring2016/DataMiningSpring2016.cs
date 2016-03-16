@@ -48,7 +48,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
             _playedGameNoisePredicate = x => false;
 
             // Pattern discovery
-            _kMeanClusters = 3;
+            _kMeanClusters = 10;
 
         }
 

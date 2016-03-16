@@ -67,6 +67,8 @@
     <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Clustering\KMeanCluster.cs" />
     <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Clustering\KMeans.cs" />
     <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Clustering\ReassignedResponse.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Helpers.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\KNearestNeighbors\KNearestNeighbor.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataCleaningHandler.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataMappers.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Preprocessing\DataNormalizer.cs" />
