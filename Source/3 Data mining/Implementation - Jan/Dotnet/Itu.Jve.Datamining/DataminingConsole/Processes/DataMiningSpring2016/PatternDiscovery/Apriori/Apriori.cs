@@ -53,9 +53,9 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         {
             var frequentItemSetCandidates = new Dictionary<ItemSet, int>();
 
-            foreach (ItemSet item in lowerLevelItemSets.Keys)
+            foreach (var item in lowerLevelItemSets.Keys)
             {
-                foreach (ItemSet item2 in lowerLevelItemSets.Keys)
+                foreach (var item2 in lowerLevelItemSets.Keys)
                 {
                     if (!item.Equals(item2))
                     {
@@ -63,8 +63,32 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                     }
                 }
             }
-
-            //TODO: Prune itemsets.
+            
+            //Pruning itemsets according to the apriori property.
+            var frequentCandidateItemSetsPruned = new Dictionary<ItemSet, int>();
+            foreach(var item in frequentItemSetCandidates)
+            {
+                List<ItemSet> itemSetCandidateSubset = new List<ItemSet>();
+                for(int i = 0; i < item.Set.Length-1; i++)
+                {
+                    var items = new int[]();
+                    for(int j = 0; j < item.Set.Length-1; i++){
+                        if(i != j) {
+                            items.Add(item[i]);
+                        }
+                    }
+                    itemSetCandidateSubset.Add(new ItemSet{ Set = items });
+                }
+                
+                foreach(var candidateSet in itemSetCandidateSubset)
+                {
+                    var keepSet = true;
+                    if(!lowerLevelItemSets.Contains(candidateSet)) {
+                        keepSet = false;
+                    }
+                }
+                if(keepSet) frequentCandidateItemSetsPruned.Add(itemSet, 0)
+            }
 
             //check the support for all candidates and add only those
             var frequentItemSets = new Dictionary<ItemSet, int>();
