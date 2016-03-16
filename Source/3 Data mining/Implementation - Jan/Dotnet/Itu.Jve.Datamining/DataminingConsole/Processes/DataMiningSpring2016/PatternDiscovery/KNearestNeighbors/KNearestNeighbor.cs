@@ -9,12 +9,19 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.KNea
 {
     public class KNearestNeighbor
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T">The classifier type.</typeparam>
+        /// <param name="k">number of K nearest neighbore</param>
+        /// <param name="tuple">The tuple to assign a class T</param>
+        /// <param name="trainingSet"></param>
+        /// <returns></returns>
         public T CalculateClassification<T>(int k, DataTuple tuple, Dictionary<DataTuple, T> trainingSet)
         {
             var kNearestNeighbors = KNearestNeighbors(k, tuple, trainingSet.Keys.ToList());
-            //var group = kNearestNeighbors.GroupBy(x => trainingSet[x]).Select(group => );
-
-            return default(T);
+            var group = kNearestNeighbors.GroupBy(x => trainingSet[x]).OrderByDescending(x => x.Count());
+            return group.Any() ? group.First().Key : default(T);
         }
 
         private IEnumerable<DataTuple> KNearestNeighbors(int k, DataTuple tuple, List<DataTuple> trainingSet)
