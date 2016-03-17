@@ -41,21 +41,35 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                 Console.WriteLine(" found " + frequentItemSets.Count());
             }
 
-
-            
-
-
             // Returning something useful
             return CreateAssociationRules(itemSets); ;
         }
 
+        // Creating association rules from the frequent itemsets
+        // This should problably be done somewhere else??
         private static List<AssociationRule> CreateAssociationRules(Dictionary<ItemSet, int> FrequentItemSets)
         {
-            // TODO: create association rules from the frequent itemsets
-            // What is the easiest way to do this? Joining the frequent item sets with itself, and checking if each pairing is in the frequent item sets?
-            // These should be created using page 254.
-            // On a second thought, this should problably be done somewhere else.
-            return null;
+            var AssociationRuleList = new List<AssociationRule>();
+
+            //Creating all possible equivalence rules
+            foreach (var item1 in FrequentItemSets)
+            {
+                foreach(var item2 in FrequentItemSets)
+                {
+                    if(item1.Equals(item2)) { break; } //ItemSets are equivalent
+                    var AssociationRule = new AssociationRule { Premise = item1.Key, Conclusion = item2.Key };
+                    var tempItemSet = new ItemSet { Set = item1.Key.Set.Union(item2.Key.Set).OrderBy(x => x).ToArray() };
+                    int supportForUnion;
+                    
+                    //Test if this works properly, might only be tested for reference!!!
+                    if (FrequentItemSets.TryGetValue(tempItemSet, out supportForUnion))
+                    {
+                        AssociationRule.Confidence = supportForUnion / item1.Value;
+                        AssociationRuleList.Add(AssociationRule);
+                    }
+                }
+            }
+            return AssociationRuleList;
         }
 
         private static Dictionary<ItemSet, int> GenerateFrequentItemSets(int supportThreshold, int[][] transactions,
