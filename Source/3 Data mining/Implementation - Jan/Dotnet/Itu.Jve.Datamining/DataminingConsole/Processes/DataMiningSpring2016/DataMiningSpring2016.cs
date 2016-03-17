@@ -6,6 +6,7 @@ using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
 using DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clustering;
 using DataminingConsole.Processes.DataMiningSpring2016.Preprocessing;
+using DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apriori;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016
 {
@@ -58,7 +59,9 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
         {
             var data = DataSelection();
             var dataset = PreProcessing(data);
-            PatternDiscovery(dataset);
+            //PatternDiscovery(dataset);
+            Apriori.AprioriAlg(Apriori.TRANSACTIONS, 7);
+
         }
 
         public List<List<string>> DataSelection()

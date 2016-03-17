@@ -17,7 +17,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         /**
         * hashCode functioned used internally in Hashtable
         */
-        public int hashCode()
+        public override int GetHashCode()
         {
             int code = 0;
             for (int i = 0; i < Set.Length; i++)
