@@ -19,7 +19,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         {
             int k = 1;
             Dictionary<ItemSet, int> frequentItemSets = generateFrequentItemSetsLevel1(transactions, supportThreshold);
-            var itemSets = new List<ItemSet>();
+            var itemSets = new Dictionary<ItemSet>();
 
             //Continues untill there is one or fewer itemsets left.
             while (frequentItemSets.Count > 1)
@@ -30,7 +30,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
 
                 foreach (ItemSet item in  frequentItemSets.Keys)
                 {
-                    itemSets.Add(item);
+                    itemSets.Add(item, frequentItemSets[item]);
                 }
 
                 if (tempFrequentItemSets.Count() > 0)
@@ -43,8 +43,12 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
 
             // TODO: create association rules from the frequent itemsets
             // These should be created using page 254.
-
+            foreach(var item in itemSets) {
+                
+            }
+            
             // TODO: return something useful
+            
             return itemSets;
         }
 
