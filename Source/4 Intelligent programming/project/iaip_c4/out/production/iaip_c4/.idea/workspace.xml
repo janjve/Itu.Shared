@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java" line="119" />
+    <bookmark url="file://$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java" line="122" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86ab0ff7-0e41-4f5e-831c-b3b0e076bda6" name="Default" comment="">
@@ -32,21 +32,21 @@
       <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/group42/gamelogic/GameBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2907104">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.5528053">
+              <caret line="347" column="7" selection-start-line="347" selection-start-column="7" selection-end-line="347" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#stateHeuristicVertical#0;class#GameBoard#0" expanded="false" />
+                <element signature="method#stateHeuristicHorizontal#0;class#GameBoard#0" expanded="false" />
+                <element signature="method#stateHeuristicDiagonallyAscend#0;class#GameBoard#0" expanded="false" />
+                <element signature="method#stateHeuristicDiagonallyDesc#0;class#GameBoard#0" expanded="false" />
+                <element signature="method#tieCondition#0;class#GameBoard#0" expanded="false" />
+                <element signature="method#winConditionHorizontally#0;class#GameBoard#0" expanded="false" />
+                <element signature="method#winConditionVertically#0;class#GameBoard#0" expanded="false" />
+                <element signature="method#winConditionDiagonallyAscending#0;class#GameBoard#0" expanded="false" />
+                <element signature="method#winConditionDiagonallyDescending#0;class#GameBoard#0" expanded="false" />
+                <element signature="method#resultTypeFromPlayerId#0;class#GameBoard#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShowGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -55,27 +55,20 @@
         <entry file="file://$PROJECT_DIR$/GameLogic42.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-              <folding />
+              <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+              <folding>
+                <element signature="e#1180#1181#0" expanded="true" />
+                <element signature="e#1235#1236#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimaxDecision.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/group42/heuristics/MinimaxDecision.java">
+      <file leaf-file-name="FourConnectGUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FourConnectGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MinimaxIDSDecision.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <caret line="179" column="48" selection-start-line="179" selection-start-column="48" selection-end-line="179" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -110,7 +103,6 @@
         <option value="$PROJECT_DIR$/grp1/helpers/Heuristic.java" />
         <option value="$PROJECT_DIR$/IGameLogic.java" />
         <option value="$PROJECT_DIR$/grp1/tests/HeuristicTest.java" />
-        <option value="$PROJECT_DIR$/ShowGame.java" />
         <option value="$PROJECT_DIR$/GameLogic.java" />
         <option value="$PROJECT_DIR$/group42/helpers/awer.java" />
         <option value="$PROJECT_DIR$/group42/helpers/tests/awer.java" />
@@ -130,11 +122,12 @@
         <option value="$PROJECT_DIR$/FourConnectGUI.java" />
         <option value="$PROJECT_DIR$/group42/entities/MinimaxIDSResult.java" />
         <option value="$PROJECT_DIR$/group42/heuristics/MinimaxDecision.java" />
-        <option value="$PROJECT_DIR$/GameLogic42.java" />
         <option value="$PROJECT_DIR$/group42/heuristics/GameLogic42IDSAB.java" />
         <option value="$PROJECT_DIR$/GameLogic42IDSAB.java" />
-        <option value="$PROJECT_DIR$/group42/gamelogic/GameBoard.java" />
         <option value="$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java" />
+        <option value="$PROJECT_DIR$/GameLogic42.java" />
+        <option value="$PROJECT_DIR$/ShowGame.java" />
+        <option value="$PROJECT_DIR$/group42/gamelogic/GameBoard.java" />
       </list>
     </option>
   </component>
@@ -150,10 +143,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="-13" />
-    <option name="width" value="3866" />
-    <option name="height" value="2126" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -202,20 +195,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches">
+        <subPane />
+      </pane>
       <pane id="Scope">
         <subPane subId="Tests" />
       </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="iaip_c4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -298,9 +290,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,7 +304,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../3 Data mining/Lab 7 - Classification &amp; Prediction #2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -561,36 +550,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -647,26 +606,11 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="ShowGame" type="Application" factoryName="Application" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="ShowGame" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="GameLogic42IDSAB GameLogic42IDSAB 8 8" />
+      <option name="PROGRAM_PARAMETERS" value="human GameLogic42IDSAB 8 8" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -809,8 +753,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3866" height="2126" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -821,7 +765,7 @@
       <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.23802084" sideWeight="0.48223898" order="8" side_tool="false" content_ui="tabs" x="4" y="1239" width="3840" height="279" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15442708" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1522694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24894515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -833,7 +777,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286004" sideWeight="0.4936034" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.4936034" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981715" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -857,7 +801,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="200" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GameLogic42.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="202" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -869,9 +821,58 @@
     <entry file="file://$PROJECT_DIR$/group42/gamelogic/GameBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="70" selection-start-line="90" selection-start-column="70" selection-end-line="90" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#stateHeuristicVertical#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicHorizontal#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicDiagonallyAscend#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicDiagonallyDesc#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#tieCondition#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionHorizontally#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionVertically#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionDiagonallyAscending#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionDiagonallyDescending#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#resultTypeFromPlayerId#0;class#GameBoard#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShowGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameLogic42.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group42/gamelogic/GameBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#stateHeuristicVertical#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicHorizontal#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicDiagonallyAscend#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicDiagonallyDesc#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#tieCondition#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionHorizontally#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionVertically#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionDiagonallyAscending#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionDiagonallyDescending#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#resultTypeFromPlayerId#0;class#GameBoard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -895,14 +896,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group42/heuristics/MinimaxDecision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -912,6 +909,16 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#stateHeuristicVertical#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicHorizontal#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicDiagonallyAscend#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicDiagonallyDesc#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#tieCondition#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionHorizontally#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionVertically#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionDiagonallyAscending#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionDiagonallyDescending#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#resultTypeFromPlayerId#0;class#GameBoard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -927,7 +934,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -937,6 +947,16 @@
           <caret line="86" column="13" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#stateHeuristicVertical#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicHorizontal#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicDiagonallyAscend#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicDiagonallyDesc#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#tieCondition#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionHorizontally#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionVertically#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionDiagonallyAscending#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionDiagonallyDescending#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#resultTypeFromPlayerId#0;class#GameBoard#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -955,25 +975,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/group42/heuristics/MinimaxDecision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FourConnectGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group42/heuristics/SimpleDecision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,7 +993,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1003,7 +1011,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,7 +1029,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1054,7 +1068,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,7 +1100,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1155,14 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/group42/heuristics/SimpleDecision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6969206">
-          <caret line="30" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/group42/heuristics/IDecisionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19286872">
@@ -1173,13 +1185,6 @@
     <entry file="file://$PROJECT_DIR$/imgs/maze.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FourConnectGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.1764092">
-          <caret line="179" column="48" selection-start-line="179" selection-start-column="48" selection-end-line="179" selection-end-column="48" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/group42/entities/TerminalResultType.java">
@@ -1196,30 +1201,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameLogic42IDSAB.java">
+    <entry file="file://$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="70" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1314#1315#0" expanded="false" />
-            <element signature="e#1369#1370#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShowGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group42/heuristics/MinimaxDecision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.24257426">
+          <caret line="172" column="5" selection-start-line="172" selection-start-column="5" selection-end-line="172" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1227,25 +1212,46 @@
     <entry file="file://$PROJECT_DIR$/GameLogic42.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FourConnectGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="179" column="48" selection-start-line="179" selection-start-column="48" selection-end-line="179" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/group42/heuristics/MinimaxIDSDecision.java">
+    <entry file="file://$PROJECT_DIR$/ShowGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state vertical-scroll-proportion="2.6930692">
+          <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/group42/gamelogic/GameBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2907104">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.5528053">
+          <caret line="347" column="7" selection-start-line="347" selection-start-column="7" selection-end-line="347" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#stateHeuristicVertical#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicHorizontal#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicDiagonallyAscend#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#stateHeuristicDiagonallyDesc#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#tieCondition#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionHorizontally#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionVertically#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionDiagonallyAscending#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#winConditionDiagonallyDescending#0;class#GameBoard#0" expanded="false" />
+            <element signature="method#resultTypeFromPlayerId#0;class#GameBoard#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -47,6 +47,7 @@ public class GameBoard
         this.colCount[column]--;
     }
 
+    //Determine whether the board is in a terminal state.
     public TerminalResultType terminalTest()
     {
         TerminalResultType type = TerminalResultType.NOT_FINISHED;
@@ -56,20 +57,6 @@ public class GameBoard
         type = type == TerminalResultType.NOT_FINISHED ? winConditionVertically() : type;
         type = type == TerminalResultType.NOT_FINISHED ? tieCondition() : type;
         return type;
-    }
-
-    public GameBoard clone()
-    {
-        int[][] _gameBoard = new int[gameboard.length][gameboard[0].length];
-        for (int x = 0; x < gameboard.length; x++)
-        {
-            for (int y = 0; y < gameboard[x].length; y++)
-            {
-                _gameBoard[x][y] = gameboard[x][y];
-            }
-        }
-
-        return new GameBoard(_gameBoard, Arrays.copyOf(colCount, colCount.length));
     }
 
     public boolean fullColumn(int col)
@@ -82,6 +69,7 @@ public class GameBoard
         return colCount[col] == 0;
     }
 
+    //Calculate points for evaluation function.
     public int stateHeuristic(int player, int opponent)
     {
         int statePoints = 0;
@@ -92,6 +80,7 @@ public class GameBoard
         return statePoints;
     }
 
+    //Private helper methods for heuristic.
     private int stateHeuristicVertical(int player, int opponent)
     {
         int points = 0;
@@ -344,7 +333,7 @@ public class GameBoard
     }
 
 
-
+    //Private helper methods for terminal board state.
     private TerminalResultType tieCondition()
     {
         boolean fullBoard = true;
