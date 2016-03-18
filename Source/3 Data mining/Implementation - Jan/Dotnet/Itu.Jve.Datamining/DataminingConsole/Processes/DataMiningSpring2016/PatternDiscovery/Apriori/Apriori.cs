@@ -16,60 +16,28 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
 
         static Entities.Attribute[][] ATTRIBUTE_TRANSACTIONS = { new Entities.Attribute[] { new AgeAttribute { } } };
 
-        public static List<AssociationRule> AprioriAlg(int[][] transactions, int supportThreshold)
+        public static List<ItemSet> AprioriAlg(int[][] transactions, int supportThreshold)
         {
-            int k = 1;
             Dictionary<ItemSet, int> frequentItemSets = GenerateFrequentItemSetsLevel1(transactions, supportThreshold);
-            var itemSets = new Dictionary<ItemSet, int>();
+            var itemSets = new Dictionary<ItemSet, int>(frequentItemSets);
 
             //Continues untill there is one or fewer itemsets left.
-            while (frequentItemSets.Count > 1)
+            for (int k = 1;  frequentItemSets.Count > 0; k++)
             {
-                k++;
                 Console.WriteLine("Finding frequent itemsets of length " + (k + 1) + "…");
-                var tempFrequentItemSets = GenerateFrequentItemSets(supportThreshold, transactions, frequentItemSets);
+                frequentItemSets = GenerateFrequentItemSets(supportThreshold, transactions, frequentItemSets);
 
-                foreach (ItemSet item in  frequentItemSets.Keys)
+                foreach (ItemSet item in frequentItemSets.Keys)
                 {
                     itemSets.Add(item, frequentItemSets[item]);
                 }
 
-                if (tempFrequentItemSets.Count() > 0)
-                {
-                    frequentItemSets = tempFrequentItemSets;
-                }
                 Console.WriteLine(" found " + frequentItemSets.Count());
             }
 
             // Returning something useful
-            return CreateAssociationRules(itemSets); ;
-        }
-
-        // Creating association rules from the frequent itemsets
-        // This should problably be done somewhere else??
-        private static List<AssociationRule> CreateAssociationRules(Dictionary<ItemSet, int> FrequentItemSets)
-        {
-            var AssociationRuleList = new List<AssociationRule>();
-
-            //Creating all possible equivalence rules
-            foreach (var item1 in FrequentItemSets)
-            {
-                foreach(var item2 in FrequentItemSets)
-                {
-                    if(item1.Equals(item2)) { break; } //ItemSets are equivalent
-                    var AssociationRule = new AssociationRule { Premise = item1.Key, Conclusion = item2.Key };
-                    var tempItemSet = new ItemSet { Set = item1.Key.Set.Union(item2.Key.Set).OrderBy(x => x).ToArray() };
-                    int supportForUnion;
-                    
-                    //Test if this works properly, might only be tested for reference!!!
-                    if (FrequentItemSets.TryGetValue(tempItemSet, out supportForUnion))
-                    {
-                        AssociationRule.Confidence = supportForUnion / item1.Value;
-                        AssociationRuleList.Add(AssociationRule);
-                    }
-                }
-            }
-            return AssociationRuleList;
+            // If this method were to be used for creation of association rules, then it should merely return the dictionary instead. 
+            return itemSets.Keys.ToList();
         }
 
         private static Dictionary<ItemSet, int> GenerateFrequentItemSets(int supportThreshold, int[][] transactions,
@@ -128,10 +96,10 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
             var frequentItemSets = new Dictionary<ItemSet, int>();
             foreach (ItemSet item in frequentItemSetCandidates.Keys)
             {
-
-                if (CountSupport(item.Set, transactions) >= supportThreshold)
+                var support = CountSupport(item.Set, transactions);
+                if (support >= supportThreshold)
                 {
-                    frequentItemSets.Add(item, frequentItemSetCandidates[item]);
+                    frequentItemSets.Add(item, support);
                 }
             }
             return frequentItemSets;

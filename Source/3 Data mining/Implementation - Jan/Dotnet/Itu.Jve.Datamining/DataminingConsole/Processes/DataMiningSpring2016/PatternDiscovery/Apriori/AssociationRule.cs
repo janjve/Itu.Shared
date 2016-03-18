@@ -16,7 +16,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
 
         public override string ToString()
         {
-            return base.ToString();
+            return "Confidence is: " + Confidence + " that " + Premise.ToString() + " => " + Conclusion.ToString();
         }
     }
 }

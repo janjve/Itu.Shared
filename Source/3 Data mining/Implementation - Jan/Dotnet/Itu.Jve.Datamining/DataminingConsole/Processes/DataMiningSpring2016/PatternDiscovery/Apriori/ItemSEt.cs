@@ -58,5 +58,16 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         {
             throw new NotImplementedException();
         }
+
+        public override string ToString()
+        {
+            string all = "";
+
+            foreach(var item in Set)
+            {
+                all += item + ",";
+            }
+            return all.Remove(all.Length-1);
+        }
     }
 }
