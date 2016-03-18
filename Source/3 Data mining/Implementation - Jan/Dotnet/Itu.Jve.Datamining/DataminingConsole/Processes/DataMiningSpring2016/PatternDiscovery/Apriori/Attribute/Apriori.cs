@@ -118,9 +118,9 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                 for (int j = 0; j < transactions[i].Length; j++)
                 {
                     ItemSet itemSet = new ItemSet { Set = new Entities.Attribute[] { transactions[i][j] } };
-                    //var hashCode = itemSet.GetHashCode();
+                    var hashCode = itemSet.GetHashCode();
                     var doesObjectExist = dictionary.Keys.FirstOrDefault(x => x.Equals(itemSet));
-                    if (doesObjectExist)
+                    if (!dictionary.ContainsKey(itemSet))
                     {
                         dictionary.Add(itemSet, 0);
                     }
