@@ -58,7 +58,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                     if (!item.Equals(item2))
                     {
                         var itemSet = JoinSets(item, item2);
-                        if (!frequentItemSetCandidates.ContainsKey(itemSet))
+                        if (itemSet != null && !frequentItemSetCandidates.ContainsKey(itemSet))
                         {
                             frequentItemSetCandidates.Add(itemSet, 0);
                         }
