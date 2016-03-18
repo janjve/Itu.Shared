@@ -9,14 +9,14 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
     //Association rules, to be output at the end.
     public class AssociationRule
     {
-        public ItemSet Premise { get; set; }
-        public ItemSet Conclusion { get; set; }
+        public ItemSetForInts Premise { get; set; }
+        public ItemSetForInts Conclusion { get; set; }
         public double Confidence { get; set; }
         public int Support { get; set; }
 
         public override string ToString()
         {
-            return base.ToString();
+            return "Confidence is: " + Confidence + " that " + Premise.ToString() + " => " + Conclusion.ToString();
         }
     }
 }

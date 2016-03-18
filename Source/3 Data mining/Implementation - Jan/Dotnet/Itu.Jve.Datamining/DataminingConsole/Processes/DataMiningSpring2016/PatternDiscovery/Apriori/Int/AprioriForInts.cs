@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apriori
 {
-    public class Apriori
+    public class AprioriForInts
     {
         public static int[][] TRANSACTIONS = new int[][] { new int[]{ 1, 2, 3, 4, 5 }, new int[]{ 1, 3, 5 },new int[] { 2, 3, 5 }, new int[]{ 1, 5 },
             new int[] { 1, 3, 4 }, new int[]{ 2, 3, 5 }, new int[] { 2, 3, 5 }, new int[]{ 3, 4, 5 },new int[] { 4, 5 }, new int[]{ 2 },
@@ -16,67 +16,35 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
 
         static Entities.Attribute[][] ATTRIBUTE_TRANSACTIONS = { new Entities.Attribute[] { new AgeAttribute { } } };
 
-        public static List<AssociationRule> AprioriAlg(int[][] transactions, int supportThreshold)
+        public static List<ItemSetForInts> AprioriAlg(int[][] transactions, int supportThreshold)
         {
-            int k = 1;
-            Dictionary<ItemSet, int> frequentItemSets = GenerateFrequentItemSetsLevel1(transactions, supportThreshold);
-            var itemSets = new Dictionary<ItemSet, int>();
+            Dictionary<ItemSetForInts, int> frequentItemSets = GenerateFrequentItemSetsLevel1(transactions, supportThreshold);
+            var itemSets = new Dictionary<ItemSetForInts, int>(frequentItemSets);
 
             //Continues untill there is one or fewer itemsets left.
-            while (frequentItemSets.Count > 1)
+            for (int k = 1;  frequentItemSets.Count > 0; k++)
             {
-                k++;
                 Console.WriteLine("Finding frequent itemsets of length " + (k + 1) + "…");
-                var tempFrequentItemSets = GenerateFrequentItemSets(supportThreshold, transactions, frequentItemSets);
+                frequentItemSets = GenerateFrequentItemSets(supportThreshold, transactions, frequentItemSets);
 
-                foreach (ItemSet item in  frequentItemSets.Keys)
+                foreach (ItemSetForInts item in frequentItemSets.Keys)
                 {
                     itemSets.Add(item, frequentItemSets[item]);
                 }
 
-                if (tempFrequentItemSets.Count() > 0)
-                {
-                    frequentItemSets = tempFrequentItemSets;
-                }
                 Console.WriteLine(" found " + frequentItemSets.Count());
             }
 
             // Returning something useful
-            return CreateAssociationRules(itemSets); ;
+            // If this method were to be used for creation of association rules, then it should merely return the dictionary instead. 
+            return itemSets.Keys.ToList();
         }
 
-        // Creating association rules from the frequent itemsets
-        // This should problably be done somewhere else??
-        private static List<AssociationRule> CreateAssociationRules(Dictionary<ItemSet, int> FrequentItemSets)
-        {
-            var AssociationRuleList = new List<AssociationRule>();
-
-            //Creating all possible equivalence rules
-            foreach (var item1 in FrequentItemSets)
-            {
-                foreach(var item2 in FrequentItemSets)
-                {
-                    if(item1.Equals(item2)) { break; } //ItemSets are equivalent
-                    var AssociationRule = new AssociationRule { Premise = item1.Key, Conclusion = item2.Key };
-                    var tempItemSet = new ItemSet { Set = item1.Key.Set.Union(item2.Key.Set).OrderBy(x => x).ToArray() };
-                    int supportForUnion;
-                    
-                    //Test if this works properly, might only be tested for reference!!!
-                    if (FrequentItemSets.TryGetValue(tempItemSet, out supportForUnion))
-                    {
-                        AssociationRule.Confidence = supportForUnion / item1.Value;
-                        AssociationRuleList.Add(AssociationRule);
-                    }
-                }
-            }
-            return AssociationRuleList;
-        }
-
-        private static Dictionary<ItemSet, int> GenerateFrequentItemSets(int supportThreshold, int[][] transactions,
-                Dictionary<ItemSet, int> lowerLevelItemSets)
+        private static Dictionary<ItemSetForInts, int> GenerateFrequentItemSets(int supportThreshold, int[][] transactions,
+                Dictionary<ItemSetForInts, int> lowerLevelItemSets)
         {
             //Compute the new candidate sets from the lower level frequent item sets.
-            var frequentItemSetCandidates = new Dictionary<ItemSet, int>();
+            var frequentItemSetCandidates = new Dictionary<ItemSetForInts, int>();
 
             foreach (var item in lowerLevelItemSets.Keys)
             {
@@ -85,7 +53,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                     if (!item.Equals(item2))
                     {
                         var itemSet = JoinSets(item, item2);
-                        if(!frequentItemSetCandidates.ContainsKey(itemSet))
+                        if(itemSet != null && !frequentItemSetCandidates.ContainsKey(itemSet))
                         {
                             frequentItemSetCandidates.Add(itemSet, 0);
                         }
@@ -96,13 +64,13 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
             
             //Incase of errors, look here.
             //Pruning itemsets according to the apriori property.
-            var frequentCandidateItemSetsPruned = new Dictionary<ItemSet, int>();
+            var frequentCandidateItemSetsPruned = new Dictionary<ItemSetForInts, int>();
             foreach(var item in frequentItemSetCandidates)
             {
-                List<ItemSet> itemSetCandidateSubset = new List<ItemSet>();
+                List<ItemSetForInts> itemSetCandidateSubset = new List<ItemSetForInts>();
                 for(int i = 0; i < item.Key.Set.Length-1; i++)
                 {
-                    itemSetCandidateSubset.Add(new ItemSet { Set = item.Key.Set.Where(x => !x.Equals(item.Key.Set[i])).ToArray() });
+                    itemSetCandidateSubset.Add(new ItemSetForInts { Set = item.Key.Set.Where(x => !x.Equals(item.Key.Set[i])).ToArray() });
                     
                     /*var items = new int[item.Key.Set.Length - 2];
                     for(int j = 0; j < item.Key.Set.Length-1; i++){
@@ -125,27 +93,27 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
             }
 
             //Check the support for all candidates and add only those that are above the threshold
-            var frequentItemSets = new Dictionary<ItemSet, int>();
-            foreach (ItemSet item in frequentItemSetCandidates.Keys)
+            var frequentItemSets = new Dictionary<ItemSetForInts, int>();
+            foreach (ItemSetForInts item in frequentItemSetCandidates.Keys)
             {
-
-                if (CountSupport(item.Set, transactions) >= supportThreshold)
+                var support = CountSupport(item.Set, transactions);
+                if (support >= supportThreshold)
                 {
-                    frequentItemSets.Add(item, frequentItemSetCandidates[item]);
+                    frequentItemSets.Add(item, support);
                 }
             }
             return frequentItemSets;
         }
 
         //Creates a set of itemsets that is above a given support threshold
-        private static Dictionary<ItemSet, int> GenerateFrequentItemSetsLevel1(int[][] transactions, int supportThreshold)
+        private static Dictionary<ItemSetForInts, int> GenerateFrequentItemSetsLevel1(int[][] transactions, int supportThreshold)
         {
-            var dictionary = new Dictionary<ItemSet, int>();
+            var dictionary = new Dictionary<ItemSetForInts, int>();
             for (int i = 0; i < transactions.Length; i++)
             {
                 for (int j = 0; j < transactions[i].Length; j++)
                 {
-                    ItemSet itemSet = new ItemSet { Set = new int[] { transactions[i][j] } };
+                    ItemSetForInts itemSet = new ItemSetForInts { Set = new int[] { transactions[i][j] } };
                     if (!dictionary.ContainsKey(itemSet))
                     {
                         dictionary.Add(itemSet, 0);
@@ -155,8 +123,8 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                 }
             }
 
-            var frequentItemSets = new Dictionary<ItemSet, int>();
-            foreach (ItemSet item in dictionary.Keys)
+            var frequentItemSets = new Dictionary<ItemSetForInts, int>();
+            foreach (ItemSetForInts item in dictionary.Keys)
             {
                 
                 if (dictionary[item] >= supportThreshold)
@@ -168,7 +136,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         }
 
         //Joins itemsets
-        private static ItemSet JoinSets(ItemSet first, ItemSet second)
+        private static ItemSetForInts JoinSets(ItemSetForInts first, ItemSetForInts second)
         {
             int[] items = new int[first.Set.Length + 1];
             for (int i = 0; i < first.Set.Length - 1; i++)
@@ -192,7 +160,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                 items[items.Length - 2] = second.Set[second.Set.Length - 1];
                 items[items.Length - 1] = first.Set[second.Set.Length - 1];
             }
-            return new ItemSet { Set = items };
+            return new ItemSetForInts { Set = items };
         }
 
         //Counts the support for an itemset in a given set of transactions

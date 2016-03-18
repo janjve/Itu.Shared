@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apriori
 {
-    public class ItemSet : IComparable
+    public class ItemSetForInts : IComparable
     {
         /***
             * The PRIMES array is internally in the ItemSet-class' hashCode method
@@ -33,7 +33,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         public override bool Equals(object obj)
         {
             if (obj == null) return false;
-            var other = obj as ItemSet;
+            var other = obj as ItemSetForInts;
 
             if (other != null)
             {
@@ -57,6 +57,17 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         public int CompareTo(object obj)
         {
             throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            string all = "";
+
+            foreach(var item in Set)
+            {
+                all += item + ",";
+            }
+            return all.Remove(all.Length-1);
         }
     }
 }
