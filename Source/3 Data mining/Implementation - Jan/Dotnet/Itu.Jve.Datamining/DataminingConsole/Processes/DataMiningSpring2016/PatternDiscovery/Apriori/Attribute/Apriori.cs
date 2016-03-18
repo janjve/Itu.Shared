@@ -7,7 +7,18 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
 {
     class Apriori
     {
-        static Entities.Attribute[][] ATTRIBUTE_TRANSACTIONS = { new Entities.Attribute[] { new AgeAttribute { Value = 20 } } };
+
+
+        public static Entities.Attribute[][] ATTRIBUTE_TRANSACTIONS = {
+            new Entities.Attribute[] { new AgeAttribute { Value = 1 }, new AgeAttribute { Value = 2 }, new AgeAttribute { Value = 3 }, new AgeAttribute { Value = 4 }, new AgeAttribute { Value = 5 } },
+            new Entities.Attribute[] { new AgeAttribute { Value = 1 }, new AgeAttribute { Value = 2 }, new AgeAttribute { Value = 3 }, new AgeAttribute { Value = 4 }, new AgeAttribute { Value = 5 } },
+            new Entities.Attribute[] { new AgeAttribute { Value = 2 }, new AgeAttribute { Value = 4 } },
+            new Entities.Attribute[] { new AgeAttribute { Value = 1 }, new AgeAttribute { Value = 4 } },
+            new Entities.Attribute[] { new AgeAttribute { Value = 3 }, new AgeAttribute { Value = 5 } },
+            new Entities.Attribute[] { new AgeAttribute { Value = 3 }, new AgeAttribute { Value = 5 } },
+            new Entities.Attribute[] { new AgeAttribute { Value = 2 }, new AgeAttribute { Value = 3 }, new AgeAttribute { Value = 4 } },
+            new Entities.Attribute[] { new AgeAttribute { Value = 1 }, new AgeAttribute { Value = 2 }, new AgeAttribute { Value = 3 } }
+        };
 
         public static List<ItemSet> AprioriAlg(Entities.Attribute[][] transactions, int supportThreshold)
         {
@@ -107,11 +118,12 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                 for (int j = 0; j < transactions[i].Length; j++)
                 {
                     ItemSet itemSet = new ItemSet { Set = new Entities.Attribute[] { transactions[i][j] } };
-                    if (!dictionary.ContainsKey(itemSet))
+                    //var hashCode = itemSet.GetHashCode();
+                    var doesObjectExist = dictionary.Keys.FirstOrDefault(x => x.Equals(itemSet));
+                    if (doesObjectExist)
                     {
                         dictionary.Add(itemSet, 0);
                     }
-                    //dictionary.Add(itemSet, dictionary[itemSet] +1);
                     dictionary[itemSet] += 1;
                 }
             }

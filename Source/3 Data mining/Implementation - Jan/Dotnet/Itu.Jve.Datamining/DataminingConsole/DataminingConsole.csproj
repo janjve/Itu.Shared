@@ -62,9 +62,11 @@
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\FavoriteGameAttribute.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\DegreeAttribute.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\DataTuple.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Apriori\Apriori.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Apriori\Attribute\Apriori.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Apriori\Int\AprioriForInts.cs" />
     <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Apriori\AssociationRule.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Apriori\ItemSet.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Apriori\Attribute\ItemSet.cs" />
+    <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Apriori\Int\ItemSetForInts.cs" />
     <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Clustering\KMeanCluster.cs" />
     <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Clustering\KMeans.cs" />
     <Compile Include="Processes\DataMiningSpring2016\PatternDiscovery\Clustering\ReassignedResponse.cs" />

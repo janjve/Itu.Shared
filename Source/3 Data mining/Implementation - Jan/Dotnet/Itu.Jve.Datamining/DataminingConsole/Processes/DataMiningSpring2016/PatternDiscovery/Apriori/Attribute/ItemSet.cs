@@ -17,15 +17,15 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         /**
         * hashCode functioned used internally in Hashtable
         */
-        //public override int GetHashCode()
-        //{
-        //    int code = 0;
-        //    for (int i = 0; i < Set.Length; i++)
-        //    {
-        //        code += Set[i] * PRIMES[i];
-        //    }
-        //    return code;
-        //}
+        public override int GetHashCode()
+        {
+            int code = 0;
+            for (int i = 0; i < Set.Length; i++)
+            {
+                code += Set[i].ToString().GetHashCode();
+            }
+            return code;
+        }
 
         /**
         * Used to determine whether two ItemSet objects are equal
@@ -65,7 +65,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
 
             foreach (var item in Set)
             {
-                all += item + ",";
+                all += item.ToString() + ",";
             }
             return all.Remove(all.Length - 1);
         }
