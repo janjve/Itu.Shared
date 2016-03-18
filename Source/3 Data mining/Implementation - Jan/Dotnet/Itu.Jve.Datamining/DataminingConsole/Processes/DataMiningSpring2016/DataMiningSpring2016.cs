@@ -25,7 +25,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
         private readonly Func<DataTuple, bool> _ageNoisePredicate;
 
         private const int KMeanClusters = 3;
-        private const int SupportThreshold = 4;
+        private const int SupportThreshold = 5;
 
 
         public DataMiningSpring2016()

@@ -5,6 +5,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 {
     public class DataCleaningHandler
     {
+        /// <summary>
+        /// Remove trailing and leading " character
+        /// </summary>
+        /// <param name="initial"></param>
+        /// <returns></returns>
         public string StringCleaner(string initial)
         {
             return initial.StartsWith("\"") && initial.EndsWith("\"") 
@@ -21,12 +26,6 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 
             if (!int.TryParse(initial, out ignored))
                 return Constant.InternalString.ParsingError;
-
-            return initial;
-        }
-
-        public string DegreeCleaner(string initial)
-        {
 
             return initial;
         }

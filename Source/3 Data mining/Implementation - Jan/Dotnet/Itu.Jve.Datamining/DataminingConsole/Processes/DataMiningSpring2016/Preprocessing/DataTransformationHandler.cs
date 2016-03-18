@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
 using static DataminingConsole.Processes.DataMiningSpring2016.Common.Constant;
 using System;
@@ -8,10 +7,14 @@ using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstr
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 {
-    // Values that can't be transformed are considered "missing"
     public class DataTransformationHandler
     {
-
+        /// <summary>
+        /// Map a string to DataTuple.
+        /// </summary>
+        /// <param name="tuple">string to parse</param>
+        /// <param name="attributeIndex">attributeIndex for array.</param>
+        /// <returns>DataTuple object</returns>
         public DataTuple TransformTuple(List<string> tuple, Dictionary<AttributeType, int> attributeIndex)
         {
             return new DataTuple
@@ -20,16 +23,25 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
                 Degree = TransformDegree(tuple[attributeIndex[AttributeType.Degree]]),
                 FavoriteGame = TransformFavoriteGame(tuple[attributeIndex[AttributeType.FavoriteGame]]),
                 GameFrequency = TransformGameFrequency(tuple[attributeIndex[AttributeType.GameFrequency]]),
-                PlayedGames = new PlayedGamesAttribute() // TransformPlayedGames(tuple[attributeIndex[AttributeType.PlayedGames]])
+                PlayedGames = new PlayedGamesAttribute() // Unfinished.
             };
         } 
-
+        /// <summary>
+        /// Parse age
+        /// </summary>
+        /// <param name="age"></param>
+        /// <returns></returns>
         public AgeAttribute TransformAge(string age)
         {
             int transformedAge;
             return int.TryParse(age, out transformedAge) ? new AgeAttribute {Value = transformedAge } : null;
         }
         
+        /// <summary>
+        /// Parse degree
+        /// </summary>
+        /// <param name="degree"></param>
+        /// <returns></returns>
         public DegreeAttribute TransformDegree(string degree) {
             switch (degree.ToLower())
             {
@@ -44,6 +56,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
             }
         }
         
+        /// <summary>
+        /// Parse favorite game
+        /// </summary>
+        /// <param name="favoriteGame"></param>
+        /// <returns></returns>
         public FavoriteGameAttribute TransformFavoriteGame(string favoriteGame) {
             var arrayOfGames = favoriteGame.Split(',');
             favoriteGame = arrayOfGames[0]?.Trim().ToLower();
@@ -54,6 +71,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 
         }
 
+        /// <summary>
+        /// Parse gameFrequency
+        /// </summary>
+        /// <param name="gameFrequency"></param>
+        /// <returns></returns>
         public GameFrequencyAttribute TransformGameFrequency(string gameFrequency) {
             
             switch (gameFrequency)
@@ -75,6 +97,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
             }
         }
         
+        [Obsolete("Not finished => ununsed")]
         public PlayedGamesAttribute TransformPlayedGames(string playedGames) {
             throw new NotImplementedException("No transformation yet.");
         }

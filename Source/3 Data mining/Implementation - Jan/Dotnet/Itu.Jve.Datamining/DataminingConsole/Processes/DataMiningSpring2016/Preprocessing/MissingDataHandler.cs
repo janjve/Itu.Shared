@@ -10,6 +10,13 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 {
     public static class NoiseHandler
     {
+        /// <summary>
+        /// Remove noise not parsing the missingPredicate.
+        /// </summary>
+        /// <param name="dataTuples">dataset</param>
+        /// <param name="missingPredicate">predicate</param>
+        /// <param name="removalMethod">Only use Median method atm.</param>
+        /// <returns></returns>
         public static List<DataTuple> RemoveAgeNoise(this List<DataTuple> dataTuples, Func<DataTuple, bool> missingPredicate, NoiseMethod removalMethod)
         {
             switch (removalMethod)
