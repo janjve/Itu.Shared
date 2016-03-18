@@ -13,6 +13,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         */
         private static int[] PRIMES = { 2, 3, 5, 7, 11, 13, 17, 23, 27, 31, 37 };
         public Entities.Attribute[] Set { get; set; }
+        public int Support { get; set; }
 
         /**
         * hashCode functioned used internally in Hashtable
@@ -22,7 +23,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
             int code = 0;
             for (int i = 0; i < Set.Length; i++)
             {
-                code += Set[i].ToString().GetHashCode();
+                code += unchecked( Set[i].ToString().GetHashCode());
             }
             return code;
         }

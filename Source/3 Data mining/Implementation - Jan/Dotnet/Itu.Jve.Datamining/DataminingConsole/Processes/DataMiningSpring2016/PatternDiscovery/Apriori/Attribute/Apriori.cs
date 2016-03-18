@@ -42,7 +42,15 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
             // Returning something useful
             // If this method were to be used for creation of association rules, then it should merely return the dictionary instead.
             // Should it always do this!? All information about support is lost this way... 
-            return itemSets.Keys.ToList();
+            var frequentItemSetsList = new List<ItemSet>();
+
+            foreach(var item in itemSets)
+            {
+                item.Key.Support = item.Value;
+                frequentItemSetsList.Add(item.Key);
+            }
+
+            return frequentItemSetsList;
         }
 
         private static Dictionary<ItemSet, int> GenerateFrequentItemSets(int supportThreshold, Entities.Attribute[][] transactions,
@@ -62,7 +70,6 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                         {
                             frequentItemSetCandidates.Add(itemSet, 0);
                         }
-
                     }
                 }
             }
