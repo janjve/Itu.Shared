@@ -15,7 +15,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.KNea
         /// <typeparam name="T">The classifier type.</typeparam>
         /// <param name="k">number of K nearest neighbore</param>
         /// <param name="tuple">The tuple to assign a class T</param>
-        /// <param name="trainingSet"></param>
+        /// <param name="trainingSet">a list of tuple as keys with there respective classes as value</param>
         /// <returns></returns>
         public T CalculateClassification<T>(int k, DataTuple tuple, Dictionary<DataTuple, T> trainingSet)
         {

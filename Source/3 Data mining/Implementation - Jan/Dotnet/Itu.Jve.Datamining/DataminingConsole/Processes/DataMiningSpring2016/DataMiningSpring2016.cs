@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes;
 using DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clustering;
 using DataminingConsole.Processes.DataMiningSpring2016.Preprocessing;
 using DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apriori;
@@ -49,7 +50,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
             _playedGameNoisePredicate = x => false;
 
             // Pattern discovery
-            _kMeanClusters = 10;
+            _kMeanClusters = 3;
 
         }
 
@@ -59,8 +60,8 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
         {
             var data = DataSelection();
             var dataset = PreProcessing(data);
-            //PatternDiscovery(dataset);
-            var patterns = Apriori.AprioriAlg(Apriori.ATTRIBUTE_TRANSACTIONS, 2);
+            PatternDiscovery(dataset);
+            //var patterns = Apriori.AprioriAlg(Apriori.ATTRIBUTE_TRANSACTIONS, 2);
         }
 
         public List<List<string>> DataSelection()
@@ -107,7 +108,28 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
             Debug.WriteLine("=======================================================================");
 
             var clusters = KMeans.KMeansPartition(_kMeanClusters, dataSet);
-            clusters.ForEach(x => Debug.WriteLine(x));
+            clusters.ForEach(ClusterAnalysis);
+        }
+
+        private static void ClusterAnalysis(KMeanCluster cluster)
+        {
+            //var never = cluster.ClusterMembers.Count(x => x.GameFrequency.Value == GameFrequencyType.Never);
+            //var lessThan5HoursAWeek = cluster.ClusterMembers.Count(x => x.GameFrequency.Value == GameFrequencyType.LessThan5HoursAWeek);
+            //var lessThan10HoursAWeek = cluster.ClusterMembers.Count(x => x.GameFrequency.Value == GameFrequencyType.LessThan10HoursAWeek);
+            //var lessThan15HoursAWeek = cluster.ClusterMembers.Count(x => x.GameFrequency.Value == GameFrequencyType.LessThan15HoursAWeek);
+            //var lessThan20HoursAWeek = cluster.ClusterMembers.Count(x => x.GameFrequency.Value == GameFrequencyType.LessThan20HoursAWeek);
+            //var moreThan20HoursAWeek = cluster.ClusterMembers.Count(x => x.GameFrequency.Value == GameFrequencyType.MoreThan20HoursAWeek);
+            //Debug.WriteLine($"Never: {never}");
+            //Debug.WriteLine($"LessThan5HoursAWeek: {lessThan5HoursAWeek}");
+            //Debug.WriteLine($"LessThan10HoursAWeek: {lessThan10HoursAWeek}");
+            //Debug.WriteLine($"LessThan15HoursAWeek: {lessThan15HoursAWeek}");
+            //Debug.WriteLine($"LessThan20HoursAWeek: {lessThan20HoursAWeek}");
+            //Debug.WriteLine($"MoreThan20HoursAWeek: {moreThan20HoursAWeek}");
+            Debug.WriteLine(cluster);
+
+            var ageMean = cluster.ClusterMembers.Sum(x => x.Age.Value) / cluster.ClusterMembers.Count;
+            Debug.WriteLine($"ageMean: {ageMean}");
+
         }
     }
 }
