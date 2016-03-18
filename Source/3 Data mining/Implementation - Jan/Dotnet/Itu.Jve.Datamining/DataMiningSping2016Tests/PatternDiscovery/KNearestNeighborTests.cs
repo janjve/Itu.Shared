@@ -9,7 +9,7 @@ using DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clusteri
 using DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.KNearestNeighbors;
 using DataminingConsole.Processes.DataMiningSpring2016.Preprocessing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Attribute = DataminingConsole.Processes.DataMiningSpring2016.Entities.Attribute;
+using Attribute = DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstract.Attribute;
 
 namespace DataMiningSping2016Tests.PatternDiscovery
 {

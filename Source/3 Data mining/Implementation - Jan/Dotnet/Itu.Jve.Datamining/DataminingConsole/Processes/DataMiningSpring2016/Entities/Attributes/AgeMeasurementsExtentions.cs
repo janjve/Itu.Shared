@@ -5,6 +5,7 @@ using DataminingConsole.Processes.DataMiningSpring2016.Common;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes
 {
+    [Obsolete("Unused")]
     public static class AgeMeasurementsExtentions
     {
         #region Central tendency measures

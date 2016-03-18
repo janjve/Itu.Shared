@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstract;
+using Attribute = DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstract.Attribute;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes
 {
+    [Obsolete("Unused")]
     public class PlayedGamesAttribute : Attribute
     {
         public PlayedGamesAttribute() : base(AttributeType.PlayedGames) { }

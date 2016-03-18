@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DataminingConsole.Processes.DataMiningSpring2016.Entities;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstract;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Common
 {

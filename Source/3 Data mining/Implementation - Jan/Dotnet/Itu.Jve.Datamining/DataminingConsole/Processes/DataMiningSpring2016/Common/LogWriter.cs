@@ -1,7 +1,9 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Common
 {
+    [Obsolete("Unused")]
     public class LogWriter
     {
         public static void WriteLogToFile(string path, string output, bool append = true)

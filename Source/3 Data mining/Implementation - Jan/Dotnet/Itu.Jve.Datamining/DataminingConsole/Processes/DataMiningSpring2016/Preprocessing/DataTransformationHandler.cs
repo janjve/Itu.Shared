@@ -4,6 +4,7 @@ using DataminingConsole.Processes.DataMiningSpring2016.Entities;
 using static DataminingConsole.Processes.DataMiningSpring2016.Common.Constant;
 using System;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstract;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing
 {

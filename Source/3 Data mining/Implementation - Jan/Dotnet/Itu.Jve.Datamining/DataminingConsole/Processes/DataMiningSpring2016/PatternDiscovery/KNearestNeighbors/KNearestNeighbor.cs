@@ -10,7 +10,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.KNea
     public class KNearestNeighbor
     {
         /// <summary>
-        /// 
+        /// Start the KNearestNeighbor process
         /// </summary>
         /// <typeparam name="T">The classifier type.</typeparam>
         /// <param name="k">number of K nearest neighbore</param>
@@ -24,7 +24,14 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.KNea
             return group.Any() ? group.First().Key : default(T);
         }
 
-        private IEnumerable<DataTuple> KNearestNeighbors(int k, DataTuple tuple, List<DataTuple> trainingSet)
+        /// <summary>
+        /// Finds the K-nearest neighbors using the manhatten distance.
+        /// </summary>
+        /// <param name="k">number of neighbors</param>
+        /// <param name="tuple">input tuple</param>
+        /// <param name="trainingSet">training set to seach</param>
+        /// <returns></returns>
+        private static IEnumerable<DataTuple> KNearestNeighbors(int k, DataTuple tuple, List<DataTuple> trainingSet)
         {
             var kNearestNeighbors = new List<DataTupleWithDistance>();
 
@@ -41,7 +48,8 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.KNea
                         Distance = manhattenDistance
                     });
                 }
-                else {
+                else
+                {
                     // First highest manhattenDistance in nearest neighbors.
                     var currentFurthest = kNearestNeighbors.Aggregate((x1, x2) => x1.Distance > x2.Distance ? x1 : x2);
 
@@ -55,6 +63,9 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.KNea
             return kNearestNeighbors.Select(x => x.Tuple);
         }
 
+        /// <summary>
+        /// Data wrapper
+        /// </summary>
         private class DataTupleWithDistance
         {
             public DataTuple Tuple { get; set; }

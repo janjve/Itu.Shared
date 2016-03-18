@@ -12,13 +12,10 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Common
             public static string Age { get; } = "\"Age\"";
             public static string Degree { get; } = "\"What degree are you studying?\"";
             public static string GameFrequency { get; } = "\"How often do you play video games?\"";
-            //public static string PickNumber { get; } = "\"Pick a number\"";
             public static string FavoriteGame { get; } = "\"Favorite game?\"";
             public static string PlayedGames { get; } = "\"Which of these games have you played? \"";
-            //public static string Row { get; } = "\"Which row are you sitting/did you sit in during the introduction lecture?\"";
-            //public static string Seat { get; } = "\"Which seat are you sitting/did you sit on during the introduction lecture?\"";
         }
-
+        [Obsolete("Unused")]
         private static class ReferenceId
         {
             internal static Guid MissingData { get; } = new Guid("58E0F061-4B75-452A-B377-3031C7E1774C");
@@ -26,7 +23,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Common
             internal static Guid Success { get; } = new Guid("69A2E061-713F-4FDC-87C0-E732637F9D30");
 
         }
-
+        [Obsolete("Unused")]
         public static class InternalString
         {
             public static string Success { get; } = $"SUCCESS (Ref: {ReferenceId.Success})";
@@ -36,7 +33,6 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Common
         
         public static class Mappings
         {
-
             public static Dictionary<string, FavoriteGameType> FavoriteGameMapping { get; } =
                 new Dictionary<string, FavoriteGameType>{
                     {"wot", FavoriteGameType.World_Of_Tank},
@@ -83,33 +79,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Common
                     {"advanced wars dual strike", FavoriteGameType.Advanced_Wars_Dual_Strike},
                     {"prototype", FavoriteGameType.Prototype},
                 };
-                
-            //public static Dictionary<string, PlayedGamesType> PlayedGamesMapping { get; } = 
-            //    new Dictionary<string, PlayedGamesType> {
-            //        {"Candy Crush", PlayedGamesType.World_Of_Tanks},
-            //        {"Wordfeud", PlayedGamesType.World_Of_Tanks},
-            //        {"Minecraft", PlayedGamesType.World_Of_Tanks},
-            //        {"FarmVille", PlayedGamesType.World_Of_Tanks},
-            //        {"Fifa 2016", PlayedGamesType.World_Of_Tanks},
-            //        {"Star Wars Battlefront", PlayedGamesType.World_Of_Tanks},
-            //        {"Life is Strange", PlayedGamesType.World_Of_Tanks},
-            //        {"Battlefield 4", PlayedGamesType.World_Of_Tanks},
-            //        {"Gone Home", PlayedGamesType.World_Of_Tanks},
-            //        {"Stanley Parable", PlayedGamesType.World_Of_Tanks},
-            //        {"Call of Duty: Black Ops III", PlayedGamesType.World_Of_Tanks},
-            //        {"Rocket League", PlayedGamesType.World_Of_Tanks},
-            //        {"Bloodborne", PlayedGamesType.World_Of_Tanks},
-            //        {"Rise of the Tomb Raider", PlayedGamesType.World_Of_Tanks},
-            //        {"The Witness", PlayedGamesType.World_Of_Tanks},
-            //        {"Her Story", PlayedGamesType.World_Of_Tanks},
-            //        {"Fallout 4", PlayedGamesType.World_Of_Tanks},
-            //        {"Dragon Age: Inquisition", PlayedGamesType.World_Of_Tanks},
-            //        {"Counter strike: GO", PlayedGamesType.World_Of_Tanks},
-            //        {"Angry birds", PlayedGamesType.World_Of_Tanks},
-            //        {"The Last of Us", PlayedGamesType.World_Of_Tanks},
-            //        {"The Magic Circle", PlayedGamesType.World_Of_Tanks},
-            //        {"I have not played any of these games", PlayedGamesType.World_Of_Tanks},
-                           //}
+               
         }
     }
 }

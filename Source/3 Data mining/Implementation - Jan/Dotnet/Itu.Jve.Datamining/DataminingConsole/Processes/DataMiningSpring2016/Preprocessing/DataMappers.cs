@@ -1,5 +1,6 @@
 ﻿using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstract;
 using CsvAttributeName = DataminingConsole.Processes.DataMiningSpring2016.Common.Constant.CsvAttributeName;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Preprocessing

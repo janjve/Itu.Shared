@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apriori
+namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apriori.Attribute
 {
     public class ItemSet : IComparable
     {
-        /***
-            * The PRIMES array is internally in the ItemSet-class' hashCode method
-        */
-        private static int[] PRIMES = { 2, 3, 5, 7, 11, 13, 17, 23, 27, 31, 37 };
-        public Entities.Attribute[] Set { get; set; }
+        public Entities.Attributes.Abstract.Attribute[] Set { get; set; }
         public int Support { get; set; }
 
         /**
@@ -20,12 +13,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         */
         public override int GetHashCode()
         {
-            int code = 0;
-            for (int i = 0; i < Set.Length; i++)
-            {
-                code += unchecked( Set[i].ToString().GetHashCode());
-            }
-            return code;
+            return Set.Sum(t => unchecked(t.ToString().GetHashCode()));
         }
 
         /**
@@ -42,14 +30,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                 {
                     return false;
                 }
-                for (int i = 0; i < Set.Length; i++)
-                {
-                    if (!Set[i].ToString().Equals(other.Set[i].ToString()))
-                    {
-                        return false;
-                    }
-                }
-                return true;
+                return !Set.Where((t, i) => !t.ToString().Equals(other.Set[i].ToString())).Any();
             }
             else
                 throw new ArgumentException("Object is not an ItemSet");
@@ -62,12 +43,8 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
 
         public override string ToString()
         {
-            string all = "";
+            var all = Set.Aggregate("", (current, item) => current + (item.ToString() + ","));
 
-            foreach (var item in Set)
-            {
-                all += item.ToString() + ",";
-            }
             return all.Remove(all.Length - 1);
         }
     }

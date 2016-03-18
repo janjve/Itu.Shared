@@ -4,11 +4,14 @@ using System.IO;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Common
 {
+    /// <summary>
+    /// A simple file reader.
+    /// </summary>
     public class CsvFileReader
     {
         public static List<List<string>> ReadDataFile(string path)
         {
-            List<List<string>> listA = new List<List<string>>();
+            var listA = new List<List<string>>();
             try
             {
                 var reader = new StreamReader(File.OpenRead(path));

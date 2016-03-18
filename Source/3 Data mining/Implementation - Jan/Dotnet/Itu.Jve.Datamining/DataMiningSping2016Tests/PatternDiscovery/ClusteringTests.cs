@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using DataminingConsole.Processes.DataMiningSpring2016.Common;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities;
 using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes;
 using DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clustering;

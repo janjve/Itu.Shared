@@ -11,8 +11,10 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clus
 {
     public class KMeanCluster
     {
+        // DataTuples in the cluster
         public List<DataTuple> ClusterMembers { get; set; }
 
+        // Cluster average
         public DataTuple ClusterMean { get; set; }
 
         public KMeanCluster()
@@ -20,8 +22,13 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clus
             ClusterMembers = new List<DataTuple>();
         }
 
+        /// <summary>
+        /// Recalculate the clustermean
+        /// </summary>
+        /// <returns></returns>
         public DataTuple CalculateClusterMean()
         {
+            // This is a lazy implementation, but is easier to read.
             var ageSum = ClusterMembers.Sum(x => x.Age.NormalizedValue);
             var degree = ClusterMembers.GroupBy(x => x.Degree.Value).OrderByDescending(group => group.Count()).First().Key;
             var favoriteGame = ClusterMembers.GroupBy(x => x.FavoriteGame.Value).OrderByDescending(group => group.Count()).First().Key;
@@ -37,6 +44,10 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Clus
             return ClusterMean;
         }
 
+        /// <summary>
+        /// String override
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             var stringToPrint = "-----------------------------------CLUSTER START------------------------------------------" + Environment.NewLine;

@@ -10,9 +10,11 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.Common
     {
         public static T Median<T>(this IEnumerable<T> objects)
         {
-            if (objects == null || !objects.Any())
+            var enumerable = objects as T[] ?? objects.ToArray();
+            if (objects == null || !enumerable.Any())
                 throw new ApplicationException("Trying to take median of empty list");
-            var list = objects.OrderBy(x => x).ToList();
+
+            var list = enumerable.OrderBy(x => x).ToList();
             return list[list.Count / 2];
 
         }

@@ -1,4 +1,6 @@
 ﻿using System;
+using DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstract;
+using Attribute = DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstract.Attribute;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes
 {

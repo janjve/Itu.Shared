@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace DataminingConsole.Processes.DataMiningSpring2016.Common
 {
+    [Obsolete("Unused")]
     public static class Logger
     {
         public static void Log(List<List<string>> results, string header)

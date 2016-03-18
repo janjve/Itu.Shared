@@ -14,7 +14,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         static int[][] BOOK_TRANSACTIONS = new int[][] { new int[]{ 1, 2, 5 },new int[] {2, 4}, new int[]{ 2, 3 },new int[] { 1, 2, 4 },
             new int[] { 1, 3 },new int[] { 2, 3 },new int[] { 1, 3 },new int[]{ 1, 2, 3, 5 }, new int[]{ 1, 2, 3 }};
 
-        static Entities.Attribute[][] ATTRIBUTE_TRANSACTIONS = { new Entities.Attribute[] { new AgeAttribute { } } };
+        static Entities.Attributes.Abstract.Attribute[][] ATTRIBUTE_TRANSACTIONS = { new Entities.Attributes.Abstract.Attribute[] { new AgeAttribute { } } };
 
         public static List<ItemSetForInts> AprioriAlg(int[][] transactions, int supportThreshold)
         {

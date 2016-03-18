@@ -1,4 +1,4 @@
-﻿namespace DataminingConsole.Processes.DataMiningSpring2016.Entities
+﻿namespace DataminingConsole.Processes.DataMiningSpring2016.Entities.Attributes.Abstract
 {
     public enum AttributeType
     {
