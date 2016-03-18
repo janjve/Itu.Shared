@@ -5,7 +5,9 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
 {
     public class ItemSet : IComparable
     {
+        // An array of all the attributes the ItemSet contains
         public Entities.Attributes.Abstract.Attribute[] Set { get; set; }
+        // The support for the ItemSet
         public int Support { get; set; }
 
         /**

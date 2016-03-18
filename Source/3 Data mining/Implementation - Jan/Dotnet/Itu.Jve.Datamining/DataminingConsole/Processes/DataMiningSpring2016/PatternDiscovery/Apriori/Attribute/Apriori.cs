@@ -13,7 +13,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
             var frequentItemSets = GenerateFrequentItemSetsLevel1(transactions, supportThreshold);
             var itemSets = new Dictionary<ItemSet, int>(frequentItemSets);
 
-            //Continues untill there is one or fewer itemsets left.
+            // Continues untill there is 0 or fewer itemsets left.
             for (var k = 1; frequentItemSets.Count > 0; k++)
             {
                 frequentItemSets = GenerateFrequentItemSets(supportThreshold, transactions, frequentItemSets);
@@ -24,14 +24,14 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                 }
             }
 
+            //Creates a list to contain the frequent itemsets, with the support values. 
             var frequentItemSetsList = new List<ItemSet>();
-
             foreach(var item in itemSets)
             {
                 item.Key.Support = item.Value;
                 frequentItemSetsList.Add(item.Key);
             }
-
+            
             return frequentItemSetsList;
         }
 
@@ -52,10 +52,10 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
             {
                 frequentItemSetCandidates.Add(itemSet, 0);
             }
-
+            
             frequentItemSetCandidates = PruneItemsets(lowerLevelItemSets, frequentItemSetCandidates);
 
-            //Check the support for all candidates and add only those that are above the threshold
+            // Calculate the support for all candidates and add only those that are above the threshold
             var frequentItemSets = new Dictionary<ItemSet, int>();
             foreach (var item in frequentItemSetCandidates.Keys)
             {
@@ -72,7 +72,6 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         {
             if (lowerLevelItemSets == null) throw new ArgumentNullException(nameof(lowerLevelItemSets));
 
-            //Incase of errors, look here.
             //Pruning itemsets according to the apriori property.
             var frequentCandidateItemSetsPruned = new Dictionary<ItemSet, int>();
             foreach (var item in frequentItemSetCandidates)
@@ -119,6 +118,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         //Joins itemsets
         private static ItemSet JoinSets(ItemSet first, ItemSet second)
         {
+            // Joins the first k-1 items from each itemset. 
             var items = new Entities.Attributes.Abstract.Attribute[first.Set.Length + 1];
             for (var i = 0; i < first.Set.Length - 1; i++)
             {
@@ -131,6 +131,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
                     return null;
                 }
             }
+            // Decides upon the ordering of the last 2 elements of each list(the difference between the two sets).
             if (string.Compare(first.Set[first.Set.Length - 1].ToString(), second.Set[second.Set.Length - 1].ToString(), StringComparison.Ordinal) < 0)
             {
                 items[items.Length - 2] = first.Set[second.Set.Length - 1];
