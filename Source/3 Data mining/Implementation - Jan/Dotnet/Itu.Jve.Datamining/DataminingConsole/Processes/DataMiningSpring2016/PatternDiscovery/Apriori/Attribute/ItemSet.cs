@@ -13,7 +13,12 @@ namespace DataminingConsole.Processes.DataMiningSpring2016.PatternDiscovery.Apri
         */
         public override int GetHashCode()
         {
-            return Set.Sum(t => unchecked(t.ToString().GetHashCode()));
+            int code = 0;
+            for (int i = 0; i < Set.Length; i++)
+            {
+                code += unchecked(Set[i].ToString().GetHashCode());
+            }
+            return code;
         }
 
         /**

@@ -55,7 +55,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
             var data = DataSelection();
             var dataset = PreProcessing(data);
             AprioriCalculate(dataset);
-            //ClusteringCalculate(dataset);
+            ClusteringCalculate(dataset);
         }
 
         /// <summary>

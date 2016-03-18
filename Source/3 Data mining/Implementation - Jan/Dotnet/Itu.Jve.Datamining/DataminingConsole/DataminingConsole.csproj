@@ -51,8 +51,6 @@
     <Compile Include="Processes\DataMiningSpring2016\Common\LogWriter.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Common\NumericMeasurer.cs" />
     <Compile Include="Processes\DataMiningSpring2016\DataMiningSpring2016.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\Abstract\NominalAttribute.cs" />
-    <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\Abstract\NumericAttribute.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\AgeAttribute.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\AgeMeasurementsExtentions.cs" />
     <Compile Include="Processes\DataMiningSpring2016\Entities\Attributes\Abstract\Attribute.cs" />

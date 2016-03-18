@@ -8,9 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{5EEFC17F-C770-47C8-9B91-E75AD2E5C376}"
 	ProjectSection(SolutionItems) = preProject
 		Doc\Data Mining - Spring 2016 - Google Forms.pdf = Doc\Data Mining - Spring 2016 - Google Forms.pdf
-		Doc\Data mining methods.txt = Doc\Data mining methods.txt
-		Doc\Readme.md = Doc\Readme.md
-		Doc\SelectedAttributes.txt = Doc\SelectedAttributes.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMiningSping2016Tests", "DataMiningSping2016Tests\DataMiningSping2016Tests.csproj", "{8A078138-B9EC-466C-ADD7-B69927BA5B59}"
