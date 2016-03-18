@@ -60,7 +60,7 @@ namespace DataminingConsole.Processes.DataMiningSpring2016
             var data = DataSelection();
             var dataset = PreProcessing(data);
             //PatternDiscovery(dataset);
-            var patterns = Apriori.AprioriAlg(Apriori.TRANSACTIONS, 7);
+            var patterns = AprioriForInts.AprioriAlg(AprioriForInts.TRANSACTIONS, 7);
         }
 
         public List<List<string>> DataSelection()
