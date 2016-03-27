@@ -27,6 +27,7 @@ public class MinimaxIDSDecision implements IDecisionHandler
     @Override
     public int decideNextMove()
     {
+        System.out.println("STARTED DECISION SEARCH");
 
         GameBoard state = gameBoard;
         int maxUtility = Integer.MIN_VALUE;
@@ -41,6 +42,8 @@ public class MinimaxIDSDecision implements IDecisionHandler
         //IDS, starting at depth 1. CutOff by either time or solution found.
         for (int depthCutOff = 1; !this.timeCutOff() && doneCount < (end+1 - start); depthCutOff++)
         {
+            System.out.println("SEARCHING DEPTH: " + depthCutOff);
+
             int alpha = Integer.MIN_VALUE;
             int beta = Integer.MAX_VALUE;
 
@@ -69,7 +72,7 @@ public class MinimaxIDSDecision implements IDecisionHandler
             }
 
             //Iterating through all actions.
-            for (int i = start; i <= end; i++)
+            for (int i = 0; i < state.getGameboard().length; i++)
             {
                 //Skip action if full column
                 if (!state.fullColumn(i))
