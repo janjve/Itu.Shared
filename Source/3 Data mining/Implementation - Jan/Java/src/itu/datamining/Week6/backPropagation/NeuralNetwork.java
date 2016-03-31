@@ -36,7 +36,7 @@ public class NeuralNetwork {
     }
 
     public float calculateValue(Neuron neuron){
-
+        return 1;
     }
 
     // Returns a neuron network with the structure (layer1-layer2-layer3): (4-2-1).
