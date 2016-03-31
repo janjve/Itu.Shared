@@ -76,7 +76,7 @@ public class SOMTrainer implements Runnable {
 						SOMNode node = lattice.getNode(j,k);
 						double distance = node.getVector().euclideanDist(bmu.getVector());
 						if(distance > neighborhood) {
-							node.adjustWeights(,learningRate,);
+							//node.adjustWeights(,learningRate,);
 						}
 					}
 				}
