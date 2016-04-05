@@ -11,7 +11,7 @@ public class NeuralNetwork {
     public ArrayList<Neuron> neurons;
 
     public NeuralNetwork(){
-        this.inputLayer = neurons;
+        //this.inputLayer = neurons;
     }
 
     public NeuralNetwork BackPropagateIris(ArrayList<Iris> dataset, float learningRate){

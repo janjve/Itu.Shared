@@ -44,11 +44,13 @@ object Exercise1 extends App { // this line not needed in REPL
   // several times. Incidentally this also explains why random number generators
   // are rather called "pseudo random number generators". Why?
 
+  // JVE: Predicting the seed value will make it possible to predict the outcome of the rng.
 
   // QUESTION 1: how do I get the next random number? (check in the REPL and make
   // sure that you indeed have got a different number)
   //
-  // val ... = ...
+  // JVE:
+  val val (x2, rng3) = rng2.nextInt
 
   // The book uses this simple generator to implement a series of various
   // generators, including one for nonnegative integers (function
@@ -80,10 +82,10 @@ object Exercise1 extends App { // this line not needed in REPL
   // generator functions from State.scala, wrap them into a state, and use the
   // above interface to get a random value out of them.
   //
-  // val s_random_x : ... = State (...)
-  // val random_x : ... = ....
+  val s_random_boolean : State[RNG, Boolean] = State (RNG.boolean)
+  val random_boolean : Boolean = s_random_boolean.run(rng2)
 
-  // This wrapping makes as independent of the names of the functions of the
+  // This wrapping makes as independent of the names of the fu  nctions of the
   // actual generators, so we can write generic functions for all generators,
   // or we can use even more generic functions implemented just in terms of
   // states.
@@ -100,14 +102,25 @@ object Exercise1 extends App { // this line not needed in REPL
   // Our stream will be "delayed". It will await a seed (or rather an
   // initialized RNG) to start generation.  Note: I am using standard library
   // streams (which behave as expected)
+  // JVE: Answer
   def state2stream[A] (s :State[RNG,A]) (seed :RNG) :Stream[A] =
     s.run(seed) match { case (n,s1) => n #:: state2stream (s) (s1) }
 
+  // JVE: example of use
+  val stream1 = state2stream(State(x => RNG.boolean(x)))(rng2)
+  val stream1output = stream1.take(10).toList
   // the function basically takes a transition function and converts it to a
   // stream (it could be written polumorphically  to work for any state.
 
   // QUESTION 3: generalize the above function to work for any State object, not
   // just for state pattern applied to the random number generators.
+  // JVE: Answer
+  def state2stream1[S, A] (s :State[S,A]) (seed :S) :Stream[A] =
+    s.run(seed) match { case (n,s1) => n #:: state2stream1 (s) (s1) }
+
+  // JVE: example of use
+  val stream2 = state2stream1(State(x => RNG.boolean(x)))(rng2)
+  val stream2output = stream2.take(10).toList
 
   // This hack allows us to hide the state of the random number generator in the
   // stream. We just work with a stream of random numbers declaratively from now
@@ -145,6 +158,8 @@ object Exercise1 extends App { // this line not needed in REPL
   // stream of random values that it generates. Access the stream to compute
   // several random values.
 
+  val random_booleans = state2stream[Boolean] (s_random_boolean) (RNG.Simple(System.currentTimeMillis.toInt))
+  random_booleans.take(10).toList
 }
 
 // vim:cc=80:foldmethod=indent:foldenable:tw=80

@@ -113,7 +113,7 @@ object Gen {
   // generators that are wrapped in \texttt{State} and the state has a
   // \lstinline{map} function.
 
-  // def choose (start :Int, stopExclusive :Int) :Gen[Int] = ...
+  // def choose (start :Int, stopExclusive :Int) :Gen[Int] = {
 
 
 
