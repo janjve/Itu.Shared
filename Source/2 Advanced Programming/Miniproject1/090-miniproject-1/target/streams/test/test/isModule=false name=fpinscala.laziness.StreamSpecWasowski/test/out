@@ -1,0 +1,22 @@
+[0m[[0minfo[0m] [0m[32mStreamSpecWasowski:[0m[0m
+[0m[[0minfo[0m] [0m[32mheadOption[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return None on an empty Stream (01)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return the head of the stream packaged in Some (02)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not evaluate tail[0m[0m
+[0m[[0minfo[0m] [0m[32mtake[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not force any heads nor any tails of the Stream it manipulates[0m[0m
+[0m[[0minfo[0m] [0m[32m- should take(n) does not force (n+1st) head (even if we force all elements of take(n))[0m[0m
+[0m[[0minfo[0m] [0m[32m- should s.take(n).take(n) == s.take(n) for any Stream s, and any int n[0m[0m
+[0m[[0minfo[0m] [0m[32mdrop[0m[0m
+[0m[[0minfo[0m] [0m[31m- should s.drop(n).drop(m) == s.drop(n+m) for any ints n and m *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  GeneratorDrivenPropertyCheckFailedException was thrown during property evaluation.[0m[0m
+[0m[[0minfo[0m] [0m[31m   (StreamSpecWasowski.scala:116)[0m[0m
+[0m[[0minfo[0m] [0m[31m    Falsified after 11 successful property evaluations.[0m[0m
+[0m[[0minfo[0m] [0m[31m    Location: (StreamSpecWasowski.scala:116)[0m[0m
+[0m[[0minfo[0m] [0m[31m    Occurred when passed generated values ([0m[0m
+[0m[[0minfo[0m] [0m[31m      arg0 = -2147483648,[0m[0m
+[0m[[0minfo[0m] [0m[31m      arg1 = 2147483647,[0m[0m
+[0m[[0minfo[0m] [0m[31m      arg2 = Cons(<function0>,<function0>)[0m[0m
+[0m[[0minfo[0m] [0m[31m    )[0m[0m
+[0m[[0minfo[0m] [0m[31m    Label of failing property:[0m[0m
+[0m[[0minfo[0m] [0m[31m      random[0m[0m
