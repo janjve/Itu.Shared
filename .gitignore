@@ -1,7 +1,7 @@
 ######################### Java/IntelliJ
 
 *.class
-
+**/.idea/workspace.xml
 ######################### Visual studio
 
 ## Ignore Visual Studio temporary files, build results, and
