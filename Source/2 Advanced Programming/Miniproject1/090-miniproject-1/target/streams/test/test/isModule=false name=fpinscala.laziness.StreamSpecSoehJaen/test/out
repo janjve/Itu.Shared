@@ -1,0 +1,21 @@
+[0m[[0minfo[0m] [0m[32mStreamSpecSoehJaen:[0m[0m
+[0m[[0minfo[0m] [0m[32mheadOption[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return None on an empty Stream (01)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return the head of the stream packaged in Some (02)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not evaluate tail[0m[0m
+[0m[[0minfo[0m] [0m[32mtake[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not force any heads nor any tails of the Stream it manipulates[0m[0m
+[0m[[0minfo[0m] [0m[32m- should take(n) does not force (n+1st) head (even if we force all elements of take(n))[0m[0m
+[0m[[0minfo[0m] [0m[32m- should s.take(n).take(n) == s.take(n) for any Stream s, and any int n[0m[0m
+[0m[[0minfo[0m] [0m[32mdrop[0m[0m
+[0m[[0minfo[0m] [0m[32m- should s.drop(n).drop(m) == s.drop(n+m) for any ints n and m[0m[0m
+[0m[[0minfo[0m] [0m[32m- should s.drop(n) does not force any of the dropped elements heads[0m[0m
+[0m[[0minfo[0m] [0m[32m- should s.drop(n) does not force any of the dropped elements heads even when forcing tail[0m[0m
+[0m[[0minfo[0m] [0m[32mmap[0m[0m
+[0m[[0minfo[0m] [0m[32m- should x.map(id) == x (where id is the identity function)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should map terminates on infinite streams[0m[0m
+[0m[[0minfo[0m] [0m[32mappend[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return the same stream when appending an empty stream[0m[0m
+[0m[[0minfo[0m] [0m[32m- should hold that s.append(s2.append(s3)) == s.append(s2).append(s3)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should not change the size no matter what order append is called[0m[0m
+[0m[[0minfo[0m] [0m[32m- should hold that s1 comes before s2 for s1.append(s2).[0m[0m

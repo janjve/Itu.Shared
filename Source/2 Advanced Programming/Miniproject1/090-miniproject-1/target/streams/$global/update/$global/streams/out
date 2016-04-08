@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/C:/Code/2016-adpro-code-examples/090-miniproject-1/}root-090-miniproject-1...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/C:/Code/itu-jve/Source/2%20Advanced%20Programming/Miniproject1/090-miniproject-1/}root-090-miniproject-1...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,22 +7,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@68fabb01[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: sbt.ivyint.MergedDescriptors@68fabb01[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang\scala-library\2.11.6\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-library;2.11.6[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-library;2.11.6[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.pom (2.11.6)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.6!scala-library.pom(pom.original) (89ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang\scala-library\2.11.6\jars\scala-library.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.6 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@20e22181[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.6[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.6 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.6] org.scala-lang#scala-library;2.11.6[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scala-lang#scala-library;2.11.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scala-lang#scala-library;2.11.6 [compile->compile][0m
@@ -45,41 +32,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scalacheck#scalacheck_2.11;1.12.5 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalacheck#scalacheck_2.11;1.12.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalacheck#scalacheck_2.11;1.12.5 {test=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scalacheck#scalacheck_2.11;1.12.5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalacheck#scalacheck_2.11;1.12.5 {test=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scalacheck\scalacheck_2.11\1.12.5\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalacheck#scalacheck_2.11;1.12.5[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scalacheck#scalacheck_2.11;1.12.5[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.pom (1.12.5)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalacheck#scalacheck_2.11;1.12.5!scalacheck_2.11.pom(pom.original) (76ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scalacheck\scalacheck_2.11\1.12.5\jars\scalacheck_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scalacheck#scalacheck_2.11;1.12.5 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalacheck#scalacheck_2.11;1.12.5[0m
+[0m[[0mdebug[0m] [0m	found org.scalacheck#scalacheck_2.11;1.12.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scalacheck#scalacheck_2.11;1.12.5 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scalacheck#scalacheck_2.11;1.12.5 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalacheck#scalacheck_2.11;1.12.5->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.11.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang#scala-library;2.11.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang\scala-library\2.11.7\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-library;2.11.7[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-library;2.11.7[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom (2.11.7)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.7!scala-library.pom(pom.original) (84ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang\scala-library\2.11.7\jars\scala-library.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalacheck#scalacheck_2.11;1.12.5->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalacheck#scalacheck_2.11;1.12.5->org.scala-lang#scala-library;2.11.7 [compile->runtime(*)][0m
@@ -106,21 +67,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scalatest#scalatest_2.11;2.2.4 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.11;2.2.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.11;2.2.4 {test=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.11;2.2.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalatest#scalatest_2.11;2.2.4 {test=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scalatest\scalatest_2.11\2.2.4\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalatest#scalatest_2.11;2.2.4[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scalatest#scalatest_2.11;2.2.4[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom (2.2.4)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalatest#scalatest_2.11;2.2.4!scalatest_2.11.pom(pom.original) (79ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scalatest\scalatest_2.11\2.2.4\bundles\scalatest_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scalatest#scalatest_2.11;2.2.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalatest#scalatest_2.11;2.2.4[0m
+[0m[[0mdebug[0m] [0m	found org.scalatest#scalatest_2.11;2.2.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scalatest#scalatest_2.11;2.2.4 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scalatest#scalatest_2.11;2.2.4 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.4->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
@@ -130,21 +78,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.4->org.scala-lang#scala-reflect;2.11.2 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang\scala-reflect\2.11.2\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-reflect;2.11.2[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-reflect;2.11.2[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom (2.11.2)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.2!scala-reflect.pom(pom.original) (83ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang\scala-reflect\2.11.2\jars\scala-reflect.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.2 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.2[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.2] org.scala-lang#scala-reflect;2.11.2[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.4->org.scala-lang#scala-reflect;2.11.2 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
@@ -159,21 +94,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.4->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.2\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang.modules#scala-xml_2.11;1.0.2[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang.modules#scala-xml_2.11;1.0.2[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom (1.0.2)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.pom(pom.original) (78ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.2\bundles\scala-xml_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.2 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.2[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.4->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -281,21 +203,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scala-lang#scala-compiler;2.11.6 [scala-tool->default][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.11.6 {scala-tool=[default, optional(default)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang#scala-compiler;2.11.6 {scala-tool=[default, optional(default)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang\scala-compiler\2.11.6\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-compiler;2.11.6[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-compiler;2.11.6[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.pom (2.11.6)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.6!scala-compiler.pom(pom.original) (89ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang\scala-compiler\2.11.6\jars\scala-compiler.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.6 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.11.6[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.6 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scala-lang#scala-compiler;2.11.6 [scala-tool->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scala-lang#scala-compiler;2.11.6 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
@@ -310,21 +219,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-reflect;2.11.6 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang\scala-reflect\2.11.6\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-reflect;2.11.6[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-reflect;2.11.6[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.pom (2.11.6)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.6!scala-reflect.pom(pom.original) (75ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang\scala-reflect\2.11.6\jars\scala-reflect.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.6 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.6[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.6 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.6] org.scala-lang#scala-reflect;2.11.6[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-reflect;2.11.6 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
@@ -336,21 +232,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.3 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.3\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang.modules#scala-xml_2.11;1.0.3[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang.modules#scala-xml_2.11;1.0.3[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.pom (1.0.3)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.pom(pom.original) (78ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.3\bundles\scala-xml_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.3 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.3[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.3 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang.modules#scala-xml_2.11;1.0.3 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.3->org.scala-lang#scala-library;2.11.4 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
@@ -364,21 +247,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.3\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.pom (1.0.3)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.pom(pom.original) (77ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.3\bundles\scala-parser-combinators_2.11.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
@@ -402,38 +272,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->jline#jline;2.12.1 [optional->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving jline#jline;2.12.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: jline#jline;2.12.1 {optional=[compile(*), master(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving jline#jline;2.12.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: jline#jline;2.12.1 {optional=[compile(*), master(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\jline\jline\2.12.1\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for jline#jline;2.12.1[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for jline#jline;2.12.1[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom (2.12.1)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] jline#jline;2.12.1!jline.pom(pom.original) (90ms)[0m
-[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}[0m
-[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.sonatype.oss\oss-parent\7\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom (7)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.sonatype.oss#oss-parent;7!oss-parent.pom(pom.original) (79ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\org.sonatype.oss\oss-parent\7\jars\oss-parent.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.jar[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Soeren\.ivy2\local\jline\jline\2.12.1\jars\jline.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar[0m
-[0m[[0mdebug[0m] [0m	found jline#jline;2.12.1 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: jline#jline;2.12.1[0m
+[0m[[0mdebug[0m] [0m	found jline#jline;2.12.1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.6->jline#jline;2.12.1 [optional->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scala-lang#scala-library;2.11.6 [scala-tool->default][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scala-lang#scala-library;2.11.6 [scala-tool->runtime][0m
@@ -442,86 +282,31 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0->org.scala-lang#scala-library;2.11.6 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.6!scala-library.jar (661ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalacheck#scalacheck_2.11;1.12.5!scalacheck_2.11.jar (337ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalatest#scalatest_2.11;2.2.4!scalatest_2.11.jar(bundle) (743ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.7!scala-library.jar (611ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.6!scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalacheck#scalacheck_2.11;1.12.5!scalacheck_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.11;2.2.4!scalatest_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.7!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.2!scala-reflect.jar (499ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle) (142ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.6/scala-compiler-2.11.6.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.6!scala-compiler.jar (1368ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.6/scala-reflect-2.11.6.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.6!scala-reflect.jar (538ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.3/scala-xml_2.11-1.0.3.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(bundle) (147ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.3/scala-parser-combinators_2.11-1.0.3.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(bundle) (127ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] jline#jline;2.12.1!jline.jar (100ms)[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2142ms :: artifacts dl 5298ms[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 compile produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 runtime produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 test produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 provided produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 optional produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 compile-internal produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 runtime-internal produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 test-internal produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 plugin produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 sources produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 docs produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 pom produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 scala-tool produced in C:\Code\2016-adpro-code-examples\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2142ms resolve - 5298ms download)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.2!scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.6!scala-compiler.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.6!scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 375ms :: artifacts dl 11ms[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 compile produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 runtime produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 test produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 provided produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 optional produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 compile-internal produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 runtime-internal produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 test-internal produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 plugin produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 sources produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 docs produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 pom produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-laziness-and-testing#miniproject-on-laziness-and-testing_2.11;0.0 scala-tool produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject1\090-miniproject-1\target\resolution-cache\reports\miniproject-on-laziness-and-testing-miniproject-on-laziness-and-testing_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (375ms resolve - 11ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

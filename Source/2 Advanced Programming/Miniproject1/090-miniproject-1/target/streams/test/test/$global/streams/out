@@ -1,13 +1,12 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.laziness.StreamSpecWasowski, org.scalatest.tools.Framework$$anon$1@68140f71, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.laziness.StreamSpecSoehJaen, org.scalatest.tools.Framework$$anon$1@7ce3e27d, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0mScalaCheck[0m
 [0m[[0minfo[0m] [0mPassed: Total 0, Failed 0, Errors 0, Passed 0[0m
 [0m[[0minfo[0m] [0mScalaTest[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 602 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 7[0m[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 669 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 15[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 6, failed 1, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0minfo[0m] [0m[31m*** 1 TEST FAILED ***[0m[0m
-[0m[[31merror[0m] [0mFailed: Total 7, Failed 1, Errors 0, Passed 6[0m
-[0m[[31merror[0m] [0mFailed tests:[0m
-[0m[[31merror[0m] [0m	fpinscala.laziness.StreamSpecWasowski[0m
-[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 15, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
+[0m[[0minfo[0m] [0mPassed: Total 15, Failed 0, Errors 0, Passed 15[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	fpinscala.laziness.StreamSpecSoehJaen[0m
