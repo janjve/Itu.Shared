@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/C:/ITU%20programming/Shared/Source/2%20Advanced%20Programming/Week7/}week7...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/D:/Development/itu/Source/2%20Advanced%20Programming/Week7/}week7...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: adpro-exercises#adpro-exercises_2.11;0.0[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,22 +7,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for adpro-exercises#adpro-exercises_2.11;0.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies adpro-exercises#adpro-exercises_2.11;0.0->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@87106cd[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: sbt.ivyint.MergedDescriptors@87106cd[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang\scala-library\2.11.7\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-library;2.11.7[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-library;2.11.7[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom (2.11.7)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.7!scala-library.pom(pom.original) (120ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang\scala-library\2.11.7\jars\scala-library.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@d63b5c1[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies adpro-exercises#adpro-exercises_2.11;0.0->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies adpro-exercises#adpro-exercises_2.11;0.0->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
@@ -90,7 +77,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.11.7 {scala-tool=[default, optional(default)]}[0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang#scala-compiler;2.11.7 {scala-tool=[default, optional(default)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang\scala-compiler\2.11.7\ivys\ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\rrjan\.ivy2\local\org.scala-lang\scala-compiler\2.11.7\ivys\ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-compiler;2.11.7[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-compiler;2.11.7[0m
@@ -99,8 +86,8 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.7!scala-compiler.pom(pom.original) (108ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang\scala-compiler\2.11.7\jars\scala-compiler.jar[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.7!scala-compiler.pom(pom.original) (114ms)[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\rrjan\.ivy2\local\org.scala-lang\scala-compiler\2.11.7\jars\scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.7 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies adpro-exercises#adpro-exercises_2.11;0.0->org.scala-lang#scala-compiler;2.11.7 [scala-tool->runtime][0m
@@ -119,7 +106,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang\scala-reflect\2.11.7\ivys\ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\rrjan\.ivy2\local\org.scala-lang\scala-reflect\2.11.7\ivys\ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-reflect;2.11.7[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-reflect;2.11.7[0m
@@ -128,8 +115,8 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.7!scala-reflect.pom(pom.original) (155ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang\scala-reflect\2.11.7\jars\scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.7!scala-reflect.pom(pom.original) (107ms)[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\rrjan\.ivy2\local\org.scala-lang\scala-reflect\2.11.7\jars\scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.7 in public[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-reflect;2.11.7[0m
@@ -145,7 +132,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.4\ivys\ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\rrjan\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.4\ivys\ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang.modules#scala-xml_2.11;1.0.4[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.pom[0m
 [0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang.modules#scala-xml_2.11;1.0.4[0m
@@ -154,8 +141,8 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.pom(pom.original) (155ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.4\bundles\scala-xml_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.pom(pom.original) (105ms)[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\rrjan\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.4\bundles\scala-xml_2.11.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.jar[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.4 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
@@ -173,7 +160,7 @@
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.4\ivys\ivy.xml[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\rrjan\.ivy2\local\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.4\ivys\ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.pom[0m
 [0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4[0m
@@ -182,8 +169,8 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.pom(pom.original) (210ms)[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.4\bundles\scala-parser-combinators_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.pom(pom.original) (151ms)[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\rrjan\.ivy2\local\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.4\bundles\scala-parser-combinators_2.11.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->compile(*)][0m
@@ -209,24 +196,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->jline#jline;2.12.1 [optional->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving jline#jline;2.12.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: jline#jline;2.12.1 {optional=[compile(*), master(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving jline#jline;2.12.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: jline#jline;2.12.1 {optional=[compile(*), master(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\jline\jline\2.12.1\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for jline#jline;2.12.1[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for jline#jline;2.12.1[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom (2.12.1)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] jline#jline;2.12.1!jline.pom(pom.original) (185ms)[0m
-[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\jline\jline\2.12.1\jars\jline.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar[0m
-[0m[[0mdebug[0m] [0m	found jline#jline;2.12.1 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: jline#jline;2.12.1[0m
+[0m[[0mdebug[0m] [0m	found jline#jline;2.12.1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->jline#jline;2.12.1 [optional->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies adpro-exercises#adpro-exercises_2.11;0.0->org.scala-lang#scala-library;2.11.7 [scala-tool->default][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies adpro-exercises#adpro-exercises_2.11;0.0->org.scala-lang#scala-library;2.11.7 [scala-tool->runtime][0m
@@ -235,55 +206,45 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies adpro-exercises#adpro-exercises_2.11;0.0->org.scala-lang#scala-library;2.11.7 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.7!scala-library.jar (2559ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.7!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar[0m
 [0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar ...[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar (3093ms)[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar (5138ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar[0m
 [0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar ...[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar (916ms)[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar (1517ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.jar[0m
 [0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.jar ...[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle) (280ms)[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle) (301ms)[0m
 [0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar[0m
 [0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar ...[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle) (239ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/jline/jline/2.12.1/jline-2.12.1.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] jline#jline;2.12.1!jline.jar (159ms)[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1828ms :: artifacts dl 7270ms[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 compile produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 runtime produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 test produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 provided produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 optional produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 compile-internal produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 runtime-internal produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 test-internal produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 plugin produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 sources produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 docs produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 pom produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 scala-tool produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1828ms resolve - 7270ms download)[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle) (230ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1753ms :: artifacts dl 7214ms[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 compile produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 runtime produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 test produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 provided produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 optional produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 compile-internal produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 runtime-internal produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 test-internal produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 plugin produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 sources produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 docs produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 pom produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for adpro-exercises#adpro-exercises_2.11;0.0 scala-tool produced in D:\Development\itu\Source\2 Advanced Programming\Week7\target\resolution-cache\reports\adpro-exercises-adpro-exercises_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (1753ms resolve - 7214ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

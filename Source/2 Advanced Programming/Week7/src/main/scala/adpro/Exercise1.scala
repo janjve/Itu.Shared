@@ -50,7 +50,7 @@ object Exercise1 extends App { // this line not needed in REPL
   // sure that you indeed have got a different number)
   //
   // JVE:
-  val val (x2, rng3) = rng2.nextInt
+  val (x2, rng3) = rng2.nextInt
 
   // The book uses this simple generator to implement a series of various
   // generators, including one for nonnegative integers (function
@@ -83,7 +83,7 @@ object Exercise1 extends App { // this line not needed in REPL
   // above interface to get a random value out of them.
   //
   val s_random_boolean : State[RNG, Boolean] = State (RNG.boolean)
-  val random_boolean : Boolean = s_random_boolean.run(rng2)
+  val (random_boolean, rng) = s_random_boolean.run(rng2)
 
   // This wrapping makes as independent of the names of the fu  nctions of the
   // actual generators, so we can write generic functions for all generators,
@@ -119,7 +119,7 @@ object Exercise1 extends App { // this line not needed in REPL
     s.run(seed) match { case (n,s1) => n #:: state2stream1 (s) (s1) }
 
   // JVE: example of use
-  val stream2 = state2stream1(State(x => RNG.boolean(x)))(rng2)
+  val stream2 = state2stream1(State(RNG.boolean))(rng2)
   val stream2output = stream2.take(10).toList
 
   // This hack allows us to hide the state of the random number generator in the
