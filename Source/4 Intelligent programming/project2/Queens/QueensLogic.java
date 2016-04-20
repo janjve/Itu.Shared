@@ -2,7 +2,7 @@
  * This class implements the logic behind the BDD for the n-queens problem
  * You should implement all the missing methods
  *
- * @author Stavros Amanatidis
+ * @author Jan Vium Enghoff & Søren Harrison
  */
 
 import java.util.*;
@@ -21,10 +21,10 @@ public class QueensLogic {
     private BDD nQueenBdd;
     private BDD queen;
 
-    public QueensLogic() {
+    // Empty constructor
+    public QueensLogic() {}
 
-    }
-
+    // Initialize the attributes for starting a game.
     public void initializeGame(int size) {
         this.sizeX = size;
         this.sizeY = size;
@@ -36,34 +36,39 @@ public class QueensLogic {
         updateBoard();
     }
 
-
+    // Returns the game board without changing it.
     public int[][] getGameBoard() {
         return board;
     }
 
+    // Insert the queen on the board and update the BDD.
     public boolean insertQueen(int column, int row) {
-
+        // Return if the chosen field already contains a queen or is an invalid move.
         if (board[column][row] == -1 || board[column][row] == 1) {
             return true;
         }
 
+        // Update the board matrix.
         board[column][row] = QUEEN;
 
-        // put some logic here..
+        // Update the BDD
         restrictBDD(column, row);
         updateBoard();
 
         return true;
     }
 
-    private void restrictBDD(int col, int row) {
-        BDD restrictQueen = factory.ithVar(col * sizeX + row);
+    // Restrict the BDD by assigning the variable matching the field to 1.
+    private void restrictBDD(int x, int y) {
+        BDD restrictQueen = factory.ithVar(getCellVariableIndex(x, y));
         nQueenBdd = nQueenBdd.restrictWith(restrictQueen);
     }
 
+    // Update the board to match the possible solutions in the BDD.
     private void updateBoard() {
         List satisfyingList = nQueenBdd.allsat();
 
+        // Auto-fill the board if there exists only a single solution.
         if(satisfyingList.size() == 1){
             byte[] solution = (byte[])satisfyingList.get(0);
             for (int x = 0; x < sizeX; x++) {
@@ -71,11 +76,12 @@ public class QueensLogic {
                 {
                     if (board[x][y] != QUEEN)
                     {
-                        board[x][y] = solution[x * sizeX + y] == 1 ? QUEEN : INVALID;
+                        board[x][y] = solution[getCellVariableIndex(x,y)] == 1 ? QUEEN : INVALID;
                     }
                 }
             }
-        } else{
+        } else // Assign a field to invalid if there does not exist a solution with a queen on it.
+        {
             for (int x = 0; x < sizeX; x++) {
                 for (int y = 0; y < sizeY; y++) {
                     if (board[x][y] != QUEEN) {
@@ -83,8 +89,7 @@ public class QueensLogic {
                         for (Object object : satisfyingList) {
                             byte[] satList = (byte[]) object;
                             if (!legalMove) {
-                                int index = x * sizeX + y;
-                                int value = satList[index];
+                                int value = satList[getCellVariableIndex(x,y)];
                                 legalMove = value == 1 || value == -1;
                             } else break;
                         }
@@ -95,18 +100,18 @@ public class QueensLogic {
         }
     }
 
+    // Generate the initial BDD with the rules of the n-queen problem.
     private void initBDD() {
-        // vertical rules
         nQueenBdd = factory.one()
                 .and(getVertical())
                 .and(getHorizontal())
                 .and(getDiagonallyAscendHorizontal())
                 .and(getDiagonallyAscendVertical())
                 .and(getDiagonallyDescendHorizontal())
-                .and(getDiagonallyDescendVertical())
-                ;
+                .and(getDiagonallyDescendVertical());
     }
 
+    // Generate BDD for vertical rules.
     private BDD getVertical()
     {
         BDD vertical = null;
@@ -116,9 +121,9 @@ public class QueensLogic {
                 BDD cell = null;
                 for (int c = 0; c < sizeY; c++) {
                     if (cell == null)
-                        cell = c == y ? factory.ithVar(x * sizeX + c) : factory.nithVar(x * sizeX + c);
+                        cell = c == y ? factory.ithVar(getCellVariableIndex(x,c)) : factory.nithVar(getCellVariableIndex(x,c));
                     else
-                        cell = c == y ? cell.and(factory.ithVar(x * sizeX + c)) : cell.and(factory.nithVar(x * sizeX + c));
+                        cell = c == y ? cell.and(factory.ithVar(getCellVariableIndex(x,c))) : cell.and(factory.nithVar(getCellVariableIndex(x,c)));
                 }
                 if(col== null)
                     col = cell;
@@ -132,6 +137,7 @@ public class QueensLogic {
         return vertical;
     }
 
+    // Generate BDD for horizontal rules.
     private BDD getHorizontal()
     {
         BDD horizontal = null;
@@ -141,9 +147,9 @@ public class QueensLogic {
                 BDD cell = null;
                 for (int c = 0; c < sizeX; c++) {
                     if (cell == null)
-                        cell = c == x ? factory.ithVar(c * sizeX + y) : factory.nithVar(c * sizeX + y);
+                        cell = c == x ? factory.ithVar(getCellVariableIndex(c,y)) : factory.nithVar(getCellVariableIndex(c,y));
                     else
-                        cell = c == x ? cell.and(factory.ithVar(c * sizeX + y)) : cell.and(factory.nithVar(c * sizeX + y));
+                        cell = c == x ? cell.and(factory.ithVar(getCellVariableIndex(c,y))) : cell.and(factory.nithVar(getCellVariableIndex(c,y)));
                 }
                 if(row== null)
                     row = cell;
@@ -157,11 +163,13 @@ public class QueensLogic {
         return horizontal;
     }
 
+    // Generate BDD for descending direction on the vertical axis rules.
     private BDD getDiagonallyDescendVertical()
     {
         BDD diagonallyDescendVertical = null;
-        for (int x = 0; x < sizeY-1; x++) {
+        for (int x = 0; x < sizeX-1; x++) {
             BDD row = null;
+            // Allow diagonals to be empty
             for (int y = x; y < sizeX*sizeX - sizeX*x; y += sizeX+1)
             {
                 row = row == null ? factory.nithVar(y) : row.and(factory.nithVar(y));
@@ -190,11 +198,13 @@ public class QueensLogic {
         return diagonallyDescendVertical;
     }
 
+    // Generate BDD for descending direction on the horizontal axis rules.
     private BDD getDiagonallyDescendHorizontal()
     {
         BDD diagonallyDescendHorizontal = null;
         for (int x = 1; x < sizeX; x++) {
             BDD row = null;
+            // Allow diagonals to be empty
             for (int y = sizeX*x; y < sizeX*sizeX - x; y += sizeX+1)
             {
                 row = row == null ? factory.nithVar(y) : row.and(factory.nithVar(y));
@@ -217,11 +227,13 @@ public class QueensLogic {
         return diagonallyDescendHorizontal;
     }
 
+    // Generate BDD for ascending direction on the vertical axis rules.
     private BDD getDiagonallyAscendVertical()
     {
         BDD diagonallyAscendVertical = null;
         for (int x = sizeX-1; x > 0; x--) {
             BDD row = null;
+            // Allow diagonals to be empty
             for (int y = x; y <= sizeX*(sizeX)-sizeX*(sizeX-x); y += sizeX-1)
             {
                 row = row == null ? factory.nithVar(y) : row.and(factory.nithVar(y));
@@ -243,11 +255,13 @@ public class QueensLogic {
         return diagonallyAscendVertical;
     }
 
+    // Generate BDD for ascending direction on the horizontal axis rules.
     private BDD getDiagonallyAscendHorizontal()
     {
         BDD diagonallyAscendHorizontal = null;
         for (int x = 1; x < sizeX-1; x++) {
             BDD row = null;
+            // Allow diagonals to be empty
             for (int y = sizeX - 1 + sizeX*x; y <= sizeX*(sizeX-1) + x; y += sizeX-1)
             {
                 row = row == null ? factory.nithVar(y) : row.and(factory.nithVar(y));
@@ -271,5 +285,10 @@ public class QueensLogic {
             else diagonallyAscendHorizontal = diagonallyAscendHorizontal.and(row);
         }
         return diagonallyAscendHorizontal;
+    }
+
+    // Returns the BDD variable index from a cell coordinate pair.
+    private int getCellVariableIndex(int x, int y){
+        return x*sizeX + y;
     }
 }

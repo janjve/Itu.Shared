@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/QueensLogic.java" line="103" mnemonic="7" />
+    <bookmark url="file://$PROJECT_DIR$/QueensLogic.java" line="108" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d2bca7e-1a27-4c02-bc06-f789e047c803" name="Default" comment="" />
@@ -28,11 +28,21 @@
       <file leaf-file-name="QueensLogic.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/QueensLogic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63484085">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.71691793">
+              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
               <folding>
-                <element signature="e#859#860#0" expanded="true" />
-                <element signature="e#887#888#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
+                <element signature="e#1025#1026#0" expanded="true" />
+                <element signature="method#restrictBDD#0;class#QueensLogic#0" expanded="false" />
+                <element signature="method#updateBoard#0;class#QueensLogic#0" expanded="false" />
+                <element signature="method#initBDD#0;class#QueensLogic#0" expanded="false" />
+                <element signature="method#getVertical#0;class#QueensLogic#0" expanded="false" />
+                <element signature="method#getHorizontal#0;class#QueensLogic#0" expanded="false" />
+                <element signature="method#getDiagonallyDescendVertical#0;class#QueensLogic#0" expanded="false" />
+                <element signature="method#getDiagonallyDescendHorizontal#0;class#QueensLogic#0" expanded="false" />
+                <element signature="method#getDiagonallyAscendVertical#0;class#QueensLogic#0" expanded="false" />
+                <element signature="method#getDiagonallyAscendHorizontal#0;class#QueensLogic#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -127,26 +137,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Queens" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Queens" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apidocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/project 1/iaip_c4" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.ShowBoard">
     <configuration default="false" name="ShowBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -471,7 +470,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3301179" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09701493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -525,7 +524,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="65" />
+      <option name="time" value="68" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -539,8 +538,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="method#restrictBDD#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#updateBoard#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#initBDD#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getHorizontal#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyDescendVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyDescendHorizontal#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyAscendVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyAscendHorizontal#0;class#QueensLogic#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -566,8 +575,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="method#restrictBDD#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#updateBoard#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#initBDD#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getHorizontal#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyDescendVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyDescendHorizontal#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyAscendVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyAscendHorizontal#0;class#QueensLogic#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -593,8 +612,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="method#restrictBDD#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#updateBoard#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#initBDD#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getHorizontal#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyDescendVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyDescendHorizontal#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyAscendVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyAscendHorizontal#0;class#QueensLogic#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -620,8 +649,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
           <folding>
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="method#restrictBDD#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#updateBoard#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#initBDD#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getHorizontal#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyDescendVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyDescendHorizontal#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyAscendVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyAscendHorizontal#0;class#QueensLogic#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -664,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/javabdd-1.0b2.jar!/net/sf/javabdd/BDD.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6970387">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apidocs/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -701,6 +733,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/javabdd-1.0b2.jar!/net/sf/javabdd/BDD.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3491228">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#991#992#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ShowBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -711,14 +753,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/QueensLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63484085">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.71691793">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
           <folding>
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="method#restrictBDD#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#updateBoard#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#initBDD#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getHorizontal#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyDescendVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyDescendHorizontal#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyAscendVertical#0;class#QueensLogic#0" expanded="false" />
+            <element signature="method#getDiagonallyAscendHorizontal#0;class#QueensLogic#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>Queens:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Queens</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>javabdd-1.0b2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
