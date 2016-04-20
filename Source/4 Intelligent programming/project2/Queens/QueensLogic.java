@@ -109,6 +109,7 @@ public class QueensLogic {
                 .and(getDiagonallyAscendVertical())
                 .and(getDiagonallyDescendHorizontal())
                 .and(getDiagonallyDescendVertical());
+        nQueenBdd.printDot();
     }
 
     // Generate BDD for vertical rules.
