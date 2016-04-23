@@ -51,7 +51,7 @@ case class Gen[A] (sample :State[RNG,A]) {
   // Hint: The standard library has the following useful function (List
   // companion object):
   //
-  // def fill[A](n: Int)(elem: ⇒ A): List[A]
+  // def fill[A](n: Int)(elem: => A): List[A] 
   //
   // It is of course possible to implement a solution without it, but the
   // result is ugly (you need to replicate the behavior of fill inside
@@ -60,9 +60,7 @@ case class Gen[A] (sample :State[RNG,A]) {
   // the output state of one as an input to the next.  This can be used to
   // execute a series of consecutive generations, passing the RNG state around.
 
-  // def listOfN (n :Int) :Gen[List[A]] = ...
-
-
+  def listOfN (n :Int) :Gen[List[A]] = Gen(State(State.sequence(List.fill(n)(State[RNG,A](this.sample.run(_)))).run(_)))
 
   // Exercise 5 (Ex. 8.6 [Chiusano, Bjarnasson 2015])
   //
@@ -113,29 +111,30 @@ object Gen {
   // generators that are wrapped in \texttt{State} and the state has a
   // \lstinline{map} function.
 
-  // def choose (start :Int, stopExclusive :Int) :Gen[Int] = {
-
-
+  def choose (start :Int, stopExclusive :Int) :Gen[Int] = {
+    Gen(State[RNG, Int](_.nextInt).map[Int](x => {
+        (start + 1.0*(stopExclusive.toLong - start.toLong) / (Int.MaxValue.toLong - Int.MinValue.toLong) * (x - Int.MinValue.toLong)).toInt
+      }))
+  }
 
   // Exercise 3 (Exercise 8.5, part one)
   //
   // Hint: The \lstinline{State} trait already had \lstinline{unit}
   // implemented.
 
-  // def unit[A] (a : =>A) :Gen[A] = ...
+  def unit[A] (a : =>A) :Gen[A] = Gen[A](State.unit(a))
 
   // Hint: How do you convert a random integer number to a random Boolean?
   // Alternatively: do we already have a random generator for booleans? Could
   // we wrap it in.
 
-  // def boolean :Gen[Boolean] = ...
+  def boolean :Gen[Boolean] = Gen[Boolean](State(RNG.boolean(_)))
 
 
   // Hint: Recall from Exercise1.scala that we already implemented a random
   // number generator for doubles.
 
-  // def double :Gen[Double] = ...
-
+  def double :Gen[Double] = Gen[Double](State(RNG.double(_)))
 
 
   // (Exercise 4 is found in the Gen class above)

@@ -2,3 +2,14 @@ State
 ;
 :q
 exit
+q
+Exercise1
+:q
+exit
+:q
+q:
+exit
+help
+help test
+test
+exit

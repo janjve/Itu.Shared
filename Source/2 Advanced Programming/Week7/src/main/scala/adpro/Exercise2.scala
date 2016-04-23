@@ -11,6 +11,10 @@ import adpro.Exercise1._
 import Gen._
 
 
+object tests {
+
+}
+
 object Exercise85_TestCases {
 
   // The functions requested by the exercise should be written
@@ -18,10 +22,12 @@ object Exercise85_TestCases {
   // Use the in the REPL
 
   // uncomment once functions are implemented
-  //
   val r1 = Gen.unit(3.14).toStream(42).take(5).toList
-  // val r2 = Gen.boolean.toStream(42).take(5).toList
-  // val r3 = Gen.boolean.listOfN(3).toStream(42).take(5).toList
+  val r2 = Gen.boolean.toStream(42).take(5).toList
+  val r3 = Gen.boolean.listOfN(3).toStream(42).take(5).toList
+	val list = Gen.choose(10, 100).toStream(100).take(100).toList
+	println(r3.size)
+	println(r3)
 }
 
 object Exercise88_TestCases {
