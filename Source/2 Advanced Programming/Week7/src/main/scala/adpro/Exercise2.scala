@@ -25,7 +25,7 @@ object Exercise85_TestCases {
   val r1 = Gen.unit(3.14).toStream(42).take(5).toList
   val r2 = Gen.boolean.toStream(42).take(5).toList
   val r3 = Gen.boolean.listOfN(3).toStream(42).take(5).toList
-  val r4 = Gen.boolean.listOfN1(Gen.choose(2,10)).toStream(42).take(5).toList
+  val r4 = Gen.boolean.listOfN(Gen.choose(2,10)).toStream(42).take(5).toList
 	val list = Gen.choose(10, 100).toStream(100).take(100).toList
 	println(r4.size)
 	println(r4)

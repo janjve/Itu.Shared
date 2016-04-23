@@ -67,35 +67,16 @@ case class Gen[A] (sample :State[RNG,A]) {
   // So this is a solution that is ignoring the nice API that we developed.
   // It builds the result from ground up.
 
-  def flatMap[B] (f: A => Gen[B]) :Gen[B] = Gen[B](State[RNG,B](x => f(this.sample.run(x)._1).sample.run(x)))
+  def flatMap[B] (f: A => Gen[B]) :Gen[B] = Gen(sample.flatMap(x => f(x).sample))
 
 
   // It would be convenient to also have map (uncomment once you have unit and flatMap)
-
   def map[B] (f : A => B) :Gen[B] = this.flatMap (a => Gen.unit[B] (f(a)))
 
   // Exercise 6 (Second part of Ex. 8.6)
 
-  def listOfN1(size: Gen[Int]): Gen[List[A]] = {
-    Gen(State[RNG,List[A]](y => 
-      State.sequence(
-        List.fill (size.sample.run(y)._1) (State[RNG,A](x => 
-          this.sample.run(x)))).run(y)))
+  def listOfN(size: Gen[Int]): Gen[List[A]] = size.flatMap(x => this.listOfN(x))
 
-    // flapmap try    
-        /*
-    val gen = Gen(State[RNG, Gen[List[A]]](x => {
-        val (v1,s1) = size.sample.run(x)
-        (listOfN(v1), s1)
-      }))
-    Gen(State(y => gen.flatMap(x => {
-
-      x.sample.run(y)
-      })))*/
-  }
-  /*
-
-*/
   // Exercise 7 (Ex. 8.7; I implemented it as a method, the book asks for a
   // function, the difference is minor; you may want to have both for
   // convenience)
@@ -103,7 +84,7 @@ case class Gen[A] (sample :State[RNG,A]) {
   // Hint: we already have a generator that emulates tossing a coin. Which one
   // is it? Use flatMap with it.
 
-  // def union (that :Gen[A]) :Gen[A] = ...
+  def union (that :Gen[A]) :Gen[A] = Gen.boolean.flatMap(x => if(x) this else that)
 
   // Exercise 8 continues in the bottom of the file (in the companion object)
 }
