@@ -60,24 +60,42 @@ case class Gen[A] (sample :State[RNG,A]) {
   // the output state of one as an input to the next.  This can be used to
   // execute a series of consecutive generations, passing the RNG state around.
 
-  def listOfN (n :Int) :Gen[List[A]] = Gen(State(State.sequence(List.fill(n)(State[RNG,A](this.sample.run(_)))).run(_)))
+  def listOfN (n :Int) :Gen[List[A]] = Gen(State(State.sequence(List.fill(n)(State[RNG,A](x => this.sample.run(x)))).run(_)))
 
   // Exercise 5 (Ex. 8.6 [Chiusano, Bjarnasson 2015])
   //
   // So this is a solution that is ignoring the nice API that we developed.
   // It builds the result from ground up.
 
-  // def flatMap[B] (f: A => Gen[B]) :Gen[B] = ...
+  def flatMap[B] (f: A => Gen[B]) :Gen[B] = Gen[B](State[RNG,B](x => f(this.sample.run(x)._1).sample.run(x)))
 
 
   // It would be convenient to also have map (uncomment once you have unit and flatMap)
 
-  // def map[B] (f : A => B) :Gen[B] = this.flatMap (a => Gen.unit[B] (f(a)))
+  def map[B] (f : A => B) :Gen[B] = this.flatMap (a => Gen.unit[B] (f(a)))
 
   // Exercise 6 (Second part of Ex. 8.6)
 
-  // def listOfN(size: Gen[Int]): Gen[List[A]] = ...
+  def listOfN1(size: Gen[Int]): Gen[List[A]] = {
+    Gen(State[RNG,List[A]](y => 
+      State.sequence(
+        List.fill (size.sample.run(y)._1) (State[RNG,A](x => 
+          this.sample.run(x)))).run(y)))
 
+    // flapmap try    
+        /*
+    val gen = Gen(State[RNG, Gen[List[A]]](x => {
+        val (v1,s1) = size.sample.run(x)
+        (listOfN(v1), s1)
+      }))
+    Gen(State(y => gen.flatMap(x => {
+
+      x.sample.run(y)
+      })))*/
+  }
+  /*
+
+*/
   // Exercise 7 (Ex. 8.7; I implemented it as a method, the book asks for a
   // function, the difference is minor; you may want to have both for
   // convenience)

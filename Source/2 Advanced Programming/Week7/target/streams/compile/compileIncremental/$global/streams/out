@@ -1,28 +1,62 @@
 [0m[[0mdebug[0m] [0m[naha] [0m
 [0m[[0mdebug[0m] [0m[naha] Initial source changes: [0m
 [0m[[0mdebug[0m] [0m[naha] 	removed:Set()[0m
-[0m[[0mdebug[0m] [0m[naha] 	added: Set()[0m
-[0m[[0mdebug[0m] [0m[naha] 	modified: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] 	added: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise1.scala, D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala, D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\state\State.scala, D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] 	modified: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Invalidated products: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] External API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Modified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise1.scala, D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala, D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\state\State.scala, D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala)[0m
 [0m[[0mdebug[0m] [0m[naha] [0m
 [0m[[0mdebug[0m] [0m[naha] Sources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m[naha] 	product: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala)[0m
-[0m[[0minfo[0m] [0mCompiling 1 Scala source to D:\Development\itu\Source\2 Advanced Programming\Week7\target\scala-2.11\classes...[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise1.scala, D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala, D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\state\State.scala, D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Recompiling all 4 sources: invalidated sources (4) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 4 Scala sources to D:\Development\itu\Source\2 Advanced Programming\Week7\target\scala-2.11\classes...[0m
 [0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.11:component from component compiler for Scala 2.11.7[0m
 [0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.11:component from component compiler for Scala 2.11.7[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 60f2a155, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 5f959fea, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jre1.8.0_77\lib\resources.jar;C:\Program Files\Java\jre1.8.0_77\lib\rt.jar;C:\Program Files\Java\jre1.8.0_77\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_77\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_77\lib\jce.jar;C:\Program Files\Java\jre1.8.0_77\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_77\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_77\classes;C:\Users\rrjan\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	D:\Development\itu\Source\2 Advanced Programming\Week7\target\scala-2.11\classes[0m
-[0m[[0mdebug[0m] [0mScala compilation took 5.968620884 s[0m
+[0m[[0mdebug[0m] [0mScala compilation took 8.374809987 s[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise1.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise1.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise1.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise1.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] The D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise1.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	notify, stream1, x, stream1output, random_non_negative_integers, wait, $asInstanceOf, equals, random_booleans, random_integers_no_RT, stream2, asInstanceOf, executionStart, rng1, synchronized, rng, random_boolean, $isInstanceOf, s_nonNegativeInt, main, x2, notifyAll, isInstanceOf, stream2output, random_integers, s_double, rng2, state2stream, ==, random_doubles, s_random_int, clone, s_random_boolean, $init$, state2stream1, toString, args, !=, getClass, ne, rng3, eq, Exercise1, delayedInit, ##, finalize, hashCode.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] The following modified names cause invalidation of D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala: Set(Exercise1)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] The D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	notify, wait, $asInstanceOf, equals, asInstanceOf, synchronized, tests, $isInstanceOf, notifyAll, isInstanceOf, r4, r1, ==, clone, Exercise85_TestCases, toString, r2, !=, getClass, Exercise88_TestCases, r3, ne, eq, ##, list, finalize, hashCode.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\state\State.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\state\State.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\state\State.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\state\State.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] The D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\state\State.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	notify, nonNegativeInt, unapply, randIntDouble, wait, copy$default$2, $asInstanceOf, Coin, seed, compose, randDoubleInt, map, sequenceViaFoldLeft, productArity, equals, asInstanceOf, RNG, run, set, synchronized, $isInstanceOf, andThen, ints, locked, Simple, canEqual, productPrefix, doubleInt, Turn, notifyAll, Rand, modify, ints2, isInstanceOf, double, _map, <init>, boolean, sequence, Input, apply, flatMap, _double, double3, ==, clone, int, intDouble, Machine, $init$, nextInt, _ints, both, nonNegativeLessThan, copy$default$3, copy, Candy, toString, coins, !=, get, unit, getClass, copy$default$1, update, State, map2, ne, sequenceViaFoldRight, eq, productIterator, simulateMachine, ##, finalize, candies, _map2, productElement, hashCode.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] The following modified names cause invalidation of D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala: Set(seed, map, asInstanceOf, RNG, run, isInstanceOf, double, <init>, boolean, sequence, apply, flatMap, ==, nextInt, toString, unit, State, ne, eq)[0m
+[0m[[0mdebug[0m] [0m[naha] The following modified names cause invalidation of D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise1.scala: Set(nonNegativeInt, seed, RNG, run, double, <init>, boolean, apply, nextInt, State, ne)[0m
+[0m[[0mdebug[0m] [0m[naha] The following modified names cause invalidation of D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala: Set(RNG, <init>, boolean, unit)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] The D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\fpinscala\testing\Gen.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	listOfN1, notify, failure, unapply, Passed, curried, choose, wait, anyInteger, copy$default$2, $asInstanceOf, Gen, map, productArity, equals, asInstanceOf, successes, Falsified, run, synchronized, FailedCase, $isInstanceOf, tupled, isFalsified, canEqual, productPrefix, notifyAll, Prop, isInstanceOf, double, <init>, toStream, boolean, apply, listOfN, flatMap, SuccessCount, TestCases, ==, clone, Proved, $init$, sample, copy, toString, !=, unit, getClass, copy$default$1, buildMsg, Result, ne, forAll, eq, productIterator, ##, finalize, productElement, hashCode.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] The following modified names cause invalidation of D:\Development\itu\Source\2 Advanced Programming\Week7\src\main\scala\adpro\Exercise2.scala: Set(listOfN1, choose, Gen, <init>, toStream, boolean, listOfN, unit)[0m
 [0m[[0mdebug[0m] [0m[naha] New invalidations:[0m
 [0m[[0mdebug[0m] [0m[naha] 	Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set()[0m
