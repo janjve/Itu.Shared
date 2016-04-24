@@ -1,0 +1,378 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes
+compile options:
+2 items
+0 -> -deprecation
+1 -> -feature
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.11.6
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+49 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anon$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anon$2.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anonfun$codistribute$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anonfun$codistribute$2.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anonfun$distribute$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anonfun$distribute$2.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$class.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anon$3.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anon$4.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anon$5.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$join$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$map$1$$anonfun$apply$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$map$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$map2$1$$anonfun$apply$2.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$map2$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$replicateM$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$sequence$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$sequence$2$$anonfun$apply$3.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$sequence$2.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$class.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable$$anonfun$concatenate$2.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable$$anonfun$foldMap$2.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable$$anonfun$toList$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable$class.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\FoldableOption$$anonfun$foldMap$3.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\FoldableOption$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\FoldableOption.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$10.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$2.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$3.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$4.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$5.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$6.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$7.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$8.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$9$$anonfun$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$9$$anonfun$op$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$9.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anonfun$concatenate$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anonfun$foldMap$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid.class
+binary dependencies:
+4 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Program Files\Java\jre1.8.0_77\lib\rt.jar
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C:\Users\Soeren\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Program Files\Java\jre1.8.0_77\lib\rt.jar
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> C:\Users\Soeren\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+49 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Functor
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Functor$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Functor$$anon$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Functor$$anon$2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Functor$$anonfun$codistribute$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Functor$$anonfun$codistribute$2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Functor$$anonfun$distribute$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Functor$$anonfun$distribute$2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Functor$class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anon$3
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anon$4
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anon$5
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anonfun$join$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anonfun$map$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anonfun$map$1$$anonfun$apply$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anonfun$map2$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anonfun$map2$1$$anonfun$apply$2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anonfun$replicateM$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anonfun$sequence$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anonfun$sequence$2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$$anonfun$sequence$2$$anonfun$apply$3
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala.monads.Monad$class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Foldable
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Foldable$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Foldable$$anonfun$concatenate$2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Foldable$$anonfun$foldMap$2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Foldable$$anonfun$toList$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Foldable$class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.FoldableOption
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.FoldableOption$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.FoldableOption$$anonfun$foldMap$3
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$10
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$3
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$4
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$5
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$6
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$7
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$8
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$9
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$9$$anonfun$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anon$9$$anonfun$op$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anonfun$concatenate$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala.monoids.Monoid$$anonfun$foldMap$1
+used names:
+137 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> $anon
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> ::
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> <byname>
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> <init>
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> A
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> AnyRef
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> B
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> C
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Either
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> F
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Function1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Function2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Functor
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Int
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Left
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> List
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> ListFunctor
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Monad
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Nil
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Option
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> OptionFunctor
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Right
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Stream
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> Tuple2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> _1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> _2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> _root_
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> a
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> apply
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> as
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> asInstanceOf
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> b
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> canBuildFrom
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> e
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> f
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fa
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fab
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fb
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fill
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> flatMap
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> foldRight
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> fpinscala
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> higherKinds
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> immutable
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> isInstanceOf
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> la
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> language
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> lfa
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> listMonad
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> ma
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> map
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> map2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> mb
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> mma
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> monads
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> n
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> oa
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> optionMonad
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> package
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> scala
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> sequence
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> streamMonad
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> unit
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> $anon
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> &&
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> *
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> +
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> ++
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> /
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> ::
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> <init>
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> ==
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> >
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> A
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> AnyRef
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> B
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> Boolean
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> F
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> Foldable
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> FoldableOption
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> Function1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> Function2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> IndexedSeq
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> Int
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> List
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> Monoid
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> Nil
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> None
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> Option
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> Predef
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> String
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> Tuple2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> _1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> _2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> _root_
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> a
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> a1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> a2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> apply
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> as
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> as1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> asInstanceOf
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> b
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> booleanAnd
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> booleanOr
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> canBuildFrom
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> f
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fa
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> foldLeft
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> foldMapV
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> foldRight
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> fpinscala
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> head
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> higherKinds
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> immutable
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> intAddition
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> intMultiplication
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> isInstanceOf
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> language
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> length
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> m
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> ma
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> mb
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> monoids
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> ne
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> op
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> package
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> s1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> s2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> scala
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> splitAt
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> stringMonoid
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> unchecked
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> v
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> x
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> zero
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> ||
+product stamps:
+49 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anon$1.class -> lastModified(1461501265646)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anon$2.class -> lastModified(1461501265649)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anonfun$codistribute$1.class -> lastModified(1461501265655)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anonfun$codistribute$2.class -> lastModified(1461501265660)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anonfun$distribute$1.class -> lastModified(1461501265664)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$$anonfun$distribute$2.class -> lastModified(1461501265666)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$.class -> lastModified(1461501265637)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor$class.class -> lastModified(1461501265672)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Functor.class -> lastModified(1461501265621)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anon$3.class -> lastModified(1461501265691)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anon$4.class -> lastModified(1461501265703)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anon$5.class -> lastModified(1461501265712)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$join$1.class -> lastModified(1461501265717)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$map$1$$anonfun$apply$1.class -> lastModified(1461501265725)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$map$1.class -> lastModified(1461501265720)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$map2$1$$anonfun$apply$2.class -> lastModified(1461501265730)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$map2$1.class -> lastModified(1461501265728)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$replicateM$1.class -> lastModified(1461501265735)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$sequence$1.class -> lastModified(1461501265738)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$sequence$2$$anonfun$apply$3.class -> lastModified(1461501265743)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$$anonfun$sequence$2.class -> lastModified(1461501265740)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$.class -> lastModified(1461501265681)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad$class.class -> lastModified(1461501265750)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monads\Monad.class -> lastModified(1461501265675)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable$$anonfun$concatenate$2.class -> lastModified(1461492040149)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable$$anonfun$foldMap$2.class -> lastModified(1461492040154)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable$$anonfun$toList$1.class -> lastModified(1461492040160)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable$.class -> lastModified(1461492040121)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable$class.class -> lastModified(1461492040166)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Foldable.class -> lastModified(1461492040137)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\FoldableOption$$anonfun$foldMap$3.class -> lastModified(1461492040183)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\FoldableOption$.class -> lastModified(1461492040181)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\FoldableOption.class -> lastModified(1461492040173)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$1.class -> lastModified(1461492040200)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$10.class -> lastModified(1461492040206)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$2.class -> lastModified(1461492040209)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$3.class -> lastModified(1461492040212)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$4.class -> lastModified(1461492040217)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$5.class -> lastModified(1461492040220)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$6.class -> lastModified(1461492040223)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$7.class -> lastModified(1461492040228)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$8.class -> lastModified(1461492040231)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$9$$anonfun$1.class -> lastModified(1461492040237)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$9$$anonfun$op$1.class -> lastModified(1461492040239)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anon$9.class -> lastModified(1461492040233)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anonfun$concatenate$1.class -> lastModified(1461492040244)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$$anonfun$foldMap$1.class -> lastModified(1461492040250)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid$.class -> lastModified(1461492040193)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes\fpinscala\monoids\Monoid.class -> lastModified(1461492040196)
+source stamps:
+2 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> hash(f252849022826f2ef29394e101c47be96ec94b3c)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> hash(2953cc50cd17f308e2e3933d28d47ce563b1d0d1)
+binary stamps:
+2 items
+C:\Program Files\Java\jre1.8.0_77\lib\rt.jar -> lastModified(1459669515099)
+C:\Users\Soeren\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar -> lastModified(1424912463000)
+class names:
+2 items
+C:\Program Files\Java\jre1.8.0_77\lib\rt.jar -> java.lang.Object
+C:\Users\Soeren\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar -> scala.Tuple2
+internal apis:
+2 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHCIWqgzAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAJXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAsMAZh0AAZub3RpZnlzcQB+AAzzIlGQdAAEd2FpdHNxAH4ADONIH/p0AA0kYXNJbnN0YW5jZU9mc3EAfgAMZ0nNHnQABU1vbmFkc3EAfgAMMvJBgnQABGpvaW5zcQB+AAyGJTOLdAADbWFwc3EAfgAMg8TQuXQABmVxdWFsc3NxAH4ADCA9j/Z0AAlsaXN0TW9uYWRzcQB+AAy9Vh7RdAAMYXNJbnN0YW5jZU9mc3EAfgAMTfQ0zHQADHN5bmNocm9uaXplZHNxAH4ADFWkDut0AA0kaXNJbnN0YW5jZU9mc3EAfgAMDo+atHQAC29wdGlvbk1vbmFkc3EAfgAMRC1XkXQACmRpc3RyaWJ1dGVzcQB+AAyJepdedAAJbm90aWZ5QWxsc3EAfgAMaqHaznQADGlzSW5zdGFuY2VPZnNxAH4ADCzymt50AAhzZXF1ZW5jZXNxAH4ADEFn0i90AAdmbGF0TWFwc3EAfgAM4oO7onQAAj09c3EAfgAMdHPGoHQACHRyYXZlcnNlc3EAfgAMQoNKgHQABWNsb25lc3EAfgAMp5B94HQABiRpbml0JHNxAH4ADFHxDV50AAh0b1N0cmluZ3NxAH4ADBts2QB0AAdGdW5jdG9yc3EAfgAMlz6MK3QAAiE9c3EAfgAMP9AQvnQABHVuaXRzcQB+AAzEQX+ldAAIZ2V0Q2xhc3NzcQB+AAyGA2tvdAAMY29kaXN0cmlidXRlc3EAfgAMiOzEGXQAC0xpc3RGdW5jdG9yc3EAfgAMetlHw3QAC3N0cmVhbU1vbmFkc3EAfgAMVocXFXQABG1hcDJzcQB+AAyREptidAACbmVzcQB+AAxMe0IzdAACZXFzcQB+AAzvclL2dAANT3B0aW9uRnVuY3RvcnNxAH4ADGZW5xd0AAIjI3NxAH4ADA7Rd9h0AAhmaW5hbGl6ZXNxAH4ADBtx7eN0AApyZXBsaWNhdGVNc3EAfgAMy+dICHQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAABHNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AYXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAXQAGGZwaW5zY2FsYS5tb25hZHMuRnVuY3RvcnVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAABc3IAF3hzYnRpLmFwaS5UeXBlUGFyYW1ldGVyZ2lV2+NykGsCAAZbAAthbm5vdGF0aW9uc3EAfgBmTAACaWRxAH4ADUwACmxvd2VyQm91bmR0ABBMeHNidGkvYXBpL1R5cGU7WwAOdHlwZVBhcmFtZXRlcnNxAH4AY0wACnVwcGVyQm91bmRxAH4AdEwACHZhcmlhbmNldAAUTHhzYnRpL2FwaS9WYXJpYW5jZTt4cHVxAH4AbAAAAAB0ABpmcGluc2NhbGEubW9uYWRzLkZ1bmN0b3IuRnNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHB0AAdOb3RoaW5nc3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgB7c3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgCIdXEAfgBxAAAAAXNxAH4Ac3VxAH4AbAAAAAB0ABpmcGluc2NhbGEubW9uYWRzLkZ1bmN0b3IuX3EAfgB9dXEAfgBxAAAAAHNxAH4AeXQAA0FueXEAfgCBfnIAEnhzYnRpLmFwaS5WYXJpYW5jZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQACUludmFyaWFudHEAfgCScQB+AJZ+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cQB+AJV0AAVUcmFpdHVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhxAH4Ae3NxAH4AnXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBhTAAJaW5oZXJpdGVkcQB+AGFMAAdwYXJlbnRzcQB+AGF4cQB+AHxzcQB+AJ11cQB+AFwAAAAAc3EAfgCddXEAfgBcAAAAAHNxAH4AnXVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAACc3EAfgB5dAAGT2JqZWN0c3EAfgB/c3EAfgCCdXEAfgCFAAAAA3NxAH4Ah3QABGphdmFzcQB+AId0AARsYW5ncQB+AIxzcQB+AHlxAH4Ak3NxAH4Af3NxAH4AgnVxAH4AhQAAAAJzcQB+AIdxAH4AinEAfgCMc3EAfgBecQB+AGt1cQB+AGwAAAAAc3EAfgBuAHQAGGZwaW5zY2FsYS5tb25hZHMuRnVuY3RvcnVxAH4AcQAAAAB+cQB+AJh0AAZNb2R1bGV1cQB+AJsAAAAAc3EAfgCdcQB+AKFzcQB+AJ1zcQB+AKNzcQB+AJ11cQB+AFwAAAAAc3EAfgCddXEAfgBcAAAAAHNxAH4AnXVxAH4AqgAAAAJzcQB+AHlxAH4ArXNxAH4Af3NxAH4AgnVxAH4AhQAAAANzcQB+AIdxAH4AsnNxAH4Ah3EAfgC0cQB+AIxzcQB+AHlxAH4Ak3NxAH4Af3NxAH4AgnVxAH4AhQAAAAJzcQB+AIdxAH4AinEAfgCMc3EAfgBecQB+AGt1cQB+AGwAAAAAc3EAfgBuAXQAFmZwaW5zY2FsYS5tb25hZHMuTW9uYWR1cQB+AHEAAAABc3EAfgBzdXEAfgBsAAAAAHQAGGZwaW5zY2FsYS5tb25hZHMuTW9uYWQuRnEAfgB9dXEAfgBxAAAAAXNxAH4Ac3VxAH4AbAAAAAB0ABhmcGluc2NhbGEubW9uYWRzLk1vbmFkLl9xAH4AfXVxAH4AcQAAAABxAH4AknEAfgCWcQB+AJJxAH4AlnEAfgCZdXEAfgCbAAAAAHNxAH4AnXEAfgChc3EAfgCdc3EAfgCjc3EAfgCddXEAfgBcAAAAAHNxAH4AnXVxAH4AXAAAAABzcQB+AJ11cQB+AKoAAAACc3EAfgB5cQB+AK1zcQB+AH9zcQB+AIJ1cQB+AIUAAAADc3EAfgCHcQB+ALJzcQB+AIdxAH4AtHEAfgCMc3EAfgB5cQB+AJNzcQB+AH9zcQB+AIJ1cQB+AIUAAAACc3EAfgCHcQB+AIpxAH4AjHNxAH4AXnEAfgBrdXEAfgBsAAAAAHNxAH4AbgB0ABZmcGluc2NhbGEubW9uYWRzLk1vbmFkdXEAfgBxAAAAAHEAfgC/dXEAfgCbAAAAAHNxAH4AnXEAfgChc3EAfgCdc3EAfgCjc3EAfgCddXEAfgBcAAAAAHNxAH4AnXVxAH4AXAAAAABzcQB+AJ11cQB+AKoAAAACc3EAfgB5cQB+AK1zcQB+AH9zcQB+AIJ1cQB+AIUAAAADc3EAfgCHcQB+ALJzcQB+AIdxAH4AtHEAfgCMc3EAfgB5cQB+AJNzcQB+AH9zcQB+AIJ1cQB+AIUAAAACc3EAfgCHcQB+AIpxAH4AjHVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAACc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQACWZwaW5zY2FsYXNxAH4BFHQAEGZwaW5zY2FsYS5tb25hZHNzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVRIQ3tGdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAU8lKEkCKCby7yk5ThAcR76W7JSzw=
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHCcgkaDAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAKXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAtFob10AAZNb25vaWRzcQB+AAzn7aITdAAGbm90aWZ5c3EAfgAMwcPwWXQADG9wdGlvbk1vbm9pZHNxAH4ADArMw6p0AA5Gb2xkYWJsZU9wdGlvbnNxAH4ADMg1NxR0AAR3YWl0c3EAfgAMg1MznHQACWZvbGRSaWdodHNxAH4ADNS3lht0AA0kYXNJbnN0YW5jZU9mc3EAfgAMBfPxM3QACmVuZG9Nb25vaWRzcQB+AAyBty/IdAAIRm9sZGFibGVzcQB+AAy24Qs5dAAGZXF1YWxzc3EAfgAM3vAqnHQABnRvTGlzdHNxAH4ADBnJPzd0AAR6ZXJvc3EAfgAMJQ/Wn3QADGFzSW5zdGFuY2VPZnNxAH4ADDcD7ch0AApsaXN0TW9ub2lkc3EAfgAMwxDLOnQABGR1YWxzcQB+AAz+aLnHdAAMc3luY2hyb25pemVkc3EAfgAM9r3nzHQADSRpc0luc3RhbmNlT2ZzcQB+AAzf9KDodAAHZm9sZE1hcHNxAH4ADHqwa7N0AAhmb2xkTWFwVnNxAH4ADAXoHGh0AAlib29sZWFuT3JzcQB+AAwA5/5cdAAJbm90aWZ5QWxsc3EAfgAMyvF89HQADGlzSW5zdGFuY2VPZnNxAH4ADD+USAN0AA1wcm9kdWN0TW9ub2lkc3EAfgAMpuDRJ3QAC2ludEFkZGl0aW9uc3EAfgAM9eKwznQAAj09c3EAfgAMPHnSYHQABWNsb25lc3EAfgAM6RQhQnQACmJvb2xlYW5BbmRzcQB+AAxegdkEdAAGJGluaXQkc3EAfgAMo2JuoXQACHRvU3RyaW5nc3EAfgAMU2hOJ3QAAiE9c3EAfgAMKMMTU3QACGdldENsYXNzc3EAfgAM4kfp03QAC2NvbmNhdGVuYXRlc3EAfgAMDmpo0HQACGZvbGRMZWZ0c3EAfgAM7B4LhXQAAm5lc3EAfgAMGww383QAEWludE11bHRpcGxpY2F0aW9uc3EAfgAM/P2AY3QAAmVxc3EAfgAMTDpUb3QADHN0cmluZ01vbm9pZHNxAH4ADJ18oXd0AAIjI3NxAH4ADOur+Sl0AAhmaW5hbGl6ZXNxAH4ADKL3dBt0AAhoYXNoQ29kZXNxAH4ADKQb4+J0AAJvcHNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAVzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AGl4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAF0ABhmcGluc2NhbGEubW9ub2lkcy5Nb25vaWR1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcmdpVdvjcpBrAgAGWwALYW5ub3RhdGlvbnNxAH4AbkwAAmlkcQB+AA1MAApsb3dlckJvdW5kdAAQTHhzYnRpL2FwaS9UeXBlO1sADnR5cGVQYXJhbWV0ZXJzcQB+AGtMAAp1cHBlckJvdW5kcQB+AHxMAAh2YXJpYW5jZXQAFEx4c2J0aS9hcGkvVmFyaWFuY2U7eHB1cQB+AHQAAAAAdAAaZnBpbnNjYWxhLm1vbm9pZHMuTW9ub2lkLkFzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwdAAHTm90aGluZ3NyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4Ag3NyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAA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
+external apis:
+0 items
+source infos:
+2 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monads\Monad.scala -> 
+AAAAAAAAAAA=
+C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\main\scala\fpinscala\monoids\Monoid.scala -> 
+AAAAAAAAAAA=
+compilations:
+14 items
+00 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEdJbFN1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+01 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEdXW/J1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+02 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEdiAet1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+03 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEdySJh1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+04 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEejU591cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+05 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEe2tfd1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+06 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEfXanp1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+07 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEfuF4F1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+08 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEfw+M91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+09 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEfzsu11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+10 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEgonLN1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+11 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEg7p0J1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+12 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEhAwYt1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==
+13 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEhDe0Z1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATUM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrOFx0YXJnZXRcc2NhbGEtMi4xMVxjbGFzc2VzdAABLw==

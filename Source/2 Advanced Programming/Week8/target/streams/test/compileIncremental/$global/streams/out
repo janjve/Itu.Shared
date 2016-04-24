@@ -1,0 +1,47 @@
+[0m[[0mdebug[0m] [0m[naha] The fpinscala.monads.Functor$ source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	listMonad, optionMonad, sequence, traverse, streamMonad, replicateM.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] Files invalidated by inheriting from (external) fpinscala.monads.Functor$: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0mdebug[0m] [0m[naha] Getting direct dependencies of all sources transitively invalidated by inheritance.[0m
+[0m[[0mdebug[0m] [0m[naha] Getting sources that directly depend on (external) fpinscala.monads.Functor$.[0m
+[0m[[0mdebug[0m] [0m[naha] None of the modified names appears in C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\test\scala\fpinscala\monads\FunctorSpec.scala. This dependency is not being considered for invalidation.[0m
+[0m[[0mdebug[0m] [0m[naha] The fpinscala.monads.Functor source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	listMonad, optionMonad, sequence, traverse, streamMonad, replicateM.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] Files invalidated by inheriting from (external) fpinscala.monads.Functor: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0mdebug[0m] [0m[naha] Getting direct dependencies of all sources transitively invalidated by inheritance.[0m
+[0m[[0mdebug[0m] [0m[naha] Getting sources that directly depend on (external) fpinscala.monads.Functor.[0m
+[0m[[0mdebug[0m] [0m[naha] None of the modified names appears in C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\test\scala\fpinscala\monads\FunctorSpec.scala. This dependency is not being considered for invalidation.[0m
+[0m[[0mdebug[0m] [0m[naha] [0m
+[0m[[0mdebug[0m] [0m[naha] Initial source changes: [0m
+[0m[[0mdebug[0m] [0m[naha] 	removed:Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	added: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	modified: Set(C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\test\scala\fpinscala\monads\MonadSpec.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated products: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] External API changes: API Changes: Set(NamesChange(fpinscala.monads.Functor$,ModifiedNames(regularNames = listMonad, optionMonad, sequence, traverse, streamMonad, replicateM, implicitNames = )), NamesChange(fpinscala.monads.Functor,ModifiedNames(regularNames = listMonad, optionMonad, sequence, traverse, streamMonad, replicateM, implicitNames = )))[0m
+[0m[[0mdebug[0m] [0m[naha] Modified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\test\scala\fpinscala\monads\MonadSpec.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] [0m
+[0m[[0mdebug[0m] [0m[naha] Sources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m[naha] 	product: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Code\itu-jve\Source\2 Advanced Programming\Week8\src\test\scala\fpinscala\monads\MonadSpec.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\test-classes...[0m
+[0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.11:component from component compiler for Scala 2.11.6[0m
+[0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.11:component from component compiler for Scala 2.11.6[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 3b51dfc2, interfacing (CompilerInterface) with Scala compiler version 2.11.6[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-deprecation[0m
+[0m[[0mdebug[0m] [0m	-feature[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	C:\Program Files\Java\jre1.8.0_77\lib\resources.jar;C:\Program Files\Java\jre1.8.0_77\lib\rt.jar;C:\Program Files\Java\jre1.8.0_77\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_77\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_77\lib\jce.jar;C:\Program Files\Java\jre1.8.0_77\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_77\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_77\classes;C:\Users\Soeren\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.6.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\test-classes;C:\Code\itu-jve\Source\2 Advanced Programming\Week8\target\scala-2.11\classes;C:\Users\Soeren\.ivy2\cache\org.scalacheck\scalacheck_2.11\jars\scalacheck_2.11-1.12.5.jar;C:\Users\Soeren\.ivy2\cache\org.scala-sbt\test-interface\jars\test-interface-1.0.jar[0m
+[0m[[0mdebug[0m] [0mScala compilation took 3.256049477 s[0m
+[0m[[0mdebug[0m] [0m[naha] New invalidations:[0m
+[0m[[0mdebug[0m] [0m[naha] 	Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Previously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m[naha] 	Set()[0m
+[0m[[0mdebug[0m] [0m[naha] All newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m

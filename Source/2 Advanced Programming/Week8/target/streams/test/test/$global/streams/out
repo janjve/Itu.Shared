@@ -1,0 +1,26 @@
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monads.MonadSpec, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monads.FunctorSpec, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monads.FunctorSpec-0, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monads.FunctorSpec-1, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-5, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-8, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-9, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-0, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-1, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-11, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-7, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-3, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-10, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-4, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-6, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monoids.MonoidSpec-2, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monads.MonadSpec-2, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monads.MonadSpec-0, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monads.MonadSpec-1, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(fpinscala.monads.MonadSpec-3, org.scalacheck.ScalaCheckFramework$$anon$3@376565da, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mPassed: Total 18, Failed 0, Errors 0, Passed 18[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	fpinscala.monads.FunctorSpec[0m
+[0m[[0mdebug[0m] [0m	fpinscala.monads.MonadSpec[0m
+[0m[[0mdebug[0m] [0m	fpinscala.monoids.MonoidSpec[0m

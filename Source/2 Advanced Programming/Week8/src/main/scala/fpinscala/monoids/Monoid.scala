@@ -25,15 +25,39 @@ object Monoid {
   }
 
   // Exercise 10.1
+// Int monoid
+val intAddition: Monoid[Int] = new Monoid[Int] {
+  def op(a1: Int, a2: Int) = a1+a2
+  val zero = 0
+}
 
-  // val intAddition =
-  // val intMultiplication =
-  // val booleanOr =
-  // val booleanAnd =
+// Multiplication monoid 
+val intMultiplication: Monoid[Int] = new Monoid[Int] {
+  def op(a1: Int, a2: Int) = a1*a2
+  val zero = 1
+}
+
+// BooleanOr monoid 
+val booleanOr: Monoid[Boolean] = new Monoid[Boolean] {
+  def op(a1: Boolean, a2: Boolean) = a1 || a2
+  val zero = false
+}
+
+// BooleanAnd monoid 
+val booleanAnd: Monoid[Boolean] = new Monoid[Boolean] {
+  def op(a1: Boolean, a2: Boolean) = a1 && a2
+  val zero = true
+}
 
   // Exercise 10.2
 
-  // def optionMonoid[A] = ...
+  def optionMonoid[A]: Monoid[Option[A]] = new Monoid[Option[A]]{
+    def op(a1: Option[A], a2: Option[A]) = a1 match {
+      case None => a2
+      case _ => a1
+    }
+    val zero = None
+  }
 
   def dual[A] (m :Monoid[A]) = new Monoid[A] {
     def op (a1: A, a2: A) = m.op(a2,a1)
@@ -41,7 +65,10 @@ object Monoid {
   }
 
   // Exercise 10.3
-  // def endoMonoid[A] =
+  def endoMonoid[A]: Monoid[A => A] = new Monoid[A=> A] {
+    def op(a1: A => A, a2: A => A) = (a:A) => a1(a2(a))
+    val zero = (a:A) => a
+  }
 
   // Exercise 10.4 is solved in MonoidSpec.scala
   //
@@ -55,11 +82,20 @@ object Monoid {
 
   // Exercise 10.5 (easy)
 
-  // def foldMap[A,B] (as: List[A], m: Monoid[B]) (f: A=>B): B =
+  def foldMap[A,B] (as: List[A], m: Monoid[B]) (f: A=>B): B = {
+    as.foldRight[B] (m.zero) (((a,b) => m.op(b,f(a))))
+  }
 
   // Exercise 10.7
 
-  // def foldMapV[A,B] (v: IndexedSeq[A], m: Monoid[B]) (f: A => B) :B =
+  def foldMapV[A,B] (v: IndexedSeq[A], m: Monoid[B]) (f: A => B) :B = {
+    if(v.length > 1) {
+      val (s1, s2) = v.splitAt(v.length/2)
+      m.op(foldMapV(s1, m)(f), foldMapV(s2, m)(f))
+    } else {
+      f(v.head)
+    }
+  }
 
   // Exercise 9
   //
@@ -67,7 +103,11 @@ object Monoid {
   // with scala check for instance by composing an Option[Int] monoid with a
   // List[String] monoid and running through our monoid laws.
 
-  // def productMonoid[A,B] (ma: Monoid[A]) (mb: Monoid[B]) =
+  def productMonoid[A,B] (ma: Monoid[A]) (mb: Monoid[B]): Monoid[(A,B)] = new Monoid[(A,B)]
+  {
+    def op(a1: (A,B), a2: (A,B)) = (ma.op(a1._1, a2._1), mb.op(a1._2, a2._2))
+    val zero = (ma.zero, mb.zero)
+  }
 
   // Exercise 10.17
 
@@ -86,7 +126,7 @@ trait Foldable[F[_]] {
 
   // Exercise 10.15 (we use the mixed nature of traits here)
 
-  // def toList[A] (fa: F[A]) :List[A]
+  def toList[A] (fa: F[A]) :List[A] = foldLeft[A,List[A]](fa)(Nil)((b,a) => a :: b)
 }
 
 // Exercise 10.12 We just do Foldable[List]
