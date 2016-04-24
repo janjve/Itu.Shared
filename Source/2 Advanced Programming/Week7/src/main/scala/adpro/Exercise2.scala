@@ -33,11 +33,11 @@ object Exercise85_TestCases {
 
 object Exercise88_TestCases {
 
-  // val unfair_coin =
-  //      weighted[Boolean] (Gen.unit (true)->1.0, Gen.unit (false)->2.0)
+  val unfair_coin =
+       weighted[Boolean] (Gen.unit (true)->1.0, Gen.unit (false)->2.0)
 
-  // val unfair_coin_stream = unfair_coin.toStream (42)
-
+  val unfair_coin_stream = unfair_coin.toStream (42)
+  println(unfair_coin_stream.take(100).toList)
   // trying checkRatio on large numbers reveals that  this generator is very
   // bad.  The convergense is slow, and the precision does not exceed two digits
   // even for many thousands of tosses. I wonder whether it is our Boolean

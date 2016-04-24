@@ -67,7 +67,7 @@ case class Gen[A] (sample :State[RNG,A]) {
   // So this is a solution that is ignoring the nice API that we developed.
   // It builds the result from ground up.
 
-  def flatMap[B] (f: A => Gen[B]) :Gen[B] = Gen(sample.flatMap(x => f(x).sample))
+  def flatMap[B] (f: A => Gen[B]) :Gen[B] = Gen(this.sample.flatMap(x => f(x).sample))
 
 
   // It would be convenient to also have map (uncomment once you have unit and flatMap)
@@ -145,7 +145,10 @@ object Gen {
   // probabilities. Then use our generator of doubles to simulate an unfair
   // coin with flatMap.
 
-  // def weighted[A](g1: (Gen[A],Double), g2: (Gen[A],Double)): Gen[A] = ...
+  def weighted[A](g1: (Gen[A],Double), g2: (Gen[A],Double)): Gen[A] = {
+  	val ratio = g1._2 / (g1._2 + g2._2)
+  	Gen.double.flatMap(x => if(x < ratio) g1._1 else g2._1)
+  }
   //
   // Nice test idea for the above: create 1.0:2.0 boolean generator, translate
   // to stream, and try longer and longer prefixes to see if the law of big
