@@ -1,0 +1,234 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes
+compile options:
+2 items
+0 -> -deprecation
+1 -> -feature
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.11.7
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+25 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$ConsL$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$ConsR$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Deep$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Deep.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Digit$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Empty$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Empty.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$FingerTree$$anonfun$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$FingerTree$$anonfun$2.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$FingerTree$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$FingerTree.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$NilTree$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node2$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node2.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node3$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node3.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Reduce$$anonfun$toList$1.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Reduce$class.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Reduce.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Single$.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Single.class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data.class
+binary dependencies:
+2 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Program Files\Java\jre1.8.0_77\lib\rt.jar
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> C:\Users\Soeren\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+25 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$ConsL$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$ConsR$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Deep
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Deep$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Digit$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Empty
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Empty$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$FingerTree
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$FingerTree$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$FingerTree$$anonfun$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$FingerTree$$anonfun$2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$NilTree$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Node
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Node$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Node2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Node2$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Node3
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Node3$
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Reduce
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Reduce$$anonfun$toList$1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Reduce$class
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Single
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro.data$Single$
+used names:
+73 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> &&
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> ::
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> <init>
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> <repeated>
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> ==
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> A
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> AbstractFunction0
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> AnyRef
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> B
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> ConsL
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> ConsR
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Deep
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Digit
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Empty
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> F
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> FingerTree
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Function2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> List
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Nil
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> NilTree
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Node
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Node2
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Node3
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> None
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Nothing
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Option
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Product
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Reduce
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> ScalaRunTime
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Seq
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Serializable
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Single
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> Z
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> _hashCode
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> _root_
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> _toString
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> a
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> adpro
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> apply
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> as
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> asInstanceOf
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> b
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> d
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> data
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> eq
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> fa
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> foldLeft
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> foldRight
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> higherKinds
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> immutable
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> isInstanceOf
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> l
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> language
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> m
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> m1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> n
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> opl
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> opr
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> package
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> pr
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> pr1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> r
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> reduceL
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> reduceR
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> runtime
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> scala
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> sf
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> sf1
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> t
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> toString
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> typedProductIterator
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> z
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> ||
+product stamps:
+25 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$.class -> lastModified(1461516007754)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$ConsL$.class -> lastModified(1461516007756)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$ConsR$.class -> lastModified(1461516007761)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Deep$.class -> lastModified(1461516007769)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Deep.class -> lastModified(1461516007782)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Digit$.class -> lastModified(1461516007788)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Empty$.class -> lastModified(1461516007792)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Empty.class -> lastModified(1461516007798)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$FingerTree$$anonfun$1.class -> lastModified(1461516007826)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$FingerTree$$anonfun$2.class -> lastModified(1461516007833)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$FingerTree$.class -> lastModified(1461516007815)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$FingerTree.class -> lastModified(1461516007817)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$NilTree$.class -> lastModified(1461516007835)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node$.class -> lastModified(1461516007841)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node.class -> lastModified(1461516007842)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node2$.class -> lastModified(1461516007853)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node2.class -> lastModified(1461516007850)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node3$.class -> lastModified(1461516007860)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Node3.class -> lastModified(1461516007867)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Reduce$$anonfun$toList$1.class -> lastModified(1461516007878)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Reduce$class.class -> lastModified(1461516007885)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Reduce.class -> lastModified(1461516007871)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Single$.class -> lastModified(1461516007889)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data$Single.class -> lastModified(1461516007893)
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\target\scala-2.11\classes\adpro\data.class -> lastModified(1461516007687)
+source stamps:
+1 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> hash(bc7729b5605dcd82d5b975bddd86d44cb6c74b86)
+binary stamps:
+2 items
+C:\Program Files\Java\jre1.8.0_77\lib\rt.jar -> lastModified(1459669515099)
+C:\Users\Soeren\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar -> lastModified(1435004218000)
+class names:
+2 items
+C:\Program Files\Java\jre1.8.0_77\lib\rt.jar -> java.lang.Object
+C:\Users\Soeren\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar -> scala.Product
+internal apis:
+1 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHCZzhe1AHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAANnNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cCTaIVN0AAZub3RpZnlzcQB+AAwqoDX/dAAHdW5hcHBseXNxAH4ADAsMClB0AAp1bmFwcGx5U2Vxc3EAfgAMV7gjc3QABHdhaXRzcQB+AAxk4wlIdAAHcmVkdWNlTHNxAH4ADN5Vahp0AAVDb25zUnNxAH4ADD5JeSV0AA5jb3B5JGRlZmF1bHQkMnNxAH4ADAQaL450AA0kYXNJbnN0YW5jZU9mc3EAfgAMmJduJ3QABU5vZGUyc3EAfgAMlTinVHQADHByb2R1Y3RBcml0eXNxAH4ADH7EAkh0AAZlcXVhbHNzcQB+AAx0LssLdAAGdG9MaXN0c3EAfgAM8/4fLHQADGFzSW5zdGFuY2VPZnNxAH4ADPeBPzB0AARkYXRhc3EAfgAMKC+jq3QAB05pbFRyZWVzcQB+AAzklwFedAAMc3luY2hyb25pemVkc3EAfgAMeXHvoHQADSRpc0luc3RhbmNlT2ZzcQB+AAw9diVUdAACc2ZzcQB+AAyrzzmidAAETm9kZXNxAH4ADGKhhjR0AAFtc3EAfgAM0HjTWXQACGNhbkVxdWFsc3EAfgAMUmMJBnQADXByb2R1Y3RQcmVmaXhzcQB+AAzMLlOFdAAJbm90aWZ5QWxsc3EAfgAM/1ufcXQADGlzSW5zdGFuY2VPZnNxAH4ADLv4CKN0AAY8aW5pdD5zcQB+AAxmyzSZdAAFQ29uc0xzcQB+AAyBbpGqdAAFYXBwbHlzcQB+AAyjjd9LdAACcHJzcQB+AAy2f1ExdAAERGVlcHNxAH4ADISwcr90AAVOb2RlM3NxAH4ADM+H6Bh0AAVFbXB0eXNxAH4ADPC+dFp0AAZSZWR1Y2VzcQB+AAy/PycndAABbHNxAH4ADF1wvhB0AAI9PXNxAH4ADLXK5ZJ0AAVjbG9uZXNxAH4ADJiiqtl0AAYkaW5pdCRzcQB+AAyFocUCdAAOY29weSRkZWZhdWx0JDNzcQB+AAx2hFVPdAAEY29weXNxAH4ADLSer5h0AAh0b1N0cmluZ3NxAH4ADNdANkx0AAdyZWR1Y2VSc3EAfgAMQT4WF3QABURpZ2l0c3EAfgAMuSc8uXQAAiE9c3EAfgAM6Xm2QHQACGdldENsYXNzc3EAfgAMQn8RQnQADmNvcHkkZGVmYXVsdCQxc3EAfgAMHzlgFXQAAXJzcQB+AAwCywhkdAACbmVzcQB+AAwDEoxsdAAKRmluZ2VyVHJlZXNxAH4ADKx6B410AAJlcXNxAH4ADPriHtJ0AA9wcm9kdWN0SXRlcmF0b3JzcQB+AAwikakJdAACIyNzcQB+AAyj6p65dAAIZmluYWxpemVzcQB+AAwrLF5UdAAOcHJvZHVjdEVsZW1lbnRzcQB+AAy/1PScdAAIaGFzaENvZGVzcQB+AAzIhT6ldAAGU2luZ2xlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4Ag3hyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHQACmFkcHJvLmRhdGF1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAIXhzYnRpLmFwaS5BYnN0cmFjdExhenkkU3RyaWN0TGF6eQ1mHGspFiq4AgABTAAFdmFsdWV0ABJMamF2YS9sYW5nL09iamVjdDt4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AJtzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4Ag0wACWluaGVyaXRlZHEAfgCDTAAHcGFyZW50c3EAfgCDeHEAfgCgc3EAfgCbdXEAfgB+AAAAAHNxAH4Am3VxAH4AfgAAAABzcQB+AJt1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAnNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AJ90AAZPYmplY3RzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AJ9zcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAANzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABGphdmFzcQB+ALh0AARsYW5nc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+ALlzcQB+AKx0AANBbnlzcQB+ALBzcQB+ALN1cQB+ALYAAAACc3EAfgC4dAAFc2NhbGFxAH4Av3VyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAABc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQABWFkcHJvc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFUSSRsUXVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AE5DOlxDb2RlXGl0dS1qdmVcU291cmNlXDIgQWR2YW5jZWQgUHJvZ3JhbW1pbmdcV2VlazEwXHRhcmdldFxzY2FsYS0yLjExXGNsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABS8dym1YF3NgtW5db3dhtRMtsdLhg==
+external apis:
+0 items
+source infos:
+1 items
+C:\Code\itu-jve\Source\2 Advanced Programming\Week10\src\main\scala\adpro\FingerTree.scala -> 
+AAAAAAAAAAA=
+compilations:
+13 items
+00 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEi2Ecp1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+01 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEi6oRB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+02 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEjM/q91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+03 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEjNmf91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+04 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEjODht1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+05 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEjYlDZ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+06 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEjZgxt1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+07 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEjcC4p1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+08 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEjcmgh1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+09 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEjrgu11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+10 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEjuCF11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+11 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEke0e91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
+12 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABVEkkbFF1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XENvZGVcaXR1LWp2ZVxTb3VyY2VcMiBBZHZhbmNlZCBQcm9ncmFtbWluZ1xXZWVrMTBcdGFyZ2V0XHNjYWxhLTIuMTFcY2xhc3Nlc3QAAS8=
