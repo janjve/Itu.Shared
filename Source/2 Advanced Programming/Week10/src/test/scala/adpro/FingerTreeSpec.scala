@@ -94,23 +94,20 @@ class FingerTreeSpecWasowski extends FlatSpec with Checkers {
 
   behavior of "addR"
 
-  it should "produce a queue containing the inserted elements" in check {
+  it should "produce a queue containing the inserted elements for" in check {
     forAll (Gen.listOfN(100, Gen.choose[Int](0,1000))) {
       (l :List[Int]) =>
-        val res = l.foldLeft[FingerTree[Int]] (Empty()) (FingerTree.addR).toList
-        println(res)
-        println(l)
-        res == l
+        l.foldLeft[FingerTree[Int]] (Empty()) (FingerTree.addR).toList == l
     }
   }
 
   behavior of "toTree"
 
-  /*it should "be an identitity on trees" in check {
+  it should "be an identitity on trees" in check {
     forAll (fingerTreeOfN(100, Gen.choose[Int](0,1000))) {
       (t :FingerTree[Int]) => toTree (t) == t
     }
-  }*/
+  }
 
   behavior of "left views (extractors)"
 
@@ -139,18 +136,34 @@ class FingerTreeSpecWasowski extends FlatSpec with Checkers {
     }
   }
 
-  /*it should "have the right prefix on any tree larger than 3" in check {
+  it should "have the right prefix on any tree larger than 3" in check {
     val list3plus = Gen.choose(3,100) flatMap { Gen.listOfN(_,arbitrary[Int]) }
     forAll (list3plus) { (l: List[Int]) =>
       val t = Digit.toTree (l)
       t.headL == l.head && t.tailL.headL == l.tail.head &&
       t.tailL.tailL.headL == l.tail.tail.head
     }
-  }*/
+  }
 
   behavior of "right views"
 
-  // ...
+    it should "be ConsR(ConsR(_,_),_) on any tree larger than 3" in check {
+    val ft3plus = Gen.choose(3,100) flatMap { fingerTreeOfN(_,arbitrary[Int]) }
+    forAll (ft3plus) { (t: FingerTree[Int]) => t match {
+      case ConsR (ConsR(_,b), a) => true
+      case _ => false
+      }
+    }
+  }
+
+    it should "have the right suffix on any tree larger than 3" in check {
+    val list3plus = Gen.choose(3,100) flatMap { Gen.listOfN(_,arbitrary[Int]) }
+    forAll (list3plus) { (l: List[Int]) =>
+      val t = Digit.toTree (l)
+      t.headR == l.last && t.tailR.headR == l.take(l.length-1).last &&
+      t.tailR.tailR.headR == l.take(l.length-2).last
+    }
+  }
 
 
 }

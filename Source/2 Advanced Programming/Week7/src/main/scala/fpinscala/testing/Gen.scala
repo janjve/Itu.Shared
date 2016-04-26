@@ -1,6 +1,9 @@
 // Advanced Programming 2015
 // Andrzej Wasowski, IT Univesity of Copenhagen
 
+// AUTHOR1: Jan Vium Enghoff (jaen@itu.dk)
+// AUTHOR2: Søren Harrison (soeh@itu.dk)
+// Group number: 23
 
 // 1. Introduction
 //

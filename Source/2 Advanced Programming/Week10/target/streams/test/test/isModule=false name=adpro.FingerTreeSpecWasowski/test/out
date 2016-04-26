@@ -5,17 +5,14 @@
 [0m[[0minfo[0m] [0m[32m- should produce a queue containing the inserted element[0m[0m
 [0m[[0minfo[0m] [0m[32m- should produce a queue containing the inserted elements[0m[0m
 [0m[[0minfo[0m] [0m[32maddR[0m[0m
-[0m[[0minfo[0m] [0m[31m- should produce a queue containing the inserted elements *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  GeneratorDrivenPropertyCheckFailedException was thrown during property evaluation.[0m[0m
-[0m[[0minfo[0m] [0m[31m   (FingerTreeSpec.scala:97)[0m[0m
-[0m[[0minfo[0m] [0m[31m    Falsified after 0 successful property evaluations.[0m[0m
-[0m[[0minfo[0m] [0m[31m    Location: (FingerTreeSpec.scala:97)[0m[0m
-[0m[[0minfo[0m] [0m[31m    Occurred when passed generated values ([0m[0m
-[0m[[0minfo[0m] [0m[31m      arg0 = List("0", "0", "0", "0", "1", "0") // 19 shrinks[0m[0m
-[0m[[0minfo[0m] [0m[31m    )[0m[0m
+[0m[[0minfo[0m] [0m[32m- should produce a queue containing the inserted elements for[0m[0m
 [0m[[0minfo[0m] [0m[32mtoTree[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be an identitity on trees[0m[0m
 [0m[[0minfo[0m] [0m[32mleft views (extractors)[0m[0m
 [0m[[0minfo[0m] [0m[32m- should be NilTree on Empty[0m[0m
 [0m[[0minfo[0m] [0m[32m- should be ConsL(_,Nil) on Single[0m[0m
 [0m[[0minfo[0m] [0m[32m- should be ConsL(_,Consl(_,_)) on any tree larger than 3[0m[0m
+[0m[[0minfo[0m] [0m[32m- should have the right prefix on any tree larger than 3[0m[0m
 [0m[[0minfo[0m] [0m[32mright views[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be ConsR(ConsR(_,_),_) on any tree larger than 3[0m[0m
+[0m[[0minfo[0m] [0m[32m- should have the right prefix on any tree larger than 3[0m[0m

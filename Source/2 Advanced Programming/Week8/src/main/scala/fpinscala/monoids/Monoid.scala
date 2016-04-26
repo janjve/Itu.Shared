@@ -1,5 +1,10 @@
 // Advanced Programming 2015
 // Andrzej Wasowski, IT University of Copenhagen
+
+// AUTHOR1: Jan Vium Enghoff (jaen@itu.dk)
+// AUTHOR2: Søren Harrison (soeh@itu.dk)
+// Group number: 23
+
 package fpinscala.monoids
 import scala.language.higherKinds
 

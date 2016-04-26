@@ -1,6 +1,10 @@
 package adpro
 import scala.language.higherKinds
 
+// AUTHOR1: Jan Vium Enghoff (jaen@itu.dk)
+// AUTHOR2: Søren Harrison (soeh@itu.dk)
+// Group number: 23
+
 // The implementation is based on Section 3 of the paper.
 //
 // This implementation is designed to be eager, following the regular strictness
@@ -211,7 +215,7 @@ object data {
     def addR[A] (t: FingerTree[A], a: A): FingerTree[A] = t match {
     	case Empty() => Single(a)
     	case Single(b) => Deep(Digit(b), Empty(), Digit(a)) 
-    	case Deep(pr,m,b::c::d::e::Nil) => Deep(pr, addR[Node[A]](m,Node3(c,d,e)), Digit(b,a))
+    	case Deep(pr,m,b::c::d::e::Nil) => Deep(pr, addR[Node[A]](m,Node3(b,c,d)), Digit(e,a))
     	case Deep(pr,m,sf) => Deep(pr, m, sf:+a)
     }
 
