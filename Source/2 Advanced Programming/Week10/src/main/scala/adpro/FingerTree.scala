@@ -35,7 +35,7 @@ object data {
 
     // page 6
     //
-    // def toTree[A] (fa :F[A]) :FingerTree[A] = ...
+    def toTree[A] (fa :F[A]) :FingerTree[A] = reduceR[A, FingerTree[A]]((a,b) => FingerTree.addL(a,b))(fa, Empty())
   }
 
   // Types for Finger trees after Hinze and Pattersoni (page 4)
@@ -46,7 +46,7 @@ object data {
 
     // uncomment the delagation once Node.toList is implemented
     //
-    // def toList :List[A] = Node.toList (this)
+    def toList :List[A] = Node.toList (this)
   }
 
   case class Node2[A] (l :A, r :A) extends Node[A]
@@ -58,29 +58,31 @@ object data {
     // the operations both as methods and functions.
     // Uncomment them once you have implemented the corresponding functions.
 
-    // def addL[B >:A] (b: B) :FingerTree[B] = FingerTree.addL (b,this)
-    // def addR[B >:A] (b: B) :FingerTree[B] = FingerTree.addR (this,b)
-    // def toList :List[A] = FingerTree.toList (this)
+    def addL[B >:A] (b: B) :FingerTree[B] = FingerTree.addL (b,this)
+    def addR[B >:A] (b: B) :FingerTree[B] = FingerTree.addR (this,b)
+    def toList :List[A] = FingerTree.toList (this)
 
-    // def headL :A = FingerTree.headL (this)
-    // def tailL :FingerTree[A] = FingerTree.tailL (this)
-    // def headR :A = FingerTree.headR (this)
-    // def tailR :FingerTree[A] = FingerTree.tailR (this)
+    def headL :A = FingerTree.headL (this)
+    def tailL :FingerTree[A] = FingerTree.tailL (this)
+    def headR :A = FingerTree.headR (this)
+    def tailR :FingerTree[A] = FingerTree.tailR (this)
 
     // page 7 (but this version uses polymorphis for efficiency, so we can
     // implement it differently; If you want to follow the paper closely move them to
     // FingerTree object and delegate the methods, so my tests still work.
     //
-    // def empty :Boolean = ...
-    // def nonEmpty :Boolean = ...
+    def empty :Boolean = false
+    def nonEmpty :Boolean = true
   }
+
   case class Empty () extends FingerTree[Nothing] {
 
     // page 7
     //
-    // override def empty =  ...
-    // override def nonEmpty = ...
+    override def empty = true
+    override def nonEmpty = false
   }
+
   case class Single[A] (data: A) extends FingerTree[A]
   // paramter names: pr - prefix, m - middle, sf - suffix
   case class Deep[A] (pr: Digit[A], m: FingerTree[Node[A]], sf: Digit[A]) extends FingerTree[A]
@@ -96,9 +98,9 @@ object data {
   // In the paper views are generic in the type of tree used. Here I make them
   // fixed for FingerTrees.
 
-  //  sealed trait ViewL[+A]
-  //  case class NilTree () extends ViewL[Nothing]
-  //  case class ConsL[A] (hd: A, tl: FingerTree[A]) extends ViewL[A]
+  sealed trait ViewL[+A]
+  case class NilTree () extends ViewL[Nothing]
+  case class ConsL[A] (hd: A, tl: FingerTree[A]) extends ViewL[A]
 
   // Left extractors for Finger Trees (we use the same algorithm as viewL in the
   // paper). You can do this, once you implemented the views the book way.
@@ -108,15 +110,26 @@ object data {
   // See an example extractor implemented for Digit below (Digit.unapply)
 
   object NilTree { // we use the same extractor for both left and right views
-    // def unapply[A] (t: FingerTree[A]) :Boolean = ...
+    def unapply[A] (t: FingerTree[A]) :Boolean = t match {
+    	case Empty() => true
+    	case _ => false
+    }
   }
 
   object ConsL {
-    // def unapply[A] (t: FingerTree[A]) :Option[(A,FingerTree[A])] = ...
+    def unapply[A] (t: FingerTree[A]) :Option[(A,FingerTree[A])] = t match {
+    	case Empty() => None
+    	case Single(x) => Some((x, Empty()))
+    	case Deep(pr, m, sf) => Some((pr.head, FingerTree.deepL(pr.tail, m, sf)))
+    }
   }
 
   object ConsR {
-    // def unapply[A] (t: FingerTree[A]) :Option[(FingerTree[A],A)] = ...
+    def unapply[A] (t: FingerTree[A]) :Option[(FingerTree[A],A)] = t match {
+    	case Empty() => None
+    	case Single(x) => Some((Empty(),x))
+    	case Deep(pr, m, sf) => Some((FingerTree.deepR(pr, m, Digit(sf.take(sf.length-1):_*)), sf.last ))
+    }
   }
 
   // several convenience operations for Digits.
@@ -147,9 +160,10 @@ object data {
 
     // page 5, top
     def reduceR[A,Z] (opr: (A,Z) => Z) (n :Node[A], z: Z) :Z = n match {
-    	case Node2(l, r) => opr(r,opr(l, z))
-    	case Node3(l, m, r) =>  opr(r, opr(m, opr(l, z)))
+    	case Node2(l, r) => opr(l,opr(r, z))
+    	case Node3(l, m, r) =>  opr(l, opr(m, opr(r, z)))
     }
+
     def reduceL[A,Z] (opl: (Z,A) => Z) (z: Z, n :Node[A]) :Z = n match {
     	case Node2(l,r) => opl(opl(z, r), l)
     	case Node3(l,m,r) => opl(opl(opl(z, r), m), l)
@@ -160,7 +174,7 @@ object data {
 
   // Most of the paper's key functions are in the module below.
 
-  object FingerTree { // extends Reduce[FingerTree] { // uncomment once the interface is implemented
+  object FingerTree extends Reduce[FingerTree] { // uncomment once the interface is implemented
 
     // page 5
     def reduceR[A,Z] (opr: (A,Z) => Z) (t: FingerTree[A], z: Z) :Z = t match {
@@ -172,6 +186,7 @@ object data {
     		Digit.reduceR(opr)(pr,m1)
     	}
     }
+
     def reduceL[A,Z] (opl: (Z,A) => Z) (z: Z, t: FingerTree[A]) :Z = t match {
     	case Empty() => z
     	case Single(a) => opl(z, a)
@@ -185,9 +200,20 @@ object data {
     // page 5 bottom (the left triangle); Actually we could use the left
     // triangle in Scala but I am somewhat old fashioned ...
 
-    // def addL[A] ... = ...
+    def addL[A] (a: A, t: FingerTree[A]): FingerTree[A] = t match {
+    	case Empty() => Single(a)
+    	case Single(b) => Deep(Digit(a), Empty(), Digit(b)) 
+    	case Deep(b::c::d::e::Nil, m, sf) => Deep(Digit(a,b),addL[Node[A]](Node3(c,d,e),m),sf)
+    	case Deep(pr,m,sf) => Deep(a::pr, m, sf)
+    }
+    
 
-    // def addR[A] ... = ...
+    def addR[A] (t: FingerTree[A], a: A): FingerTree[A] = t match {
+    	case Empty() => Single(a)
+    	case Single(b) => Deep(Digit(b), Empty(), Digit(a)) 
+    	case Deep(pr,m,b::c::d::e::Nil) => Deep(pr, addR[Node[A]](m,Node3(c,d,e)), Digit(b,a))
+    	case Deep(pr,m,sf) => Deep(pr, m, sf:+a)
+    }
 
     // page 6
     //
@@ -198,23 +224,56 @@ object data {
     // In Haskell we need to call viewL(t) to pattern match on views.  In Scala,
     // with extractors in place, we can directly pattern match on t.
     //
-    // def viewL[A] (t: FingerTree[A]) :ViewL[A] = ...
+    def viewL[A] (t: FingerTree[A]) :ViewL[A] = t match {
+    	case Empty() => NilTree()
+    	case Single(x) => ConsL(x, Empty())
+    	case Deep(pr, m, sf) => ConsL(pr.head, deepL(pr.tail, m, sf))
+    }
+    
 
     // page 6
     //
     // A smart constructor that allows pr to be empty
-    // def deepL[A] (pr: Digit[A], m: FingerTree[Node[A]], sf: Digit[A]) :FingerTree[A] =
+    def deepL[A] (pr: Digit[A], m: FingerTree[Node[A]], sf: Digit[A]) :FingerTree[A] = pr match {
+    	case Nil => m match {
+    		case NilTree() => Digit.toTree(sf)
+    		case ConsL(h,t) => Deep[A](Digit[A](Node.toList(h):_*), t, sf)
+    	}
+    	case _ => Deep(pr, m, sf)
+    }
 
-    // def deepR[A] ... = ...
-
+    def deepR[A] (pr: Digit[A], m: FingerTree[Node[A]], sf: Digit[A]) :FingerTree[A] = sf match {
+    	case Nil => m match {
+    		case NilTree() => Digit.toTree(pr)
+    		case ConsR(t, h) => Deep[A](pr, t, Digit[A](Node.toList(h):_*))
+    	}
+    	case _ => Deep(pr, m, sf)
+    }
     // page 7
 
-    // def headL[A] ... = ...
-    // def tailL[A] ... = ...
-    // def headR[A] ... = ...
-    // def tailR[A] ... = ...
-  }
+    def headL[A] (t: FingerTree[A]): A = t match {
+    	case Empty() => throw new NoSuchElementException("No head element in empty tree")
+    	case Single(a) => a
+    	case Deep(pr, m, sf) => pr.head
+    }
 
+    def tailL[A] (t: FingerTree[A]): FingerTree[A] = t match {
+    	case NilTree() => Empty()
+    	case ConsL(h,t) => t
+    }
+     
+
+    def headR[A] (t: FingerTree[A]): A = t match {
+    	case Empty() => throw new NoSuchElementException("No head element in empty tree")
+    	case Single(a) => a
+    	case Deep(pr, m, sf) => sf.last
+    } 
+
+    def tailR[A] (t: FingerTree[A]): FingerTree[A] = t match {
+    	case NilTree() => Empty()
+    	case ConsR(t,h) => t
+    }
+  }
 }
 
 
