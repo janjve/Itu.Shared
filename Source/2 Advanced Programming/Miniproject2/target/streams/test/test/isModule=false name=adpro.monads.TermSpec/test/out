@@ -29,3 +29,9 @@
 [0m[[0minfo[0m] [0m[32mException evalutors[0m[0m
 [0m[[0minfo[0m] [0m[32m- should behave identically (safe)[0m[0m
 [0m[[0minfo[0m] [0m[32m- should behave identically (unsafe)[0m[0m
+[0m[[0minfo[0m] [0m[32mMonadic state eval[0m[0m
+[0m[[0minfo[0m] [0m[32m- should should count two divisions[0m[0m
+[0m[[0minfo[0m] [0m[32m- should should count no divisions[0m[0m
+[0m[[0minfo[0m] [0m[32m- should throw a scala exception on division by 0[0m[0m
+[0m[[0minfo[0m] [0m[32mState evaluators[0m[0m
+[0m[[0minfo[0m] [0m[32m- should behave identically (safe)[0m[0m

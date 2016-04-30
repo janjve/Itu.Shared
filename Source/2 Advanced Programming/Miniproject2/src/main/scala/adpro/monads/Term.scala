@@ -212,18 +212,12 @@ object BasicEvaluatorWithMonads {
 
    // TODO: complete the implementation of the evalutor:
    def eval (term :Term) :M[State] = term match {
-     case Cons (a) => M.unit (a)
-     /*case Div (t,u) => M[State]((x: State) => for {
-     		m1 <- eval(t)
-     		m2 <- eval(m1())
-     		} yield (1,1)
-		)*/
+      case Cons (a) => M.unit (a)
+      case Div(t,u) => M[State](x => eval(t).flatMap(a => M[State](y => 
+        eval(u).flatMap(b => M[State](z => (a/b, z+1))).step(y))).step(x))
+
    }
-   /*
-   		val (a,y) = eval(t).step(x)
-		val (b,z) = eval(u).step(y)
-     	(a/b,z+1)
-*/
+
    // TODO: Discuss in the group how the monadic evaluator with counter differs
    // from the monadic basic one (or the one with exceptions)
 

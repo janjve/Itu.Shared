@@ -181,30 +181,30 @@ class  TermSpec extends FlatSpec with Checkers {
         ExceptionEvaluator.eval(t))
   }
 
-//  // Section 2.8 [Wadler] Variation two, revisited: State
-//
-//  behavior of "Monadic state eval"
-//  it should "should count two divisions" in check {
-//    forAll { (n: Int) =>
-//      StateEvaluatorWithMonads.eval (answer).step (n) == (42,n+2) } }
-//
-//  it should "should count no divisions" in check {
-//    forAll { (n: Int) =>
-//      StateEvaluatorWithMonads.eval (const).step (n) == (42,n) } }
-//
-//  it should "throw a scala exception on division by 0" in
-//  { intercept[java.lang.ArithmeticException] {
-//  StateEvaluatorWithMonads.eval (error).step (0) } }
-//
-//  behavior of "State evaluators"
-//
-//  it should "behave identically (safe)" in check {
-//    forAll (genSafeTerm) ( (t: Term) =>
-//        forAll { (n: Int) =>
-//      StateEvaluator.eval (t).step(n) ==
-//        StateEvaluatorWithMonads.eval(t).step (n)
-//     })
-//  }
+  // Section 2.8 [Wadler] Variation two, revisited: State
+
+  behavior of "Monadic state eval"
+  it should "should count two divisions" in check {
+    forAll { (n: Int) =>
+      StateEvaluatorWithMonads.eval (answer).step (n) == (42,n+2) } }
+
+  it should "should count no divisions" in check {
+    forAll { (n: Int) =>
+      StateEvaluatorWithMonads.eval (const).step (n) == (42,n) } }
+
+  it should "throw a scala exception on division by 0" in
+  { intercept[java.lang.ArithmeticException] {
+  StateEvaluatorWithMonads.eval (error).step (0) } }
+
+  behavior of "State evaluators"
+
+  it should "behave identically (safe)" in check {
+    forAll (genSafeTerm) ( (t: Term) =>
+        forAll { (n: Int) =>
+      StateEvaluator.eval (t).step(n) ==
+        StateEvaluatorWithMonads.eval(t).step (n)
+     })
+  }
 //
 //
 //  // Section 2.9 [Wadler] Output evaluator
