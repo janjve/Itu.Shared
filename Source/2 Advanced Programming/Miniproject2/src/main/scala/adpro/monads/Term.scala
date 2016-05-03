@@ -233,7 +233,8 @@ object BasicEvaluatorWithMonads {
 
      // flatMap is (*) in [Wadler]
      // TODO: implement flatMap
-     def flatMap[B] (k :A => M[B]) = k(this.a)
+     def flatMap[B] (k :A => M[B]) = { 
+     	val m1 = k(this.a); M[B](this.o+m1.o, m1.a) }
 
      def map[B] (k :A => B) :M[B] = M[B] (this.o, k(this.a))
 
@@ -247,13 +248,12 @@ object BasicEvaluatorWithMonads {
    // TODO: implement eval
    def eval (term :Term) :M[Int] = term match{
       case Cons(a) => M[Int](line(Cons(a))(a),a)
-      case Div(t,u) => eval(t).flatMap(x => eval(u).flatMap(y => {
-          val str = line(Div(t,u))(x/y)
-          println(str)
-          val m = M[Int](str, x/y)
-          m
-        }))
-   }
+      case Div(t,u) => for{
+      		a <- eval(t)
+      		b <- eval(u)
+      		r <- M[Int](line(Div(t,u))(a/b), a/b)
+      	} yield r
+	}
 
    // Discuss in the group how the monadic evaluator with output differs from
    // the monadic basic one (or the one with state/counter).
