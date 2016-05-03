@@ -223,32 +223,39 @@ object BasicEvaluatorWithMonads {
 
  }
 
-// // Section 2.9 [Wadler] Output evaluator
-//
-// object OutputEvaluatorWithMonads {
-//
-//   type Output = String
-//
-//   case class M[+A] (o: Output, a: A) {
-//
-//     // flatMap is (*) in [Wadler]
-//     // TODO: implement flatMap
-//     def flatMap[B] (k :A => M[B]) = ...
-//
-//     def map[B] (k :A => B) :M[B] = M[B] (this.o, k(this.a))
-//
-//   }
-//
-//   // TODO: implement unit
-//   object M { def unit[A] (a : A) :M[A] = ... }
-//
-//   def line (a :Term) (v :Int) :Output =
-//     "eval(" + a.toString + ") <= " + v.toString + "\n"
-//
-//   // TODO: implement eval
-//   def eval (term :Term) :M[Int] = ...
-//
-//   // Discuss in the group how the monadic evaluator with output differs from
-//   // the monadic basic one (or the one with state/counter).
-// }
+ // Section 2.9 [Wadler] Output evaluator
+
+ object OutputEvaluatorWithMonads {
+
+   type Output = String
+
+   case class M[+A] (o: Output, a: A) {
+
+     // flatMap is (*) in [Wadler]
+     // TODO: implement flatMap
+     def flatMap[B] (k :A => M[B]) = k(this.a)
+
+     def map[B] (k :A => B) :M[B] = M[B] (this.o, k(this.a))
+
+   }
+
+   // TODO: implement unit
+   object M { def unit[A] (a : A) :M[A] = M[A]("", a) }
+
+   def line (a :Term) (v :Int) :Output = "eval(" + a.toString + ") <= " + v.toString + "\n"
+
+   // TODO: implement eval
+   def eval (term :Term) :M[Int] = term match{
+      case Cons(a) => M[Int](line(Cons(a))(a),a)
+      case Div(t,u) => eval(t).flatMap(x => eval(u).flatMap(y => {
+          val str = line(Div(t,u))(x/y)
+          println(str)
+          val m = M[Int](str, x/y)
+          m
+        }))
+   }
+
+   // Discuss in the group how the monadic evaluator with output differs from
+   // the monadic basic one (or the one with state/counter).
+ }
 

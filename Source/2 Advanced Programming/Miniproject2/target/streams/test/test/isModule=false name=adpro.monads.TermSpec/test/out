@@ -35,3 +35,13 @@
 [0m[[0minfo[0m] [0m[32m- should throw a scala exception on division by 0[0m[0m
 [0m[[0minfo[0m] [0m[32mState evaluators[0m[0m
 [0m[[0minfo[0m] [0m[32m- should behave identically (safe)[0m[0m
+[0m[[0minfo[0m] [0m[32mMonadic output eval[0m[0m
+[0m[[0minfo[0m] [0m[31m- should give good result and string output *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  "eval([]Div(Div(Cons(1972),C..." was not equal to "eval([Cons(1972)) <= 1972[0m[0m
+[0m[[0minfo[0m] [0m[31m  eval(Cons(2)) <= 2[0m[0m
+[0m[[0minfo[0m] [0m[31m  eval(Div(Cons(1972),Cons(2))) <= 986[0m[0m
+[0m[[0minfo[0m] [0m[31m  eval(Cons(23)) <= 23[0m[0m
+[0m[[0minfo[0m] [0m[31m  eval(]Div(Div(Cons(1972),C..." (TermSpec.scala:218)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return simple result for a constant[0m[0m
+[0m[[0minfo[0m] [0m[32m- should throw a scala exception on division by 0[0m[0m
+[0m[[0minfo[0m] [0m[32mOutput evaluators[0m[0m

@@ -1,12 +1,13 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(adpro.monads.TermSpec, org.scalatest.tools.Framework$$anon$1@95c514a, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(adpro.monads.TermSpec, org.scalatest.tools.Framework$$anon$1@753a296b, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0mScalaCheck[0m
 [0m[[0minfo[0m] [0mPassed: Total 0, Failed 0, Errors 0, Passed 0[0m
 [0m[[0minfo[0m] [0mScalaTest[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 777 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 26[0m[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 856 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 29[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 26, failed 0, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
-[0m[[0minfo[0m] [0mPassed: Total 26, Failed 0, Errors 0, Passed 26[0m
-[0m[[0mdebug[0m] [0mPassed tests:[0m
-[0m[[0mdebug[0m] [0m	adpro.monads.TermSpec[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 28, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[31merror[0m] [0mFailed: Total 29, Failed 1, Errors 0, Passed 28[0m
+[0m[[31merror[0m] [0mFailed tests:[0m
+[0m[[31merror[0m] [0m	adpro.monads.TermSpec[0m
+[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

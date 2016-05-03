@@ -207,36 +207,38 @@ class  TermSpec extends FlatSpec with Checkers {
   }
 //
 //
-//  // Section 2.9 [Wadler] Output evaluator
-//
-//  behavior of "Monadic output eval"
-//  it should "give good result and string output" in {
-//    val r = OutputEvaluatorWithMonads.eval(answer)
-//    r.a shouldBe 42
-//    r.o shouldBe result
-//  }
-//
-//  it should "return simple result for a constant" in {
-//    val r = OutputEvaluatorWithMonads.eval(const)
-//    r.a shouldBe 42
-//    r.o shouldBe "eval(Cons(42)) <= 42\n"
-//  }
-//  it should "throw a scala exception on division by 0" in
-//  { intercept[java.lang.ArithmeticException] {
-//    OutputEvaluatorWithMonads.eval (error) } }
-//
-//
-//  behavior of "Output evaluators"
-//
-//  private def repackage (r :OutputEvaluatorWithMonads.M[Int])
-//      : OutputEvaluator.M[Int] =
-//    r match { case OutputEvaluatorWithMonads.M(o,a) => OutputEvaluator.M(o,a) }
-//
-//  it should "behave identically (safe)" in check {
-//    forAll (genSafeTerm) ( (t: Term) =>
-//      OutputEvaluator.eval (t) == repackage(OutputEvaluatorWithMonads.eval(t))
-//    )
-//  }
+  // Section 2.9 [Wadler] Output evaluator
+
+  behavior of "Monadic output eval"
+  it should "give good result and string output" in {
+    val r = OutputEvaluatorWithMonads.eval(answer)
+    println("EXPECT: " + result)
+    println("ACTUAL: " + r.o)
+    r.a shouldBe 42
+    r.o shouldBe result
+  }
+
+  it should "return simple result for a constant" in {
+    val r = OutputEvaluatorWithMonads.eval(const)
+    r.a shouldBe 42
+    r.o shouldBe "eval(Cons(42)) <= 42\n"
+  }
+  it should "throw a scala exception on division by 0" in
+  { intercept[java.lang.ArithmeticException] {
+    OutputEvaluatorWithMonads.eval (error) } }
+
+
+  behavior of "Output evaluators"
+
+  private def repackage (r :OutputEvaluatorWithMonads.M[Int])
+      : OutputEvaluator.M[Int] =
+    r match { case OutputEvaluatorWithMonads.M(o,a) => OutputEvaluator.M(o,a) }
+
+  //it should "behave identically (safe)" in check {
+  //  forAll (genSafeTerm) ( (t: Term) =>
+  //    OutputEvaluator.eval (t) == repackage(OutputEvaluatorWithMonads.eval(t))
+  //  )
+  //}
 
 
   // AW TODO: look into monadic tests in Wadler's paper (Section 3)
