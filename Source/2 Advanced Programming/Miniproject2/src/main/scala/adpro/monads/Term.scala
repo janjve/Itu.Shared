@@ -1,3 +1,8 @@
+// AUTHOR1: Jan Vium Enghoff (jaen@itu.dk)
+// AUTHOR2: Søren Harrison (soeh@itu.dk)
+// AUTHOR3: Diem Nguyen (hong@itu.dk)
+// Group number: 23
+
 /* ADVANCED PROGRAMMING. MINIPROJECT 2. Monads
    Andrzej Wąsowski */
 
