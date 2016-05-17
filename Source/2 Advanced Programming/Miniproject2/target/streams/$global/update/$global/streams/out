@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/C:/Code/itu-jve/Source/2%20Advanced%20Programming/Miniproject2/}miniproject2...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/C:/ITU%20programming/Shared/Source/2%20Advanced%20Programming/Miniproject2/}miniproject2...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: miniproject-on-monads#miniproject-on-monads_2.11;0.0[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for miniproject-on-monads#miniproject-on-monads_2.11;0.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-monads#miniproject-on-monads_2.11;0.0->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5a2fc83b[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@30bf4693[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -32,8 +32,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-monads#miniproject-on-monads_2.11;0.0->org.scalacheck#scalacheck_2.11;1.12.4 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalacheck#scalacheck_2.11;1.12.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalacheck#scalacheck_2.11;1.12.4 {test=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalacheck#scalacheck_2.11;1.12.4[0m
-[0m[[0mdebug[0m] [0m	found org.scalacheck#scalacheck_2.11;1.12.4 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving org.scalacheck#scalacheck_2.11;1.12.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalacheck#scalacheck_2.11;1.12.4 {test=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scalacheck\scalacheck_2.11\1.12.4\ivys\ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalacheck#scalacheck_2.11;1.12.4[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scalacheck#scalacheck_2.11;1.12.4[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.pom (1.12.4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalacheck#scalacheck_2.11;1.12.4!scalacheck_2.11.pom(pom.original) (160ms)[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scalacheck\scalacheck_2.11\1.12.4\jars\scalacheck_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scalacheck#scalacheck_2.11;1.12.4 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-monads#miniproject-on-monads_2.11;0.0->org.scalacheck#scalacheck_2.11;1.12.4 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-monads#miniproject-on-monads_2.11;0.0->org.scalacheck#scalacheck_2.11;1.12.4 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalacheck#scalacheck_2.11;1.12.4->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
@@ -57,8 +70,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-monads#miniproject-on-monads_2.11;0.0->org.scalatest#scalatest_2.11;2.2.4 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.11;2.2.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.11;2.2.4 {test=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalatest#scalatest_2.11;2.2.4[0m
-[0m[[0mdebug[0m] [0m	found org.scalatest#scalatest_2.11;2.2.4 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.11;2.2.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scalatest#scalatest_2.11;2.2.4 {test=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scalatest\scalatest_2.11\2.2.4\ivys\ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scalatest#scalatest_2.11;2.2.4[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scalatest#scalatest_2.11;2.2.4[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom (2.2.4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scalatest#scalatest_2.11;2.2.4!scalatest_2.11.pom(pom.original) (175ms)[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scalatest\scalatest_2.11\2.2.4\bundles\scalatest_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scalatest#scalatest_2.11;2.2.4 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-monads#miniproject-on-monads_2.11;0.0->org.scalatest#scalatest_2.11;2.2.4 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies miniproject-on-monads#miniproject-on-monads_2.11;0.0->org.scalatest#scalatest_2.11;2.2.4 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.4->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
@@ -68,8 +94,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.4->org.scala-lang#scala-reflect;2.11.2 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.2[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.2 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang\scala-reflect\2.11.2\ivys\ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-reflect;2.11.2[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-reflect;2.11.2[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom (2.11.2)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.2!scala-reflect.pom(pom.original) (140ms)[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang\scala-reflect\2.11.2\jars\scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.2 in public[0m
 [0m[[0mdebug[0m] [0m	[2.11.2] org.scala-lang#scala-reflect;2.11.2[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.4->org.scala-lang#scala-reflect;2.11.2 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
@@ -84,8 +123,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.4->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.2[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.2 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.2\ivys\ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang.modules#scala-xml_2.11;1.0.2[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang.modules#scala-xml_2.11;1.0.2[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom (1.0.2)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.pom(pom.original) (478ms)[0m
+[0m[[0mdebug[0m] [0m		tried C:\Users\jan\.ivy2\local\org.scala-lang.modules\scala-xml_2.11\1.0.2\bundles\scala-xml_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.2 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.4->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
@@ -274,29 +326,49 @@
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.7!scala-library.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalacheck#scalacheck_2.11;1.12.4!scalacheck_2.11.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.11;2.2.4!scalatest_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.11/1.12.4/scalacheck_2.11-1.12.4.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalacheck#scalacheck_2.11;1.12.4!scalacheck_2.11.jar (2635ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scalatest#scalatest_2.11;2.2.4!scalatest_2.11.jar(bundle) (3918ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.2!scala-reflect.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.2!scala-reflect.jar (1322ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle) (276ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 385ms :: artifacts dl 9ms[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 compile produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 runtime produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 test produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 provided produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 optional produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 compile-internal produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 runtime-internal produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 test-internal produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 plugin produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 sources produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 docs produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 pom produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 scala-tool produced in C:\Code\itu-jve\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (385ms resolve - 9ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5720ms :: artifacts dl 8187ms[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 compile produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 runtime produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 test produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 provided produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 optional produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 compile-internal produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 runtime-internal produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 test-internal produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 plugin produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 sources produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 docs produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 pom produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for miniproject-on-monads#miniproject-on-monads_2.11;0.0 scala-tool produced in C:\ITU programming\Shared\Source\2 Advanced Programming\Miniproject2\target\resolution-cache\reports\miniproject-on-monads-miniproject-on-monads_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (5720ms resolve - 8187ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
