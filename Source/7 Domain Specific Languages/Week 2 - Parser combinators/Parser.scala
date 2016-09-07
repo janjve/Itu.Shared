@@ -5,8 +5,11 @@ import scala.language.implicitConversions
 import scala.util.matching.Regex
 
 trait Parsers[Parser[+_]] { self => // so inner classes may call methods of trait
+
   	implicit def operators[A](p: Parser[A]) = ParserOps[A](p)
   	implicit def regex(r: Regex): Parser[String]
+	implicit def asStringParser[A](a: A)(implicit f: A => Parser[String]):
+		ParserOps[String] = ParserOps(f(a))
 
 	def char(c: Char): Parser[Char] =
 		string(c.toString) map (_.charAt(0))
@@ -22,6 +25,9 @@ trait Parsers[Parser[+_]] { self => // so inner classes may call methods of trai
 	
 	def map[A,B](a: Parser[A])(f: A => B): Parser[B] = 
 		flatMap(a)(x => succeed(f(x)))
+
+	def opt[A](a: Parser[A]): Parser[Option[A]] = 
+		or(a.map(Some(_)), succeed(None))
 
 	def listOfN[A](n: Int, p: Parser[A]): Parser[List[A]] = {
 		if(n == 0)  map2(p, succeed(List()))(_::_)
@@ -44,11 +50,16 @@ trait Parsers[Parser[+_]] { self => // so inner classes may call methods of trai
  	case class ParserOps[A](p: Parser[A]) {
 		def product[B](p2: => Parser[B]): Parser[(A,B)] = self.product(p, p2)
 		def **[B](p2: Parser[B]): Parser[(A,B)] = self.product(p, p2)
+		def *|[B](p2: Parser[B]): Parser[A] = (p ** p2).map(_._1) 
+		def |*[B](p2: Parser[B]): Parser[B] = (p ** p2).map(_._2)
 		def map[B](f: A => B): Parser[B] = self.map(p)(f)
 		def or(p2: Parser[A]): Parser[A] = self.or(p, p2)
+		def |(p2: Parser[A]): Parser[A] = self.or(p, p2)
 		def many: Parser[List[A]] = self.many(p)
+		def * : Parser[List[A]] = self.many(p)
 		def slice: Parser[String] = self.slice(p)
-		def many1: Parser[List[A]] = self.many1(p)	
+		def many1: Parser[List[A]] = self.many1(p)
+		def ? : Parser[Option[A]] = self.opt(p)
   		def map2[B,C](p2: => Parser[B])(f: (A,B) => C): Parser[C] = self.map2(p, p2)(f)
 		def listOfN(n: Int): Parser[List[A]] = self.listOfN(n, p)
 		def flatMap[B](f: A => Parser[B]): Parser[B] = self.flatMap(p)(f)
@@ -78,11 +89,6 @@ case class ParseError(stack: List[(Location,String)] = List(),
                       otherFailures: List[ParseError] = List()) {
 }
 
-object myJsonLibrary {
-	
-
-}
-
 trait JSON
 object JSON {
 	case object JNull extends JSON
@@ -94,14 +100,12 @@ object JSON {
 
 
   	def jsonParser[Parser[+_]](P: Parsers[Parser]): Parser[JSON] = {
-		/*val spaces = char(' ').many.slice
-		def string(s: String): Parser[String] 
-  		def product[A,B](p: Parser[A], p2: => Parser[B]): Parser[(A,B)]
-  		def or[A](p1: Parser[A], p2: Parser[A]): Parser[A]
-		def slice[A](p: Parser[A]): Parser[String]
-		def flatMap[A,B](p: Parser[A])(f: A => Parser[B]): Parser[B]*/
+  		import P._
 
+  		val QUOTED: Parser[String] = (""""[^"]*"""".r).map{_.dropRight(1).substring(1) }
+
+  		//val WS: Parser[Unit] = "[\t\n ]+".r.map{_ => ()}
+		//val a: Parser[String] = """"[^"]*"""".r map(x => x)	
+  		(P.succeed(JNumber(123)) ** succeed(JBool(true))) map(_._1)
 	}
-
-
 }
