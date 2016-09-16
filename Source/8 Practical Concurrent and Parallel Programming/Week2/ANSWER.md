@@ -89,6 +89,10 @@ runtime: 8765 ms.
 class Memoizer5
 calls: 115000
 runtime: 8829 ms.
+
+class Memoizer0
+calls: 115000
+runtime: 8518 ms.
 ```
 
 ##7
