@@ -15,7 +15,7 @@ trait Parsers[Parser[+_]] { self => // so inner classes may call methods of trai
 		string(c.toString) map (_.charAt(0))
 	def succeed[A](a: A): Parser[A] = string("") map (_ => a)
 
-	def string(s: String): Parser[String] 
+	implicit def string(s: String): Parser[String] 
   	def product[A,B](p: Parser[A], p2: => Parser[B]): Parser[(A,B)]
   	def or[A](p1: Parser[A], p2: Parser[A]): Parser[A]
 	def slice[A](p: Parser[A]): Parser[String]
@@ -53,8 +53,8 @@ trait Parsers[Parser[+_]] { self => // so inner classes may call methods of trai
 		def *|[B](p2: Parser[B]): Parser[A] = (p ** p2).map(_._1) 
 		def |*[B](p2: Parser[B]): Parser[B] = (p ** p2).map(_._2)
 		def map[B](f: A => B): Parser[B] = self.map(p)(f)
-		def or(p2: Parser[A]): Parser[A] = self.or(p, p2)
-		def |(p2: Parser[A]): Parser[A] = self.or(p, p2)
+		def or[B>:A](p2: Parser[B]): Parser[B] = self.or(p, p2)
+		def |[B>:A](p2: Parser[B]): Parser[B] = self.or(p, p2)
 		def many: Parser[List[A]] = self.many(p)
 		def * : Parser[List[A]] = self.many(p)
 		def slice: Parser[String] = self.slice(p)
@@ -103,9 +103,27 @@ object JSON {
   		import P._
 
   		val QUOTED: Parser[String] = (""""[^"]*"""".r).map{_.dropRight(1).substring(1) }
+  		val DOUBLE: Parser[Double] = 
+  		"""(\+|-)?[0-9]+(\.[0-9]+(e[0-9]+)?)?""".r.map{ _.toDouble }
+  		val ws: Parser[Unit] = "[\t\n ]+".r.map{_ => ()}
+		
+		val jnull: Parser[JSON] = "null" |* succeed(JNull)
+		val jbool: Parser[JBool] = (ws.? |* "true" |* succeed(JBool(true))) |
+			(ws.? |* "false" |* succeed(JBool(false)))
+		val jstring: Parser[JString] = QUOTED.map{JString(_)}
+		val jnumber: Parser[JNumber] = DOUBLE.map{JNumber(_)}
+		
+		lazy val jarray: Parser[JArray] = (ws.? |* "[" |* (ws.? |* json *| ",").*
+			*| ws.? *| "]" *| ws.?).map{l => JArray(l.toVector)}
+		
+		lazy val field: Parser[(String, JSON)] = 
+			ws.? |* QUOTED *| ws.? *| ":" *| ws.? ** json *| ","
+		
+		lazy val jobject: Parser[JObject] = (ws.? |* "{" |* field.* *| ws.? *| "}" *| ws.?)
+			.map {l => JObject(l.toMap)}
 
-  		//val WS: Parser[Unit] = "[\t\n ]+".r.map{_ => ()}
-		//val a: Parser[String] = """"[^"]*"""".r map(x => x)	
-  		(P.succeed(JNumber(123)) ** succeed(JBool(true))) map(_._1)
+  		lazy val json : Parser[JSON] = (jstring | jobject | jarray |
+  		 jnull | jnumber | jbool) *| ws.?
+  		json
 	}
 }
