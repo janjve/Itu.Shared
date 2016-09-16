@@ -3,7 +3,8 @@
 
 import java.util.function.BiFunction;
 import java.util.function.Consumer;  
-import java.util.function.Function;  
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 class Example154 {
   public static void main(String[] args) {
@@ -15,14 +16,14 @@ class Example154 {
       list5 = list2.removeAt(3),                                  // 7 9 13       
       list6 = list5.reverse(),                                    // 13 9 7       
       list7 = list5.append(list5);                                // 7 9 13 7 9 13
-    System.out.println(list1);
+    /*System.out.println(list1);
     System.out.println(list2);
     System.out.println(list3);
     System.out.println(list4);
     System.out.println(list5);
     System.out.println(list6);
-    System.out.println(list7);
-    FunList<Double> list8 = list5.map(i -> 2.5 * i);              // 17.5 22.5 32.5
+    System.out.println(list7);*/
+    /*FunList<Double> list8 = list5.map(i -> 2.5 * i);              // 17.5 22.5 32.5
     System.out.println(list8); 
     double sum = list8.reduce(0.0, (res, item) -> res + item),    // 72.5
        product = list8.reduce(1.0, (res, item) -> res * item);    // 12796.875
@@ -31,7 +32,18 @@ class Example154 {
     FunList<Boolean> list9 = list5.map(i -> i < 10);              // true true false 
     System.out.println(list9);
     boolean allBig = list8.reduce(true, (res, item) -> res && item > 10);
-    System.out.println(allBig);
+    System.out.println(allBig);*/
+    FunList<FunList<Integer>> list = new FunList<>(null),
+            a2 = cons(list1,cons(list2, list));
+
+
+    //System.out.println(list1.remove(9));
+    //System.out.println(list7.count(x -> x == 7));
+    System.out.println(list7.filter(x -> x == 7));
+    System.out.println(list7.removeFun(7));
+    System.out.println(a2.flattenFun());
+
+
   }
 
   public static <T> FunList<T> cons(T item, FunList<T> list) { 
@@ -58,6 +70,45 @@ class FunList<T> {
 
   public FunList() { 
     this(null);
+  }
+
+ /*public <U> FunList<U> flatMap(Function<T,FunList<U>> f) {
+    return new FunList<U>(flatMap(f, this.first));
+  }
+  protected static <T,U> Node<U> flatMap(Function<T, FunList<U>> f, Node<T> xs) {
+    return Node<U>(f.apply(xs.item).)
+  }*/
+
+  public FunList<T> flattenFun() {
+    return this.reduce(new FunList<T>(), (z,a) -> z.append(cons(a, new FunList<T>())));
+  }
+
+  public FunList<T> removeFun(T x){
+    return new FunList<T>(filter(y -> !y.equals(x), this.first));
+  }
+
+  public FunList<T> filter(Predicate<T> p){
+    return new FunList<T>(filter(p, this.first));
+  }
+  protected static <T> Node<T> filter(Predicate<T> p, Node<T> xs){
+    if (xs == null) return xs;
+    return p.test(xs.item) ? new Node<T>(xs.item, filter(p, xs.next)) : filter(p, xs.next);
+  }
+
+  public int count(Predicate<T> p){
+    return count(p, this.first);
+  }
+  protected static <T> int count(Predicate<T> p, Node<T> xs) {
+    if(xs == null) return 0;
+    return p.test(xs.item) ? count(p, xs.next) + 1 : count(p, xs.next);
+  }
+
+  public FunList<T> remove(T x){
+    return new FunList<T>(remove(x, this.first));
+  }
+  protected static <T> Node<T> remove(T item, Node<T> xs){
+    if (xs == null) return xs;
+    return item.equals(xs.item) ? remove(item, xs.next) : new Node<T>(xs.item, remove(item, xs.next));
   }
 
   public int getCount() {
