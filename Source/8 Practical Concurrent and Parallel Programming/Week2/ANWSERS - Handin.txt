@@ -1,0 +1,129 @@
+#Exercise 2.1
+## 1.
+Approximately 7 seconds
+
+##2. 
+public class MyAtomicInteger {
+    private volatile int value;
+
+    public synchronized int addAndGet(int amount) {
+        value += amount;
+        return value;
+    }
+
+    public synchronized int get() {
+        return value;
+    }
+}
+
+##3. 
+Yes, the anwser is correct. It took roughly 3 seconds. 
+
+##4. 
+No, while that would sove the visibility issue, there would still be issues with concurrency. 
+
+##5. 
+There is no difference in speed. That field was final all along in my implementation. 
+
+#Exercise 2.2
+##1. 
+Otherwise the cache wouldn't be visible. 
+
+##2. 
+The final keyword also makes the values visible. In the case of primitive types, it also makes the value immutable, and for objects,
+it can never be set to another instance. 
+
+#Exercise 2.3
+##1.
+With this set of operations, getSpan would not need to be synchronized, since it never changes. In fact, in the way that it is used, neither would getCount, since it's never being called from another thread, although it'd make little difference to this example. 
+
+##2. 
+See code.
+
+##3. 
+Although the performance gain I observed was relatively small, it might be slightly faster. And it also remove the need for synchronization of methods.
+
+##4. 
+See code.
+
+##5.
+Unfortunately, it's impossible under these constraints to get a live view of the underlying data in a safe way.
+In histogram2, we have to clone it in order to prevent the object from escaping. 
+In histogram3 and histogram 4, we need to convert the arrays to int arrays first, which means that we won't have any references to the original datastructures. 
+Thus, all of the histograms gives snapshots of the data. 
+
+##6. 
+See code. 
+
+#Exercise 2.4
+##1.
+See code.
+
+##2.  
+class Memoizer1
+115000
+milliseconds: 24843
+Yes, which is expected, as this code is completely thread safe. It does not, however, scale properly, since the compute methods can only be used from one thread at a time, result in sequential computation.
+
+##3. 
+class Memoizer2
+226309
+milliseconds: 16221
+Here we see concurrency issues, since the amount of calls have risen significantly, meaning that we don't manage to get all the cache hits that we'd like. We have achieved full parallization, however, which has resulted in a performance increase.
+
+##4. 
+class Memoizer3
+119020
+milliseconds: 12750
+The usage of FutureTask, where instead of simply caching the result of the computation, the computation itself is cached, which means that the computations that overlap can more reliably use the cache, since it is much faster to store a computation that has to be completed later, than the result of that computation. 
+We don't achieve a 100% cache hit ratio with this setup, however. If we have a pair of threads, A and B, it is still possible for A to ask if the computation is present, get a null result, start creating the computation, and then have thread B ask for the element, which still isn't present. In this event, both computations will be added to the cache.
+
+##5. 
+class Memoizer4
+115000
+milliseconds: 12478
+We're now using putIfAbsent instead, which is an atomic operation. We might still create the same computation multiple times, but we will only put one instance into the ConcurrentHashMap, and we will only execute this one computation. Inspite of this, the time that it takes for the computations to finish has barely moved from the last Memoizer, which is problably partially because of the very low difference in cache hits, compared to going from Memoizer2 to 3, along with the fact that putting variables into the ConcurrentHashMap is now an atomic operation, which prevents a very small degree of parallization. 
+
+##6.
+class Memoizer5
+115000
+milliseconds: 12350
+We're now using ComputeIfAbsent instead, which directly creates the computation if it isn't already in the ConcurrentHashMap. This time we see a fairly small gian over the last iteration. The performance gain going from putIfAbsent to ComputeIfAbsent is very small, and does lead to some additional complexity.
+
+##7. 
+
+class Memoizer0<A, V> implements Computable<A, V>
+{
+  private final Map<A, V> cache = new ConcurrentHashMap<A, V>();
+  private final Computable<A, V> c;
+
+  public Memoizer0(Computable<A, V> c)
+  {
+    this.c = c;
+  }
+
+  public V compute(final A arg) throws InterruptedException
+  {
+      return cache.computeIfAbsent(arg, (A argv) -> {
+        V v = null;
+        try{
+          v = c.compute(argv);
+        } catch(Exception e){
+          launderThrowable(e.getCause());
+        }
+        return v;
+      });
+  }
+
+  // Cast to unchecked exception to allow exceptions in lambda. 
+  public static RuntimeException launderThrowable(Throwable t) {
+    if (t instanceof RuntimeException)
+      return (RuntimeException) t;
+    else if (t instanceof Error)
+      throw (Error) t;
+    else
+      throw new IllegalStateException("Not unchecked", t);
+  }
+}
+
+Memoizer0 calls the factoizer only 115000 times, which is as many as expected, since calculations are only added to the ConcurrentHashMap if they're absent. While it is slower than Memoizer5, it is still reasonably fast. 
