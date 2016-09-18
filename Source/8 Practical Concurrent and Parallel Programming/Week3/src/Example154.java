@@ -5,6 +5,7 @@ import java.util.function.BiFunction;
 import java.util.function.Consumer;  
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.BinaryOperator;
 
 class Example154 {
   public static void main(String[] args) {
@@ -39,11 +40,15 @@ class Example154 {
 
     //System.out.println(list1.remove(9));
     //System.out.println(list7.count(x -> x == 7));
-    System.out.println(list7.filter(x -> x == 7));
-    System.out.println(list7.removeFun(7));
-    System.out.println(a2.flattenFun());
+    //System.out.println(list7.filter(x -> x == 7));
+    //System.out.println(list7.removeFun(7));
 
-
+    //System.out.println(a2.flattenFun());
+    //System.out.println(FunList.flatten(a2));
+    //System.out.println(list1.flatMap(x -> cons(x+1, cons(x+2, empty))));
+    //System.out.println(list1.flatMapFun(x -> cons(x+1, cons(x+2, empty))));
+    System.out.println(list7);
+    System.out.println(list7.scan((a,b) -> a+b));
   }
 
   public static <T> FunList<T> cons(T item, FunList<T> list) { 
@@ -72,15 +77,36 @@ class FunList<T> {
     this(null);
   }
 
- /*public <U> FunList<U> flatMap(Function<T,FunList<U>> f) {
-    return new FunList<U>(flatMap(f, this.first));
+  public static <T> FunList<T> flatten(FunList<FunList<T>> xss){
+  	if(xss == null || xss.first == null){
+  		return new FunList<T>();
+    } if(xss.first.item == null || xss.first.item.first == null) {
+    	return flatten(new FunList<FunList<T>>(xss.first.next));
+    } else {
+    	return cons(xss.first.item.first.item, 
+    		flatten(cons(new FunList<T>(xss.first.item.first.next), 
+    			new FunList<FunList<T>>(xss.first.next))));
+    }
   }
-  protected static <T,U> Node<U> flatMap(Function<T, FunList<U>> f, Node<T> xs) {
-    return Node<U>(f.apply(xs.item).)
-  }*/
 
   public FunList<T> flattenFun() {
     return this.reduce(new FunList<T>(), (z,a) -> z.append(cons(a, new FunList<T>())));
+  }
+
+  public <U> FunList<U> flatMap(Function<T, FunList<U>> f) {
+  	if(this == null || this.first == null) return new FunList<U>();
+  	FunList<T> t = new FunList<T>(this.first.next);
+  	return f.apply(this.first.item).append(t.flatMap(f));
+  }
+
+  public <U> FunList<U> flatMapFun(Function<T, FunList<U>> f){
+  	return this.reduce(new FunList<U>(), (z,a) -> z.append(f.apply(a)));
+  }
+
+  public FunList<T> scan(BinaryOperator<T> f){
+  	return new FunList<T>(this.first.next)
+  		.reduce(cons(this.first.item, new FunList<T>()), (z,a) -> cons(f.apply(z.first.item, a), z))
+  		.reverse();
   }
 
   public FunList<T> removeFun(T x){
