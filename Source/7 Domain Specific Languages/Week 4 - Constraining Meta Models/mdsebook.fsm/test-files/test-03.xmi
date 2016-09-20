@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mdsebook.fsm:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mdsebook.fsm="http://www.itu.dk/people/wasowski/mdsebook.fsm"
+    xsi:schemaLocation="http://www.itu.dk/people/wasowski/mdsebook.fsm ../model/fsm.ecore#//fsm"
+    name="test-03">
+  <machines
+      name="machine-1"
+      initial="a">
+    <states
+        name="a"/>
+  </machines>
+  <machines
+      name="machine-2"
+      initial="c">
+    <states
+        name="b"/>
+    <states
+        name="c"/>
+  </machines>
+</mdsebook.fsm:Model>

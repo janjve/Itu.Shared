@@ -1,0 +1,29 @@
+
+machine CoffeeMachine [
+
+	initial ^initial 
+	
+	state ^initial [
+		on input "coin" 	output  "what drink do you want?"	and go to selection
+		on input "break" 	output  "machine is broken"	 		and go to broken
+	]
+	
+	state selection [ 
+		on input "tea" 		output "serving tea" 				and go to makingTea
+		on input "coffee"	output "serving coffee"				and go to makingCoffee
+		on input "timeout"	output "coin returned; insert coin"	and go to ^initial
+		on input "break"	output "machine is broken!"			and go to broken
+	]
+	
+	state brewingCoffee [
+		on input "done"		output "coffee served. Enjoy!" 		and go to ^initial
+		on input "break"	output "machine is broken!"			and go to broken
+	]
+	
+	state brewingTea [
+		on input "done" 	output "tea served. Enjoy!"			and go to ^initial
+		on input "break"	output "machine is broken!"			and go to broken
+	]
+	
+	state broken 
+]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdsebook.printers.T3:PrinterPool
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mdsebook.printers.T3="http://www.itu.dk/people/wasowski/mdsebook.printers.T3"
+    xsi:schemaLocation="http://www.itu.dk/people/wasowski/mdsebook.printers.T3 ../model/T3.ecore#//printers/T3"
+    minSpeed="600"
+    speed="1200"/>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: org.bitbucket.inkytonik.dsprofile:dsprofile_2.10:0.3.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.bitbucket.inkytonik.dsprofile/dsprofile_2.10/jars/dsprofile_2.10-0.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.bitbucket.inkytonik.dsprofile/dsprofile_2.10/srcs/dsprofile_2.10-0.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

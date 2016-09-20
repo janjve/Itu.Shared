@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdsebook.printers.T4:PrinterPool
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mdsebook.printers.T4="http://www.itu.dk/people/wasowski/mdsebook.printers.T4"
+    xsi:schemaLocation="http://www.itu.dk/people/wasowski/mdsebook.printers.T4 ../model/T4.ecore#//printers/T4">
+  <printer color="true"/>
+</mdsebook.printers.T4:PrinterPool>

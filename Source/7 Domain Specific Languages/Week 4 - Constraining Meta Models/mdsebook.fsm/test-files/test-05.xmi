@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdsebook.fsm:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mdsebook.fsm="http://www.itu.dk/people/wasowski/mdsebook.fsm"
+    xsi:schemaLocation="http://www.itu.dk/people/wasowski/mdsebook.fsm ../model/fsm.ecore#//fsm"
+    name="LargeInstance">
+  <machines
+      name="M1"
+      initial="S2">
+    <states
+        name="S1">
+      <leavingTransitions
+          target="S2"
+          input="toS2"
+          output="going to S2"/>
+      <leavingTransitions
+          target="S1"
+          input="activeLoop"
+          output="spinning"/>
+    </states>
+    <states
+        name="S2">
+      <leavingTransitions
+          target="S1"
+          input="toS1"
+          output="going to S1"/>
+      <leavingTransitions
+          target="S3"
+          input="toS3"/>
+    </states>
+    <states
+        name="S3"/>
+  </machines>
+  <machines
+      name="M2"
+      initial="T1">
+    <states
+        name="T1"/>
+  </machines>
+</mdsebook.fsm:Model>

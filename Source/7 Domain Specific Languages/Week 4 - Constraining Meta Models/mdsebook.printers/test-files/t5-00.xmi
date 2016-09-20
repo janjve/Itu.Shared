@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdsebook.printers.T5:PrinterPool
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mdsebook.printers.T5="http://www.itu.dk/people/wasowski/mdsebook.printers.T5"
+    xsi:schemaLocation="http://www.itu.dk/people/wasowski/mdsebook.printers.T5 ../model/T5.ecore#//printers/T5"
+    color="true">
+  <printer/>
+</mdsebook.printers.T5:PrinterPool>

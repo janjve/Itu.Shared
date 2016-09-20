@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mdsebook" nsURI="http://www.itu.dk/people/wasowski/mdsebook"
+    nsPrefix="mdsebook">
+  <eSubpackages name="fsm" nsURI="http://www.itu.dk/people/wasowski/mdsebook.fsm"
+      nsPrefix="mdsebook.fsm">
+    <eClassifiers xsi:type="ecore:EClass" name="Transition">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+          eType="#//fsm/State"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+          eType="#//fsm/State" eOpposite="#//fsm/State/leavingTransitions"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="input" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="output" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          iD="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//fsm/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="machines" upperBound="-1"
+          eType="#//fsm/FiniteStateMachine" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FiniteStateMachine" eSuperTypes="#//fsm/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+          upperBound="-1" eType="#//fsm/State" containment="true" eOpposite="#//fsm/State/machine"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="initial" lowerBound="1"
+          eType="#//fsm/State"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="State" eSuperTypes="#//fsm/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="leavingTransitions" upperBound="-1"
+          eType="#//fsm/Transition" containment="true" eOpposite="#//fsm/Transition/source"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="machine" lowerBound="1"
+          eType="#//fsm/FiniteStateMachine" eOpposite="#//fsm/FiniteStateMachine/states"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

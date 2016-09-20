@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mdsebook.printers/src" modelPluginID="mdsebook.printers"
+    modelName="T1" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>T1.ecore</foreignModel>
+  <genPackages prefix="T1" disposableProviderFactory="true" ecorePackage="T1.ecore#/">
+    <nestedGenPackages prefix="Printers" basePackage="mdsebook" disposableProviderFactory="true"
+        ecorePackage="T1.ecore#//printers">
+      <nestedGenPackages prefix="T1" basePackage="mdsebook.printers" disposableProviderFactory="true"
+          ecorePackage="T1.ecore#//printers/T1">
+        <genClasses ecoreClass="T1.ecore#//printers/T1/PrinterPool">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference T1.ecore#//printers/T1/PrinterPool/printer"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference T1.ecore#//printers/T1/PrinterPool/fax"/>
+        </genClasses>
+        <genClasses ecoreClass="T1.ecore#//printers/T1/Fax">
+          <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference T1.ecore#//printers/T1/Fax/pool"/>
+        </genClasses>
+        <genClasses ecoreClass="T1.ecore#//printers/T1/Printer">
+          <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference T1.ecore#//printers/T1/Printer/pool"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

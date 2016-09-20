@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mdsebook" nsURI="http://www.itu.dk/people/wasowski/mdsebook"
+    nsPrefix="mdsebook">
+  <eSubpackages name="printers" nsURI="http://www.itu.dk/people/wasowski/mdsebook.printers"
+      nsPrefix="mdsebook.printers">
+    <eSubpackages name="T2" nsURI="http://www.itu.dk/people/wasowski/mdsebook.printers.T2"
+        nsPrefix="mdsebook.printers.T2">
+      <eClassifiers xsi:type="ecore:EClass" name="PrinterPool">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="printer" eType="#//printers/T2/Printer"
+            containment="true" eOpposite="#//printers/T2/Printer/pool"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="fax" eType="#//printers/T2/Fax"
+            containment="true" eOpposite="#//printers/T2/Fax/pool"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="copier" eType="#//printers/T2/Copier"
+            containment="true" eOpposite="#//printers/T2/Copier/pool"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="scanner" eType="#//printers/T2/Scanner"
+            containment="true" eOpposite="#//printers/T2/Scanner/pool"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Copier">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="pool" lowerBound="1"
+            eType="#//printers/T2/PrinterPool" eOpposite="#//printers/T2/PrinterPool/copier"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Scanner">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="pool" eType="#//printers/T2/PrinterPool"
+            eOpposite="#//printers/T2/PrinterPool/scanner"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Fax">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="pool" lowerBound="1"
+            eType="#//printers/T2/PrinterPool" derived="true" eOpposite="#//printers/T2/PrinterPool/fax"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Printer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="pool" lowerBound="1"
+            eType="#//printers/T2/PrinterPool" eOpposite="#//printers/T2/PrinterPool/printer"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

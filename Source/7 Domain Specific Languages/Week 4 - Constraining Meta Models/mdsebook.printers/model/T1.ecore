@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mdsebook" nsURI="http://www.itu.dk/people/wasowski/mdsebook"
+    nsPrefix="mdsebook">
+  <eSubpackages name="printers" nsURI="http://www.itu.dk/people/wasowski/mdsebook.printers"
+      nsPrefix="mdsebook.printers">
+    <eSubpackages name="T1" nsURI="http://www.itu.dk/people/wasowski/mdsebook.printers.T1"
+        nsPrefix="mdsebook.printers.T1">
+      <eClassifiers xsi:type="ecore:EClass" name="PrinterPool">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="printer" eType="#//printers/T1/Printer"
+            containment="true" eOpposite="#//printers/T1/Printer/pool"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="fax" eType="#//printers/T1/Fax"
+            containment="true" eOpposite="#//printers/T1/Fax/pool"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Fax">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="pool" lowerBound="1"
+            eType="#//printers/T1/PrinterPool" derived="true" eOpposite="#//printers/T1/PrinterPool/fax"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Printer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="pool" lowerBound="1"
+            eType="#//printers/T1/PrinterPool" eOpposite="#//printers/T1/PrinterPool/printer"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

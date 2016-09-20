@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mdsebook.printers/src" editDirectory="/mdsebook.printers.edit/src"
+    editorDirectory="/mdsebook.printers.editor/src" modelPluginID="mdsebook.printers"
+    modelName="T3" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    editorPluginID="mdsebook.printers.editor" operationReflection="true" importOrganizing="true">
+  <foreignModel>T3.ecore</foreignModel>
+  <genPackages prefix="T3" disposableProviderFactory="true" ecorePackage="T3.ecore#/">
+    <nestedGenPackages prefix="Printers" basePackage="mdsebook" disposableProviderFactory="true"
+        ecorePackage="T3.ecore#//printers">
+      <nestedGenPackages prefix="T3" basePackage="mdsebook.printers" disposableProviderFactory="true"
+          ecorePackage="T3.ecore#//printers/T3">
+        <genClasses ecoreClass="T3.ecore#//printers/T3/PrinterPool">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute T3.ecore#//printers/T3/PrinterPool/minSpeed"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute T3.ecore#//printers/T3/PrinterPool/speed"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

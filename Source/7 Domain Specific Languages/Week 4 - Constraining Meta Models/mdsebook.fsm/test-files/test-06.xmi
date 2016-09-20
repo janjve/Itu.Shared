@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" 
+ xmlns:xmi="http://www.omg.org/XMI" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:smdpfsm="http://www.itu.dk/people/wasowski/dk.itu.smdp.fsm" 
+ xsi:schemaLocation="http://www.itu.dk/people/wasowski/dk.itu.smdp.fsm fsm.ecore">
+  <smdpfsm:Model name="coffeeMachineModel">
+    <machines name="coffeeMachine" initial="initial">
+      <states name="initial">
+        <leavingTransitions target="selection" input="coin" output="what drink do you want?"/>
+        <leavingTransitions target="broken" input="break" output="machine is broken"/>
+        <leavingTransitions target="initial" input="idle" output=""/>
+      </states>
+      <states name="selection">
+        <leavingTransitions target="makingTea" input="tea" output="serving tea"/>
+        <leavingTransitions target="makingCoffee" input="coffee" output="serving coffee"/>
+        <leavingTransitions target="initial" input="timeout" output="coin returned; insert coin"/>
+        <leavingTransitions target="broken" input="break" output="machine is broken!"/>
+      </states>
+      <states name="makingCoffee">
+        <leavingTransitions target="initial" input="done" output="coffee served. Enjoy!"/>
+        <leavingTransitions target="broken" input="break" output="machine is broken!"/>
+      </states>
+      <states name="makingTea">
+        <leavingTransitions target="initial" input="done" output="tea served. Enjoy!"/>
+        <leavingTransitions target="broken" input="break" output="machine is broken!"/>
+      </states>
+      <states name="broken"/>
+      <states name="loneState"/>
+    </machines>
+  </smdpfsm:Model>
+</xmi:XMI>

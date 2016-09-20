@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ASCII"?>
+<smdpfsm:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:smdpfsm="http://www.itu.dk/people/wasowski/mdsebook.fsm"
+    xsi:schemaLocation="http://www.itu.dk/people/wasowski/mdsebook.fsm ../model/fsm.ecore#//fsm"
+    name="test-02">
+  <machines
+      name="machine-1"
+      initial="a">
+    <states
+        name="a">
+      <leavingTransitions
+          target="a"
+          input="1"
+          output="o!"/>
+      <leavingTransitions
+          target="c"
+          input="2"
+          output="q!"/>
+      <leavingTransitions
+          target="a"
+          input="3"
+          output="r!"/>
+      <leavingTransitions
+          target="a"
+          input="idle"/>
+    </states>
+    <states
+        name="c">
+      <leavingTransitions
+          target="c"
+          input="idle"/>
+    </states>
+  </machines>
+  <machines
+      name="machine-2"
+      initial="b">
+    <states
+        name="b">
+      <leavingTransitions
+          target="b"
+          input="idle"/>
+    </states>
+  </machines>
+</smdpfsm:Model>

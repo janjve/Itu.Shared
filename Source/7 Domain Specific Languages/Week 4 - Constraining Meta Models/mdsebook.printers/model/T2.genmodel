@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mdsebook.printers/src" editDirectory="/mdsebook.printers.edit/src"
+    editorDirectory="/mdsebook.printers.editor/src" modelPluginID="mdsebook.printers"
+    modelName="T2" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    editPluginID="mdsebook.printers.edit" editorPluginID="mdsebook.printers.editor"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>T2.ecore</foreignModel>
+  <genPackages prefix="T2" disposableProviderFactory="true" ecorePackage="T2.ecore#/">
+    <nestedGenPackages prefix="Printers" basePackage="mdsebook" disposableProviderFactory="true"
+        ecorePackage="T2.ecore#//printers">
+      <nestedGenPackages prefix="T2" basePackage="mdsebook.printers" disposableProviderFactory="true"
+          ecorePackage="T2.ecore#//printers/T2">
+        <genClasses ecoreClass="T2.ecore#//printers/T2/PrinterPool">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference T2.ecore#//printers/T2/PrinterPool/printer"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference T2.ecore#//printers/T2/PrinterPool/fax"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference T2.ecore#//printers/T2/PrinterPool/copier"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference T2.ecore#//printers/T2/PrinterPool/scanner"/>
+        </genClasses>
+        <genClasses ecoreClass="T2.ecore#//printers/T2/Copier">
+          <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference T2.ecore#//printers/T2/Copier/pool"/>
+        </genClasses>
+        <genClasses ecoreClass="T2.ecore#//printers/T2/Scanner">
+          <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference T2.ecore#//printers/T2/Scanner/pool"/>
+        </genClasses>
+        <genClasses ecoreClass="T2.ecore#//printers/T2/Fax">
+          <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference T2.ecore#//printers/T2/Fax/pool"/>
+        </genClasses>
+        <genClasses ecoreClass="T2.ecore#//printers/T2/Printer">
+          <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference T2.ecore#//printers/T2/Printer/pool"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdsebook.fsm:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mdsebook.fsm="http://www.itu.dk/people/wasowski/mdsebook.fsm"
+    xsi:schemaLocation="http://www.itu.dk/people/wasowski/mdsebook.fsm ../model/fsm.ecore#//fsm"
+    name="HelloModel">
+  <machines
+      name="MyStateMaschine"
+      initial="MyState">
+    <states
+        name="MyState">
+      <leavingTransitions
+          target="MyState"
+          input="idle"
+          output="idle"/>
+    </states>
+  </machines>
+</mdsebook.fsm:Model>

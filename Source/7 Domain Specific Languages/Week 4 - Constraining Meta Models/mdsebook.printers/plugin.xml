@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated T1 -->
+      <package
+            uri="http://www.itu.dk/people/wasowski/mdsebook.printers.T1"
+            class="mdsebook.printers.T1.T1Package"
+            genModel="model/T1.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated T2 -->
+      <package
+            uri="http://www.itu.dk/people/wasowski/mdsebook.printers.T2"
+            class="mdsebook.printers.T2.T2Package"
+            genModel="model/T2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated T3 -->
+      <package
+            uri="http://www.itu.dk/people/wasowski/mdsebook.printers.T3"
+            class="mdsebook.printers.T3.T3Package"
+            genModel="model/T3.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated T4 -->
+      <package
+            uri="http://www.itu.dk/people/wasowski/mdsebook.printers.T4"
+            class="mdsebook.printers.T4.T4Package"
+            genModel="model/T4.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated T5 -->
+      <package
+            uri="http://www.itu.dk/people/wasowski/mdsebook.printers.T5"
+            class="mdsebook.printers.T5.T5Package"
+            genModel="model/T5.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated T6 -->
+      <package
+            uri="http://www.itu.dk/people/wasowski/mdsebook.printers.T6"
+            class="mdsebook.printers.T6.T6Package"
+            genModel="model/T6.genmodel"/>
+   </extension>
+
+</plugin>

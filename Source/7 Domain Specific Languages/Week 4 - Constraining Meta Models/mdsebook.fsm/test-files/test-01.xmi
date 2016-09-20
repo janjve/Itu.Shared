@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<smdpfsm:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:smdpfsm="http://www.itu.dk/people/wasowski/mdsebook.fsm"
+    xsi:schemaLocation="http://www.itu.dk/people/wasowski/mdsebook.fsm ../model/fsm.ecore#//fsm"
+     name="test-01">
+  <machines
+      name="machine-1"
+      initial="a">
+    <states
+        name="a"/>
+  </machines>
+  <machines
+      name="machine-2"
+      initial="b">
+    <states
+        name="b"/>
+  </machines>
+</smdpfsm:Model>

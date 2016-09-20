@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mdsebook.fsm/src" editDirectory="/mdsebook.fsm.edit/src"
+    editorDirectory="/mdsebook.fsm.editor/src" modelPluginID="mdsebook.fsm" modelName="Fsm"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" editPluginID="mdsebook.fsm.edit"
+    editorPluginID="mdsebook.fsm.editor" operationReflection="true" importOrganizing="true">
+  <foreignModel>fsm.ecore</foreignModel>
+  <genPackages prefix="Fsm" disposableProviderFactory="true" ecorePackage="fsm.ecore#/">
+    <nestedGenPackages prefix="Fsm" basePackage="mdsebook" disposableProviderFactory="true"
+        ecorePackage="fsm.ecore#//fsm">
+      <genClasses ecoreClass="fsm.ecore#//fsm/Transition">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference fsm.ecore#//fsm/Transition/target"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference fsm.ecore#//fsm/Transition/source"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//fsm/Transition/input"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//fsm/Transition/output"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="fsm.ecore#//fsm/NamedElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//fsm/NamedElement/name"/>
+      </genClasses>
+      <genClasses ecoreClass="fsm.ecore#//fsm/Model">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fsm.ecore#//fsm/Model/machines"/>
+      </genClasses>
+      <genClasses ecoreClass="fsm.ecore#//fsm/FiniteStateMachine">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fsm.ecore#//fsm/FiniteStateMachine/states"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference fsm.ecore#//fsm/FiniteStateMachine/initial"/>
+      </genClasses>
+      <genClasses ecoreClass="fsm.ecore#//fsm/State">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fsm.ecore#//fsm/State/leavingTransitions"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference fsm.ecore#//fsm/State/machine"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
