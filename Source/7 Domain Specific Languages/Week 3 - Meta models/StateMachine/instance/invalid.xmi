@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state.fsm:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:state.fsm="http://example.com/state.fsm"
+    xsi:schemaLocation="http://example.com/state.fsm ../model/StateMachine.ecore"
+    name="model">
+  <machine name="fsm2"
+      initial="//@machine.1/@states.0">
+    <states
+        name="s2"/>
+  </machine>
+  <machine name="fsm1"
+      initial="//@machine.1/@states.0">
+    <states
+        name="s1">
+      <leavingTransitions
+          target="//@machine.0/@states.0"
+          input="s1"/>
+    </states>
+  </machine>
+</state.fsm:Model>

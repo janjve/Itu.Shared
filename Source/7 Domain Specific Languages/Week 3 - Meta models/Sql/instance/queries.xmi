@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sql.queries:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:sql.queries="http://example.com/sql.queries"
+    xsi:schemaLocation="http://example.com/sql.queries ../model/SqlQueries.ecore">
+  <queries from="//@tables.0"
+      what="//@tables.0/@columns.0"/>
+  <queries from="//@tables.0"
+      what="//@tables.0/@columns.0 //@tables.0/@columns.1"/>
+  <tables name="customer">
+    <columns
+        name="name"/>
+    <columns
+        name="price"/>
+  </tables>
+</sql.queries:Model>
