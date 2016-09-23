@@ -12,20 +12,20 @@ public class TestTimeThreads {
   public static void main(String[] args) {
     SystemInfo();
     final Point myPoint = new Point(42, 39);
-    Mark6("hashCode()", i -> myPoint.hashCode());
-    Mark6("Point creation", 
+    Mark7("hashCode()", i -> myPoint.hashCode());
+    Mark7("Point creation", 
           i -> {
             Point p = new Point(i, i);
             return p.hashCode();
           });
     final AtomicInteger ai = new AtomicInteger();
-    Mark6("Thread's work", 
+    Mark7("Thread's work", 
           i -> {
             for (int j=0; j<1000; j++)
               ai.getAndIncrement();
             return ai.doubleValue();
           });
-    Mark6("Thread create", 
+    Mark7("Thread create", 
           i -> {
             Thread t = new Thread(() -> {
                 for (int j=0; j<1000; j++)
@@ -33,7 +33,7 @@ public class TestTimeThreads {
               });
             return t.hashCode();
           });
-    Mark6("Thread create start", 
+    Mark7("Thread create start", 
           i -> {
             Thread t = new Thread(() -> {
               for (int j=0; j<1000; j++)
@@ -42,7 +42,7 @@ public class TestTimeThreads {
             t.start();
             return t.hashCode();
           });
-    Mark6("Thread create start join", 
+    Mark7("Thread create start join", 
           i -> {
             Thread t = new Thread(() -> {
               for (int j=0; j<1000; j++)
@@ -55,7 +55,7 @@ public class TestTimeThreads {
           });
     System.out.printf("ai value = %d%n", ai.intValue());
     final Object obj = new Object();
-    Mark6("Uncontended lock", 
+    Mark7("Uncontended lock", 
           i -> {
             synchronized (obj) {
               return i;

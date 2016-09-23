@@ -1,0 +1,44 @@
+System info:
+# Processor: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+# Installed memory (RAM): 16.0 GB
+# System type: 64-bit Operating System, x64 based Processor
+
+System info from benchmark.java:
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_74
+# CPU:  Intel64 Family 6 Model 60 Stepping 3, GenuineIntel; 8 "cores"
+# Date: 2016-09-23T10:31:31+0200
+
+countSequential                   11668.1 us     189.86         32
+countParallelLocal      1         12308.8 us     396.58         32
+countParallelLocal      2          7715.6 us      68.42         64
+countParallelLocal      3          4834.3 us     497.97         64
+countParallelLocal      4          3576.8 us     179.71        128
+countParallelLocal      5          4432.2 us     124.06         64
+countParallelLocal      6          3943.0 us      40.89        128
+countParallelLocal      7          3557.6 us      73.62        128
+countParallelLocal      8          3366.3 us      30.48        128
+countParallelLocal      9          3393.1 us      77.99        128
+countParallelLocal     10          3460.2 us      29.29        128
+countParallelLocal     11          3488.2 us      75.87        128
+countParallelLocal     12          3517.0 us      52.58        128
+countParallelLocal     13          3481.5 us      55.04        128
+countParallelLocal     14          3475.5 us      70.98        128
+countParallelLocal     15          3499.1 us     131.15        128
+countParallelLocal     16          3403.7 us      72.79        128
+countParallelLocal     17          3412.6 us      89.20        128
+countParallelLocal     18          3453.1 us      81.27        128
+countParallelLocal     19          3492.1 us      73.45        128
+countParallelLocal     20          3540.5 us      78.98        128
+countParallelLocal     21          3605.4 us     152.40        128
+countParallelLocal     22          3558.4 us      88.18        128
+countParallelLocal     23          3562.1 us      97.17        128
+countParallelLocal     24          3574.2 us      89.82        128
+countParallelLocal     25          3632.9 us     167.17         64
+countParallelLocal     26          3643.4 us      87.11        128
+countParallelLocal     27          3665.5 us      80.55        128
+countParallelLocal     28          3709.4 us      90.12        128
+countParallelLocal     29          3839.7 us     160.44        128
+countParallelLocal     30          3782.7 us      85.43        128
+countParallelLocal     31          3818.9 us      85.99        128
+countParallelLocal     32          3851.5 us      80.52        128

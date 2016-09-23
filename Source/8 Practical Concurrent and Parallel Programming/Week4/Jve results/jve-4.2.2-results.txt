@@ -1,0 +1,19 @@
+System info:
+# Processor: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+# Installed memory (RAM): 16.0 GB
+# System type: 64-bit Operating System, x64 based Processor
+
+System info from benchmark.java:
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_74
+# CPU:  Intel64 Family 6 Model 60 Stepping 3, GenuineIntel; 8 "cores"
+# Date: 2016-09-23T10:31:31+0200
+
+
+hashCode()                            2.8 ns       0.02  134217728
+Point creation                       50.0 ns       0.82    8388608
+Thread's work                      6000.3 ns      46.22      65536
+Thread create                       799.6 ns       5.47     524288
+Thread create start               62258.9 ns     120.70       4096
+Thread create start join         124244.5 ns     281.78       2048
+Uncontended lock                      5.9 ns       0.04   67108864
