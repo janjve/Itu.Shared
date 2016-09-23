@@ -111,6 +111,4 @@ The same phenomenom as with Mark5, but this time it occurs at count 16.
 4.1.2
 ------------
 
-See the file.
-
-
+See jve-4.2.2-results.txt

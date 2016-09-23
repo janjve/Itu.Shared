@@ -1,0 +1,21 @@
+System info:
+- Processor: Intel(R) Core(TM) i7-4712HQ CPU @ 2.30GHz
+- Installed memory (RAM): 16.0 GB
+- System type: 64-bit Operating System, x64 based Processor
+
+System info from benchmark.java:
+- OS:   Windows 10; 10.0; amd64
+- JVM:  Oracle Corporation; 1.8.0_74
+- CPU:  Intel64 Family 6 Model 60 Stepping 3, GenuineIntel; 8 "cores"
+- Date: 2016-09-23T10:31:31+0200
+
+
+pow                                  80.7 ns       1.09    4194304
+exp                                  57.9 ns       0.83    8388608
+log                                  25.5 ns       0.41   16777216
+sin                                 113.0 ns       0.48    4194304
+cos                                 111.8 ns       1.13    4194304
+tan                                 146.4 ns       1.98    2097152
+asin                                254.0 ns       3.39    1048576
+acos                                243.0 ns       4.26    1048576
+atan                                 44.9 ns       0.54    8388608
