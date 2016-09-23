@@ -1,0 +1,59 @@
+##Exercise 4.1
+##1.
+Results: See Results 4.1.1
+
+Unless otherwise is noted below, the results that we achieved are equivalent to those from Microbenchmarks.
+Mark1 is completely unreliable, seeing as to how the compiler will simmply remove any dead code when it's being called sufficiently frequently.
+Mark2-4 are fairly reliable, and produces similar results to those reported in microbenchmarks.
+Mark5 has a slight deviation in where the spike in computation happens, possibly due to garbage collection happening at different times, or random system operations.
+Mark6 is largely the same.
+
+##2. 
+See results 4.1.2
+
+These results seems to match fairly well with those of Microbenchmarks, with minor variations, which could potentially be random background noise.
+
+#Exercise 4.2
+##1.
+hashcode: when increasing the amount of iterations from 32768 to 65536, some "strangeness" occurs. The JVM figures out that it will always be performing the operations on the same object, at which point it caches the result and outputs that instead of recalculating it. 
+Point creation: while it seems to converge towards 50 ns at long iterations, the time spent descends significantly several times, untill the iteration creating 8192 points. Untill this point in time, it seems as if the compiler manages to make improvements to the code. 
+
+The rest of the operation benchmarks seems to be performing as expected. 
+
+##2. 
+See results 4.2
+
+The same points about hashcode and point creation from 4.2.1 still applies here. Other than that, the values from my results seems to be roughly identical to those in the lectures. 
+
+#Exercise 4.3
+##1.
+See results 4.3 for results.
+
+##2.
+See Graph 4.3.2 for graph.
+
+##3.
+From our results, the following conclusion can be drawn with certainty: Increasing the number of threads up to the number of physical cores will increase the performance of the program running, assuming proper parallization is possible for said program. This seems reasonable, since there will be a physical core available to hande each thread.
+It also seems that increasing the number of threads, up to the number of logical cores, provides some additional performance. This also seems reasonable, since there is now a logical core available per thread, which provides a fairly modest increase in performance. 
+After this point, however, the performance seems to worsen, steadily but slowly, for each additional thread added. This makes sense in the sense that we create a slight overhead for each thread we introduce, without gaining any performance, since there are no more logical cores available. 
+
+##4.
+See 4.3.4 for results.
+
+From a performance perspective, this seems to have absolutely no impact what-so-ever. But in general, it is reasonable to assume that built-in classes and methods are well tested, which is a pretty strong argument for using them whenever possible, especially for more complex scenarios. 
+
+##5.
+This is very slightly faster on my computer, but still within roughly one standard deviation from the original result, making it compelling to believe that there was no actual performance gain from this optimization attempt. 
+
+#Exercise 4.4
+##1.
+
+
+##4.7
+Everything behaves as expected, except for Memoizer2, which has for some reason become the cache implementation with the best performance. Considering the fact that we earlier measured it to have a significantly worse performance than other cache implementations, this leads me to believe that we have an issue with our code. 
+
+##4.8
+See code in TestCache.java.
+
+The experiment described in exercise 4 actually describes something that measures scalability when adding additional threads fairly well. It is worth mentioning that as additional cores are added, we also add additional calculations to be performed. To make the results from Mark7 more useful, it could benefit from a notion of correction, in order to measure thread safety. If the method isn't thread safe, then that method properly shouldn't be considered to be viable. 
+
