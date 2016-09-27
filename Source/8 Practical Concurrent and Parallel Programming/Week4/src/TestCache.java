@@ -15,18 +15,22 @@ import java.util.function.IntToDoubleFunction;
 public class TestCache {
   public static void main(String[] args) throws InterruptedException {
     SystemInfo();
-
-    for(int c=16; c<=16; c++) {
+    double dummy = 0;
+    for(int c=1; c <= 16; c++) {
       final int threadCount = c;
-      final Factorizer factorizer = new Factorizer();
-      final Computable<Long, long[]> cachingFactorizer = new Memoizer5<Long,long[]>(factorizer);
-      Mark7(String.format("%s %6d", cachingFactorizer.getClass(), threadCount), i -> exerciseFactorizer(cachingFactorizer, threadCount));
+      dummy += Mark7(String.format("%s %6d", "Memoizer1", threadCount), i ->start(threadCount, i));
     }
+  }
+
+  private static long start(long tc, int i){
+    final Factorizer factorizer = new Factorizer();
+    final Computable<Long, long[]> cachingFactorizer = new Memoizer1<Long,long[]>(factorizer);
+    return exerciseFactorizer(cachingFactorizer, tc);
   }
 
   private static long exerciseFactorizer(Computable<Long, long[]> f, long tc) {
     final long threadCount = tc;
-    final long start = 10_000_000_000L, range = 20_000L;
+    final long start = 10_000_000_000L, range = 2_000L;
 
     final AtomicLong result = new AtomicLong();
     Thread[] threads = new Thread[(int)threadCount];
@@ -66,17 +70,18 @@ public class TestCache {
       st = sst = 0.0;
       for (int j=0; j<n; j++) {
         Timer t = new Timer();
-        for (int i=0; i<count; i++) 
+        for (int i=0; i<count; i++){ 
           dummy += f.applyAsDouble(i);
+          }
         runningTime = t.check();
-        double time = runningTime * 1e6 / count; // nanoseconds
+        double time = (runningTime * 1e6) / count; // nanoseconds
         st += time; 
         sst += time * time;
         totalCount += count;
       }
     } while (runningTime < 0.25 && count < Integer.MAX_VALUE/2);
     double mean = st/n, sdev = Math.sqrt((sst - mean*mean*n)/(n-1));
-    System.out.printf("%-25s %15.1f us %10.2f %10d%n", msg, mean, sdev, count);
+    System.out.printf("%-25s %15.1f ms %10.2f %10d%n", msg, mean, sdev, count);
     return dummy / totalCount;
   }
 
@@ -295,6 +300,7 @@ class Memoizer5<A, V> implements Computable<A, V> {
   }
 
   public static RuntimeException launderThrowable(Throwable t) {
+    System.out.println("Exception");
     if (t instanceof RuntimeException)
       return (RuntimeException) t;
     else if (t instanceof Error)

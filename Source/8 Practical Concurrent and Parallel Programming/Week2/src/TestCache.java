@@ -13,7 +13,7 @@ import java.util.function.Function;
 public class TestCache {
   public static void main(String[] args) throws InterruptedException {
     Factorizer factorizer = new Factorizer();
-    Computable<Long, long[]> cachingFactorizer = new Memoizer0<Long,long[]>(factorizer);
+    Computable<Long, long[]> cachingFactorizer = new Memoizer5<Long,long[]>(factorizer);
     //cachingFactorizer = factorizer;
 
     long start = System.nanoTime();
