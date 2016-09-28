@@ -18,13 +18,13 @@ public class TestCache {
     double dummy = 0;
     for(int c=1; c <= 16; c++) {
       final int threadCount = c;
-      dummy += Mark7(String.format("%s %6d", "Memoizer1", threadCount), i ->start(threadCount, i));
+      dummy += Mark7(String.format("%s %6d", "Memoizer", threadCount), i ->start(threadCount, i));
     }
   }
 
   private static long start(long tc, int i){
     final Factorizer factorizer = new Factorizer();
-    final Computable<Long, long[]> cachingFactorizer = new Memoizer1<Long,long[]>(factorizer);
+    final Computable<Long, long[]> cachingFactorizer = new Memoizer<Long,long[]>(factorizer);
     return exerciseFactorizer(cachingFactorizer, tc);
   }
 
