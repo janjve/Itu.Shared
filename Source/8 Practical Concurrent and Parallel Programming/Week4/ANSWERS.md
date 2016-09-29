@@ -1,6 +1,5 @@
 Exercise 4.1
 ============
-
 4.1.1
 ------------
 System info:
@@ -111,6 +110,102 @@ The same phenomenom as with Mark5, but this time it occurs at count 16.
 4.1.2
 ------------
 
-See the file.
+See jve-4.1.2-results.txt & soh-4.1.2-results.txt
 
+The results seem to match with the results presented in Microbenchmarks.
 
+4.2
+============
+4.2.1
+------------
+
+__hashCode():__
+
+The JIT compiler quickly finds out that the point object is final and that the hashCode() function always returns the same value.
+This makes the results go towards the very low value of 3 ns, which may well be the time it takes for Java to execute IntToDoubleFunction.applyAsDouble().
+
+__Point creation:__
+
+A new point is constructed in each iteration and not stored. The runtime goes towards 48 ns, which is the time it takes for the function to create a new object.
+The Earlier results takes longer, but has a higher standard deviation and therefore can't be used as reliable metric.
+
+__Thread's work:__
+
+For-loops are run sequentially and the runtime are therefore a lot slower than just constructing the point object.
+The standard deviation is natually going down as the count increases.
+
+__Thread create:__
+
+After a count of 512 there is a huge spike in the standard deviation. It could seem like the JIT compiler changes strategy for how it optimizes the code.
+
+__Thread create start:__
+
+The results are as expected. There is a huge overhead in starting the thread.
+
+__Thread create start join:__
+
+The standard deviation for this test is huge as result of the overhead of managing the threads. 
+This also makes the runtime of the method very unpredictable.
+
+__Uncontended lock:__
+
+Here the standard deviation converge towards 0.05 and the runtime converge towards 5.6 ns.
+This confirms that acquiring an uncontended lock takes a few number of CPU cycles.
+
+4.2.2
+------------
+
+See jve-4.2.2-results.txt & soh-4.2.2-results.txt
+
+The results from my run of TestTimeThreads.java seems to match with the results from the lecture. The point about hashcode from 4.2.1 still applies here. 
+It is however the case that my computer is faster at constructing the object, but slower when it comes to actually starting and running the threads.
+Additionally my results seem to have a much lower standard deviation.
+
+Exercise 4.3
+============
+4.3.1
+------------
+
+See jve-4.3.1-results.txt & soh-4.3.1-results.txt
+
+4.3.2
+------------
+
+See jve-4.3.2-results.xlsx & soh-4.3.2-results.xlsx
+
+4.3.3
+------------
+
+We can perform the following observation from the data collected:
+- creating a single thread to do the calculation is slower than doing the calculation on the main thread.
+  This is due to the overhead created by spawning it.
+- The steep slope on the graph from 1-4 threads are when each thread can run on a physical core each.
+  This is where the performance gain is the highest.
+- Following the initial increase in performance there is a small descrease when adding the fifth thread, which doesn't have its own core.
+  This creates some overhead which overshadows the increase from having a thread more.
+- From the fifth thread and onwards to 8 threads there is an increase in performance again. This is when the physical cores are used.
+- After the eighth thread the performance starts to decrease again as there is no more cores to make use of.
+- Adding more threads will not increase performance more than just having 8. 
+
+The overall picture from here is that the performance decreases as the overhead of manageging the thread pool is worsening. It seems that a good general rule of thumb is to have roughly as many threads running as the host system has logical cores. 
+
+4.3.4
+------------
+
+For me the results are roughly the same, but the standard deviation might be slightly better for AtomicLong.
+But in general, it is reasonable to assume that built-in classes and methods are well tested, which is a pretty strong argument for using them whenever possible, especially for more complex scenarios.
+
+4.3.5
+------------
+
+Again the results are roughly the same. Using the method of adding the prime count after the for-loop is slightly faster. 
+Weirdly this is mostly the case for low number of threads.
+The reason that this doesn't increase the performance by a lot is that the shared variable is rarely updated by the threads. 
+This reduces the likelyhood that a collision occurs. 
+
+Exercise 4.4
+============ 
+4.4.1 - 4.4.6
+------------
+
+See jve-4.4.1-4.4.6-results.txt & soh-4.4.1-4.4.6-results.txt
