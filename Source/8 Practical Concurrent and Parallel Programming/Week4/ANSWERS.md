@@ -210,6 +210,10 @@ Exercise 4.4
 
 See jve-4.4.1-4.4.6-results.txt & soh-4.4.1-4.4.6-results.txt
 
+4.4.7
+------------
+
+Everything behaves as expected, with the conclusion from 4.3.3 still standing firm. Our results align fairly perfectly with the expectations, showing significant gains all the way up to Memoizer4, with a fairly small gain from Memoizer4 to Memoizer5.
 
 4.4.8
 ------------
