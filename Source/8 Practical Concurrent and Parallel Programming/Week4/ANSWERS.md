@@ -1,3 +1,5 @@
+Authors: Søren Harrison & Jan Vium Enghoff
+
 Exercise 4.1
 ============
 4.1.1
