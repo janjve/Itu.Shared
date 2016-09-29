@@ -204,6 +204,13 @@ This reduce the likelyhood that a collision occurs.
 
 Exercise 4.4
 ============ 
-4.4.1
+4.4.1 - 4.4.6
 ------------
 
+See jve-4.4.1-4.4.6-results.txt
+
+4.4.7
+------------
+
+4.4.8
+------------
