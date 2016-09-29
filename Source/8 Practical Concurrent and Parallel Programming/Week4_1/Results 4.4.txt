@@ -1,0 +1,126 @@
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_101
+# CPU:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel; 8 "cores"
+# Date: 2016-09-27T15:45:08+0200
+Memoizer1      1                 603324.7 ms    4366.01          2
+Memoizer1      2                 693506.7 ms    3661.02          2
+Memoizer1      3                 766126.9 ms    3334.16          2
+Memoizer1      4                 833711.6 ms    3702.74          2
+Memoizer1      5                 903467.0 ms    3508.13          2
+Memoizer1      6                 982704.1 ms    3302.92          2
+Memoizer1      7                1054497.3 ms    3342.06          2
+Memoizer1      8                1136451.3 ms    3577.89          2
+Memoizer1      9                1214252.1 ms    2964.43          2
+Memoizer1     10                1289201.5 ms    3191.70          2
+Memoizer1     11                1363388.7 ms    3693.38          2
+Memoizer1     12                1449525.6 ms    3760.28          2
+Memoizer1     13                1520623.4 ms    3820.83          2
+Memoizer1     14                1600610.4 ms    4558.94          2
+Memoizer1     15                1683045.5 ms    5756.38          2
+Memoizer1     16                1773133.0 ms   33213.06          2
+
+
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_101
+# CPU:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel; 8 "cores"
+# Date: 2016-09-27T15:52:09+0200
+Memoizer2      1                 584585.1 ms   24526.56          2
+Memoizer2      2                 620678.5 ms    3023.96          2
+Memoizer2      3                 623215.0 ms    6883.93          2
+Memoizer2      4                 612358.7 ms    4519.84          2
+Memoizer2      5                 634452.4 ms   11359.76          2
+Memoizer2      6                 646699.2 ms   16856.44          2
+Memoizer2      7                 654883.0 ms   10015.55          2
+Memoizer2      8                 879664.8 ms    2034.36          2
+Memoizer2      9                 907838.7 ms    8464.64          2
+Memoizer2     10                 919027.0 ms   10257.04          2
+Memoizer2     11                 945469.9 ms   11362.30          2
+Memoizer2     12                 966918.2 ms   12678.77          2
+Memoizer2     13                 972443.3 ms   12030.28          2
+Memoizer2     14                 990641.2 ms    9346.20          2
+Memoizer2     15                1012649.2 ms    4026.40          2
+Memoizer2     16                1033707.0 ms    6052.83          2
+
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_101
+# CPU:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel; 8 "cores"
+# Date: 2016-09-29T10:06:00+0200
+Memoizer3      1                 610638.6 ms    7805.93          2
+Memoizer3      2                 622201.3 ms    6339.10          2
+Memoizer3      3                 626366.9 ms    3031.14          2
+Memoizer3      4                 615310.5 ms    7586.58          2
+Memoizer3      5                 634055.6 ms   16476.89          2
+Memoizer3      6                 647939.1 ms   12136.97          2
+Memoizer3      7                 653532.3 ms    7510.80          2
+Memoizer3      8                 688391.3 ms    1795.03          2
+Memoizer3      9                 706978.8 ms    2745.84          2
+Memoizer3     10                 731412.4 ms    8218.76          2
+Memoizer3     11                 774819.2 ms    9966.11          2
+Memoizer3     12                 771276.7 ms    8912.21          2
+Memoizer3     13                 794001.1 ms   28329.15          2
+Memoizer3     14                 805948.4 ms   24610.58          2
+Memoizer3     15                 807822.0 ms   12877.44          2
+Memoizer3     16                 819199.0 ms    9515.50          2
+
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_101
+# CPU:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel; 8 "cores"
+# Date: 2016-09-29T10:45:28+0200
+Memoizer4      1                 594776.0 ms    9495.79          2
+Memoizer4      2                 615352.9 ms    4347.70          2
+Memoizer4      3                 624307.5 ms    2042.72          2
+Memoizer4      4                 611770.4 ms    1052.80          2
+Memoizer4      5                 630838.0 ms   10813.85          2
+Memoizer4      6                 646423.6 ms    8223.64          2
+Memoizer4      7                 652112.7 ms   10567.78          2
+Memoizer4      8                 676503.5 ms    1750.96          2
+Memoizer4      9                 700472.0 ms    8345.69          2
+Memoizer4     10                 714907.6 ms    6724.85          2
+Memoizer4     11                 741129.8 ms   15593.90          2
+Memoizer4     12                 745449.7 ms   11115.44          2
+Memoizer4     13                 763328.6 ms   12019.74          2
+Memoizer4     14                 781521.0 ms   10933.94          2
+Memoizer4     15                 798258.2 ms   10812.09          2
+Memoizer4     16                 815728.9 ms   10170.96          2
+
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_101
+# CPU:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel; 8 "cores"
+# Date: 2016-09-29T10:52:57+0200
+Memoizer5      1                 593318.5 ms    8365.64          2
+Memoizer5      2                 616362.8 ms    7156.16          2
+Memoizer5      3                 623287.0 ms    1385.82          2
+Memoizer5      4                 611861.1 ms     624.92          2
+Memoizer5      5                 622987.4 ms   11857.51          2
+Memoizer5      6                 638164.2 ms   16140.19          2
+Memoizer5      7                 657417.9 ms    6065.30          2
+Memoizer5      8                 676442.1 ms    2185.62          2
+Memoizer5      9                 694147.2 ms    7134.25          2
+Memoizer5     10                 715319.4 ms    8483.41          2
+Memoizer5     11                 727093.9 ms    7181.41          2
+Memoizer5     12                 750270.3 ms    6187.20          2
+Memoizer5     13                 755447.0 ms    6858.16          2
+Memoizer5     14                 777053.7 ms    9865.55          2
+Memoizer5     15                 796965.8 ms    8471.76          2
+Memoizer5     16                 812373.2 ms   11691.05          2
+
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_101
+# CPU:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel; 8 "cores"
+# Date: 2016-09-29T11:01:20+0200
+Memoizer0      1                 577779.3 ms    7363.18          2
+Memoizer0      2                 620498.8 ms    2523.28          2
+Memoizer0      3                 622726.3 ms    1541.81          2
+Memoizer0      4                 610376.2 ms    1544.83          2
+Memoizer0      5                 627853.6 ms   17095.03          2
+Memoizer0      6                 642389.1 ms   13876.64          2
+Memoizer0      7                 672504.6 ms    7801.88          2
+Memoizer0      8                 699749.6 ms    1729.31          2
+Memoizer0      9                 731745.3 ms    4863.97          2
+Memoizer0     10                 746813.3 ms    6066.66          2
+Memoizer0     11                 765488.3 ms    6230.88          2
+Memoizer0     12                 783058.7 ms    4654.23          2
+Memoizer0     13                 798643.4 ms    8702.03          2
+Memoizer0     14                 813730.0 ms    6352.63          2
+Memoizer0     15                 838251.5 ms    8337.95          2
+Memoizer0     16                 850590.1 ms   11454.48          2
