@@ -219,4 +219,4 @@ Everything behaves as expected, with the conclusion from 4.3.3 still standing fi
 ------------
 
 The experiment to compare the scalability of cache implementations, could be carried out much like the experiments from 4.4.1.
-Plotting the results from the earlier experiments on a (threads-runtime)-graph would give an indicator of the scalability. By drawing the regression line for each cache implementations points we could see which one had the biggest slope. This could help in choosing the right algorithm to use on a machine with the same specifications as the one used for the experiment.
+Plotting the results from the earlier experiments on a (threads-runtime)-graph would give an indicator of the scalability. By drawing the regression line for each cache implementations points we could see which one had the lowest growth rate. This one would be the best choice of cache implementation on machines with the same specifications as the one used for the experiment.
