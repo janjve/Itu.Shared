@@ -209,3 +209,14 @@ Exercise 4.4
 ------------
 
 See jve-4.4.1-4.4.6-results.txt & soh-4.4.1-4.4.6-results.txt
+
+4.4.7
+------------
+
+Everything behaves as expected, with the conclusion from 4.3.3 still standing firm. Our results align fairly perfectly with the expectations, showing significant gains all the way up to Memoizer4, with a fairly small gain from Memoizer4 to Memoizer5.
+
+4.4.8
+------------
+See code in TestCache.java.
+
+The experiment described in exercise 4 actually describes something that measures scalability when adding additional threads fairly well. It is worth mentioning that as additional cores are added, we also add additional calculations to be performed. To make the results from Mark7 more useful, it could benefit from a notion of correction, in order to measure thread safety. If the method isn't thread safe, then that method properly shouldn't be considered to be viable. 
