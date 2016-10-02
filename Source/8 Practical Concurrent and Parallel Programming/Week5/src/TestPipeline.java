@@ -43,6 +43,12 @@ public class TestPipeline {
   }
 }
 
+class Uniquifier<T> implements Runnable {
+  public void run(){
+    // TODO
+  }
+}
+
 class UrlProducer implements Runnable {
   private final BlockingQueue<String> output;
 
