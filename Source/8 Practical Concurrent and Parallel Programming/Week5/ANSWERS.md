@@ -1,3 +1,8 @@
+Week 5
+=============
+Author1: Jan Vium Enghoff
+Author2: Søren Harisson
+
 Exercise 5.1
 =============
 
