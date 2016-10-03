@@ -21,31 +21,96 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
+
 // For regular expressions
 import java.util.regex.Matcher;
 import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 
+// For exercises
+import java.util.HashSet;
+import java.util.Set;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Future;
+import java.util.concurrent.ExecutionException;
+
 public class TestPipeline {
   public static void main(String[] args) {
-    runAsThreads();
+    //runAsThreads();
+    runAsTasks();
   }
 
   private static void runAsThreads() {
     final BlockingQueue<String> urls = new OneItemQueue<String>();
     final BlockingQueue<Webpage> pages = new OneItemQueue<Webpage>();
     final BlockingQueue<Link> refPairs = new OneItemQueue<Link>();
+    final BlockingQueue<Link> uniqueRefPairs = new OneItemQueue<Link>();
     Thread t1 = new Thread(new UrlProducer(urls));
     Thread t2 = new Thread(new PageGetter(urls, pages));
     Thread t3 = new Thread(new LinkScanner(pages, refPairs));
-    Thread t4 = new Thread(new LinkPrinter(refPairs));
-    t1.start(); t2.start(); t3.start(); t4.start(); 
+    Thread t32 = new Thread(new Uniquifier<Link>(refPairs, uniqueRefPairs));
+    Thread t4 = new Thread(new LinkPrinter(uniqueRefPairs));
+    t1.start(); t2.start(); t3.start(); t32.start(); t4.start();
+  }
+
+  private static void runAsTasks(){
+    // 5.4.3
+    final ExecutorService executor = Executors.newWorkStealingPool();
+
+    // 5.4.4
+    //final ExecutorService executor = Executors.newFixedThreadPool(6);
+
+    // 5.4.5
+    //final ExecutorService executor = Executors.newFixedThreadPool(3);
+
+    List<Future<?>> futures = new ArrayList<Future<?>>();
+
+    final BlockingQueue<String> urls = new OneItemQueue<String>();
+    final BlockingQueue<Webpage> pages = new OneItemQueue<Webpage>();
+    final BlockingQueue<Link> refPairs = new OneItemQueue<Link>();
+    final BlockingQueue<Link> uniqueRefPairs = new OneItemQueue<Link>();
+
+    futures.add(executor.submit(new UrlProducer(urls)));
+    futures.add(executor.submit(new PageGetter(urls, pages)));
+    // 5.4.6
+    futures.add(executor.submit(new PageGetter(urls, pages)));
+    futures.add(executor.submit(new LinkScanner(pages, refPairs)));
+    futures.add(executor.submit(new Uniquifier<Link>(refPairs, uniqueRefPairs)));
+    futures.add(executor.submit(new LinkPrinter(uniqueRefPairs)));
+    
+    try {
+      for (Future<?> future : futures)
+        future.get();
+    } catch (InterruptedException exn) { 
+      System.out.println("Interrupted: " + exn);
+    } catch (ExecutionException exn) { 
+      throw new RuntimeException(exn.getCause()); 
+    }
   }
 }
 
 class Uniquifier<T> implements Runnable {
+  private final BlockingQueue<T> input;
+  private final BlockingQueue<T> output;
+
+  public Uniquifier(BlockingQueue<T> input, BlockingQueue<T> output){
+    this.input = input;
+    this.output = output;
+  }
+
   public void run(){
-    // TODO
+    Set<T> set = new HashSet<T>();
+
+    while(true){
+      T element = input.take();
+      if(!set.contains(element)){
+        set.add(element);
+        output.put(element);
+      }
+    }
   }
 }
 
@@ -66,6 +131,7 @@ class UrlProducer implements Runnable {
     "http://www.microsoft.com", "http://www.amazon.com", "http://www.dr.dk",
     "http://www.vg.no", "http://www.tv2.dk", "http://www.google.com",
     "http://www.ing.dk", "http://www.dtu.dk", "http://www.bbc.co.uk"
+    //"http://www.bbc.co.uk"
   };
 }
 

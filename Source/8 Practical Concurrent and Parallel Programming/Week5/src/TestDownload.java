@@ -49,14 +49,15 @@ public class TestDownload {
 
   }
 
-  public static void printMap(Map<String, String> pages, double time){
+  private static void printMap(Map<String, String> pages, double time){
     for (Map.Entry<String, String> entry : pages.entrySet())
       System.out.println(entry.getKey() + "\t" + entry.getValue().length());
 
     System.out.println("");
-    System.out.println("Retrieved in: " + spend);
+    System.out.println("Retrieved in: " + time);
   }
 
+  // 5.3.2
   public static Map<String, String> getPages(String[] urls, int maxLines)throws IOException {
     Map<String, String> pages = new HashMap<String, String>();
     for(int i = 0; i < urls.length; i++){
@@ -65,6 +66,7 @@ public class TestDownload {
     return pages;
   }
 
+  // 5.3.4
   public static Map<String, String> getPagesParallel(String[] urls, int maxLines)throws IOException {
     Map<String, String> pages = new HashMap<String, String>();
     List<Callable<DownloadTuple>> tasks = new ArrayList<Callable<DownloadTuple>>();
