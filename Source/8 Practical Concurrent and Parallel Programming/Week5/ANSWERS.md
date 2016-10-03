@@ -14,9 +14,12 @@ The results are plotted in the file jve_5.1.1-5.1.2.xlsx
 5.1.4
 -------------
 
-The results are as expected. It should be noted that the results doesn't get worse by adding more tasks, 
+There was a few outliers in the results, but they where mostly consistent. The outlier on 57 tasks for local cached thread pool was due to the power cord falling out when running the test.
+It should be noted that the results doesn't get worse by adding more tasks, 
 which was the case when using threads. The executor will use as many cores as that are available for the jvm, 
 whereas the implementation from last week will keep adding overhead and thereby slowing it down.
+
+
 
 5.1.5
 -------------
@@ -28,11 +31,9 @@ whereas the implementation from last week will keep adding overhead and thereby 
 # Date: 2016-09-30T11:05:26+0200
 ```
 
-#TODO: Add file.
-
 The results are plotted in the file jve_5.1.5.xlsx.
 
-It is not noticably faster using the LongAdder than our own implementation as it can be observed on the graph.
+When running with a few tasks, our own implementation is actually noticably faster. However ss more tasks is used this changes and the library version becomes faster.
 
 Exercise 5.3
 =============

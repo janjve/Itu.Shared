@@ -21,28 +21,27 @@ import java.util.concurrent.atomic.LongAdder;
 
 public class TestCountPrimesTasks {
   private static final ExecutorService executor 
-    // = Executors.newWorkStealingPool();
-     = Executors.newCachedThreadPool();
+     = Executors.newWorkStealingPool();
+    // = Executors.newCachedThreadPool();
   
   public static void main(String[] args) {
     SystemInfo();
     final int range = 100_000;
-    System.out.println(Mark7("countSequential", 
+    /*System.out.println(Mark7("countSequential", 
 			     i -> countSequential(range)));
     System.out.println(Mark7(String.format("countParTask1 %6d", 32), 
 			     i -> countParallelN1(range, 32)));
     System.out.println(Mark7(String.format("countParTask2 %6d", 32), 
 			     i -> countParallelN2(range, 32)));
     System.out.println(Mark7(String.format("countParTask3 %6d", 32), 
-			     i -> countParallelN3(range, 32)));
+			     i -> countParallelN3(range, 32)));*/
 
     // Shared.
-    /*for (int c=1; c<=100; c++) {
+    for (int c=1; c<=100; c++) {
       final int taskCount = c;
       Mark7(String.format("countParTask1 %6d", taskCount), 
 	    i -> countParallelN1(range, taskCount));
-      
-    }*/
+    }
     // Local
     for (int c=1; c<=100; c++) {
       final int taskCount = c;
@@ -72,8 +71,9 @@ public class TestCountPrimesTasks {
   // General parallel solution, using multiple (Runnable) tasks
   private static long countParallelN1(int range, int taskCount) {
     final int perTask = range / taskCount;
-    final LongAdder lc = new LongAdder();
-    //final LongCounter lc = new LongCounter();
+    // 5.1.5
+    //final LongAdder lc = new LongAdder();
+    final LongCounter lc = new LongCounter();
     List<Future<?>> futures = new ArrayList<Future<?>>();
     for (int t=0; t<taskCount; t++) {
       final int from = perTask * t, 
@@ -92,8 +92,8 @@ public class TestCountPrimesTasks {
     } catch (ExecutionException exn) { 
       throw new RuntimeException(exn.getCause()); 
     }
-    return lc.sum(); // LongAdder
-    //return lc.get(); // LongCounter
+    //return lc.sum(); // LongAdder
+    return lc.get(); // LongCounter
   }
 
   // General parallel solution, using multiple Callable<Long> tasks
