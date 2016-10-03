@@ -37,19 +37,19 @@ public class TestCountPrimesTasks {
 			     i -> countParallelN3(range, 32)));
 
     // Shared.
-    for (int c=1; c<=8; c++) {
+    /*for (int c=1; c<=100; c++) {
       final int taskCount = c;
       Mark7(String.format("countParTask1 %6d", taskCount), 
 	    i -> countParallelN1(range, taskCount));
       
-    }
-    /* // Local
-    for (int c=1; c<=8; c++) {
+    }*/
+    // Local
+    for (int c=1; c<=100; c++) {
       final int taskCount = c;
       Mark7(String.format("countParTask2 %6d", taskCount), 
 	    i -> countParallelN2(range, taskCount));
     }
-    */
+    
   }
 
   private static boolean isPrime(int n) {
