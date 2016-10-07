@@ -28,20 +28,22 @@ public class TestLongAdders {
 
   public static void main(String[] args) {
     SystemInfo();
-    Mark7("current thread hashCode", 
+    /*Mark7("current thread hashCode", 
           i -> Thread.currentThread().hashCode());
     Mark7("ThreadLocalRandom", 
-          i -> ThreadLocalRandom.current().nextInt());
-    Mark7("AtomicLong", 
+          i -> ThreadLocalRandom.current().nextInt());*/
+    /*Mark7("AtomicLong", 
           i -> exerciseAtomicLong());
     Mark7("LongAdder", 
           i -> exerciseLongAdder());
     Mark7("LongCounter", 
           i -> exerciseLongCounter());
     Mark7("NewLongAdder", 
-          i -> exerciseNewLongAdder());
+          i -> exerciseNewLongAdder());*/
     Mark7("NewLongAdderPadded", 
           i -> exerciseNewLongAdderPadded());
+    Mark7("NewLongAdderLessPadded", 
+          i -> exerciseNewLongLessAdderPadded());
   }
 
   // Timing of Java's AtomicLong
@@ -127,6 +129,25 @@ public class TestLongAdders {
   // Timing of a striped long, with scattered allocation of stripes
   private static double exerciseNewLongAdderPadded() {
     final NewLongAdderPadded adder = new NewLongAdderPadded();
+    Thread[] threads = new Thread[threadCount];
+    for (int t=0; t<threadCount; t++) {
+      final int myThread = t;
+      threads[t] = new Thread(() -> {
+        for (int i=0; i<iterations; i++) 
+          adder.add(i);
+      });
+    }
+    for (int t=0; t<threadCount; t++) 
+      threads[t].start();
+    try {
+      for (int t=0; t<threadCount; t++) 
+        threads[t].join();
+    } catch (InterruptedException exn) { }
+    return adder.longValue();
+  }
+
+  private static double exerciseNewLongLessAdderPadded() {
+    final NewLongAdderLessPadded adder = new NewLongAdderLessPadded();
     Thread[] threads = new Thread[threadCount];
     for (int t=0; t<threadCount; t++) {
       final int myThread = t;
@@ -250,6 +271,29 @@ class NewLongAdderPadded {
       // Believe it or not, this sometimes speeds up the code,
       // presumably because it avoids false sharing of cache lines:
       new Object(); new Object(); new Object(); new Object();
+      counters[stripe] = new AtomicLong();
+    }
+  }
+
+  public void add(long delta) {
+    counters[Thread.currentThread().hashCode() % NSTRIPES].addAndGet(delta);
+  }
+
+  public long longValue() {
+    long result = 0;
+    for (int stripe=0; stripe<NSTRIPES; stripe++)
+      result += counters[stripe].get();
+    return result;
+  }
+}
+
+class NewLongAdderLessPadded {
+    private final static int NSTRIPES = 31;
+  private final AtomicLong[] counters;
+
+  public NewLongAdderLessPadded() {
+    this.counters = new AtomicLong[NSTRIPES];
+    for (int stripe=0; stripe<NSTRIPES; stripe++) {
       counters[stripe] = new AtomicLong();
     }
   }
