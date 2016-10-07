@@ -26,44 +26,6 @@ TODO: Run with timeAllMaps().
 # CPU:  Intel64 Family 6 Model 60 Stepping 3, GenuineIntel; 8 "cores"
 # Date: 2016-10-07T11:02:37+0200
 
-class SynchronizedMap
-        17 maps to B
-       117 maps to C
-        34 maps to F
-       217 maps to E
-        17 maps to B
-        17 maps to B
-       217 maps to E
-        34 maps to F
-       217 maps to E
-        17 maps to B
-        34 maps to F
-
-class StripedMap
-        17 maps to B
-       117 maps to C
-       217 maps to E
-        17 maps to B
-        34 maps to F
-        17 maps to B
-       217 maps to E
-        34 maps to F
-       217 maps to E
-        17 maps to B
-        34 maps to F
-
-class WrapConcurrentHashMap
-        17 maps to B
-       117 maps to C
-        17 maps to B
-        34 maps to F
-       217 maps to E
-        17 maps to B
-        34 maps to F
-       217 maps to E
-        17 maps to B
-        34 maps to F
-       217 maps to E
 SynchronizedMap       16         570328.4 us   41794.99          2
 99992.0
 StripedMap            16         147284.2 us   32563.01          2
@@ -93,3 +55,67 @@ Kinda the same argument as in 6.1.8. The probability that two buckets unneccessa
 
 This ensures that a bucket belonging to stripe s will continue to belong to stripe s after reallocation of the buckets.
 
+Exercise 6.2
+============
+
+6.2.3
+------------
+
+We don't have to update the sizes because the number of elements in the hashmap hasn't changes.
+
+6.2.6
+------------
+
+```
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_74
+# CPU:  Intel64 Family 6 Model 60 Stepping 3, GenuineIntel; 8 "cores"
+# Date: 2016-10-07T13:57:32+0200
+
+SynchronizedMap       16         557295.1 us   27905.07          2
+99992.0
+StripedMap            16         145919.8 us   40761.11          2
+99992.0
+StripedWriteMap       16          52411.2 us    1690.19          8
+99992.0
+WrapConcHashMap       16          73135.9 us    6561.34          4
+99992.0
+```
+
+This is as expected. It is however quite weird that our implementation is so much quicker than java's ConcurrentHashMap.
+
+Exercise 6.2
+============
+
+6.3.1
+------------
+```
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_74
+# CPU:  Intel64 Family 6 Model 60 Stepping 3, GenuineIntel; 8 "cores"
+# Date: 2016-10-07T14:14:00+0200
+AtomicLong                       953626.7 us    5287.99          2
+LongAdder                         64659.0 us    1953.03          8
+LongCounter                      597240.4 us  415037.62          2
+NewLongAdder                     439888.5 us   35191.86          2
+NewLongAdderPadded               109438.3 us    8365.24          4
+```
+
+TODO: Discuss
+
+6.3.2
+-----------
+
+See code.
+
+```
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_74
+# CPU:  Intel64 Family 6 Model 60 Stepping 3, GenuineIntel; 8 "cores"
+# Date: 2016-10-07T14:21:34+0200
+NewLongAdderPadded               115018.9 us   11161.13          4
+NewLongAdderLessPadded           185132.3 us   25363.89          2
+```
+
+I left out the unrelated adders from the output.
+TODO: Discuss.
