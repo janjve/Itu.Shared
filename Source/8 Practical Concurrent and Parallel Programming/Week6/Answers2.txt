@@ -1,0 +1,124 @@
+Exercise 6.1
+============
+
+6.1.3
+------------
+If we didn't used synchronization, we would experience visibility issues.
+
+6.1.5
+-----------
+We implemented (2), since it's expected to have a better performance. Depending on what Consumer.accept does, this might not be a problem.
+
+
+6.1.7
+-----------
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_101
+# CPU:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel; 8 "cores"
+# Date: 2016-10-07T11:27:01+0200
+
+class SynchronizedMap
+        17 maps to B
+       117 maps to C
+        34 maps to F
+       217 maps to E
+        17 maps to B
+        17 maps to B
+       217 maps to E
+        34 maps to F
+       217 maps to E
+        17 maps to B
+        34 maps to F
+
+class StripedMap
+        17 maps to B
+       117 maps to C
+       217 maps to E
+        17 maps to B
+        34 maps to F
+        17 maps to B
+       217 maps to E
+        34 maps to F
+       217 maps to E
+        17 maps to B
+        34 maps to F
+SynchronizedMap       16         484097.5 us   14560.33          2
+99992.0
+StripedMap            16         137037.9 us   15567.22          2
+99992.0
+StripedWriteMap       16          47383.4 us     906.35          8
+0.0
+WrapConcHashMap       16          69422.3 us    7562.26          4
+99992.0
+
+The results looks as expected. It shows that striping the single lock into several locks performs significantly better than the single lock approach.
+
+
+
+6.1.8
+-----------
+By having fewer locks, we will have to perform fewer costly lock operations, in the cases of operations that has to iterate through the entire HashMap, since the ideal scenario for a HashMap is having very few elements in each bucket.
+Having fewer locks does, however, put a limit to the scalability, especially if the number of locks available is significantly lower than the number of cores available in the CPU. 
+
+6.1.9
+-----------
+Having more locks leads to less contention for the individual locks, which means that the likelyhood of having to wait for the lock to be released is smaller, resulting in increased performance. 
+
+6.1.10
+-----------
+To issue here is the reallocateBuckets method. If bucketCount wasn't a multiple of lockCount, then we would risk moving an entry between stripes during reallocation. While it isn't possible to get any items from the locked stripe, it would still be possible to move an item into a stripe that is intended to be locked, thus breaking thread-safety. 
+
+Exercise 6.2
+============
+
+6.2.3
+------------
+Since we haven't changed the buckets, we don't need to piggyback on the visibility of sizes. 
+
+6.2.6
+------------
+
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_101
+# CPU:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel; 8 "cores"
+# Date: 2016-10-07T13:54:14+0200
+
+SynchronizedMap       16         476454.6 us   13650.25          2
+99992.0
+StripedMap            16         124609.7 us    4618.63          4
+99992.0
+StripedWriteMap       16          62479.6 us     901.24          8
+99992.0
+WrapConcHashMap       16          67661.5 us    4884.14          8
+99992.0
+
+The results shown above are pretty much as expected. We assumed that going from a SynchronizedMap to StripedMap would be an improvement, which turned out to be true. This was also expected and true when going to the StripedWriteMap.
+As for the WrapConcHashMap, from Java, this is performing as was shown in the lecture, and could possibly be expected to have a better scalability than StripedWriteMap, which is likely being achieved by having a worse performance on fewer cores. 
+
+Exercise 6.3
+============
+
+6.3.1
+------------
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_101
+# CPU:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel; 8 "cores"
+# Date: 2016-10-07T14:19:37+0200
+current thread hashCode               0.0 us       0.00  134217728
+ThreadLocalRandom                     0.0 us       0.00   67108864
+AtomicLong                       828443.6 us   96177.50          2
+LongAdder                         64927.7 us    2058.73          4
+LongCounter                      466936.9 us  349137.26          2
+NewLongAdder                     396813.1 us   30173.39          2
+NewLongAdderPadded               107792.7 us    8604.28          4
+
+
+6.3.2
+------------
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 1.8.0_101
+# CPU:  Intel64 Family 6 Model 58 Stepping 9, GenuineIntel; 8 "cores"
+# Date: 2016-10-07T14:31:10+0200
+NewLongAdderPadded               114746.6 us    8677.65          4
+NewLongAdderLessPadded           182090.7 us   17549.06          2
+
