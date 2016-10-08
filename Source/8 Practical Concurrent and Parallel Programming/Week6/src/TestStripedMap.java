@@ -15,8 +15,8 @@ public class TestStripedMap {
   public static void main(String[] args) {
     SystemInfo();
     //testAllMaps();    // Must be run with: java -ea TestStripedMap 
-    exerciseAllMaps();
-    // timeAllMaps();
+    // exerciseAllMaps();
+    timeAllMaps();
   }
 
   private static void timeAllMaps() {

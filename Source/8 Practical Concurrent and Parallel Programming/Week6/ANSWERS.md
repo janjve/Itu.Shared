@@ -18,26 +18,10 @@ I choose implementation (2). This is to allow other threads to access stripes fo
 
 6.1.7
 ------------
-TODO: Run with timeAllMaps().
 
-```
-# OS:   Windows 10; 10.0; amd64
-# JVM:  Oracle Corporation; 1.8.0_74
-# CPU:  Intel64 Family 6 Model 60 Stepping 3, GenuineIntel; 8 "cores"
-# Date: 2016-10-07T11:02:37+0200
-
-SynchronizedMap       16         570328.4 us   41794.99          2
-99992.0
-StripedMap            16         147284.2 us   32563.01          2
-99992.0
-StripedWriteMap       16          49013.2 us     722.15          8
-0.0
-WrapConcHashMap       16          75387.9 us    4704.55          4
-```
+For results see the file jve_6.1-6.2_results.txt.
 
 This looks as expected. The performance increase in StripedMap is noticably better than for SynchronizedMap.
-
-This StripedWriteMap is commented out, so results from that can't be used.
 
 6.1.8
 ------------
@@ -66,23 +50,10 @@ We don't have to update the sizes because the number of elements in the hashmap 
 6.2.6
 ------------
 
-```
-# OS:   Windows 10; 10.0; amd64
-# JVM:  Oracle Corporation; 1.8.0_74
-# CPU:  Intel64 Family 6 Model 60 Stepping 3, GenuineIntel; 8 "cores"
-# Date: 2016-10-07T13:57:32+0200
+For results see the file jve_6.1-6.2_results.txt.
 
-SynchronizedMap       16         557295.1 us   27905.07          2
-99992.0
-StripedMap            16         145919.8 us   40761.11          2
-99992.0
-StripedWriteMap       16          52411.2 us    1690.19          8
-99992.0
-WrapConcHashMap       16          73135.9 us    6561.34          4
-99992.0
-```
-
-This is as expected. It is however quite weird that our implementation is so much quicker than java's ConcurrentHashMap.
+This is as expected. It is however quite surprising that our implementation is quicker than java's ConcurrentHashMap, even when using a high number of tasks.
+We expect that this will not be the case when running on a system with more cores than my i7 laptop.
 
 Exercise 6.2
 ============
