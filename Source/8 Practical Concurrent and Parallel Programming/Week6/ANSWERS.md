@@ -55,7 +55,7 @@ For results see the file jve_6.1-6.2_results.txt.
 This is as expected. It is however quite surprising that our implementation is quicker than java's ConcurrentHashMap, even when using a high number of tasks.
 We expect that this will not be the case when running on a system with more cores than my i7 laptop.
 
-Exercise 6.2
+Exercise 6.3
 ============
 
 6.3.1
