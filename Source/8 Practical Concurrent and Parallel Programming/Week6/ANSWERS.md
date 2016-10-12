@@ -71,8 +71,7 @@ LongCounter                      597240.4 us  415037.62          2
 NewLongAdder                     439888.5 us   35191.86          2
 NewLongAdderPadded               109438.3 us    8365.24          4
 ```
-
-TODO: Discuss
+Java 8's LongAdder seems to perform by far the best. This is as expected. What is somewhat surprising is that AtomicLong performs worse than our own LongCounter, which just locks on on every method. However, The standard deviation is huge, which could indicate that there is some anomaly in how it's run. The "useless" object padding seems to improve performance quite drastically.
 
 6.3.2
 -----------
@@ -89,4 +88,4 @@ NewLongAdderLessPadded           185132.3 us   25363.89          2
 ```
 
 I left out the unrelated adders from the output.
-TODO: Discuss.
+Testing the implementation of newLongAdderPadded without the object padding actually shows that it has an large positive effect on the performance when running on my system.
