@@ -37,7 +37,7 @@ Kinda the same argument as in 6.1.8. The probability that two buckets unneccessa
 6.1.10
 ------------
 
-This ensures that a bucket belonging to stripe s will continue to belong to stripe s after reallocation of the buckets.
+The issue here is the reallocateBuckets method. If bucketCount wasn't a multiple of lockCount, then we would risk moving an entry between stripes during reallocation. While it isn't possible to get any items from the locked stripe, it would still be possible to move an item into a stripe that is intended to be locked, thus breaking thread-safety. 
 
 Exercise 6.2
 ============
@@ -88,4 +88,4 @@ NewLongAdderLessPadded           185132.3 us   25363.89          2
 ```
 
 I left out the unrelated adders from the output.
-Testing the implementation of newLongAdderPadded without the object padding actually shows that it has an large positive effect on the performance when running on my system.
+Testing the implementation of newLongerAdderPadded, without the object padding, actually shows that the padding has a rather large positive effect when running on our systems. 
