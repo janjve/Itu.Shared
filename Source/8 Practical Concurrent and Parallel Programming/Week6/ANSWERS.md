@@ -37,7 +37,7 @@ Kinda the same argument as in 6.1.8. The probability that two buckets unneccessa
 6.1.10
 ------------
 
-This ensures that a bucket belonging to stripe s will continue to belong to stripe s after reallocation of the buckets.
+The issue here is the reallocateBuckets method. If bucketCount wasn't a multiple of lockCount, then we would risk moving an entry between stripes during reallocation. While it isn't possible to get any items from the locked stripe, it would still be possible to move an item into a stripe that is intended to be locked, thus breaking thread-safety. 
 
 Exercise 6.2
 ============
@@ -55,7 +55,7 @@ For results see the file jve_6.1-6.2_results.txt.
 This is as expected. It is however quite surprising that our implementation is quicker than java's ConcurrentHashMap, even when using a high number of tasks.
 We expect that this will not be the case when running on a system with more cores than my i7 laptop.
 
-Exercise 6.2
+Exercise 6.3
 ============
 
 6.3.1
@@ -71,8 +71,7 @@ LongCounter                      597240.4 us  415037.62          2
 NewLongAdder                     439888.5 us   35191.86          2
 NewLongAdderPadded               109438.3 us    8365.24          4
 ```
-
-TODO: Discuss
+Java 8's LongAdder seems to perform by far the best. This is as expected. What is somewhat surprising is that AtomicLong performs worse than our own LongCounter, which just locks on on every method. However, The standard deviation is huge, which could indicate that there is some anomaly in how it's run. The "useless" object padding seems to improve performance quite drastically.
 
 6.3.2
 -----------
@@ -89,4 +88,4 @@ NewLongAdderLessPadded           185132.3 us   25363.89          2
 ```
 
 I left out the unrelated adders from the output.
-TODO: Discuss.
+Testing the implementation of newLongerAdderPadded, without the object padding, actually shows that the padding has a rather large positive effect when running on our systems. 
