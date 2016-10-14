@@ -8,27 +8,51 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+
 public class TestLiftGui {
   public static void main(String[] args) {
     // The lift model and associated graphics
     final LiftShaft shaft1 = new LiftShaft(), 
-      shaft2 = new LiftShaft();
+      shaft2 = new LiftShaft(),
+      shaft3 = new LiftShaft(),
+      shaft4 = new LiftShaft();
     final Lift lift1 = new Lift("Lift1", shaft1), 
-      lift2 = new Lift("Lift2", shaft2);
+      lift2 = new Lift("Lift2", shaft2),
+      lift3 = new Lift("Lift3", shaft3),
+      lift4 = new Lift("Lift4", shaft4);
     final LiftDisplay lift1Display = new LiftDisplay(lift1, true), 
-      lift2Display = new LiftDisplay(lift2, false);
-    LiftController controller = new LiftController(lift1, lift2);
-    Thread t1 = new Thread(lift1), t2 = new Thread(lift2);
-    t1.start(); t2.start();
+      lift2Display = new LiftDisplay(lift2, false),
+      lift3Display = new LiftDisplay(lift3, true),
+      lift4Display = new LiftDisplay(lift4, false);
+    LiftController controller = new LiftController(lift1, lift2, lift3, lift4);
+    Thread t1 = new Thread(lift1), 
+      t2 = new Thread(lift2),
+      t3 = new Thread(lift3),
+      t4 = new Thread(lift4);
+
+    ScheduledExecutorService scheduledPool = Executors.newScheduledThreadPool(4);
+    scheduledPool.scheduleWithFixedDelay(lift1, 62, 62, TimeUnit.MILLISECONDS); // 62 ms ~ 1/16 sec.
+    scheduledPool.scheduleWithFixedDelay(lift2, 62, 62, TimeUnit.MILLISECONDS);
+    scheduledPool.scheduleWithFixedDelay(lift3, 62, 62, TimeUnit.MILLISECONDS);
+    scheduledPool.scheduleWithFixedDelay(lift4, 62, 62, TimeUnit.MILLISECONDS);
 
     // The graphical presentation
     final JFrame frame = new JFrame("TestLiftGui");
     final JPanel panel = new JPanel();
     frame.add(panel);
-    panel.setLayout(new BorderLayout());
-    panel.add(lift1Display, BorderLayout.WEST);
-    panel.add(new OutsideLiftButtons(controller), BorderLayout.CENTER);
-    panel.add(lift2Display, BorderLayout.EAST);
+
+    panel.setLayout(new FlowLayout());
+    panel.add(lift1Display);
+    panel.add(lift2Display);
+    panel.add(new OutsideLiftButtons(controller));
+    panel.add(lift3Display);
+    panel.add(lift4Display);
+
     frame.pack(); frame.setVisible(true);
   }
 }
@@ -43,7 +67,7 @@ class LiftDisplay extends JPanel {
 }
 
 class LiftShaft extends Canvas {
-  public final int lowFloor = -1, highFloor = 5;
+  public final int lowFloor = -2, highFloor = 10;
   private double atFloor = 0.0,         // in [lowFloor, highFloor]
     doorOpen = 0.0;                     // in [0, 1]
 
@@ -171,8 +195,9 @@ class Lift implements Runnable {
   private Direction direction;  // None or Up or Down
   // @GuardedBy("this")
   private final Direction[] stops;
+  private final JButton[] insideLiftButtons;
 
-  public Lift(String name, LiftShaft shaft) {
+  public Lift(String name, LiftShaft shaft, JButton[] insideLiftButtons) {
     this.lowFloor = shaft.lowFloor; 
     this.highFloor = shaft.highFloor;
     this.name = name;
@@ -180,6 +205,7 @@ class Lift implements Runnable {
     this.floor = 0.0;
     this.direction = Direction.None;
     this.stops = new Direction[highFloor-lowFloor+1];
+    this.insideLiftButtons = insideLiftButtons;
   }
 
   // All these private methods are used in the lift's
@@ -190,6 +216,7 @@ class Lift implements Runnable {
   }
 
   private synchronized void setStop(int floor, Direction dir) {
+    SwingUtilities.invokeLater(() -> System.out.println("floor: " + floor + "; dir:" + dir));
     stops[floor-lowFloor] = dir;
   }
 
@@ -278,9 +305,6 @@ class Lift implements Runnable {
 
   public void run() {
     final double steps = 16.0; 
-    while (true) {
-      try { Thread.sleep((int)(1000.0/steps)); }
-      catch (InterruptedException exn) { }
       switch (direction) {
       case Up: 
         if ((int)floor == floor) { // At a floor, maybe stop here
@@ -319,7 +343,6 @@ class Lift implements Runnable {
         break;
       default: throw new RuntimeException("impossible Lift.move");
       }
-    }
   }
   
   private void openAndCloseDoors() {

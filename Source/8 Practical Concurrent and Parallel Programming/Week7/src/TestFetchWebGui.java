@@ -21,10 +21,13 @@ import java.io.IOException;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+// Atomic
+import java.util.concurrent.atomic.LongAdder;
+
 public class TestFetchWebGui {
   public static void main(String[] args) {
-    badFetch();
-    // goodFetch();
+    // badFetch();
+    goodFetch();
   }
 
   // (0) This version performs all the slow web access work on the
@@ -89,25 +92,29 @@ public class TestFetchWebGui {
     final TextArea textArea = new TextArea(25, 80);
     textArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
     outerPanel.add(textArea, BorderLayout.WEST);
+    final JProgressBar progressBar = new JProgressBar(0, 100);
+    outerPanel.add(progressBar, BorderLayout.SOUTH);
     // (1) Use a background thread, not the event thread, for work
-    DownloadWorker downloadTask = new DownloadWorker(textArea);
+    DownloadWorker[] downloadTask = new DownloadWorker[urls.length];
+    for(int i = 0; i < urls.length; i++){
+      downloadTask[i] = new DownloadWorker(textArea, progressBar, urls[i]);
+    }
+
     fetchButton.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-          downloadTask.execute();
+          for(int i = 0; i < downloadTask.length; i++){
+            downloadTask[i].execute();
+          }
         }});
-    // (2) Add a progress bar
-    JProgressBar progressBar = new JProgressBar(0, 100);
-    outerPanel.add(progressBar, BorderLayout.SOUTH);
-    downloadTask.addPropertyChangeListener(new PropertyChangeListener() {
-        public void propertyChange(PropertyChangeEvent e) {
-          if ("progress".equals(e.getPropertyName())) {
-            progressBar.setValue((Integer)e.getNewValue());
-          }}});
+    
     // (3) Enable cancellation
     cancelButton.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-          downloadTask.cancel(false);
+          for(int i = 0; i < downloadTask.length; i++){
+            downloadTask[i].cancel(false);
+          }
         }});
+    
     frame.pack(); frame.setVisible(true);
   }
 
@@ -144,27 +151,33 @@ public class TestFetchWebGui {
 
   static class DownloadWorker extends SwingWorker<String,String> {
     private final TextArea textArea; 
+    private final JProgressBar progressBar;
+    private final String url; 
+    private static LongAdder maxUrlCount = new LongAdder();
+    private static LongAdder urlCount = new LongAdder();
 
-    public DownloadWorker(TextArea textArea) {
+    public DownloadWorker(TextArea textArea, JProgressBar progressBar, String url) {
       this.textArea = textArea;
+      this.url = url;
+      this.progressBar = progressBar;
+      maxUrlCount.increment();
     }
 
     // Called on a separate worker thread, not the event thread, and
     // hence cannot write to textArea.
     public String doInBackground() {
       StringBuilder sb = new StringBuilder();
-      int count = 0;
-      for (String url : urls) {
-        // if (isCancelled())			    // (3)
-        //   break;
-	System.out.println("Fetching " + url);
-        String page = getPage(url, 200),
-          result = String.format("%-40s%7d%n", url, page.length());
-        sb.append(result); // (1)
-	//      setProgress((100 * ++count) / urls.length); // (2)
-	//	publish(result); // (4)
-      }
-      return sb.toString();
+      //int count = 0;
+      //for (String url : urls) {
+      if (isCancelled())			    // (3)
+        return sb.toString();
+      System.out.println("Fetching " + url);
+      String page = getPage(url, 200),
+      result = String.format("%-40s%7d%n", url, page.length());
+
+      sb.append(result); // (1)
+
+      return result;
     }
   
     // (4) Called on the event thread to process results previously
@@ -179,7 +192,12 @@ public class TestFetchWebGui {
     public void done() {
       try { 
         textArea.append(get());
-        textArea.append("Done"); 
+        urlCount.increment();
+        // Update progressbar.
+        progressBar.setValue((100 * urlCount.intValue()) / maxUrlCount.intValue());
+        if(urlCount.intValue() == maxUrlCount.intValue() && !isCancelled()){
+          textArea.append("Done");
+        }
       } catch (InterruptedException exn) { }
         catch (ExecutionException exn) { throw new RuntimeException(exn.getCause()); }
         catch (CancellationException exn) { textArea.append("Yrk"); }  // (3)
