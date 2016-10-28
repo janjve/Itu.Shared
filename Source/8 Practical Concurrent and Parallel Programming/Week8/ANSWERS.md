@@ -38,10 +38,17 @@ The implementation runs as expected. It doesn't say anything about correct value
 8.1.3
 ------------
 
-Works as expected.
+See code. Works as expected.
 
 8.1.4
 ------------
+
+See code. Works as expected.
+
+8.1.5
+------------
+
+See code. Works as expected.
 
 8.1.6
 ------------

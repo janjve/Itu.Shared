@@ -15,6 +15,7 @@ import java.util.concurrent.Executors;
 
 public class TestStripedMap {
   protected static final int threadCount = 16;
+  protected static final int keyCount = 99;
   protected static final AtomicIntegerArray allSum = new AtomicIntegerArray(threadCount);
   protected static final CyclicBarrier barrier = new CyclicBarrier(threadCount+1);
   protected static final ExecutorService pool = Executors.newCachedThreadPool();
@@ -184,36 +185,33 @@ public class TestStripedMap {
       final int threadNo = i;
       pool.execute(() -> {
         try{
+
           Random random = new Random(threadNo);
           int[] sums = new int[threadCount];
           barrier.await();
-          for(int j = 0; j < 1000; j++){
-            int key = random.nextInt(99);
+          for(int j = 0; j < 100000; j++){
+            int key = random.nextInt(keyCount);
             String value = map.put(key, threadNo+":"+key);
             sums[threadNo] += 1;
             if(value != null)
               sums[Integer.parseInt(value.split(":")[0])] -= 1;
 
-            int key2 = random.nextInt(99);
+            int key2 = random.nextInt(keyCount);
             sums[threadNo] += map.putIfAbsent(key2, threadNo+":"+key2) == null ? 1 : 0;
 
-            int key3 = random.nextInt(99);
+            int key3 = random.nextInt(keyCount);
             String value3 = map.remove(key3);
             if(value3 != null)
               sums[Integer.parseInt(value3.split(":")[0])] -= 1;
 
-            int key4 = random.nextInt(99);
+            int key4 = random.nextInt(keyCount);
             map.containsKey(key4);
           }
-          synchronized(allSum){
-          for(int j = 0; j < sums.length; j++)
-            System.out.print(sums[j] + " ");
-          System.out.println();
-          }
-          barrier.await();
           for(int j = 0; j < threadCount; j++){
             allSum.getAndAdd(j, sums[j]);
           }
+          barrier.await();
+
         } catch(Exception e){
           throw new RuntimeException(e);
         }
@@ -227,7 +225,7 @@ public class TestStripedMap {
       int total = 0;
       for(int t = 0; t < threadCount; t++){
         int sumMap = 0;
-        for(int k = 0; k < 99; k++){
+        for(int k = 0; k < keyCount; k++){
           String value = map.get(k);
           if(value == null) continue;
           String[] split = value.split(":");
@@ -236,12 +234,11 @@ public class TestStripedMap {
         }
         int sumThread = allSum.get(t);
         total += sumThread;
-        System.out.println("pre: " + sumThread + " " + sumMap);
-        //assert sumMap == sumThread;
+        assert sumMap == sumThread;
       }
 
       assert map.size() == total;
-      for(int k = 0; k < 99; k++){
+      for(int k = 0; k < keyCount; k++){
         String value = map.get(k);
         if(value == null) continue;
 
@@ -259,11 +256,11 @@ public class TestStripedMap {
 
     //testMap(new StripedWriteMap<Integer,String>(25, 5));
     //testMapExtended(new StripedWriteMap<Integer,String>(2, 2));
-    //testMapConcurrent(new StripedWriteMap<Integer,String>(77, 7));
+    testMapConcurrent(new StripedWriteMap<Integer,String>(77, 7));
 
     //testMap(new WrapConcurrentHashMap<Integer,String>());
     //testMapExtended(new WrapConcurrentHashMap<Integer,String>());
-    testMapConcurrent(new WrapConcurrentHashMap<Integer,String>());
+    //testMapConcurrent(new WrapConcurrentHashMap<Integer,String>());
   }
 
   // --- Benchmarking infrastructure ---
