@@ -52,12 +52,10 @@ See code. Works as expected.
 
 8.1.6
 ------------
-Interruption in case of deadlocks.
-Repetition of runs??.
-Perform the test on a system with more than 8 logical cores.
-Automatic increase in number of threads, to test for potential thread pool or concurrency issues, such as deadlocks with WorkStealingPool. Problably something akin to Mark7, just without increasing the number of runs for each time. 
 
-TODO:
+- Interruption in case of deadlocks.
+- Perform the test on a system with more than 8 logical cores.
+- Automatic increase in number of threads, to test for potential thread pool or concurrency issues, such as deadlocks with WorkStealingPool. Problably something akin to Mark7, just without increasing the number of runs for each time. 
 
 Exercise 8.2
 ============
@@ -111,6 +109,7 @@ hash = h % bs.length+1;
 in the get() method. The test found this.
 
 What our tests doesn't find is that it never checks if the map is actually reallocated. This means that if we somehow ended up writing:
+
 ```
 if (false && afterSize * lockCount > bs.length){
       reallocateBuckets(bs);
