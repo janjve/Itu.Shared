@@ -180,7 +180,6 @@ public class TestStripedMap {
   }
 
   private static void testMapConcurrent(final OurMap<Integer, String> map){
-
     for(int i = 0; i < threadCount; i++){
       final int threadNo = i;
       pool.execute(() -> {
@@ -189,7 +188,7 @@ public class TestStripedMap {
           Random random = new Random(threadNo);
           int[] sums = new int[threadCount];
           barrier.await();
-          for(int j = 0; j < 100000; j++){
+          for(int j = 0; j < 100; j++){
             int key = random.nextInt(keyCount);
             String value = map.put(key, threadNo+":"+key);
             sums[threadNo] += 1;
@@ -254,8 +253,8 @@ public class TestStripedMap {
 
     //testMap(new StripedMap<Integer,String>(25, 5));
 
-    //testMap(new StripedWriteMap<Integer,String>(25, 5));
-    //testMapExtended(new StripedWriteMap<Integer,String>(2, 2));
+    testMap(new StripedWriteMap<Integer,String>(25, 5));
+    testMapExtended(new StripedWriteMap<Integer,String>(2, 2));
     testMapConcurrent(new StripedWriteMap<Integer,String>(77, 7));
 
     //testMap(new WrapConcurrentHashMap<Integer,String>());
@@ -718,7 +717,7 @@ class StripedWriteMap<K,V> implements OurMap<K,V> {
   private volatile ItemNode<K,V>[] buckets;
   private final int lockCount;
   private final Object[] locks;
-  private final AtomicIntegerArray sizes;  
+  private final AtomicIntegerArray sizes;
 
   public StripedWriteMap(int bucketCount, int lockCount) {
     if (bucketCount % lockCount != 0)
