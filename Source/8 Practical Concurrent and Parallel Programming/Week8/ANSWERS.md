@@ -42,3 +42,11 @@ Works as expected.
 
 8.1.4
 ------------
+
+8.1.6
+------------
+Interruption in case of deadlocks.
+Repetition of runs??.
+Perform the test on a system with more than 8 logical cores.
+Automatic increase in number of threads, to test for potential thread pool or concurrency issues, such as deadlocks with WorkStealingPool. Problably something akin to Mark7, just without increasing the number of runs for each time. 
+
