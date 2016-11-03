@@ -25,7 +25,7 @@ public class TestStripedMap {
     testAllMaps();    // Must be run with: java -ea TestStripedMap 
     // exerciseAllMaps();
     // timeAllMaps();
-    pool.shutdownNow(); // shutdown threadpool.
+    pool.shutdownNow(); // shutdown threadpool. Would be better to have in test method.
   }
 
   private static void timeAllMaps() {
