@@ -24,11 +24,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class TestStmQueues extends Tests {
   public static void main(String[] args) throws Exception {
+    System.out.println("STARTING..");
+
     StmBoundedQueue<Integer> bq1 = new StmBoundedQueue<Integer>(3),
-      bq2 = new StmBoundedQueue<Integer>(3);
-    System.out.println(bq1.take());  // The retry() is NOT a busy wait!
+    bq2 = new StmBoundedQueue<Integer>(3);
+    //System.out.println(bq1.take());  // The retry() is NOT a busy wait!
     bq2.put(7); bq2.put(9); bq2.put(13); 
+    
     transferFromTo(bq2, bq1);
+  
     System.out.println(bq1.take());  
     bq1.put(17);
     System.out.println(takeOne(bq1, bq2));
