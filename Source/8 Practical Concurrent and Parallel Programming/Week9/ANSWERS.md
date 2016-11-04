@@ -128,3 +128,4 @@ Our implementation is inside the atomic function of multiverse, which means that
 X.3.5
 ------------
 
+We'd have to insert a check on newBuckets if it's null, in every method performing transactions on the buckets. If the check fails, the method calls `retry`, thereby blocking untill newBuckets is null again, i.e. the reallocation has finished reallocating, at which point they can proceed.
