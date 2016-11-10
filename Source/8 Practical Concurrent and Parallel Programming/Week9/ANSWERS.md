@@ -1,9 +1,7 @@
-
-
-Exercise X.2
+Exercise 9.2
 ============
 
-X.2.2
+9.2.2
 ------------
 
 ```
@@ -41,11 +39,12 @@ X.2.2
         4000000
 ```
 
-X.2.6
+9.2.6
 ------------
 
 First reading is `histogram`, while the second is `total`.
 ```
+...
    0:         0
    1:         0
    2:         0
@@ -111,21 +110,21 @@ First reading is `histogram`, while the second is `total`.
 
 ```
 
-X.2.7
+9.2.7
 ------------
 
 We expect there will occur a slight performance decrease, since the operations sometimes will have to roll back. The transactions done not by the main thread is however much shorter than that done by the main threads, so the likelyhood that they have to retry is also a lot less.
 
 
-Exercise X.3
+Exercise 9.3
 ============
 
-X.3.3
+9.3.3
 ------------
 
 Our implementation is inside the atomic function of multiverse, which means that updates to the buckets are done atomicly. This means we don't have to lock on the stripes to ensure concurrency.
 
-X.3.5
+9.3.5
 ------------
 
-We'd have to insert a check on newBuckets if it's null, in every method performing transactions on the buckets. If the check fails, the method calls `retry`, thereby blocking untill newBuckets is null again, i.e. the reallocation has finished reallocating, at which point they can proceed.
+We'd have to insert a check on newBuckets if it's null, in every method performing transactions on the buckets. If the check fails, the method calls `retry`, thereby blocking until newBuckets is null again, i.e. the reallocation has finished reallocating, at which point they can proceed.
