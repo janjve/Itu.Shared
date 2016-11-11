@@ -1,31 +1,16 @@
 // For week 10
-// sestoft@itu.dk * 2014-11-05, 2015-10-14
-
-// Compile and run like this:
-//   javac -cp ~/lib/multiverse-core-0.7.0.jar TestStmHistogram.java
-//   java -cp ~/lib/multiverse-core-0.7.0.jar:. TestStmHistogram
-
-// For the Multiverse library:
-import org.multiverse.api.references.*;
-import static org.multiverse.api.StmUtils.*;
-
-// Multiverse locking:
-import org.multiverse.api.LockMode;
-import org.multiverse.api.Txn;
-import org.multiverse.api.callables.TxnVoidCallable;
-
 import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.CyclicBarrier;
 
-class TestStmHistogram {
+class TestCasHistogram {
   public static void main(String[] args) {
-    countPrimeFactorsWithStmHistogram();
+    countPrimeFactorsWithCasHistogram();
   }
 
-  private static void countPrimeFactorsWithStmHistogram() {
-    final Histogram total = new StmHistogram(30);
-    final Histogram histogram = new StmHistogram(30);
+  private static void countPrimeFactorsWithCasHistogram() {
+    final Histogram total = new CasHistogram(30);
+    final Histogram histogram = new CasHistogram(30);
     final int range = 4_000_000;
     final int threadCount = 10, perThread = range / threadCount;
     final CyclicBarrier startBarrier = new CyclicBarrier(threadCount + 1), 
@@ -101,47 +86,59 @@ interface Histogram {
   void transferBins(Histogram hist);
 }
 
-class StmHistogram implements Histogram {
-  private final TxnInteger[] counts;
+class CasHistogram implements Histogram {
+  private final AtomicInteger[] counts;
 
-  public StmHistogram(int span) {
-    counts = new TxnInteger[span];
+  public CasHistogram(int span) {
+    counts = new AtomicInteger[span];
     for(int i = 0; i < span; i++){
-      counts[i] = newTxnInteger(0);
+      counts[i] = new AtomicInteger(0);
     }
   }
 
   public void increment(int bin) {
-    counts[bin].atomicGetAndIncrement(1);
+    int oldValue;
+    int newValue;
+    do{
+      oldValue = counts[bin].get();
+      newValue = oldValue + 1;
+    } while(!counts[bin].compareAndSet(oldValue, newValue));
   }
 
   public int getCount(int bin) {
-    return counts[bin].atomicGet();
+    return counts[bin].get();
   }
 
   public int getSpan() {
-    return atomic(() -> counts.length);
+    return counts.length;
   }
 
   public int[] getBins() {
-    return atomic(() -> {
-      int[] result = new int[counts.length];
-      for(int i = 0; i < counts.length; i++){
-        result[i] = counts[i].atomicGet();
-      }
-      return result;
-    });
-    
+    int[] result = new int[counts.length];
+    for(int i = 0; i < counts.length; i++){
+      result[i] = counts[i].get();
+    }
+    return result;    
   }
 
   public int getAndClear(int bin) {
-    return counts[bin].atomicGetAndSet(0);
+    int oldValue;
+    do{
+      oldValue = counts[bin].get();
+    } while(!counts[bin].compareAndSet(oldValue, 0));
+    return oldValue;
   }
 
   public void transferBins(Histogram hist) {
     for(int i = 0; i < hist.getSpan(); i++){
       final int bin = i;
-      atomic(() -> counts[bin].atomicGetAndIncrement(hist.getAndClear(bin)));
+      int transfer = 0;
+      int newValue, oldValue;
+      do{
+        transfer += hist.getAndClear(bin);
+        oldValue = counts[bin].get();
+        newValue = oldValue + transfer;
+      } while(!counts[bin].compareAndSet(oldValue, newValue));
     }
   }
 }
