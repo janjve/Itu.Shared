@@ -11,7 +11,8 @@ class SimpleHistogram {
     final int threadCount = 10;
 
     Histogram histogram = countParallel(range, threadCount);
-    dump(histogram);
+    
+    //dump(histogram);
   }
 
   public static void dump(Histogram histogram)
@@ -27,7 +28,7 @@ class SimpleHistogram {
 
   private static Histogram countParallel(int range, int threadCount) {
     final int perThread = range / threadCount;
-    final Histogram histogram = new Histogram5(30);
+    final Histogram histogram = new Histogram2(30);
     Thread[] threads = new Thread[threadCount];
     for (int t=0; t<threadCount; t++) {
       final int from = perThread * t;
@@ -38,15 +39,26 @@ class SimpleHistogram {
           histogram.increment(TestCountFactors.countFactors(i));
       });
     }
-
+    Timer timer = new Timer();
     for (int t=0; t<threadCount; t++)
       threads[t].start();
     try {
       for (int t=0; t<threadCount; t++)
         threads[t].join();
     } catch (InterruptedException exn) { }
+    double runningTime = timer.check();
+    dump(histogram);
+    System.out.printf("Runningtime: %15.8f s", runningTime);
     return histogram;
   }
+}
+
+class Timer {
+  private long start, spent = 0;
+  public Timer() { play(); }
+  public double check() { return (System.nanoTime()-start+spent)/1e9; }
+  public void pause() { spent += System.nanoTime()-start; }
+  public void play() { start = System.nanoTime(); }
 }
 
 interface Histogram {
@@ -145,8 +157,8 @@ class Histogram4 implements Histogram {
 class Histogram5 implements Histogram {
   private LongAdder[] counts;
 
-  public Histogram4(int span){
-    this.counts = new LongAdder[span]();
+  public Histogram5(int span){
+    this.counts = new LongAdder[span];
     for(int i = 0; i < span; i++){
       this.counts[i] = new LongAdder();
     }
@@ -157,7 +169,7 @@ class Histogram5 implements Histogram {
   }
 
   public int getCount(int bin){
-    return counts[bin].sum();
+    return (int)counts[bin].sum();
   }
 
   public int getSpan() {return counts.length;}
