@@ -1,3 +1,7 @@
+Week 10
+-------------
+Authors: Jan Vium Enghoff, Søren Harisson
+
 Exercise 10.1
 =============
 
@@ -6,9 +10,9 @@ Exercise 10.1
 
 - `increment`: This is the default CAS implementation. We only increment the value if it was not changed by another thread during the operation.
 
-- `getBins`: The documentation for AtomicInteger ensures us that we have visibility. We never update in this method.
+- `getBins`: The documentation for AtomicInteger ensures us that we have visibility when using get(). We never update in this method.
 
-- `getAndClear`: The reason this works is the same as for `increment`.
+- `getAndClear`: The reason this works is the same as for `increment`. When the old value is returned from getAndClear it is not given that the count is still 0, as it might have been updated again after the compareAndSet call.
 
 - `transferBins`: This works because we don't care if we have the newest value from `hist` as long as it is in a consistent state. We use `getAndClear` we wrote earlier for this. We do however have to be sure that there were no changes to the bin in `this`. By using compareAndSet we achieve this.
 
@@ -18,8 +22,7 @@ Exercise 10.1
 We run the test from last week with transfering bins. This produce the following output:
 
 ```
-mming\Week10\src> java TestCasHistogram
-**********   0:         0
+   0:         0
    1:         0
    2:         0
    3:         0
@@ -90,6 +93,8 @@ This is as expected. All the values has been transfered and it gives the correct
 
 To do this measurement we will remove the transfer part of the test.
 
+The implementation for STM is included in `.\src\old(10.1.3,10.1.4)\TestStmHistogram.java`.
+
 STM:
 ```
 Runningtime:      1.21116177 s
@@ -106,23 +111,27 @@ We ran this multiple times and they seem to be similar in runtime.
 10.1.4
 ------------
 
+The implementation for lock based is included in `.\src\old(10.1.3,10.1.4)\SimpleHistogram.java`.
+
 Lock based:
 ```
 Runningtime:      1.97263442 s
 ```
 
-There is a signicant performance gain by using the CAS implementation.
+There is a signicant performance gain by using the CAS or STM implementations.
 
 Exercise 10.2
 =============
 
-See file TestSimpleRWTryLock.java.
+The implementation can be found in `.\src\TestSimpleRWTryLock.java`.
 
 Exercise 10.3
 =============
 
-See `.\result\1.3.1-jve-plot.png` for visualization of the results from running `TestPseudoRandom.java`. 
-`.\result\1.3.1-jve-plot-TL.png` is from the same dataset, but only showing the threadlocal times.
+The measurements are obtained by running the file `.\src\TestPseudoRandom.java`.
+
+See `.\result\10.3.1-jve-plot.png` for visualization of the results. 
+`.\result\10.3.1-jve-plot-TL.png` is from the same testrun, but only showing the threadlocal times.
 
 The test identified the following system information.
 
