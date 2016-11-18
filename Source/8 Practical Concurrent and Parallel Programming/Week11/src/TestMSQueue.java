@@ -58,8 +58,6 @@ public class TestMSQueue extends Tests{
     final ExecutorService pool = Executors.newCachedThreadPool();
     final UnboundedQueue<Integer> queue = ubq;
     final AtomicInteger nTrials = new AtomicInteger(n);
-    final AtomicInteger producerCount = new AtomicInteger(pc);
-    final AtomicInteger consumerCount = new AtomicInteger(cc);
     final CyclicBarrier startBarrier = new CyclicBarrier(pc + cc + 1);
     final CyclicBarrier stopBarrier = new CyclicBarrier(pc + cc + 1);
     try {
@@ -238,7 +236,7 @@ class MSQueue<T> implements UnboundedQueue<T> {
     Node<T> node = new Node<T>(item, null);
     while (true) {
       Node<T> last = tail.get(), next = last.next.get();
-      //if (last == tail.get()) {         // E7
+      if (last == tail.get()) {         // E7
         if (next == null)  {
           // In quiescent state, try inserting new node
           if (last.next.compareAndSet(next, node)) { // E9
@@ -249,14 +247,14 @@ class MSQueue<T> implements UnboundedQueue<T> {
         } else 
           // Queue in intermediate state, advance tail
           tail.compareAndSet(last, next);
-      //}
+      }
     }
   }
 
   public T dequeue() { // from head
     while (true) {
       Node<T> first = head.get(), last = tail.get(), next = first.next.get(); // D3
-      //if (first == head.get()) {        // D5
+      if (first == head.get()) {        // D5
         if (first == last) {
           if (next == null)
             return null;
@@ -267,7 +265,7 @@ class MSQueue<T> implements UnboundedQueue<T> {
           if (head.compareAndSet(first, next)) // D13
             return result;
         }
-      //}
+      }
     }
   }
 
@@ -394,19 +392,6 @@ class EnqueueDequeueTest extends Tests {
 
       assertTrue(ubq.dequeue() == null); // Check empty
       assertEquals(enqueueSum.get(), dequeueSum.get());
-    } catch (Exception e) {
-      throw new RuntimeException(e);
-    }
-  }
-
-  void testSilent(ExecutorService pool) {
-    try {
-      for (int i = 0; i < nPairs; i++) {
-        pool.execute(new Producer());
-        pool.execute(new Consumer());
-      }      
-      startBarrier.await(); // wait for all threads to be ready
-      stopBarrier.await();  // wait for all threads to finish
     } catch (Exception e) {
       throw new RuntimeException(e);
     }
