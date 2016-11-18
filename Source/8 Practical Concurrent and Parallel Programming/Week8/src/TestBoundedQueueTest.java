@@ -44,7 +44,7 @@ public class TestBoundedQueueTest extends Tests{
   }
 }
 
-class Tests {
+class Tests {  
   public static void assertEquals(int x, int y) throws Exception {
     if (x != y) 
       throw new Exception(String.format("ERROR: %d not equal to %d%n", x, y));
