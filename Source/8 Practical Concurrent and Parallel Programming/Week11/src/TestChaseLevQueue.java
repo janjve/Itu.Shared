@@ -1,16 +1,92 @@
 // For week 12
 // sestoft@itu.dk * 2015-11-05
-
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.LongAdder;
 
-public class TestChaseLevQueue {
+public class TestChaseLevQueue extends Tests {
   final static int size = 100_000_000; // Number of integers to sort
 
-  public static void main(String[] args) {
-    multiQueueMultiThreadCL(8);
+  public static void main(String[] args)throws Exception {
+    //multiQueueMultiThreadCL(8);
+    //sequentialTests(new ChaseLevDeque<Integer>(100));
+    concurrentTest(new ChaseLevDeque<Integer>(1_000_000), 8);
   }
+
+  private static void sequentialTests(Deque<Integer> dq) throws Exception {
+      dq.push(7);
+      assertEquals(dq.pop(), 7);
+      assertTrue(dq.pop() == null);
+      dq.push(10);
+      assertEquals(dq.steal(), 10);
+      assertTrue(dq.steal() == null);
+  }
+
+  private static void concurrentTest(Deque<Integer> dq, int sc) throws Exception {
+    final ExecutorService pool = Executors.newCachedThreadPool();
+    final Deque<Integer> queue = dq;
+    final int pushCount = 200_000 + sc * 100_000;
+    final int popCount = 200_000;
+    final int stealCount = 100_000;
+    final AtomicInteger pushSum = new AtomicInteger(0);
+    final AtomicInteger popStealSum = new AtomicInteger(0);
+    final CyclicBarrier startBarrier = new CyclicBarrier(1 + sc + 1);
+    final CyclicBarrier stopBarrier = new CyclicBarrier(1 + sc + 1);
+
+    try {
+       pool.execute(() -> {
+          try {
+            int pSum = 0;            
+            for(int i = 0; i < pushCount; i++) {
+              queue.push(i);
+              pSum+= i;
+            }
+            int popSum = 0;
+            startBarrier.await();
+            for(int i = 0; i < popCount; i++) {
+              popSum += queue.pop();
+            }
+            pushSum.getAndAdd(pSum);
+            popStealSum.getAndAdd(popSum);
+            stopBarrier.await();
+          } catch(Exception e){
+            throw new RuntimeException(e);
+          }
+        });
+      for (int i = 0; i < sc; i++) {
+        pool.execute(() -> {
+          try {
+            int sSum = 0; 
+            startBarrier.await();
+            for(int j = 0; j < stealCount; j ++) {
+              Integer v;
+              do {
+                v = queue.steal();
+              } while(v == null);
+              sSum += v;
+            }
+            popStealSum.getAndAdd(sSum);
+            stopBarrier.await();
+          } catch(Exception e){
+            throw new RuntimeException(e);
+          }
+        });
+      }
+      startBarrier.await();
+      stopBarrier.await();
+      assertEquals(popStealSum.get(), pushSum.get());
+      assertTrue(popStealSum.get() > 0);
+      assertTrue(queue.pop() == null);
+      assertTrue(queue.steal() == null);
+      pool.shutdown();
+    } catch(Exception e) {}
+
+  }
+
+
 
   // ----------------------------------------------------------------------
   // Version E: Multi-queue multi-thread setup SOLUTION, thread-local queues
@@ -212,5 +288,17 @@ class IntArrayUtil {
       if (arr[i-1] > arr[i])
         return false;
     return true;
+  }
+}
+
+class Tests {
+  public static void assertEquals(int x, int y) throws Exception {
+    if (x != y) 
+      throw new Exception(String.format("ERROR: %d not equal to %d%n", x, y));
+  }
+
+  public static void assertTrue(boolean b) throws Exception {
+    if (!b) 
+      throw new Exception(String.format("ERROR: assertTrue"));
   }
 }

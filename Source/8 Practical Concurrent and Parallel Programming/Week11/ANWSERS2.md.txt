@@ -85,3 +85,20 @@ Exercise 11.3
 11.3.4
 -------------
 It would appear as though having E7 disabled provides a minor performance boost, while removing D5 doesn't appear to have any effect.
+
+11.4.2
+-------------
+We have a single push/pop thread, and a variable amount of stealing threads. For each we generate a baseline 200.000 values for the push/pop thread, and 100.000 values for each stealing thread. The size of the queue needs to match the total amount of values pushed. 
+
+We have the following asserts, to make certain that everything went well:
+```
+assertEquals(popStealSum.get(), pushSum.get());
+assertTrue(popStealSum.get() > 0);
+assertTrue(queue.pop() == null);
+assertTrue(queue.steal() == null);
+```
+And it passes.
+
+1.4.4
+------------
+It seems as though this scenario should never be reached unless our push, pop and steal operations all run concurrently, since this should only happen if the queue becomes empty, and they both manage to take the last element. 
