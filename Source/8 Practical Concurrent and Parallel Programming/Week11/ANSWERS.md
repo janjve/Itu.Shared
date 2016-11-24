@@ -5,6 +5,10 @@ Authors: Jan Vium Enghoff, Søren Harisson
 Exercise 11.1
 =============
 
+11.1.1
+-------------
+See code
+
 11.1.2
 -------------
 
@@ -44,7 +48,7 @@ Yes.
 11.2.4
 -------------
 
-See 11.2.1. For test we could simply run it a large number of times and see which implementation finishes the fastest.
+See 11.2.1. For the test we could simply run it a large number of times and see which implementation finishes the fastest.
 
 11.2.5
 -------------
@@ -140,6 +144,30 @@ class MSQueue         [P:3|C:3]         18977.6 us     238.96         16
 class MSQueue         [P:4|C:4]         20203.5 us     135.19         16
 ```
 
+Exercise 11.4
+=============
+
 11.4.1
 -------------
+See code.
 
+11.4.2
+-------------
+We have a single push/pop thread, and a variable amount of stealing threads. For each we generate a baseline 200.000 values for the push/pop thread, and 100.000 values for each stealing thread. The size of the queue needs to match the total amount of values pushed. 
+
+We have the following asserts, to make certain that everything went well:
+```
+assertEquals(popStealSum.get(), pushSum.get());
+assertTrue(popStealSum.get() > 0);
+assertTrue(queue.pop() == null);
+assertTrue(queue.steal() == null);
+```
+And it passes.
+
+
+11.4.3
+------------
+
+11.4.4
+------------
+It seems as though this scenario should never be reached unless our push, pop and steal operations all run concurrently, since this should only happen if the queue becomes empty, and they both manage to take the last element. 
