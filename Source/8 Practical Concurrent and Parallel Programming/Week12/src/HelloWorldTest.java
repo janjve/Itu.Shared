@@ -1,9 +1,9 @@
 import java.io.*;
 import akka.actor.*;
 
-public class ABCTest {
+public class HelloWorldTest {
 	public static void main(String[] args){
-		 /*final ActorSystem system = ActorSystem.create("HelloWorldSystem");
+		 final ActorSystem system = ActorSystem.create("HelloWorldSystem");
 		 final ActorRef myactor =
 		 system.actorOf(Props.create(MyActor.class), "myactor");
 		 myactor.tell(new MyMessage("hello"), ActorRef.noSender());
@@ -14,13 +14,14 @@ public class ABCTest {
 		 } catch(IOException e) {
 		 e.printStackTrace();
 		 } finally {
-		 system.shutdown();
-		 }*/
+		 system.terminate();
+		 }
 	}
 }
-/*
+
 // -- MESSAGE --------------------------------------------------
 class MyMessage implements Serializable { // must be Serializable:
+ private static final long serialVersionUID = 123;
  public final String s;
  public MyMessage(String s) { this.s = s; }
 }
@@ -36,5 +37,5 @@ if (o instanceof MyMessage) {
  count++;
 }
  }
-} */
+} 
 
